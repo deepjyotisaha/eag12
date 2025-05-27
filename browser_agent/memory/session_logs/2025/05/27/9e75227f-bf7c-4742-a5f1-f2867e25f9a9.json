@@ -1,0 +1,209 @@
+{
+  "context": {
+    "session_id": "9e75227f-bf7c-4742-a5f1-f2867e25f9a9",
+    "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.",
+    "globals": {
+      "memory": [
+        {
+          "score": 200.0,
+          "session_id": "776e3f9b-50eb-4036-9922-8ca80e366f5e",
+          "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.\nResponse 1: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.\nQuery 2: How much Anmol singh paid for his DLF apartment via Capbridge?\nResponse 2: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.\nQuery 3: How much Anmol singh paid for his DLF apartment via Capbridge?",
+          "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.",
+          "timestamp": "2025-05-26T18:59:07Z"
+        },
+        {
+          "score": 200.0,
+          "session_id": "d549460a-d57a-4b86-8269-559718872e8f",
+          "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.\nResponse 1: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.\nQuery 2: How much Anmol singh paid for his DLF apartment via Capbridge?",
+          "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.",
+          "timestamp": "2025-05-26T18:59:07Z"
+        },
+        {
+          "score": 200.0,
+          "session_id": "9549e79f-c502-47ee-8654-c672936d5338",
+          "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.",
+          "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.",
+          "timestamp": "2025-05-26T18:59:07Z"
+        }
+      ]
+    },
+    "memory": [
+      {
+        "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.",
+        "result_requirement": "Final summary",
+        "summarizer_summary": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.",
+        "confidence": 0.95,
+        "original_goal_achieved": true,
+        "route": "summarize"
+      }
+    ],
+    "graph": {
+      "directed": true,
+      "multigraph": false,
+      "graph": {},
+      "nodes": [
+        {
+          "data": {
+            "index": "ROOT",
+            "description": "initial query",
+            "type": "ROOT",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "ASCII values",
+                "INDIA",
+                "sum of exponentials"
+              ],
+              "result_requirement": "ASCII values of characters in INDIA and their sum of exponentials",
+              "original_goal_achieved": true,
+              "local_goal_achieved": true,
+              "confidence": "0.95",
+              "reasoning": "The memory excerpt contains the ASCII values for the characters in the word \"INDIA\" and the sum of exponentials for these values.",
+              "local_reasoning": "The memory excerpt directly provides the required information.",
+              "last_tooluse_summary": "Not applicable",
+              "solution_summary": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.",
+              "route": "summarize",
+              "instruction_to_summarize": "Summarize the ASCII values for the characters in the word \"INDIA\" and their sum of exponentials.  Use information from memory. Format using markdown."
+            },
+            "from_step": null
+          },
+          "id": "ROOT"
+        }
+      ],
+      "links": []
+    }
+  },
+  "session": {
+    "session_id": "9e75227f-bf7c-4742-a5f1-f2867e25f9a9",
+    "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.",
+    "perception_snapshots": [
+      {
+        "run_id": "9e75227f-bf7c-4742-a5f1-f2867e25f9a9-P",
+        "snapshot_type": "user_query",
+        "entities": [
+          "ASCII values",
+          "INDIA",
+          "sum of exponentials"
+        ],
+        "result_requirement": "ASCII values of characters in INDIA and their sum of exponentials",
+        "original_goal_achieved": true,
+        "reasoning": "The memory excerpt contains the ASCII values for the characters in the word \"INDIA\" and the sum of exponentials for these values.",
+        "local_goal_achieved": true,
+        "local_reasoning": "The memory excerpt directly provides the required information.",
+        "last_tooluse_summary": "Not applicable",
+        "solution_summary": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.",
+        "confidence": "0.95",
+        "route": "summarize",
+        "timestamp": "...",
+        "return_to": ""
+      }
+    ],
+    "decision_snapshots": [],
+    "execution_snapshots": [],
+    "summarizer_snapshots": [
+      {
+        "run_id": "0d96d1ee-9f77-4cd2-9977-62b5bc04d6c1",
+        "input": {
+          "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.",
+          "globals_schema": {
+            "memory": [
+              {
+                "score": 200.0,
+                "session_id": "776e3f9b-50eb-4036-9922-8ca80e366f5e",
+                "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.\nResponse 1: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.\nQuery 2: How much Anmol singh paid for his DLF apartment via Capbridge?\nResponse 2: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.\nQuery 3: How much Anmol singh paid for his DLF apartment via Capbridge?",
+                "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.",
+                "timestamp": "2025-05-26T18:59:07Z"
+              },
+              {
+                "score": 200.0,
+                "session_id": "d549460a-d57a-4b86-8269-559718872e8f",
+                "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.\nResponse 1: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.\nQuery 2: How much Anmol singh paid for his DLF apartment via Capbridge?",
+                "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.",
+                "timestamp": "2025-05-26T18:59:07Z"
+              },
+              {
+                "score": 200.0,
+                "session_id": "9549e79f-c502-47ee-8654-c672936d5338",
+                "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.",
+                "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.",
+                "timestamp": "2025-05-26T18:59:07Z"
+              }
+            ]
+          },
+          "plan_graph": {
+            "directed": true,
+            "multigraph": false,
+            "graph": {},
+            "nodes": [
+              {
+                "data": {
+                  "index": "ROOT",
+                  "description": "initial query",
+                  "type": "ROOT",
+                  "status": "completed",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "ASCII values",
+                      "INDIA",
+                      "sum of exponentials"
+                    ],
+                    "result_requirement": "ASCII values of characters in INDIA and their sum of exponentials",
+                    "original_goal_achieved": true,
+                    "local_goal_achieved": true,
+                    "confidence": "0.95",
+                    "reasoning": "The memory excerpt contains the ASCII values for the characters in the word \"INDIA\" and the sum of exponentials for these values.",
+                    "local_reasoning": "The memory excerpt directly provides the required information.",
+                    "last_tooluse_summary": "Not applicable",
+                    "solution_summary": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.",
+                    "route": "summarize",
+                    "instruction_to_summarize": "Summarize the ASCII values for the characters in the word \"INDIA\" and their sum of exponentials.  Use information from memory. Format using markdown."
+                  },
+                  "from_step": null
+                },
+                "id": "ROOT"
+              }
+            ],
+            "links": []
+          },
+          "perception": {
+            "entities": [
+              "ASCII values",
+              "INDIA",
+              "sum of exponentials"
+            ],
+            "result_requirement": "ASCII values of characters in INDIA and their sum of exponentials",
+            "original_goal_achieved": true,
+            "local_goal_achieved": true,
+            "confidence": "0.95",
+            "reasoning": "The memory excerpt contains the ASCII values for the characters in the word \"INDIA\" and the sum of exponentials for these values.",
+            "local_reasoning": "The memory excerpt directly provides the required information.",
+            "last_tooluse_summary": "Not applicable",
+            "solution_summary": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.",
+            "route": "summarize",
+            "instruction_to_summarize": "Summarize the ASCII values for the characters in the word \"INDIA\" and their sum of exponentials.  Use information from memory. Format using markdown."
+          }
+        },
+        "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.",
+        "success": true,
+        "error": null,
+        "timestamp": "2025-05-26T19:01:38Z",
+        "return_to": ""
+      }
+    ],
+    "final_summary": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.",
+    "status": "success",
+    "completed_at": "2025-05-26T19:02:24.220398"
+  },
+  "status": "success",
+  "final_step_id": "ROOT",
+  "reason": "Summarized successfully",
+  "timestamp": "2025-05-26T19:02:24.221418",
+  "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.",
+  "final_summary": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33."
+}

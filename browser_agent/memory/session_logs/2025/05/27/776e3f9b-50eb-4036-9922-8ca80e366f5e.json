@@ -1,0 +1,221 @@
+{
+  "context": {
+    "session_id": "776e3f9b-50eb-4036-9922-8ca80e366f5e",
+    "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.\nResponse 1: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.\nQuery 2: How much Anmol singh paid for his DLF apartment via Capbridge?\nResponse 2: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.\nQuery 3: How much Anmol singh paid for his DLF apartment via Capbridge?",
+    "globals": {
+      "memory": [
+        {
+          "score": 200.0,
+          "session_id": "d549460a-d57a-4b86-8269-559718872e8f",
+          "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.\nResponse 1: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.\nQuery 2: How much Anmol singh paid for his DLF apartment via Capbridge?",
+          "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.",
+          "timestamp": "2025-05-26T18:59:07Z"
+        },
+        {
+          "score": 200.0,
+          "session_id": "9549e79f-c502-47ee-8654-c672936d5338",
+          "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.",
+          "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.",
+          "timestamp": "2025-05-26T18:59:07Z"
+        },
+        {
+          "score": 200.0,
+          "session_id": "77f3da5c-c214-44b2-8f39-1180ea9c5fc2",
+          "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.",
+          "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum].\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.",
+          "timestamp": "2025-05-26T18:54:13Z"
+        }
+      ]
+    },
+    "memory": [
+      {
+        "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.\nResponse 1: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.\nQuery 2: How much Anmol singh paid for his DLF apartment via Capbridge?\nResponse 2: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.\nQuery 3: How much Anmol singh paid for his DLF apartment via Capbridge?",
+        "result_requirement": "Final summary",
+        "summarizer_summary": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.",
+        "confidence": 0.95,
+        "original_goal_achieved": true,
+        "route": "summarize"
+      }
+    ],
+    "graph": {
+      "directed": true,
+      "multigraph": false,
+      "graph": {},
+      "nodes": [
+        {
+          "data": {
+            "index": "ROOT",
+            "description": "initial query",
+            "type": "ROOT",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "ASCII values",
+                "INDIA",
+                "sum of exponentials",
+                "Anmol Singh",
+                "DLF apartment",
+                "Capbridge"
+              ],
+              "result_requirement": "ASCII values of INDIA, sum of exponentials, and amount Anmol Singh paid for DLF apartment via Capbridge.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": true,
+              "confidence": "0.9",
+              "reasoning": "The ASCII values and the sum of exponentials have been computed and stored in memory. The information regarding Anmol Singh's payment is still missing. Since the first part is answered, and the second part is still not found, and the user is asking the same question again, there is no point in planning. Let's summarize what we know so far and tell the user that the other information wasn't found.",
+              "local_reasoning": "The raw input contains the ASCII values, the sum of exponentials, and the fact that the payment information is unknown.",
+              "last_tooluse_summary": "Not applicable",
+              "solution_summary": "ASCII values and exponential sum known, Anmol Singh payment unknown.",
+              "route": "summarize",
+              "instruction_to_summarize": "Summarize the results for the user. State the ASCII values of 'INDIA' are 73, 78, 68, 73, and 65. The sum of exponentials is approximately 7.599822246093079e+33. Also, state that the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found. Use markdown format."
+            },
+            "from_step": null
+          },
+          "id": "ROOT"
+        }
+      ],
+      "links": []
+    }
+  },
+  "session": {
+    "session_id": "776e3f9b-50eb-4036-9922-8ca80e366f5e",
+    "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.\nResponse 1: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.\nQuery 2: How much Anmol singh paid for his DLF apartment via Capbridge?\nResponse 2: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.\nQuery 3: How much Anmol singh paid for his DLF apartment via Capbridge?",
+    "perception_snapshots": [
+      {
+        "run_id": "776e3f9b-50eb-4036-9922-8ca80e366f5e-P",
+        "snapshot_type": "user_query",
+        "entities": [
+          "ASCII values",
+          "INDIA",
+          "sum of exponentials",
+          "Anmol Singh",
+          "DLF apartment",
+          "Capbridge"
+        ],
+        "result_requirement": "ASCII values of INDIA, sum of exponentials, and amount Anmol Singh paid for DLF apartment via Capbridge.",
+        "original_goal_achieved": false,
+        "reasoning": "The ASCII values and the sum of exponentials have been computed and stored in memory. The information regarding Anmol Singh's payment is still missing. Since the first part is answered, and the second part is still not found, and the user is asking the same question again, there is no point in planning. Let's summarize what we know so far and tell the user that the other information wasn't found.",
+        "local_goal_achieved": true,
+        "local_reasoning": "The raw input contains the ASCII values, the sum of exponentials, and the fact that the payment information is unknown.",
+        "last_tooluse_summary": "Not applicable",
+        "solution_summary": "ASCII values and exponential sum known, Anmol Singh payment unknown.",
+        "confidence": "0.9",
+        "route": "summarize",
+        "timestamp": "...",
+        "return_to": ""
+      }
+    ],
+    "decision_snapshots": [],
+    "execution_snapshots": [],
+    "summarizer_snapshots": [
+      {
+        "run_id": "58fec211-e005-4481-a965-9401485cee96",
+        "input": {
+          "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.\nResponse 1: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.\nQuery 2: How much Anmol singh paid for his DLF apartment via Capbridge?\nResponse 2: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.\nQuery 3: How much Anmol singh paid for his DLF apartment via Capbridge?",
+          "globals_schema": {
+            "memory": [
+              {
+                "score": 200.0,
+                "session_id": "d549460a-d57a-4b86-8269-559718872e8f",
+                "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.\nResponse 1: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.\nQuery 2: How much Anmol singh paid for his DLF apartment via Capbridge?",
+                "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.",
+                "timestamp": "2025-05-26T18:59:07Z"
+              },
+              {
+                "score": 200.0,
+                "session_id": "9549e79f-c502-47ee-8654-c672936d5338",
+                "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.",
+                "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.",
+                "timestamp": "2025-05-26T18:59:07Z"
+              },
+              {
+                "score": 200.0,
+                "session_id": "77f3da5c-c214-44b2-8f39-1180ea9c5fc2",
+                "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.",
+                "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum].\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.",
+                "timestamp": "2025-05-26T18:54:13Z"
+              }
+            ]
+          },
+          "plan_graph": {
+            "directed": true,
+            "multigraph": false,
+            "graph": {},
+            "nodes": [
+              {
+                "data": {
+                  "index": "ROOT",
+                  "description": "initial query",
+                  "type": "ROOT",
+                  "status": "completed",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "ASCII values",
+                      "INDIA",
+                      "sum of exponentials",
+                      "Anmol Singh",
+                      "DLF apartment",
+                      "Capbridge"
+                    ],
+                    "result_requirement": "ASCII values of INDIA, sum of exponentials, and amount Anmol Singh paid for DLF apartment via Capbridge.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": true,
+                    "confidence": "0.9",
+                    "reasoning": "The ASCII values and the sum of exponentials have been computed and stored in memory. The information regarding Anmol Singh's payment is still missing. Since the first part is answered, and the second part is still not found, and the user is asking the same question again, there is no point in planning. Let's summarize what we know so far and tell the user that the other information wasn't found.",
+                    "local_reasoning": "The raw input contains the ASCII values, the sum of exponentials, and the fact that the payment information is unknown.",
+                    "last_tooluse_summary": "Not applicable",
+                    "solution_summary": "ASCII values and exponential sum known, Anmol Singh payment unknown.",
+                    "route": "summarize",
+                    "instruction_to_summarize": "Summarize the results for the user. State the ASCII values of 'INDIA' are 73, 78, 68, 73, and 65. The sum of exponentials is approximately 7.599822246093079e+33. Also, state that the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found. Use markdown format."
+                  },
+                  "from_step": null
+                },
+                "id": "ROOT"
+              }
+            ],
+            "links": []
+          },
+          "perception": {
+            "entities": [
+              "ASCII values",
+              "INDIA",
+              "sum of exponentials",
+              "Anmol Singh",
+              "DLF apartment",
+              "Capbridge"
+            ],
+            "result_requirement": "ASCII values of INDIA, sum of exponentials, and amount Anmol Singh paid for DLF apartment via Capbridge.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": true,
+            "confidence": "0.9",
+            "reasoning": "The ASCII values and the sum of exponentials have been computed and stored in memory. The information regarding Anmol Singh's payment is still missing. Since the first part is answered, and the second part is still not found, and the user is asking the same question again, there is no point in planning. Let's summarize what we know so far and tell the user that the other information wasn't found.",
+            "local_reasoning": "The raw input contains the ASCII values, the sum of exponentials, and the fact that the payment information is unknown.",
+            "last_tooluse_summary": "Not applicable",
+            "solution_summary": "ASCII values and exponential sum known, Anmol Singh payment unknown.",
+            "route": "summarize",
+            "instruction_to_summarize": "Summarize the results for the user. State the ASCII values of 'INDIA' are 73, 78, 68, 73, and 65. The sum of exponentials is approximately 7.599822246093079e+33. Also, state that the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found. Use markdown format."
+          }
+        },
+        "summary_output": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.",
+        "success": true,
+        "error": null,
+        "timestamp": "2025-05-26T18:59:07Z",
+        "return_to": ""
+      }
+    ],
+    "final_summary": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.",
+    "status": "success",
+    "completed_at": "2025-05-26T19:01:27.242555"
+  },
+  "status": "success",
+  "final_step_id": "ROOT",
+  "reason": "Summarized successfully",
+  "timestamp": "2025-05-26T19:01:27.245555",
+  "original_query": "Query 1: Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.\nResponse 1: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65.\n\nTo calculate the sum of exponentials (e^x) for each of these values, the equation is:\n\ne^73 + e^78 + e^68 + e^73 + e^65 = [sum]\n\nDue to limitations, the exact numerical value of this sum cannot be provided at this time.\nQuery 2: How much Anmol singh paid for his DLF apartment via Capbridge?\nResponse 2: The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found.\nQuery 3: How much Anmol singh paid for his DLF apartment via Capbridge?",
+  "final_summary": "The ASCII values for the characters in the word \"INDIA\" are: 73, 78, 68, 73, and 65. The sum of exponentials (e^x) for each of these values is approximately 7.599822246093079e+33.\n\nRegarding the second part of your query, the amount Anmol Singh paid for his DLF apartment via Capbridge is unknown and could not be found."
+}

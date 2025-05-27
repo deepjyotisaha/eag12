@@ -433,5 +433,20 @@
     "doc": "conversation_history.txt",
     "chunk": "countries are exploring long-term military cooperation and have embassies in each other's capitals. Bilateral relations have the potential for development, especially in the defense sector, and trade relations are growing.\" }, { \"original_query\": \"Whats the latest new about India and Pakistan?\", \"summarizer_summary\": \"Recent reports indicate a ceasefire between India and Pakistan, with accusations of violations from both sides. Tensions remain high, particularly concerning the Kashmir region.\" }, { \"original_query\": \"Why was Celebi, a turkey company in news recently? Tell me in detail in html format\", \"summarizer_summary\": \"Celebi Aviation, a Turkish firm, was in the news recently because India revoked their security clearance due to tensions between India and Turkey. There were also allegations that Erdogan's daughter held a stake in the company, which the company denied.\" }, { \"original_query\": \"Query 1: What are the main differences between Mercedes Benz E Class and C Class?\", \"summarizer_summary\": \"Summaries contain information about price, dimensions, engines, and features for both models.\" }",
     "chunk_id": "conversation_history_10"
+  },
+  {
+    "doc": "DELETE_IMAGES.pdf",
+    "chunk": "# This PDF file is protected You'll need a different reader in order to view this content: [Download a compatible PDF reader](http://go.microsoft.com/fwlink/?LinkID=231373) . This PDF Document has been protected. The reader you are using does not support opening files protected by Microsoft Office",
+    "chunk_id": "DELETE_IMAGES_0"
+  },
+  {
+    "doc": "How to use Canvas LMS.pdf",
+    "chunk": "# This PDF file is protected You'll need a different reader in order to view this content: [Download a compatible PDF reader](http://go.microsoft.com/fwlink/?LinkID=231373) . This PDF Document has been protected. The reader you are using does not support opening files protected by Microsoft Office",
+    "chunk_id": "How to use Canvas LMS_0"
+  },
+  {
+    "doc": "INVG67564.pdf",
+    "chunk": "# This PDF file is protected You'll need a different reader in order to view this content: [Download a compatible PDF reader](http://go.microsoft.com/fwlink/?LinkID=231373) . This PDF Document has been protected. The reader you are using does not support opening files protected by Microsoft Office",
+    "chunk_id": "INVG67564_0"
   }
 ]

@@ -1,0 +1,1792 @@
+{
+  "context": {
+    "session_id": "47c7e65f-42a4-40d5-9ff2-26cb963467fb",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+    "globals": {
+      "memory": null,
+      "url_0A": "https://www.inkers.ai",
+      "elements_1A": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+    },
+    "memory": [],
+    "graph": {
+      "directed": true,
+      "multigraph": false,
+      "graph": {},
+      "nodes": [
+        {
+          "data": {
+            "index": "ROOT",
+            "description": "initial query",
+            "type": "ROOT",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button"
+              ],
+              "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+              "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+              "last_tooluse_summary": "Not applicable",
+              "solution_summary": "Not ready yet.",
+              "route": "decision"
+            },
+            "from_step": null
+          },
+          "id": "ROOT"
+        },
+        {
+          "data": {
+            "index": "0",
+            "description": "Open the Inkers.ai website in a new tab.",
+            "type": "CODE",
+            "status": "completed",
+            "result": {
+              "url_0A": "https://www.inkers.ai"
+            },
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button"
+              ],
+              "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The website has been opened, but the Demo button hasn't been clicked yet. Further action is needed to achieve the goal.",
+              "local_reasoning": "The previous step opened the website. The next step is to click the 'Demo Button'. The browser state must be saved.",
+              "last_tooluse_summary": "Browser tool successfully opened https://www.inkers.ai",
+              "solution_summary": "The website is open, waiting for the next action: clicking the 'Demo' button.",
+              "route": "decision"
+            },
+            "from_step": "ROOT"
+          },
+          "id": "0"
+        },
+        {
+          "data": {
+            "index": "1",
+            "description": "Get interactive elements to find the 'Demo' button.",
+            "type": "CODE",
+            "status": "completed",
+            "result": {
+              "elements_1A": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+            },
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button"
+              ],
+              "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The attempt to get interactive elements failed because the browser context was closed. The website was opened in the previous step, but the current attempt to interact with it failed. Need to re-open the website and get the interactive elements again.",
+              "local_reasoning": "The 'elements_1A' step resulted in an error, indicating the browser context was closed. This makes it impossible to find the 'Demo' button. The process needs to be restarted.",
+              "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+              "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+              "route": "decision"
+            },
+            "from_step": "1"
+          },
+          "id": "1"
+        },
+        {
+          "data": {
+            "index": "2",
+            "description": "Click the 'Demo' button.",
+            "type": "CODE",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button"
+              ],
+              "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.8",
+              "reasoning": "The tool failed to get interactive elements because the browser context was closed. The process needs to re-open the website and try to get interactive elements again. The 'Click Demo' step was executed despite the failure, which likely did nothing.",
+              "local_reasoning": "The 'elements_1A' step failed, indicating the browser context was closed.  The subsequent step of clicking the demo button could not have worked. A retry is needed to open the website and get the elements.",
+              "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+              "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+              "route": "decision"
+            },
+            "from_step": "0"
+          },
+          "id": "2"
+        },
+        {
+          "data": {
+            "index": "3",
+            "description": "Take session snapshot.",
+            "type": "CODE",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button"
+              ],
+              "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.6",
+              "reasoning": "The attempt to get interactive elements failed due to a closed browser context. The system needs to reopen the website and retrieve the elements again. The previous steps show the website was opened, but the subsequent attempt to get interactive elements resulted in an error. The browser context closing repeatedly indicates an issue with how the browser tool is being used, it requires reopening the url",
+              "local_reasoning": "The last tool use summary indicates that retrieving the webpage elements failed.  The site must be re-opened and elements re-acquired.",
+              "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+              "solution_summary": "Failed to get interactive elements due to a closed browser context. Need to reopen the website and retry.",
+              "route": "decision"
+            },
+            "from_step": "0"
+          },
+          "id": "3"
+        }
+      ],
+      "links": [
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "0"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "1"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "2"
+        },
+        {
+          "type": "normal",
+          "source": "0",
+          "target": "2"
+        },
+        {
+          "type": "normal",
+          "source": "0",
+          "target": "3"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "1"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "2"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "3"
+        }
+      ]
+    }
+  },
+  "session": {
+    "session_id": "47c7e65f-42a4-40d5-9ff2-26cb963467fb",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+    "perception_snapshots": [
+      {
+        "run_id": "47c7e65f-42a4-40d5-9ff2-26cb963467fb-P",
+        "snapshot_type": "user_query",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button"
+        ],
+        "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+        "original_goal_achieved": false,
+        "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+        "last_tooluse_summary": "Not applicable",
+        "solution_summary": "Not ready yet.",
+        "confidence": "0.9",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "47c7e65f-42a4-40d5-9ff2-26cb963467fb-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button"
+        ],
+        "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+        "original_goal_achieved": false,
+        "reasoning": "The website has been opened, but the Demo button hasn't been clicked yet. Further action is needed to achieve the goal.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The previous step opened the website. The next step is to click the 'Demo Button'. The browser state must be saved.",
+        "last_tooluse_summary": "Browser tool successfully opened https://www.inkers.ai",
+        "solution_summary": "The website is open, waiting for the next action: clicking the 'Demo' button.",
+        "confidence": "0.9",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "47c7e65f-42a4-40d5-9ff2-26cb963467fb-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button"
+        ],
+        "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+        "original_goal_achieved": false,
+        "reasoning": "The attempt to get interactive elements failed because the browser context was closed. The website was opened in the previous step, but the current attempt to interact with it failed. Need to re-open the website and get the interactive elements again.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The 'elements_1A' step resulted in an error, indicating the browser context was closed. This makes it impossible to find the 'Demo' button. The process needs to be restarted.",
+        "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+        "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+        "confidence": "0.9",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "47c7e65f-42a4-40d5-9ff2-26cb963467fb-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button"
+        ],
+        "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+        "original_goal_achieved": false,
+        "reasoning": "The tool failed to get interactive elements because the browser context was closed. The process needs to re-open the website and try to get interactive elements again. The 'Click Demo' step was executed despite the failure, which likely did nothing.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The 'elements_1A' step failed, indicating the browser context was closed.  The subsequent step of clicking the demo button could not have worked. A retry is needed to open the website and get the elements.",
+        "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+        "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+        "confidence": "0.8",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "47c7e65f-42a4-40d5-9ff2-26cb963467fb-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button"
+        ],
+        "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+        "original_goal_achieved": false,
+        "reasoning": "The attempt to get interactive elements failed due to a closed browser context. The system needs to reopen the website and retrieve the elements again. The previous steps show the website was opened, but the subsequent attempt to get interactive elements resulted in an error. The browser context closing repeatedly indicates an issue with how the browser tool is being used, it requires reopening the url",
+        "local_goal_achieved": false,
+        "local_reasoning": "The last tool use summary indicates that retrieving the webpage elements failed.  The site must be re-opened and elements re-acquired.",
+        "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+        "solution_summary": "Failed to get interactive elements due to a closed browser context. Need to reopen the website and retry.",
+        "confidence": "0.6",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      }
+    ],
+    "decision_snapshots": [
+      {
+        "run_id": "56a869f2-025f-4602-9439-a3be21abfdc7",
+        "input": {
+          "current_time": "2025-05-27T11:48:32.660330",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button"
+            ],
+            "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+            "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+            "last_tooluse_summary": "Not applicable",
+            "solution_summary": "Not ready yet.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+                "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+                "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open the Inkers.ai website in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get the interactive elements of the page after it loads."
+              },
+              {
+                "id": "2",
+                "description": "Click on the Demo Button using its identified index."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "0",
+          "code_variants": {
+            "CODE_0A": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nreturn {\"url_0A\": url}",
+            "CODE_0B": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nwait(2)\nreturn {\"url_0B\": url}",
+            "CODE_0C": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nreturn {\"url_0C\": url}"
+          }
+        },
+        "next_step_id": "0",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open the Inkers.ai website in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get the interactive elements of the page after it loads."
+            },
+            {
+              "id": "2",
+              "description": "Click on the Demo Button using its identified index."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_0A": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nreturn {\"url_0A\": url}",
+          "CODE_0B": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nwait(2)\nreturn {\"url_0B\": url}",
+          "CODE_0C": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nreturn {\"url_0C\": url}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      },
+      {
+        "run_id": "23353c73-33f3-46ed-a770-4399e9167d88",
+        "input": {
+          "current_time": "2025-05-27T11:48:42.645864",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button"
+            ],
+            "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The website has been opened, but the Demo button hasn't been clicked yet. Further action is needed to achieve the goal.",
+            "local_reasoning": "The previous step opened the website. The next step is to click the 'Demo Button'. The browser state must be saved.",
+            "last_tooluse_summary": "Browser tool successfully opened https://www.inkers.ai",
+            "solution_summary": "The website is open, waiting for the next action: clicking the 'Demo' button.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+                "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open the Inkers.ai website in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "url_0A": "https://www.inkers.ai"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened, but the Demo button hasn't been clicked yet. Further action is needed to achieve the goal.",
+                "local_reasoning": "The previous step opened the website. The next step is to click the 'Demo Button'. The browser state must be saved.",
+                "last_tooluse_summary": "Browser tool successfully opened https://www.inkers.ai",
+                "solution_summary": "The website is open, waiting for the next action: clicking the 'Demo' button.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+                "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open the Inkers.ai website in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "url_0A": "https://www.inkers.ai"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened, but the Demo button hasn't been clicked yet. Further action is needed to achieve the goal.",
+                "local_reasoning": "The previous step opened the website. The next step is to click the 'Demo Button'. The browser state must be saved.",
+                "last_tooluse_summary": "Browser tool successfully opened https://www.inkers.ai",
+                "solution_summary": "The website is open, waiting for the next action: clicking the 'Demo' button.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            },
+            "url_0A": {
+              "type": "str",
+              "preview": "https://www.inkers.ai"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open the Inkers.ai website in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get interactive elements to find the 'Demo' button."
+              },
+              {
+                "id": "2",
+                "description": "Click the 'Demo' button."
+              },
+              {
+                "id": "3",
+                "description": "Take a session snapshot."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "1",
+          "code_variants": {
+            "CODE_1A": "elements = get_interactive_elements('Demo Button', True, True)\nreturn {\"elements_1A\": elements}",
+            "CODE_1B": "elements = get_interactive_elements('Demo', True, True)\nreturn {\"elements_1B\": elements}",
+            "CODE_1C": "page_structure = get_enhanced_page_structure()\nreturn {\"page_structure_1C\": page_structure}"
+          }
+        },
+        "next_step_id": "1",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open the Inkers.ai website in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get interactive elements to find the 'Demo' button."
+            },
+            {
+              "id": "2",
+              "description": "Click the 'Demo' button."
+            },
+            {
+              "id": "3",
+              "description": "Take a session snapshot."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            },
+            {
+              "from": "2",
+              "to": "3",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_1A": "elements = get_interactive_elements('Demo Button', True, True)\nreturn {\"elements_1A\": elements}",
+          "CODE_1B": "elements = get_interactive_elements('Demo', True, True)\nreturn {\"elements_1B\": elements}",
+          "CODE_1C": "page_structure = get_enhanced_page_structure()\nreturn {\"page_structure_1C\": page_structure}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      },
+      {
+        "run_id": "c46a66e9-2abe-47b3-b863-7d7a58d355e5",
+        "input": {
+          "current_time": "2025-05-27T11:48:52.181164",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button"
+            ],
+            "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The attempt to get interactive elements failed because the browser context was closed. The website was opened in the previous step, but the current attempt to interact with it failed. Need to re-open the website and get the interactive elements again.",
+            "local_reasoning": "The 'elements_1A' step resulted in an error, indicating the browser context was closed. This makes it impossible to find the 'Demo' button. The process needs to be restarted.",
+            "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+            "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+                "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open the Inkers.ai website in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "url_0A": "https://www.inkers.ai"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened, but the Demo button hasn't been clicked yet. Further action is needed to achieve the goal.",
+                "local_reasoning": "The previous step opened the website. The next step is to click the 'Demo Button'. The browser state must be saved.",
+                "last_tooluse_summary": "Browser tool successfully opened https://www.inkers.ai",
+                "solution_summary": "The website is open, waiting for the next action: clicking the 'Demo' button.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            },
+            {
+              "index": "1",
+              "description": "Get interactive elements to find the 'Demo' button.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "elements_1A": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The attempt to get interactive elements failed because the browser context was closed. The website was opened in the previous step, but the current attempt to interact with it failed. Need to re-open the website and get the interactive elements again.",
+                "local_reasoning": "The 'elements_1A' step resulted in an error, indicating the browser context was closed. This makes it impossible to find the 'Demo' button. The process needs to be restarted.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "1"
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+                "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open the Inkers.ai website in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "url_0A": "https://www.inkers.ai"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened, but the Demo button hasn't been clicked yet. Further action is needed to achieve the goal.",
+                "local_reasoning": "The previous step opened the website. The next step is to click the 'Demo Button'. The browser state must be saved.",
+                "last_tooluse_summary": "Browser tool successfully opened https://www.inkers.ai",
+                "solution_summary": "The website is open, waiting for the next action: clicking the 'Demo' button.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            },
+            {
+              "index": "1",
+              "description": "Get interactive elements to find the 'Demo' button.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "elements_1A": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The attempt to get interactive elements failed because the browser context was closed. The website was opened in the previous step, but the current attempt to interact with it failed. Need to re-open the website and get the interactive elements again.",
+                "local_reasoning": "The 'elements_1A' step resulted in an error, indicating the browser context was closed. This makes it impossible to find the 'Demo' button. The process needs to be restarted.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "1"
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            },
+            "url_0A": {
+              "type": "str",
+              "preview": "https://www.inkers.ai"
+            },
+            "elements_1A": {
+              "type": "str",
+              "preview": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open the Inkers.ai website in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get interactive elements to find the 'Demo' button."
+              },
+              {
+                "id": "2",
+                "description": "Click the 'Demo' button."
+              },
+              {
+                "id": "3",
+                "description": "Take session snapshot."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "0",
+          "code_variants": {
+            "CODE_0A": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nreturn {\"url_0A\": url}",
+            "CODE_0B": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nreturn {\"url_0B\": url}",
+            "CODE_0C": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nreturn {\"url_0C\": url}"
+          }
+        },
+        "next_step_id": "0",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open the Inkers.ai website in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get interactive elements to find the 'Demo' button."
+            },
+            {
+              "id": "2",
+              "description": "Click the 'Demo' button."
+            },
+            {
+              "id": "3",
+              "description": "Take session snapshot."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            },
+            {
+              "from": "2",
+              "to": "3",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_0A": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nreturn {\"url_0A\": url}",
+          "CODE_0B": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nreturn {\"url_0B\": url}",
+          "CODE_0C": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nreturn {\"url_0C\": url}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      },
+      {
+        "run_id": "8ad5dc7d-dd45-45e4-9af6-699cd8c045cb",
+        "input": {
+          "current_time": "2025-05-27T11:49:01.326611",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button"
+            ],
+            "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.8",
+            "reasoning": "The tool failed to get interactive elements because the browser context was closed. The process needs to re-open the website and try to get interactive elements again. The 'Click Demo' step was executed despite the failure, which likely did nothing.",
+            "local_reasoning": "The 'elements_1A' step failed, indicating the browser context was closed.  The subsequent step of clicking the demo button could not have worked. A retry is needed to open the website and get the elements.",
+            "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+            "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+                "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open the Inkers.ai website in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "url_0A": "https://www.inkers.ai"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened, but the Demo button hasn't been clicked yet. Further action is needed to achieve the goal.",
+                "local_reasoning": "The previous step opened the website. The next step is to click the 'Demo Button'. The browser state must be saved.",
+                "last_tooluse_summary": "Browser tool successfully opened https://www.inkers.ai",
+                "solution_summary": "The website is open, waiting for the next action: clicking the 'Demo' button.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            },
+            {
+              "index": "1",
+              "description": "Get interactive elements to find the 'Demo' button.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "elements_1A": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The attempt to get interactive elements failed because the browser context was closed. The website was opened in the previous step, but the current attempt to interact with it failed. Need to re-open the website and get the interactive elements again.",
+                "local_reasoning": "The 'elements_1A' step resulted in an error, indicating the browser context was closed. This makes it impossible to find the 'Demo' button. The process needs to be restarted.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "1"
+            },
+            {
+              "index": "2",
+              "description": "Click the 'Demo' button.",
+              "type": "CODE",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.8",
+                "reasoning": "The tool failed to get interactive elements because the browser context was closed. The process needs to re-open the website and try to get interactive elements again. The 'Click Demo' step was executed despite the failure, which likely did nothing.",
+                "local_reasoning": "The 'elements_1A' step failed, indicating the browser context was closed.  The subsequent step of clicking the demo button could not have worked. A retry is needed to open the website and get the elements.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "0"
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+                "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open the Inkers.ai website in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "url_0A": "https://www.inkers.ai"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened, but the Demo button hasn't been clicked yet. Further action is needed to achieve the goal.",
+                "local_reasoning": "The previous step opened the website. The next step is to click the 'Demo Button'. The browser state must be saved.",
+                "last_tooluse_summary": "Browser tool successfully opened https://www.inkers.ai",
+                "solution_summary": "The website is open, waiting for the next action: clicking the 'Demo' button.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            },
+            {
+              "index": "1",
+              "description": "Get interactive elements to find the 'Demo' button.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "elements_1A": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The attempt to get interactive elements failed because the browser context was closed. The website was opened in the previous step, but the current attempt to interact with it failed. Need to re-open the website and get the interactive elements again.",
+                "local_reasoning": "The 'elements_1A' step resulted in an error, indicating the browser context was closed. This makes it impossible to find the 'Demo' button. The process needs to be restarted.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "1"
+            },
+            {
+              "index": "2",
+              "description": "Click the 'Demo' button.",
+              "type": "CODE",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.8",
+                "reasoning": "The tool failed to get interactive elements because the browser context was closed. The process needs to re-open the website and try to get interactive elements again. The 'Click Demo' step was executed despite the failure, which likely did nothing.",
+                "local_reasoning": "The 'elements_1A' step failed, indicating the browser context was closed.  The subsequent step of clicking the demo button could not have worked. A retry is needed to open the website and get the elements.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "0"
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            },
+            "url_0A": {
+              "type": "str",
+              "preview": "https://www.inkers.ai"
+            },
+            "elements_1A": {
+              "type": "str",
+              "preview": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open the Inkers.ai website in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get interactive elements to find the 'Demo' button."
+              },
+              {
+                "id": "2",
+                "description": "Click the 'Demo' button."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "0",
+          "code_variants": {
+            "CODE_0A": "url = 'https://www.inkers.ai'\nopen_tab(url)\nreturn {\"url_0A\": url}",
+            "CODE_0B": "url = 'https://www.inkers.ai'\nopen_tab(url)\nwait(2)\nreturn {\"url_0B\": url}",
+            "CODE_0C": "url = 'https://www.inkers.ai'\nopen_tab(url)\nreturn {\"url_0C\": url}"
+          }
+        },
+        "next_step_id": "0",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open the Inkers.ai website in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get interactive elements to find the 'Demo' button."
+            },
+            {
+              "id": "2",
+              "description": "Click the 'Demo' button."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_0A": "url = 'https://www.inkers.ai'\nopen_tab(url)\nreturn {\"url_0A\": url}",
+          "CODE_0B": "url = 'https://www.inkers.ai'\nopen_tab(url)\nwait(2)\nreturn {\"url_0B\": url}",
+          "CODE_0C": "url = 'https://www.inkers.ai'\nopen_tab(url)\nreturn {\"url_0C\": url}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      },
+      {
+        "run_id": "ee2b4062-b85b-4efd-84fb-3c089420d18b",
+        "input": {
+          "current_time": "2025-05-27T11:49:11.347207",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button"
+            ],
+            "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.6",
+            "reasoning": "The attempt to get interactive elements failed due to a closed browser context. The system needs to reopen the website and retrieve the elements again. The previous steps show the website was opened, but the subsequent attempt to get interactive elements resulted in an error. The browser context closing repeatedly indicates an issue with how the browser tool is being used, it requires reopening the url",
+            "local_reasoning": "The last tool use summary indicates that retrieving the webpage elements failed.  The site must be re-opened and elements re-acquired.",
+            "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+            "solution_summary": "Failed to get interactive elements due to a closed browser context. Need to reopen the website and retry.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+                "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open the Inkers.ai website in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "url_0A": "https://www.inkers.ai"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened, but the Demo button hasn't been clicked yet. Further action is needed to achieve the goal.",
+                "local_reasoning": "The previous step opened the website. The next step is to click the 'Demo Button'. The browser state must be saved.",
+                "last_tooluse_summary": "Browser tool successfully opened https://www.inkers.ai",
+                "solution_summary": "The website is open, waiting for the next action: clicking the 'Demo' button.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            },
+            {
+              "index": "1",
+              "description": "Get interactive elements to find the 'Demo' button.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "elements_1A": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The attempt to get interactive elements failed because the browser context was closed. The website was opened in the previous step, but the current attempt to interact with it failed. Need to re-open the website and get the interactive elements again.",
+                "local_reasoning": "The 'elements_1A' step resulted in an error, indicating the browser context was closed. This makes it impossible to find the 'Demo' button. The process needs to be restarted.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "1"
+            },
+            {
+              "index": "2",
+              "description": "Click the 'Demo' button.",
+              "type": "CODE",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.8",
+                "reasoning": "The tool failed to get interactive elements because the browser context was closed. The process needs to re-open the website and try to get interactive elements again. The 'Click Demo' step was executed despite the failure, which likely did nothing.",
+                "local_reasoning": "The 'elements_1A' step failed, indicating the browser context was closed.  The subsequent step of clicking the demo button could not have worked. A retry is needed to open the website and get the elements.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "0"
+            },
+            {
+              "index": "3",
+              "description": "Take session snapshot.",
+              "type": "CODE",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.6",
+                "reasoning": "The attempt to get interactive elements failed due to a closed browser context. The system needs to reopen the website and retrieve the elements again. The previous steps show the website was opened, but the subsequent attempt to get interactive elements resulted in an error. The browser context closing repeatedly indicates an issue with how the browser tool is being used, it requires reopening the url",
+                "local_reasoning": "The last tool use summary indicates that retrieving the webpage elements failed.  The site must be re-opened and elements re-acquired.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements due to a closed browser context. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "0"
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the Demo button, storing browser state with element IDs for future interactions.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires opening a website and interacting with it. This requires planning and tool use to open the website and click the button. Storing the browser state with element IDs is also crucial for subsequent steps.",
+                "local_reasoning": "The initial goal is to open the website and click on the 'Demo Button', but these steps need to be planned using available tools. The browser state must also be stored for future steps.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open the Inkers.ai website in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "url_0A": "https://www.inkers.ai"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened, but the Demo button hasn't been clicked yet. Further action is needed to achieve the goal.",
+                "local_reasoning": "The previous step opened the website. The next step is to click the 'Demo Button'. The browser state must be saved.",
+                "last_tooluse_summary": "Browser tool successfully opened https://www.inkers.ai",
+                "solution_summary": "The website is open, waiting for the next action: clicking the 'Demo' button.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            },
+            {
+              "index": "1",
+              "description": "Get interactive elements to find the 'Demo' button.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "elements_1A": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The attempt to get interactive elements failed because the browser context was closed. The website was opened in the previous step, but the current attempt to interact with it failed. Need to re-open the website and get the interactive elements again.",
+                "local_reasoning": "The 'elements_1A' step resulted in an error, indicating the browser context was closed. This makes it impossible to find the 'Demo' button. The process needs to be restarted.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "1"
+            },
+            {
+              "index": "2",
+              "description": "Click the 'Demo' button.",
+              "type": "CODE",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.8",
+                "reasoning": "The tool failed to get interactive elements because the browser context was closed. The process needs to re-open the website and try to get interactive elements again. The 'Click Demo' step was executed despite the failure, which likely did nothing.",
+                "local_reasoning": "The 'elements_1A' step failed, indicating the browser context was closed.  The subsequent step of clicking the demo button could not have worked. A retry is needed to open the website and get the elements.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "0"
+            },
+            {
+              "index": "3",
+              "description": "Take session snapshot.",
+              "type": "CODE",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Click the Demo button on Inkers.ai and store browser state for future interaction.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.6",
+                "reasoning": "The attempt to get interactive elements failed due to a closed browser context. The system needs to reopen the website and retrieve the elements again. The previous steps show the website was opened, but the subsequent attempt to get interactive elements resulted in an error. The browser context closing repeatedly indicates an issue with how the browser tool is being used, it requires reopening the url",
+                "local_reasoning": "The last tool use summary indicates that retrieving the webpage elements failed.  The site must be re-opened and elements re-acquired.",
+                "last_tooluse_summary": "Browser tool failed to get interactive elements due to a closed browser context.",
+                "solution_summary": "Failed to get interactive elements due to a closed browser context. Need to reopen the website and retry.",
+                "route": "decision"
+              },
+              "from_step": "0"
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            },
+            "url_0A": {
+              "type": "str",
+              "preview": "https://www.inkers.ai"
+            },
+            "elements_1A": {
+              "type": "str",
+              "preview": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open the Inkers.ai website in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get interactive elements to find the 'Demo' button."
+              },
+              {
+                "id": "2",
+                "description": "Click the 'Demo' button."
+              },
+              {
+                "id": "3",
+                "description": "Take session snapshot."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "0",
+          "code_variants": {
+            "CODE_0A": "url = 'https://www.inkers.ai'\nopen_tab(url)\nreturn {\"url_0A\": url}",
+            "CODE_0B": "url = 'https://www.inkers.ai'\ngo_to_url(url)\nreturn {\"url_0B\": url}",
+            "CODE_0C": "url = 'https://www.inkers.ai'\nopen_tab(url)\nwait(5)\nreturn {\"url_0C\": url}"
+          }
+        },
+        "next_step_id": "0",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open the Inkers.ai website in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get interactive elements to find the 'Demo' button."
+            },
+            {
+              "id": "2",
+              "description": "Click the 'Demo' button."
+            },
+            {
+              "id": "3",
+              "description": "Take session snapshot."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            },
+            {
+              "from": "2",
+              "to": "3",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_0A": "url = 'https://www.inkers.ai'\nopen_tab(url)\nreturn {\"url_0A\": url}",
+          "CODE_0B": "url = 'https://www.inkers.ai'\ngo_to_url(url)\nreturn {\"url_0B\": url}",
+          "CODE_0C": "url = 'https://www.inkers.ai'\nopen_tab(url)\nwait(5)\nreturn {\"url_0C\": url}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      }
+    ],
+    "execution_snapshots": [
+      {
+        "run_id": "ab57a736-2012-45f7-b4f4-9231877eeb04",
+        "step_id": "0",
+        "variant_used": "CODE_0A",
+        "code": "url = \"https://www.inkers.ai\"\nopen_tab(url)\nreturn {\"url_0A\": url}",
+        "status": "success",
+        "result": {
+          "url_0A": "https://www.inkers.ai"
+        },
+        "error": null,
+        "execution_time": "2025-05-27 17:18:38",
+        "total_time": "0.28",
+        "return_to": ""
+      },
+      {
+        "run_id": "8f5b4fe6-3a76-4ead-bd10-7eb500a39c78",
+        "step_id": "1",
+        "variant_used": "CODE_1A",
+        "code": "elements = get_interactive_elements('Demo Button', True, True)\nreturn {\"elements_1A\": elements}",
+        "status": "success",
+        "result": {
+          "elements_1A": "Error getting interactive elements: BrowserContext.new_page: Target page, context or browser has been closed"
+        },
+        "error": null,
+        "execution_time": "2025-05-27 17:18:47",
+        "total_time": "0.305",
+        "return_to": ""
+      }
+    ],
+    "summarizer_snapshots": [],
+    "final_summary": null,
+    "status": "failed",
+    "completed_at": "2025-05-27T11:49:16.207490"
+  },
+  "status": "failed",
+  "final_step_id": "3",
+  "reason": "Agent halted after max iterations or step failures.",
+  "timestamp": "2025-05-27T11:49:16.210532",
+  "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step."
+}

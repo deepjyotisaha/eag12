@@ -1,0 +1,834 @@
+{
+  "context": {
+    "session_id": "86b23849-3742-402c-9b99-b1f89766929b",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step",
+    "globals": {
+      "memory": [
+        {
+          "score": 198.5200845665962,
+          "session_id": "2282df9a-0aa2-4c1c-80f6-8934e778dcbd",
+          "original_query": "Query 1: Open https://www.inkers.ai/contact in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "summary_output": "The **Demo** button on the [Inkers.ai Contact page](https://www.inkers.ai/contact) has been clicked. The updated browser state (page structure) after clicking the button is available in `new_page_structure_1A`.\n\nThe **Demo button's ID is 8**.",
+          "timestamp": "2025-05-24T09:24:07Z"
+        }
+      ],
+      "interactive_elements_1A": "Error getting interactive elements: BrowserType.launch_persistent_context: Executable doesn't exist at C:\\Users\\dsaha\\AppData\\Local\\ms-playwright\\chromium-1169\\chrome-win\\chrome.exe\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d"
+    },
+    "memory": [
+      {
+        "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step",
+        "result_requirement": "Final summary",
+        "summarizer_summary": "I was unable to retrieve the interactive elements from the [Inkers.ai](https://www.inkers.ai) page because the Playwright environment is not properly configured. To resolve this, please run `playwright install`. This will install the necessary browser executables for the agent to interact with web pages.",
+        "confidence": 0.95,
+        "original_goal_achieved": true,
+        "route": "summarize"
+      }
+    ],
+    "graph": {
+      "directed": true,
+      "multigraph": false,
+      "graph": {},
+      "nodes": [
+        {
+          "data": {
+            "index": "ROOT",
+            "description": "initial query",
+            "type": "ROOT",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "inkers.ai",
+                "Demo Button",
+                "browser state",
+                "button ids"
+              ],
+              "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The query requires opening a URL and interacting with a button. This requires tool use. The memory excerpt shows a similar interaction, but for the contact page. We need to adapt the plan for the main page.",
+              "local_reasoning": "The query is not solvable without using tools to interact with a webpage and retrieve button IDs.  Although a similar query exists in memory, it is for a different URL, so a new plan is required.",
+              "last_tooluse_summary": "Not applicable",
+              "solution_summary": "Not applicable",
+              "route": "decision"
+            },
+            "from_step": null
+          },
+          "id": "ROOT"
+        },
+        {
+          "data": {
+            "index": "0",
+            "description": "Open https://www.inkers.ai in a new tab.",
+            "type": "CODE",
+            "status": "completed",
+            "result": {},
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "inkers.ai",
+                "Demo Button",
+                "browser state",
+                "button ids"
+              ],
+              "result_requirement": "Click the Demo button on inkers.ai and save the browser state.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": true,
+              "confidence": "0.95",
+              "reasoning": "The raw input shows that a previous attempt to click the demo button on a similar, but slightly different, URL (inkers.ai/contact) was successful. We need to reuse that information. The memory contains the Demo button ID.",
+              "local_reasoning": "The previous step opened inkers.ai. Now, using the information from memory, we can attempt to click the Demo button on the main page, using the ID retrieved from memory, since the site's structure is likely similar.",
+              "last_tooluse_summary": "Memory recall successful. Browser open successful.",
+              "solution_summary": "Not ready yet.",
+              "route": "decision"
+            },
+            "from_step": "ROOT"
+          },
+          "id": "0"
+        },
+        {
+          "data": {
+            "index": "1",
+            "description": "Get interactive elements of the page.",
+            "type": "CODE",
+            "status": "completed",
+            "result": {
+              "interactive_elements_1A": "Error getting interactive elements: BrowserType.launch_persistent_context: Executable doesn't exist at C:\\Users\\dsaha\\AppData\\Local\\ms-playwright\\chromium-1169\\chrome-win\\chrome.exe\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d"
+            },
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "inkers.ai",
+                "Demo Button",
+                "browser state",
+                "button ids"
+              ],
+              "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The tool failed to get interactive elements due to a missing browser executable. Further attempts to interact with the page will fail until the environment is properly configured. The error message indicates that Playwright needs to install browsers. Since this cannot be resolved with further tool use, we should summarize the error and inform the user.",
+              "local_reasoning": "The error message `Executable doesn't exist` indicates a configuration issue. The agent cannot resolve this issue itself. We must inform the user that the environment is not properly configured.",
+              "last_tooluse_summary": "get interactive elements failed",
+              "solution_summary": "The tool failed to get interactive elements due to a missing browser executable. Further attempts to interact with the page will fail until the environment is properly configured.",
+              "route": "summarize",
+              "instruction_to_summarize": "Inform the user that the agent was unable to get interactive elements from the page because the Playwright environment is not properly configured. Tell the user to run `playwright install` to resolve the issue."
+            },
+            "from_step": "1"
+          },
+          "id": "1"
+        },
+        {
+          "data": {
+            "index": "2",
+            "description": "Click on the Demo Button.",
+            "type": "CODE",
+            "status": "Skipped",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": null,
+            "from_step": "1"
+          },
+          "id": "2"
+        }
+      ],
+      "links": [
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "0"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "1"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "2"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "1"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "2"
+        }
+      ]
+    }
+  },
+  "session": {
+    "session_id": "86b23849-3742-402c-9b99-b1f89766929b",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step",
+    "perception_snapshots": [
+      {
+        "run_id": "86b23849-3742-402c-9b99-b1f89766929b-P",
+        "snapshot_type": "user_query",
+        "entities": [
+          "inkers.ai",
+          "Demo Button",
+          "browser state",
+          "button ids"
+        ],
+        "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+        "original_goal_achieved": false,
+        "reasoning": "The query requires opening a URL and interacting with a button. This requires tool use. The memory excerpt shows a similar interaction, but for the contact page. We need to adapt the plan for the main page.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The query is not solvable without using tools to interact with a webpage and retrieve button IDs.  Although a similar query exists in memory, it is for a different URL, so a new plan is required.",
+        "last_tooluse_summary": "Not applicable",
+        "solution_summary": "Not applicable",
+        "confidence": "0.9",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "86b23849-3742-402c-9b99-b1f89766929b-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "inkers.ai",
+          "Demo Button",
+          "browser state",
+          "button ids"
+        ],
+        "result_requirement": "Click the Demo button on inkers.ai and save the browser state.",
+        "original_goal_achieved": false,
+        "reasoning": "The raw input shows that a previous attempt to click the demo button on a similar, but slightly different, URL (inkers.ai/contact) was successful. We need to reuse that information. The memory contains the Demo button ID.",
+        "local_goal_achieved": true,
+        "local_reasoning": "The previous step opened inkers.ai. Now, using the information from memory, we can attempt to click the Demo button on the main page, using the ID retrieved from memory, since the site's structure is likely similar.",
+        "last_tooluse_summary": "Memory recall successful. Browser open successful.",
+        "solution_summary": "Not ready yet.",
+        "confidence": "0.95",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "86b23849-3742-402c-9b99-b1f89766929b-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "inkers.ai",
+          "Demo Button",
+          "browser state",
+          "button ids"
+        ],
+        "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+        "original_goal_achieved": false,
+        "reasoning": "The tool failed to get interactive elements due to a missing browser executable. Further attempts to interact with the page will fail until the environment is properly configured. The error message indicates that Playwright needs to install browsers. Since this cannot be resolved with further tool use, we should summarize the error and inform the user.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The error message `Executable doesn't exist` indicates a configuration issue. The agent cannot resolve this issue itself. We must inform the user that the environment is not properly configured.",
+        "last_tooluse_summary": "get interactive elements failed",
+        "solution_summary": "The tool failed to get interactive elements due to a missing browser executable. Further attempts to interact with the page will fail until the environment is properly configured.",
+        "confidence": "0.9",
+        "route": "summarize",
+        "timestamp": "...",
+        "return_to": ""
+      }
+    ],
+    "decision_snapshots": [
+      {
+        "run_id": "450fab8d-5c87-48cd-b2b7-223bc5c9ec06",
+        "input": {
+          "current_time": "2025-05-26T19:08:19.164936",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step",
+          "perception": {
+            "entities": [
+              "inkers.ai",
+              "Demo Button",
+              "browser state",
+              "button ids"
+            ],
+            "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The query requires opening a URL and interacting with a button. This requires tool use. The memory excerpt shows a similar interaction, but for the contact page. We need to adapt the plan for the main page.",
+            "local_reasoning": "The query is not solvable without using tools to interact with a webpage and retrieve button IDs.  Although a similar query exists in memory, it is for a different URL, so a new plan is required.",
+            "last_tooluse_summary": "Not applicable",
+            "solution_summary": "Not applicable",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button ids"
+                ],
+                "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The query requires opening a URL and interacting with a button. This requires tool use. The memory excerpt shows a similar interaction, but for the contact page. We need to adapt the plan for the main page.",
+                "local_reasoning": "The query is not solvable without using tools to interact with a webpage and retrieve button IDs.  Although a similar query exists in memory, it is for a different URL, so a new plan is required.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not applicable",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button ids"
+                ],
+                "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The query requires opening a URL and interacting with a button. This requires tool use. The memory excerpt shows a similar interaction, but for the contact page. We need to adapt the plan for the main page.",
+                "local_reasoning": "The query is not solvable without using tools to interact with a webpage and retrieve button IDs.  Although a similar query exists in memory, it is for a different URL, so a new plan is required.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not applicable",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "list",
+              "preview": "[{'score': 198.5200845665962, 'session_id': '2282df9a-0aa2-4c1c-80f6-8934e778dcbd', 'original_query': \"Query 1: Open https://www.inkers.ai/contact in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.\", 'summary_output': \"The **Demo** button on the [Inkers.ai Contact page](https://www.inkers.ai/con\u2026"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get interactive elements after page load."
+              },
+              {
+                "id": "2",
+                "description": "Click on the Demo Button."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "0",
+          "code_variants": {
+            "CODE_0A": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+            "CODE_0B": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+            "CODE_0C": "open_tab(\"https://www.inkers.ai\")\nreturn {}"
+          }
+        },
+        "next_step_id": "0",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get interactive elements after page load."
+            },
+            {
+              "id": "2",
+              "description": "Click on the Demo Button."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_0A": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+          "CODE_0B": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+          "CODE_0C": "open_tab(\"https://www.inkers.ai\")\nreturn {}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      },
+      {
+        "run_id": "1fe57006-b82b-4aa4-926e-6e1a121bc1ab",
+        "input": {
+          "current_time": "2025-05-26T19:08:39.411624",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step",
+          "perception": {
+            "entities": [
+              "inkers.ai",
+              "Demo Button",
+              "browser state",
+              "button ids"
+            ],
+            "result_requirement": "Click the Demo button on inkers.ai and save the browser state.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": true,
+            "confidence": "0.95",
+            "reasoning": "The raw input shows that a previous attempt to click the demo button on a similar, but slightly different, URL (inkers.ai/contact) was successful. We need to reuse that information. The memory contains the Demo button ID.",
+            "local_reasoning": "The previous step opened inkers.ai. Now, using the information from memory, we can attempt to click the Demo button on the main page, using the ID retrieved from memory, since the site's structure is likely similar.",
+            "last_tooluse_summary": "Memory recall successful. Browser open successful.",
+            "solution_summary": "Not ready yet.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button ids"
+                ],
+                "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The query requires opening a URL and interacting with a button. This requires tool use. The memory excerpt shows a similar interaction, but for the contact page. We need to adapt the plan for the main page.",
+                "local_reasoning": "The query is not solvable without using tools to interact with a webpage and retrieve button IDs.  Although a similar query exists in memory, it is for a different URL, so a new plan is required.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not applicable",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open https://www.inkers.ai in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {},
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button ids"
+                ],
+                "result_requirement": "Click the Demo button on inkers.ai and save the browser state.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": true,
+                "confidence": "0.95",
+                "reasoning": "The raw input shows that a previous attempt to click the demo button on a similar, but slightly different, URL (inkers.ai/contact) was successful. We need to reuse that information. The memory contains the Demo button ID.",
+                "local_reasoning": "The previous step opened inkers.ai. Now, using the information from memory, we can attempt to click the Demo button on the main page, using the ID retrieved from memory, since the site's structure is likely similar.",
+                "last_tooluse_summary": "Memory recall successful. Browser open successful.",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button ids"
+                ],
+                "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The query requires opening a URL and interacting with a button. This requires tool use. The memory excerpt shows a similar interaction, but for the contact page. We need to adapt the plan for the main page.",
+                "local_reasoning": "The query is not solvable without using tools to interact with a webpage and retrieve button IDs.  Although a similar query exists in memory, it is for a different URL, so a new plan is required.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not applicable",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "list",
+              "preview": "[{'score': 198.5200845665962, 'session_id': '2282df9a-0aa2-4c1c-80f6-8934e778dcbd', 'original_query': \"Query 1: Open https://www.inkers.ai/contact in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.\", 'summary_output': \"The **Demo** button on the [Inkers.ai Contact page](https://www.inkers.ai/con\u2026"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get interactive elements of the page."
+              },
+              {
+                "id": "2",
+                "description": "Click on the Demo Button."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "1",
+          "code_variants": {
+            "CODE_1A": "interactive_elements_1A = get_interactive_elements('Demo Button', True, True)\nreturn {\"interactive_elements_1A\": interactive_elements_1A}",
+            "CODE_1B": "page_structure_1B = get_enhanced_page_structure()\nreturn {\"page_structure_1B\": page_structure_1B}",
+            "CODE_1C": "interactive_elements_1C = get_interactive_elements('', True, True)\nreturn {\"interactive_elements_1C\": interactive_elements_1C}"
+          }
+        },
+        "next_step_id": "1",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get interactive elements of the page."
+            },
+            {
+              "id": "2",
+              "description": "Click on the Demo Button."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_1A": "interactive_elements_1A = get_interactive_elements('Demo Button', True, True)\nreturn {\"interactive_elements_1A\": interactive_elements_1A}",
+          "CODE_1B": "page_structure_1B = get_enhanced_page_structure()\nreturn {\"page_structure_1B\": page_structure_1B}",
+          "CODE_1C": "interactive_elements_1C = get_interactive_elements('', True, True)\nreturn {\"interactive_elements_1C\": interactive_elements_1C}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      }
+    ],
+    "execution_snapshots": [
+      {
+        "run_id": "89308969-528c-4bfb-b667-6c620feb0d42",
+        "step_id": "0",
+        "variant_used": "CODE_0A",
+        "code": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+        "status": "success",
+        "result": {},
+        "error": null,
+        "execution_time": "2025-05-27 00:38:24",
+        "total_time": "9.595",
+        "return_to": ""
+      },
+      {
+        "run_id": "48d7ef20-c39a-4ae3-a42a-e1e7b634081c",
+        "step_id": "1",
+        "variant_used": "CODE_1A",
+        "code": "interactive_elements_1A = get_interactive_elements('Demo Button', True, True)\nreturn {\"interactive_elements_1A\": interactive_elements_1A}",
+        "status": "success",
+        "result": {
+          "interactive_elements_1A": "Error getting interactive elements: BrowserType.launch_persistent_context: Executable doesn't exist at C:\\Users\\dsaha\\AppData\\Local\\ms-playwright\\chromium-1169\\chrome-win\\chrome.exe\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d"
+        },
+        "error": null,
+        "execution_time": "2025-05-27 00:38:45",
+        "total_time": "8.428",
+        "return_to": ""
+      }
+    ],
+    "summarizer_snapshots": [
+      {
+        "run_id": "85d8c72a-f067-48dd-a468-dd4f0704a5dd",
+        "input": {
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step",
+          "globals_schema": {
+            "memory": [
+              {
+                "score": 198.5200845665962,
+                "session_id": "2282df9a-0aa2-4c1c-80f6-8934e778dcbd",
+                "original_query": "Query 1: Open https://www.inkers.ai/contact in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+                "summary_output": "The **Demo** button on the [Inkers.ai Contact page](https://www.inkers.ai/contact) has been clicked. The updated browser state (page structure) after clicking the button is available in `new_page_structure_1A`.\n\nThe **Demo button's ID is 8**.",
+                "timestamp": "2025-05-24T09:24:07Z"
+              }
+            ],
+            "interactive_elements_1A": "Error getting interactive elements: BrowserType.launch_persistent_context: Executable doesn't exist at C:\\Users\\dsaha\\AppData\\Local\\ms-playwright\\chromium-1169\\chrome-win\\chrome.exe\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d"
+          },
+          "plan_graph": {
+            "directed": true,
+            "multigraph": false,
+            "graph": {},
+            "nodes": [
+              {
+                "data": {
+                  "index": "ROOT",
+                  "description": "initial query",
+                  "type": "ROOT",
+                  "status": "completed",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "inkers.ai",
+                      "Demo Button",
+                      "browser state",
+                      "button ids"
+                    ],
+                    "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.9",
+                    "reasoning": "The query requires opening a URL and interacting with a button. This requires tool use. The memory excerpt shows a similar interaction, but for the contact page. We need to adapt the plan for the main page.",
+                    "local_reasoning": "The query is not solvable without using tools to interact with a webpage and retrieve button IDs.  Although a similar query exists in memory, it is for a different URL, so a new plan is required.",
+                    "last_tooluse_summary": "Not applicable",
+                    "solution_summary": "Not applicable",
+                    "route": "decision"
+                  },
+                  "from_step": null
+                },
+                "id": "ROOT"
+              },
+              {
+                "data": {
+                  "index": "0",
+                  "description": "Open https://www.inkers.ai in a new tab.",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": {},
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "inkers.ai",
+                      "Demo Button",
+                      "browser state",
+                      "button ids"
+                    ],
+                    "result_requirement": "Click the Demo button on inkers.ai and save the browser state.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": true,
+                    "confidence": "0.95",
+                    "reasoning": "The raw input shows that a previous attempt to click the demo button on a similar, but slightly different, URL (inkers.ai/contact) was successful. We need to reuse that information. The memory contains the Demo button ID.",
+                    "local_reasoning": "The previous step opened inkers.ai. Now, using the information from memory, we can attempt to click the Demo button on the main page, using the ID retrieved from memory, since the site's structure is likely similar.",
+                    "last_tooluse_summary": "Memory recall successful. Browser open successful.",
+                    "solution_summary": "Not ready yet.",
+                    "route": "decision"
+                  },
+                  "from_step": "ROOT"
+                },
+                "id": "0"
+              },
+              {
+                "data": {
+                  "index": "1",
+                  "description": "Get interactive elements of the page.",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": {
+                    "interactive_elements_1A": "Error getting interactive elements: BrowserType.launch_persistent_context: Executable doesn't exist at C:\\Users\\dsaha\\AppData\\Local\\ms-playwright\\chromium-1169\\chrome-win\\chrome.exe\n\u2554\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2557\n\u2551 Looks like Playwright was just installed or updated.       \u2551\n\u2551 Please run the following command to download new browsers: \u2551\n\u2551                                                            \u2551\n\u2551     playwright install                                     \u2551\n\u2551                                                            \u2551\n\u2551 <3 Playwright Team                                         \u2551\n\u255a\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u255d"
+                  },
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "inkers.ai",
+                      "Demo Button",
+                      "browser state",
+                      "button ids"
+                    ],
+                    "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.9",
+                    "reasoning": "The tool failed to get interactive elements due to a missing browser executable. Further attempts to interact with the page will fail until the environment is properly configured. The error message indicates that Playwright needs to install browsers. Since this cannot be resolved with further tool use, we should summarize the error and inform the user.",
+                    "local_reasoning": "The error message `Executable doesn't exist` indicates a configuration issue. The agent cannot resolve this issue itself. We must inform the user that the environment is not properly configured.",
+                    "last_tooluse_summary": "get interactive elements failed",
+                    "solution_summary": "The tool failed to get interactive elements due to a missing browser executable. Further attempts to interact with the page will fail until the environment is properly configured.",
+                    "route": "summarize",
+                    "instruction_to_summarize": "Inform the user that the agent was unable to get interactive elements from the page because the Playwright environment is not properly configured. Tell the user to run `playwright install` to resolve the issue."
+                  },
+                  "from_step": "1"
+                },
+                "id": "1"
+              },
+              {
+                "data": {
+                  "index": "2",
+                  "description": "Click on the Demo Button.",
+                  "type": "CODE",
+                  "status": "Skipped",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": null,
+                  "from_step": "1"
+                },
+                "id": "2"
+              }
+            ],
+            "links": [
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "0"
+              },
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "1"
+              },
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "2"
+              },
+              {
+                "type": "normal",
+                "source": "1",
+                "target": "1"
+              },
+              {
+                "type": "normal",
+                "source": "1",
+                "target": "2"
+              }
+            ]
+          },
+          "perception": {
+            "entities": [
+              "inkers.ai",
+              "Demo Button",
+              "browser state",
+              "button ids"
+            ],
+            "result_requirement": "Open inkers.ai in a new tab and click the Demo Button, return the browser state with button IDs",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The tool failed to get interactive elements due to a missing browser executable. Further attempts to interact with the page will fail until the environment is properly configured. The error message indicates that Playwright needs to install browsers. Since this cannot be resolved with further tool use, we should summarize the error and inform the user.",
+            "local_reasoning": "The error message `Executable doesn't exist` indicates a configuration issue. The agent cannot resolve this issue itself. We must inform the user that the environment is not properly configured.",
+            "last_tooluse_summary": "get interactive elements failed",
+            "solution_summary": "The tool failed to get interactive elements due to a missing browser executable. Further attempts to interact with the page will fail until the environment is properly configured.",
+            "route": "summarize",
+            "instruction_to_summarize": "Inform the user that the agent was unable to get interactive elements from the page because the Playwright environment is not properly configured. Tell the user to run `playwright install` to resolve the issue."
+          }
+        },
+        "summary_output": "I was unable to retrieve the interactive elements from the [Inkers.ai](https://www.inkers.ai) page because the Playwright environment is not properly configured. To resolve this, please run `playwright install`. This will install the necessary browser executables for the agent to interact with web pages.",
+        "success": true,
+        "error": null,
+        "timestamp": "2025-05-26T19:07:14Z",
+        "return_to": ""
+      }
+    ],
+    "final_summary": "I was unable to retrieve the interactive elements from the [Inkers.ai](https://www.inkers.ai) page because the Playwright environment is not properly configured. To resolve this, please run `playwright install`. This will install the necessary browser executables for the agent to interact with web pages.",
+    "status": "success",
+    "completed_at": "2025-05-26T19:09:03.719284"
+  },
+  "status": "success",
+  "final_step_id": "2",
+  "reason": "Summarized successfully",
+  "timestamp": "2025-05-26T19:09:03.723250",
+  "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step",
+  "final_summary": "I was unable to retrieve the interactive elements from the [Inkers.ai](https://www.inkers.ai) page because the Playwright environment is not properly configured. To resolve this, please run `playwright install`. This will install the necessary browser executables for the agent to interact with web pages."
+}

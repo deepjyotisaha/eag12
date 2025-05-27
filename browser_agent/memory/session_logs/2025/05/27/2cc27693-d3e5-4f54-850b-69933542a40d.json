@@ -1,0 +1,921 @@
+{
+  "context": {
+    "session_id": "2cc27693-d3e5-4f54-850b-69933542a40d",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step. You cannot fetch results from previous sessions and conclude. You have to do this fresh.",
+    "globals": {
+      "memory": [
+        {
+          "score": 200.0,
+          "session_id": "be2844fe-f6e0-4bb6-8b8a-2a71e0a58325",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "summary_output": "The [Inkers.ai](https://www.inkers.ai) website has been opened, and the **Demo** button was clicked. The current browser state, including all element IDs, is now available for further steps. The decision module will receive the browser state with element IDs upon calling any tool, so these IDs need to be saved for reuse in the next steps.",
+          "timestamp": "2025-05-27T11:11:06Z"
+        },
+        {
+          "score": 200.0,
+          "session_id": "64b8571e-b550-44b6-9883-6e8926e3f637",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "summary_output": "The [Inkers.ai](https://www.inkers.ai) website has been opened, and the **Demo** button (navigation link with ID 8) was clicked. The current browser state, including all element IDs, is now available for further steps. This allows the agent to interact with web elements on the page.",
+          "timestamp": "2025-05-27T11:09:10Z"
+        },
+        {
+          "score": 200.0,
+          "session_id": "60c0bfc6-6a94-4de1-ba92-6cf96506ac30",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step",
+          "summary_output": "The [Inkers.ai](https://www.inkers.ai) website was opened, and the **Demo** button (navigation link with id 8) was clicked successfully. The current browser state, including all element IDs, is now available for further steps.",
+          "timestamp": "2025-05-26T19:13:25Z"
+        }
+      ]
+    },
+    "memory": [
+      {
+        "query": "Click on the Demo Button and get the browser state.",
+        "result_requirement": "Tool failed",
+        "solution_summary": "KeyError: 0"
+      },
+      {
+        "query": "Click on the Demo Button and get the browser state.",
+        "result_requirement": "Tool failed",
+        "solution_summary": "KeyError: 0"
+      },
+      {
+        "query": "Click on the Demo Button and get the browser state.",
+        "result_requirement": "Tool failed",
+        "solution_summary": "KeyError: 0"
+      },
+      {
+        "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step. You cannot fetch results from previous sessions and conclude. You have to do this fresh.",
+        "result_requirement": "Final summary",
+        "summarizer_summary": "The [Inkers.ai](https://www.inkers.ai) website was opened successfully. However, the attempt to click the **Demo** button failed due to a `KeyError`. As a result, the browser state and element IDs could not be retrieved, and the task could not be fully completed.",
+        "confidence": 0.95,
+        "original_goal_achieved": true,
+        "route": "summarize"
+      }
+    ],
+    "graph": {
+      "directed": true,
+      "multigraph": false,
+      "graph": {},
+      "nodes": [
+        {
+          "data": {
+            "index": "ROOT",
+            "description": "initial query",
+            "type": "ROOT",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "Inkers.ai",
+                "Demo Button",
+                "browser state",
+                "element IDs"
+              ],
+              "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The task requires opening a URL and clicking a button, which necessitates tool use and tracking the browser state.  The presence of memory excerpts suggests this task has been attempted before, but the instruction to execute it 'fresh' indicates past results should be ignored.  Since no steps have yet been performed in this current run to fulfill the fresh start requirement, the route is 'decision'.",
+              "local_reasoning": "The query is a directive to perform actions in a specific order (open URL, click button). This cannot be satisfied without using browser tools.",
+              "last_tooluse_summary": "Not applicable",
+              "solution_summary": "Not ready yet.",
+              "route": "decision"
+            },
+            "from_step": null
+          },
+          "id": "ROOT"
+        },
+        {
+          "data": {
+            "index": "0",
+            "description": "Open https://www.inkers.ai in a new tab.",
+            "type": "CODE",
+            "status": "completed",
+            "result": {},
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "Inkers.ai",
+                "Demo Button",
+                "browser state",
+                "element IDs"
+              ],
+              "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": true,
+              "confidence": "0.9",
+              "reasoning": "The first step of opening the website was completed. Next step is to click on the Demo button and return browser state.",
+              "local_reasoning": "Opening the URL was successful as confirmed by the tool. The next immediate step is to click the 'Demo' button and retrieve the browser state.",
+              "last_tooluse_summary": "Browser tool opened https://www.inkers.ai in a new tab.",
+              "solution_summary": "Opened Inkers.ai. Need to click Demo Button.",
+              "route": "decision"
+            },
+            "from_step": "ROOT"
+          },
+          "id": "0"
+        },
+        {
+          "data": {
+            "index": "1",
+            "description": "Click on the Demo Button and get the browser state.",
+            "type": "CODE",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": "KeyError: 0",
+            "perception": {
+              "entities": [
+                "Inkers.ai",
+                "Demo Button",
+                "browser state",
+                "element IDs"
+              ],
+              "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The first step (opening the website) was successful, but the second step (clicking the Demo button) failed repeatedly with a KeyError. Given the repeated failures, attempting more steps of this nature is unlikely to succeed. Fall back to summarization.",
+              "local_reasoning": "The 'Demo' button click failed repeatedly. It is likely there is an issue with how the browser is interacting with the page or button identification. Since it cannot be solved by Decision, calling summarize.",
+              "last_tooluse_summary": "Browser tool failed to click the 'Demo' button with KeyError.",
+              "solution_summary": "Failed to click the Demo button on Inkers.ai",
+              "route": "summarize",
+              "instruction_to_summarize": "Report that the Inkers.ai website was opened successfully, but the attempt to click the 'Demo' button failed due to a KeyError. Mention that the browser state and element IDs could not be retrieved. Indicate the task could not be fully completed. Use markdown format."
+            },
+            "from_step": "1"
+          },
+          "id": "1"
+        },
+        {
+          "data": {
+            "index": "2",
+            "description": "Click the 'Demo' button.",
+            "type": "CODE",
+            "status": "Skipped",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": null,
+            "from_step": "ROOT"
+          },
+          "id": "2"
+        },
+        {
+          "data": {
+            "index": "3",
+            "description": "Take a screenshot of the page for debugging and verification",
+            "type": "CODE",
+            "status": "Skipped",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": null,
+            "from_step": "ROOT"
+          },
+          "id": "3"
+        }
+      ],
+      "links": [
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "0"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "1"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "2"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "3"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "1"
+        }
+      ]
+    }
+  },
+  "session": {
+    "session_id": "2cc27693-d3e5-4f54-850b-69933542a40d",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step. You cannot fetch results from previous sessions and conclude. You have to do this fresh.",
+    "perception_snapshots": [
+      {
+        "run_id": "2cc27693-d3e5-4f54-850b-69933542a40d-P",
+        "snapshot_type": "user_query",
+        "entities": [
+          "Inkers.ai",
+          "Demo Button",
+          "browser state",
+          "element IDs"
+        ],
+        "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+        "original_goal_achieved": false,
+        "reasoning": "The task requires opening a URL and clicking a button, which necessitates tool use and tracking the browser state.  The presence of memory excerpts suggests this task has been attempted before, but the instruction to execute it 'fresh' indicates past results should be ignored.  Since no steps have yet been performed in this current run to fulfill the fresh start requirement, the route is 'decision'.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The query is a directive to perform actions in a specific order (open URL, click button). This cannot be satisfied without using browser tools.",
+        "last_tooluse_summary": "Not applicable",
+        "solution_summary": "Not ready yet.",
+        "confidence": "0.9",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "2cc27693-d3e5-4f54-850b-69933542a40d-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "Inkers.ai",
+          "Demo Button",
+          "browser state",
+          "element IDs"
+        ],
+        "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+        "original_goal_achieved": false,
+        "reasoning": "The first step of opening the website was completed. Next step is to click on the Demo button and return browser state.",
+        "local_goal_achieved": true,
+        "local_reasoning": "Opening the URL was successful as confirmed by the tool. The next immediate step is to click the 'Demo' button and retrieve the browser state.",
+        "last_tooluse_summary": "Browser tool opened https://www.inkers.ai in a new tab.",
+        "solution_summary": "Opened Inkers.ai. Need to click Demo Button.",
+        "confidence": "0.9",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "2cc27693-d3e5-4f54-850b-69933542a40d-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "Inkers.ai",
+          "Demo Button",
+          "browser state",
+          "element IDs"
+        ],
+        "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+        "original_goal_achieved": false,
+        "reasoning": "The first step (opening the website) was successful, but the second step (clicking the Demo button) failed repeatedly with a KeyError. Given the repeated failures, attempting more steps of this nature is unlikely to succeed. Fall back to summarization.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The 'Demo' button click failed repeatedly. It is likely there is an issue with how the browser is interacting with the page or button identification. Since it cannot be solved by Decision, calling summarize.",
+        "last_tooluse_summary": "Browser tool failed to click the 'Demo' button with KeyError.",
+        "solution_summary": "Failed to click the Demo button on Inkers.ai",
+        "confidence": "0.9",
+        "route": "summarize",
+        "timestamp": "...",
+        "return_to": ""
+      }
+    ],
+    "decision_snapshots": [
+      {
+        "run_id": "f61bf26c-dd5b-431c-b6c4-97aacfcc4cc9",
+        "input": {
+          "current_time": "2025-05-27T11:14:11.585520",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step. You cannot fetch results from previous sessions and conclude. You have to do this fresh.",
+          "perception": {
+            "entities": [
+              "Inkers.ai",
+              "Demo Button",
+              "browser state",
+              "element IDs"
+            ],
+            "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The task requires opening a URL and clicking a button, which necessitates tool use and tracking the browser state.  The presence of memory excerpts suggests this task has been attempted before, but the instruction to execute it 'fresh' indicates past results should be ignored.  Since no steps have yet been performed in this current run to fulfill the fresh start requirement, the route is 'decision'.",
+            "local_reasoning": "The query is a directive to perform actions in a specific order (open URL, click button). This cannot be satisfied without using browser tools.",
+            "last_tooluse_summary": "Not applicable",
+            "solution_summary": "Not ready yet.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "Inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "element IDs"
+                ],
+                "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The task requires opening a URL and clicking a button, which necessitates tool use and tracking the browser state.  The presence of memory excerpts suggests this task has been attempted before, but the instruction to execute it 'fresh' indicates past results should be ignored.  Since no steps have yet been performed in this current run to fulfill the fresh start requirement, the route is 'decision'.",
+                "local_reasoning": "The query is a directive to perform actions in a specific order (open URL, click button). This cannot be satisfied without using browser tools.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "Inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "element IDs"
+                ],
+                "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The task requires opening a URL and clicking a button, which necessitates tool use and tracking the browser state.  The presence of memory excerpts suggests this task has been attempted before, but the instruction to execute it 'fresh' indicates past results should be ignored.  Since no steps have yet been performed in this current run to fulfill the fresh start requirement, the route is 'decision'.",
+                "local_reasoning": "The query is a directive to perform actions in a specific order (open URL, click button). This cannot be satisfied without using browser tools.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "list",
+              "preview": "[{'score': 200.0, 'session_id': 'be2844fe-f6e0-4bb6-8b8a-2a71e0a58325', 'original_query': \"Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.\", 'summary_output': 'The [Inkers.ai](https://www.inkers.ai) website has been opened, and the **Demo** button was click\u2026"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get the enhanced page structure to identify interactive elements, specifically the 'Demo' button."
+              },
+              {
+                "id": "2",
+                "description": "Click the 'Demo' button."
+              },
+              {
+                "id": "3",
+                "description": "Take a screenshot of the page for debugging and verification"
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "0",
+          "code_variants": {
+            "CODE_0A": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+            "CODE_0B": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+            "CODE_0C": "open_tab(\"https://www.inkers.ai\")\nreturn {}"
+          }
+        },
+        "next_step_id": "0",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get the enhanced page structure to identify interactive elements, specifically the 'Demo' button."
+            },
+            {
+              "id": "2",
+              "description": "Click the 'Demo' button."
+            },
+            {
+              "id": "3",
+              "description": "Take a screenshot of the page for debugging and verification"
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            },
+            {
+              "from": "2",
+              "to": "3",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_0A": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+          "CODE_0B": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+          "CODE_0C": "open_tab(\"https://www.inkers.ai\")\nreturn {}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      },
+      {
+        "run_id": "931268cb-1e02-4046-bddf-6ecaaa07bf5d",
+        "input": {
+          "current_time": "2025-05-27T11:14:40.356917",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step. You cannot fetch results from previous sessions and conclude. You have to do this fresh.",
+          "perception": {
+            "entities": [
+              "Inkers.ai",
+              "Demo Button",
+              "browser state",
+              "element IDs"
+            ],
+            "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": true,
+            "confidence": "0.9",
+            "reasoning": "The first step of opening the website was completed. Next step is to click on the Demo button and return browser state.",
+            "local_reasoning": "Opening the URL was successful as confirmed by the tool. The next immediate step is to click the 'Demo' button and retrieve the browser state.",
+            "last_tooluse_summary": "Browser tool opened https://www.inkers.ai in a new tab.",
+            "solution_summary": "Opened Inkers.ai. Need to click Demo Button.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "Inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "element IDs"
+                ],
+                "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The task requires opening a URL and clicking a button, which necessitates tool use and tracking the browser state.  The presence of memory excerpts suggests this task has been attempted before, but the instruction to execute it 'fresh' indicates past results should be ignored.  Since no steps have yet been performed in this current run to fulfill the fresh start requirement, the route is 'decision'.",
+                "local_reasoning": "The query is a directive to perform actions in a specific order (open URL, click button). This cannot be satisfied without using browser tools.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open https://www.inkers.ai in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {},
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "Inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "element IDs"
+                ],
+                "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": true,
+                "confidence": "0.9",
+                "reasoning": "The first step of opening the website was completed. Next step is to click on the Demo button and return browser state.",
+                "local_reasoning": "Opening the URL was successful as confirmed by the tool. The next immediate step is to click the 'Demo' button and retrieve the browser state.",
+                "last_tooluse_summary": "Browser tool opened https://www.inkers.ai in a new tab.",
+                "solution_summary": "Opened Inkers.ai. Need to click Demo Button.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "Inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "element IDs"
+                ],
+                "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The task requires opening a URL and clicking a button, which necessitates tool use and tracking the browser state.  The presence of memory excerpts suggests this task has been attempted before, but the instruction to execute it 'fresh' indicates past results should be ignored.  Since no steps have yet been performed in this current run to fulfill the fresh start requirement, the route is 'decision'.",
+                "local_reasoning": "The query is a directive to perform actions in a specific order (open URL, click button). This cannot be satisfied without using browser tools.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "list",
+              "preview": "[{'score': 200.0, 'session_id': 'be2844fe-f6e0-4bb6-8b8a-2a71e0a58325', 'original_query': \"Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.\", 'summary_output': 'The [Inkers.ai](https://www.inkers.ai) website has been opened, and the **Demo** button was click\u2026"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Click on the Demo Button and get the browser state."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "1",
+          "code_variants": {
+            "CODE_1A": "elements = get_interactive_elements(\"Demo Button\", True, True)\nif elements:\n    element_id = elements[0].get(\"id\")\n    click_element_by_index(element_id)\n    browser_state = get_enhanced_page_structure()\n    return {\"browser_state_1A\": browser_state}\nelse:\n    return {\"browser_state_1A\": \"Demo Button not found\"}",
+            "CODE_1B": "elements = get_interactive_elements(\"Demo\", True, True)\nif elements:\n    element_id = elements[0].get(\"id\")\n    click_element_by_index(element_id)\n    browser_state = get_session_snapshot(True, True)\n    return {\"browser_state_1B\": browser_state}\nelse:\n    return {\"browser_state_1B\": \"Demo Button not found\"}",
+            "CODE_1C": "elements = get_interactive_elements(\"Demo\", True, True)\nif elements:\n    element_id = elements[0].get(\"id\")\n    click_element_by_index(element_id)\n    page_markdown = get_comprehensive_markdown()\n    return {\"page_markdown_1C\": page_markdown}\nelse:\n    return {\"page_markdown_1C\": \"Demo Button not found\"}"
+          }
+        },
+        "next_step_id": "1",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Click on the Demo Button and get the browser state."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_1A": "elements = get_interactive_elements(\"Demo Button\", True, True)\nif elements:\n    element_id = elements[0].get(\"id\")\n    click_element_by_index(element_id)\n    browser_state = get_enhanced_page_structure()\n    return {\"browser_state_1A\": browser_state}\nelse:\n    return {\"browser_state_1A\": \"Demo Button not found\"}",
+          "CODE_1B": "elements = get_interactive_elements(\"Demo\", True, True)\nif elements:\n    element_id = elements[0].get(\"id\")\n    click_element_by_index(element_id)\n    browser_state = get_session_snapshot(True, True)\n    return {\"browser_state_1B\": browser_state}\nelse:\n    return {\"browser_state_1B\": \"Demo Button not found\"}",
+          "CODE_1C": "elements = get_interactive_elements(\"Demo\", True, True)\nif elements:\n    element_id = elements[0].get(\"id\")\n    click_element_by_index(element_id)\n    page_markdown = get_comprehensive_markdown()\n    return {\"page_markdown_1C\": page_markdown}\nelse:\n    return {\"page_markdown_1C\": \"Demo Button not found\"}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      }
+    ],
+    "execution_snapshots": [
+      {
+        "run_id": "091360dc-7a9d-443d-86d5-7c325d694de6",
+        "step_id": "0",
+        "variant_used": "CODE_0A",
+        "code": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+        "status": "success",
+        "result": {},
+        "error": null,
+        "execution_time": "2025-05-27 16:44:16",
+        "total_time": "19.578",
+        "return_to": ""
+      },
+      {
+        "run_id": "39e7cc96-e2df-4f0c-b4e3-60c3865257f5",
+        "step_id": "1",
+        "variant_used": "CODE_1A",
+        "code": "elements = get_interactive_elements(\"Demo Button\", True, True)\nif elements:\n    element_id = elements[0].get(\"id\")\n    click_element_by_index(element_id)\n    browser_state = get_enhanced_page_structure()\n    return {\"browser_state_1A\": browser_state}\nelse:\n    return {\"browser_state_1A\": \"Demo Button not found\"}",
+        "status": "error",
+        "result": null,
+        "error": "KeyError: 0",
+        "execution_time": "2025-05-27 16:44:45",
+        "total_time": "1.483",
+        "return_to": ""
+      },
+      {
+        "run_id": "f584e0ce-475f-4875-aa6a-b1c57ba5e856",
+        "step_id": "1",
+        "variant_used": "CODE_1B",
+        "code": "elements = get_interactive_elements(\"Demo\", True, True)\nif elements:\n    element_id = elements[0].get(\"id\")\n    click_element_by_index(element_id)\n    browser_state = get_session_snapshot(True, True)\n    return {\"browser_state_1B\": browser_state}\nelse:\n    return {\"browser_state_1B\": \"Demo Button not found\"}",
+        "status": "error",
+        "result": null,
+        "error": "KeyError: 0",
+        "execution_time": "2025-05-27 16:44:47",
+        "total_time": "1.188",
+        "return_to": ""
+      },
+      {
+        "run_id": "1adf16bd-6b16-4b61-822d-2ec0e51998e4",
+        "step_id": "1",
+        "variant_used": "CODE_1C",
+        "code": "elements = get_interactive_elements(\"Demo\", True, True)\nif elements:\n    element_id = elements[0].get(\"id\")\n    click_element_by_index(element_id)\n    page_markdown = get_comprehensive_markdown()\n    return {\"page_markdown_1C\": page_markdown}\nelse:\n    return {\"page_markdown_1C\": \"Demo Button not found\"}",
+        "status": "error",
+        "result": null,
+        "error": "KeyError: 0",
+        "execution_time": "2025-05-27 16:44:48",
+        "total_time": "1.23",
+        "return_to": ""
+      }
+    ],
+    "summarizer_snapshots": [
+      {
+        "run_id": "18d66d97-e595-45af-9f0d-81dcaeb3292c",
+        "input": {
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step. You cannot fetch results from previous sessions and conclude. You have to do this fresh.",
+          "globals_schema": {
+            "memory": [
+              {
+                "score": 200.0,
+                "session_id": "be2844fe-f6e0-4bb6-8b8a-2a71e0a58325",
+                "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+                "summary_output": "The [Inkers.ai](https://www.inkers.ai) website has been opened, and the **Demo** button was clicked. The current browser state, including all element IDs, is now available for further steps. The decision module will receive the browser state with element IDs upon calling any tool, so these IDs need to be saved for reuse in the next steps.",
+                "timestamp": "2025-05-27T11:11:06Z"
+              },
+              {
+                "score": 200.0,
+                "session_id": "64b8571e-b550-44b6-9883-6e8926e3f637",
+                "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+                "summary_output": "The [Inkers.ai](https://www.inkers.ai) website has been opened, and the **Demo** button (navigation link with ID 8) was clicked. The current browser state, including all element IDs, is now available for further steps. This allows the agent to interact with web elements on the page.",
+                "timestamp": "2025-05-27T11:09:10Z"
+              },
+              {
+                "score": 200.0,
+                "session_id": "60c0bfc6-6a94-4de1-ba92-6cf96506ac30",
+                "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step",
+                "summary_output": "The [Inkers.ai](https://www.inkers.ai) website was opened, and the **Demo** button (navigation link with id 8) was clicked successfully. The current browser state, including all element IDs, is now available for further steps.",
+                "timestamp": "2025-05-26T19:13:25Z"
+              }
+            ]
+          },
+          "plan_graph": {
+            "directed": true,
+            "multigraph": false,
+            "graph": {},
+            "nodes": [
+              {
+                "data": {
+                  "index": "ROOT",
+                  "description": "initial query",
+                  "type": "ROOT",
+                  "status": "completed",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "Inkers.ai",
+                      "Demo Button",
+                      "browser state",
+                      "element IDs"
+                    ],
+                    "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.9",
+                    "reasoning": "The task requires opening a URL and clicking a button, which necessitates tool use and tracking the browser state.  The presence of memory excerpts suggests this task has been attempted before, but the instruction to execute it 'fresh' indicates past results should be ignored.  Since no steps have yet been performed in this current run to fulfill the fresh start requirement, the route is 'decision'.",
+                    "local_reasoning": "The query is a directive to perform actions in a specific order (open URL, click button). This cannot be satisfied without using browser tools.",
+                    "last_tooluse_summary": "Not applicable",
+                    "solution_summary": "Not ready yet.",
+                    "route": "decision"
+                  },
+                  "from_step": null
+                },
+                "id": "ROOT"
+              },
+              {
+                "data": {
+                  "index": "0",
+                  "description": "Open https://www.inkers.ai in a new tab.",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": {},
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "Inkers.ai",
+                      "Demo Button",
+                      "browser state",
+                      "element IDs"
+                    ],
+                    "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": true,
+                    "confidence": "0.9",
+                    "reasoning": "The first step of opening the website was completed. Next step is to click on the Demo button and return browser state.",
+                    "local_reasoning": "Opening the URL was successful as confirmed by the tool. The next immediate step is to click the 'Demo' button and retrieve the browser state.",
+                    "last_tooluse_summary": "Browser tool opened https://www.inkers.ai in a new tab.",
+                    "solution_summary": "Opened Inkers.ai. Need to click Demo Button.",
+                    "route": "decision"
+                  },
+                  "from_step": "ROOT"
+                },
+                "id": "0"
+              },
+              {
+                "data": {
+                  "index": "1",
+                  "description": "Click on the Demo Button and get the browser state.",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": null,
+                  "conclusion": null,
+                  "error": "KeyError: 0",
+                  "perception": {
+                    "entities": [
+                      "Inkers.ai",
+                      "Demo Button",
+                      "browser state",
+                      "element IDs"
+                    ],
+                    "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.9",
+                    "reasoning": "The first step (opening the website) was successful, but the second step (clicking the Demo button) failed repeatedly with a KeyError. Given the repeated failures, attempting more steps of this nature is unlikely to succeed. Fall back to summarization.",
+                    "local_reasoning": "The 'Demo' button click failed repeatedly. It is likely there is an issue with how the browser is interacting with the page or button identification. Since it cannot be solved by Decision, calling summarize.",
+                    "last_tooluse_summary": "Browser tool failed to click the 'Demo' button with KeyError.",
+                    "solution_summary": "Failed to click the Demo button on Inkers.ai",
+                    "route": "summarize",
+                    "instruction_to_summarize": "Report that the Inkers.ai website was opened successfully, but the attempt to click the 'Demo' button failed due to a KeyError. Mention that the browser state and element IDs could not be retrieved. Indicate the task could not be fully completed. Use markdown format."
+                  },
+                  "from_step": "1"
+                },
+                "id": "1"
+              },
+              {
+                "data": {
+                  "index": "2",
+                  "description": "Click the 'Demo' button.",
+                  "type": "CODE",
+                  "status": "Skipped",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": null,
+                  "from_step": "ROOT"
+                },
+                "id": "2"
+              },
+              {
+                "data": {
+                  "index": "3",
+                  "description": "Take a screenshot of the page for debugging and verification",
+                  "type": "CODE",
+                  "status": "Skipped",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": null,
+                  "from_step": "ROOT"
+                },
+                "id": "3"
+              }
+            ],
+            "links": [
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "0"
+              },
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "1"
+              },
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "2"
+              },
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "3"
+              },
+              {
+                "type": "normal",
+                "source": "1",
+                "target": "1"
+              }
+            ]
+          },
+          "perception": {
+            "entities": [
+              "Inkers.ai",
+              "Demo Button",
+              "browser state",
+              "element IDs"
+            ],
+            "result_requirement": "Open Inkers.ai in a new tab, click the Demo button, and save the browser state with element IDs for future use.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The first step (opening the website) was successful, but the second step (clicking the Demo button) failed repeatedly with a KeyError. Given the repeated failures, attempting more steps of this nature is unlikely to succeed. Fall back to summarization.",
+            "local_reasoning": "The 'Demo' button click failed repeatedly. It is likely there is an issue with how the browser is interacting with the page or button identification. Since it cannot be solved by Decision, calling summarize.",
+            "last_tooluse_summary": "Browser tool failed to click the 'Demo' button with KeyError.",
+            "solution_summary": "Failed to click the Demo button on Inkers.ai",
+            "route": "summarize",
+            "instruction_to_summarize": "Report that the Inkers.ai website was opened successfully, but the attempt to click the 'Demo' button failed due to a KeyError. Mention that the browser state and element IDs could not be retrieved. Indicate the task could not be fully completed. Use markdown format."
+          }
+        },
+        "summary_output": "The [Inkers.ai](https://www.inkers.ai) website was opened successfully. However, the attempt to click the **Demo** button failed due to a `KeyError`. As a result, the browser state and element IDs could not be retrieved, and the task could not be fully completed.",
+        "success": true,
+        "error": null,
+        "timestamp": "2025-05-27T11:13:15Z",
+        "return_to": ""
+      }
+    ],
+    "final_summary": "The [Inkers.ai](https://www.inkers.ai) website was opened successfully. However, the attempt to click the **Demo** button failed due to a `KeyError`. As a result, the browser state and element IDs could not be retrieved, and the task could not be fully completed.",
+    "status": "success",
+    "completed_at": "2025-05-27T11:14:57.718058"
+  },
+  "status": "success",
+  "final_step_id": "1",
+  "reason": "Summarized successfully",
+  "timestamp": "2025-05-27T11:14:57.720060",
+  "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step. You cannot fetch results from previous sessions and conclude. You have to do this fresh.",
+  "final_summary": "The [Inkers.ai](https://www.inkers.ai) website was opened successfully. However, the attempt to click the **Demo** button failed due to a `KeyError`. As a result, the browser state and element IDs could not be retrieved, and the task could not be fully completed."
+}
