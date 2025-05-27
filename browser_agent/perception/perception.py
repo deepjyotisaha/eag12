@@ -13,7 +13,7 @@ from agent.agentSession import AgentSession, PerceptionSnapshot
 from utils.utils import log_step, log_error, log_json_block
 from utils.json_parser import parse_llm_json
 from agent.model_manager import ModelManager
-from config.log_config import setup_logging
+from config.log_config import setup_logging, logger_prompt
 
 log = setup_logging(__name__)
 
@@ -33,7 +33,8 @@ class Perception:
             "```"
         )
 
-        log.info(f"📝 Perception prompt: {full_prompt}")
+        #log.info(f"📝 Perception prompt: {full_prompt}")
+        logger_prompt(log, "📝 Perception prompt:", full_prompt)
 
         try:
             log_step("[SENDING PROMPT TO PERCEPTION...]", symbol="→")

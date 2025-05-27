@@ -16,6 +16,9 @@ from agent.agentSession import AgentSession
 import uuid
 from datetime import datetime
 from agent.model_manager import ModelManager
+from config.log_config import setup_logging, logger_prompt
+
+log = setup_logging(__name__)
 
 class Decision:
     def __init__(self, decision_prompt_path: str, multi_mcp: MultiMCP, api_key: str | None = None, model: str = "gemini-2.0-flash",  ):
@@ -34,6 +37,10 @@ class Decision:
         try:
             log_step("[SENDING PROMPT TO DECISION...]", symbol="→")
             time.sleep(2)
+            
+            #log.info(f"📝 Decision prompt: {full_prompt}")
+            logger_prompt(log, "📝 Decision prompt:", full_prompt)
+
             response = await self.model.generate_text(
                 prompt=full_prompt
             )

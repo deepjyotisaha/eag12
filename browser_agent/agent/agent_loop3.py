@@ -10,6 +10,7 @@ from memory.memory_search import MemorySearch
 from action.execute_step import execute_step_with_mode
 from utils.utils import log_step, log_error, save_final_plan, log_json_block
 from config.log_config import setup_logging
+from config.log_config import logger_json_block
 
 log = setup_logging(__name__)
 
@@ -68,9 +69,11 @@ class AgentLoop:
 
     async def _run_initial_perception(self):
         p_input = build_perception_input(self.query, self.memory, self.ctx)
-        log.info(f"📝 Initial Perception input: {p_input}")
+        #log.info(f"📝 Initial Perception input: {p_input}")
+        logger_json_block(log,'Inital Perception input:', p_input)
         self.p_out = await self.perception.run(p_input, session=self.session)
-        log.info(f"📝 Initial Perception output: {self.p_out}")
+        #log.info(f"📝 Initial Perception output: {self.p_out}")
+        logger_json_block(log,'Initial Perception output:', self.p_out)
 
         self.ctx.add_step(step_id=StepType.ROOT, description="initial query", step_type=StepType.ROOT)
         self.ctx.mark_step_completed(StepType.ROOT)
@@ -91,9 +94,11 @@ class AgentLoop:
     async def _run_decision_loop(self):
         """Executes initial decision and begins step execution."""
         d_input = build_decision_input(self.ctx, self.query, self.p_out, self.strategy)
-        log.info(f"📌 Decision input: {d_input}")
+        #log.info(f"📌 Decision input: {d_input}")
+        logger_json_block(log,'📌 Decision input:', d_input)
         d_out = await self.decision.run(d_input, session=self.session)
-        log.info(f"📌 Decision output: {d_out}")
+        #log.info(f"📌 Decision output: {d_out}")
+        logger_json_block(log,'📌 Decision output:', d_out)
         log_json_block("📌 Decision Output", d_out)
 
         self.code_variants = d_out["code_variants"]
@@ -164,7 +169,8 @@ class AgentLoop:
 
 
             self.ctx.attach_perception(self.next_step_id, self.p_out)
-            log.info(f"📌 Perception output ({self.next_step_id})", self.p_out)
+            #log.info(f"📌 Perception output ({self.next_step_id})", self.p_out)
+            logger_json_block(log,f"📌 Perception output ({self.next_step_id})", self.p_out)
             log_json_block(f"📌 Perception output ({self.next_step_id})", self.p_out)
             self.ctx._print_graph(depth=3)
 
@@ -183,11 +189,13 @@ class AgentLoop:
             log.info(f"🔁 Running Decision again")
             
             d_input = build_decision_input(self.ctx, self.query, self.p_out, self.strategy)
-            log.info(f"📌 Decision input ({tracker.tries})", d_input)
+            #log.info(f"📌 Decision input ({tracker.tries})", d_input)
+            logger_json_block(log,f"📌 Decision input ({tracker.tries})", d_input)
 
             d_out = await self.decision.run(d_input, session=self.session)
 
-            log.info(f"📌 Decision output ({tracker.tries})", d_out)
+            #log.info(f"📌 Decision output ({tracker.tries})", d_out)
+            logger_json_block(log,f"📌 Decision output ({tracker.tries})", d_out)
             log_json_block(f"📌 Decision Output ({tracker.tries})", d_out)
 
             self.next_step_id = d_out["next_step_id"]
