@@ -45,7 +45,7 @@ def logger_json_block(logger, message, data):
         separator = "=" * 80
         
         # Create the formatted JSON string
-        json_str = json.dumps(data, indent=2, sort_keys=True)
+        json_str = json.dumps(data, indent=2, sort_keys=False)
         
         # Create the complete message
         complete_message = f"\n{separator}\n📌 {message}\n{separator}\n{json_str}\n{separator}\n"
