@@ -7,6 +7,8 @@ from datetime import datetime
 # Create custom log levels for JSON blocks and prompts
 JSON_BLOCK = 25  # Between INFO (20) and WARNING (30)
 PROMPT_BLOCK = 26  # Between INFO (20) and WARNING (30)
+CODE_BLOCK = 27  # Between INFO (20) and WARNING (30)
+logging.addLevelName(CODE_BLOCK, 'CODE_BLOCK')
 logging.addLevelName(JSON_BLOCK, 'JSON_BLOCK')
 logging.addLevelName(PROMPT_BLOCK, 'PROMPT_BLOCK')
 
@@ -82,3 +84,43 @@ def logger_prompt(logger, message, prompt):
     except Exception as e:
         logger.error(f"Failed to format prompt: {e}")
         logger.info(f"{message}: {prompt}")
+
+def logger_code_block(logger, message, code, output=None):
+    """Log code and its output in a clean, readable format"""
+    try:
+        # Create a separator
+        separator = "=" * 80
+        
+        # Create the complete message
+        complete_message = f"\n{separator}\n"
+        complete_message += f"📝 {message}\n"
+        complete_message += f"{separator}\n"
+        
+        # Add code section
+        complete_message += "🔧 Code:\n"
+        complete_message += f"{separator}\n"
+        # Split code into lines and add proper indentation
+        code_lines = code.split('\n')
+        for line in code_lines:
+            complete_message += f"  {line}\n"
+        
+        # Add output section if provided
+        if output:
+            complete_message += f"\n{separator}\n"
+            complete_message += "📊 Output:\n"
+            complete_message += f"{separator}\n"
+            # Format output as JSON if it's a dictionary
+            if isinstance(output, dict):
+                output_str = json.dumps(output, indent=2, sort_keys=True)
+                for line in output_str.split('\n'):
+                    complete_message += f"  {line}\n"
+            else:
+                complete_message += f"  {output}\n"
+        
+        complete_message += f"{separator}\n"
+        
+        # Log using the custom level
+        logger.log(CODE_BLOCK, complete_message)
+    except Exception as e:
+        logger.error(f"Failed to format code block: {e}")
+        logger.info(f"{message}: {code}")

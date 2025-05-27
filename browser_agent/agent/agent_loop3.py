@@ -69,10 +69,10 @@ class AgentLoop:
 
     async def _run_initial_perception(self):
         p_input = build_perception_input(self.query, self.memory, self.ctx)
-        #log.info(f"📝 Initial Perception input: {p_input}")
+        log.info(f"📝 Initial Perception")
         logger_json_block(log,'Inital Perception input:', p_input)
         self.p_out = await self.perception.run(p_input, session=self.session)
-        #log.info(f"📝 Initial Perception output: {self.p_out}")
+        log.info(f"📝 Initial Perception output")
         logger_json_block(log,'Initial Perception output:', self.p_out)
 
         self.ctx.add_step(step_id=StepType.ROOT, description="initial query", step_type=StepType.ROOT)
@@ -94,10 +94,10 @@ class AgentLoop:
     async def _run_decision_loop(self):
         """Executes initial decision and begins step execution."""
         d_input = build_decision_input(self.ctx, self.query, self.p_out, self.strategy)
-        #log.info(f"📌 Decision input: {d_input}")
+        log.info(f"📌 Decision input")
         logger_json_block(log,'📌 Decision input:', d_input)
         d_out = await self.decision.run(d_input, session=self.session)
-        #log.info(f"📌 Decision output: {d_out}")
+        log.info(f"📌 Decision output")
         logger_json_block(log,'📌 Decision output:', d_out)
         log_json_block("📌 Decision Output", d_out)
 
@@ -169,12 +169,13 @@ class AgentLoop:
 
 
             self.ctx.attach_perception(self.next_step_id, self.p_out)
-            #log.info(f"📌 Perception output ({self.next_step_id})", self.p_out)
+            log.info(f"📌 Perception output")
             logger_json_block(log,f"📌 Perception output ({self.next_step_id})", self.p_out)
             log_json_block(f"📌 Perception output ({self.next_step_id})", self.p_out)
             self.ctx._print_graph(depth=3)
 
             if self.p_out.get("original_goal_achieved") or self.p_out.get("route") == Route.SUMMARIZE:
+                log.info(f"🔍 Original goal achieved or route is summarize, Now summarizing...")
                 self.status = "success"
                 self.final_output = await self._summarize()
                 return
@@ -189,12 +190,12 @@ class AgentLoop:
             log.info(f"🔁 Running Decision again")
             
             d_input = build_decision_input(self.ctx, self.query, self.p_out, self.strategy)
-            #log.info(f"📌 Decision input ({tracker.tries})", d_input)
+            log.info(f"📌 Decision input")
             logger_json_block(log,f"📌 Decision input ({tracker.tries})", d_input)
 
             d_out = await self.decision.run(d_input, session=self.session)
 
-            #log.info(f"📌 Decision output ({tracker.tries})", d_out)
+            log.info(f"📌 Decision output")
             logger_json_block(log,f"📌 Decision output ({tracker.tries})", d_out)
             log_json_block(f"📌 Decision Output ({tracker.tries})", d_out)
 

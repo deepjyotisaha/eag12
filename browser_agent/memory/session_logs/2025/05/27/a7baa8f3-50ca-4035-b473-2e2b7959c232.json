@@ -1,0 +1,4302 @@
+{
+  "context": {
+    "session_id": "a7baa8f3-50ca-4035-b473-2e2b7959c232",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+    "globals": {
+      "memory": null,
+      "interactive_elements_1A": {
+        "success": true,
+        "nav": [
+          {
+            "id": 1,
+            "desc": "Home",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 2,
+            "desc": "About",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 5,
+            "desc": "Team",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 6,
+            "desc": "Pricing",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 7,
+            "desc": "Contact",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 8,
+            "desc": "Demo",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 10,
+            "desc": "Owners",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 11,
+            "desc": "Contractors",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 12,
+            "desc": "Architects",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 14,
+            "desc": "Request a demo (cta-demo-button)",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 229,
+            "desc": "Link",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 231,
+            "desc": "Link",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 233,
+            "desc": "Link",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 301,
+            "desc": "Contact",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 302,
+            "desc": "Terms of Use",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 303,
+            "desc": "About",
+            "action": "click_element_by_index"
+          }
+        ],
+        "forms": [
+          {
+            "id": 261,
+            "desc": "Enter your first name (Name_First)",
+            "action": "input_text"
+          },
+          {
+            "id": 263,
+            "desc": "Enter your last name (Name_Last)",
+            "action": "input_text"
+          },
+          {
+            "id": 265,
+            "desc": "Enter country code (PhoneNumber_countrycodeval)",
+            "action": "input_text"
+          },
+          {
+            "id": 267,
+            "desc": "Enter your phone number (PhoneNumber_countrycode)",
+            "action": "input_text"
+          },
+          {
+            "id": 269,
+            "desc": "Enter your organization name (SingleLine1)",
+            "action": "input_text"
+          },
+          {
+            "id": 271,
+            "desc": "Enter your email (Email)",
+            "action": "input_text"
+          },
+          {
+            "id": 273,
+            "desc": "Enter area to scan (sqft) (Number)",
+            "action": "input_text"
+          },
+          {
+            "id": 276,
+            "desc": "Toggle option",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 280,
+            "desc": "Toggle option",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 283,
+            "desc": "Date Input",
+            "action": "input_text"
+          },
+          {
+            "id": 285,
+            "desc": "Address Line 1 (Address_AddressLine1)",
+            "action": "input_text"
+          },
+          {
+            "id": 286,
+            "desc": "Address Line 2 (Address_AddressLine2)",
+            "action": "input_text"
+          },
+          {
+            "id": 287,
+            "desc": "City (Address_City)",
+            "action": "input_text"
+          },
+          {
+            "id": 288,
+            "desc": "State/Region/Province (Address_Region)",
+            "action": "input_text"
+          },
+          {
+            "id": 289,
+            "desc": "Postal / Zip Code (Address_ZipCode)",
+            "action": "input_text"
+          },
+          {
+            "id": 290,
+            "desc": "Select Address Country (Address_Country)",
+            "action": "select_dropdown_option",
+            "options": [
+              "\u00c5land Islands",
+              "Afghanistan",
+              "Akrotiri",
+              "Albania",
+              "Algeria",
+              "American Samoa",
+              "Andorra",
+              "Angola",
+              "Anguilla",
+              "Antarctica",
+              "Antigua and Barbuda",
+              "Argentina",
+              "Armenia",
+              "Aruba",
+              "Ashmore and Cartier Islands",
+              "Australia",
+              "Austria",
+              "Azerbaijan",
+              "Bahrain",
+              "Bangladesh",
+              "Barbados",
+              "Bassas Da India",
+              "Belarus",
+              "Belgium",
+              "Belize",
+              "Benin",
+              "Bermuda",
+              "Bhutan",
+              "Bolivia",
+              "Bosnia and Herzegovina",
+              "Botswana",
+              "Bouvet Island",
+              "Brazil",
+              "British Indian Ocean Territory",
+              "British Virgin Islands",
+              "Brunei",
+              "Bulgaria",
+              "Burkina Faso",
+              "Burma",
+              "Burundi",
+              "Cambodia",
+              "Cameroon",
+              "Canada",
+              "Cape Verde",
+              "Caribbean Netherlands",
+              "Cayman Islands",
+              "Central African Republic",
+              "Chad",
+              "Chile",
+              "China",
+              "Christmas Island",
+              "Clipperton Island",
+              "Cocos (Keeling) Islands",
+              "Colombia",
+              "Comoros",
+              "Cook Islands",
+              "Coral Sea Islands",
+              "Costa Rica",
+              "Cote D'Ivoire",
+              "Croatia",
+              "Cuba",
+              "Cura\u00e7ao",
+              "Cyprus",
+              "Czech Republic",
+              "Democratic Republic of the Congo",
+              "Denmark",
+              "Dhekelia",
+              "Djibouti",
+              "Dominica",
+              "Dominican Republic",
+              "Ecuador",
+              "Egypt",
+              "El Salvador",
+              "Equatorial Guinea",
+              "Eritrea",
+              "Estonia",
+              "Ethiopia",
+              "Europa Island",
+              "Falkland Islands (Islas Malvinas)",
+              "Faroe Islands",
+              "Federated States of Micronesia",
+              "Fiji",
+              "Finland",
+              "France",
+              "French Guiana",
+              "French Polynesia",
+              "French Southern and Antarctic Lands",
+              "Gabon",
+              "Gaza Strip",
+              "Georgia",
+              "Germany",
+              "Ghana",
+              "Gibraltar",
+              "Glorioso Islands",
+              "Greece",
+              "Greenland",
+              "Grenada",
+              "Guadeloupe",
+              "Guam",
+              "Guatemala",
+              "Guernsey",
+              "Guinea",
+              "Guinea-bissau",
+              "Guyana",
+              "Haiti",
+              "Heard Island and Mcdonald Islands",
+              "Holy See (Vatican City)",
+              "Honduras",
+              "Hong Kong",
+              "Hungary",
+              "Iceland",
+              "India",
+              "Indonesia",
+              "Iran",
+              "Iraq",
+              "Ireland",
+              "Isle of Man",
+              "Israel",
+              "Italy",
+              "Jamaica",
+              "Jan Mayen",
+              "Japan",
+              "Jersey",
+              "Jordan",
+              "Juan De Nova Island",
+              "Kazakhstan",
+              "Kenya",
+              "Kiribati",
+              "Kosovo",
+              "Kuwait",
+              "Kyrgyzstan",
+              "Laos",
+              "Latvia",
+              "Lebanon",
+              "Lesotho",
+              "Liberia",
+              "Libya",
+              "Liechtenstein",
+              "Lithuania",
+              "Luxembourg",
+              "Macau",
+              "Macedonia",
+              "Madagascar",
+              "Malawi",
+              "Malaysia",
+              "Maldives",
+              "Mali",
+              "Malta",
+              "Marshall Islands",
+              "Martinique",
+              "Mauritania",
+              "Mauritius",
+              "Mayotte",
+              "Mexico",
+              "Moldova",
+              "Monaco",
+              "Mongolia",
+              "Montenegro",
+              "Montserrat",
+              "Morocco",
+              "Mozambique",
+              "Myanmar",
+              "Namibia",
+              "Nauru",
+              "Navassa Island",
+              "Nepal",
+              "Netherlands Antilles",
+              "Netherlands",
+              "New Caledonia",
+              "New Zealand",
+              "Nicaragua",
+              "Niger",
+              "Nigeria",
+              "Niue",
+              "Norfolk Island",
+              "North Korea",
+              "Northern Mariana Islands",
+              "Norway",
+              "Oman",
+              "Pakistan",
+              "Palau",
+              "Palestine",
+              "Panama",
+              "Papua New Guinea",
+              "Paracel Islands",
+              "Paraguay",
+              "Peru",
+              "Philippines",
+              "Pitcairn Islands",
+              "Poland",
+              "Portugal",
+              "Puerto Rico",
+              "Qatar",
+              "Republic of the Congo",
+              "Reunion",
+              "Romania",
+              "Russia",
+              "Rwanda",
+              "Saint Barth\u00c3\u00a9lemy",
+              "Saint Helena",
+              "Saint Kitts and Nevis",
+              "Saint Lucia",
+              "Saint Martin",
+              "Saint Pierre and Miquelon",
+              "Saint Vincent and the Grenadines",
+              "Samoa",
+              "San Marino",
+              "Sao Tome and Principe",
+              "Saudi Arabia",
+              "Senegal",
+              "Serbia",
+              "Seychelles",
+              "Sierra Leone",
+              "Singapore",
+              "Sint Maarten",
+              "Slovakia",
+              "Slovenia",
+              "Solomon Islands",
+              "Somalia",
+              "South Africa",
+              "South Georgia and the South Sandwich Islands",
+              "South Korea",
+              "South Sudan",
+              "Spain",
+              "Spratly Islands",
+              "Sri Lanka",
+              "Sudan",
+              "Suriname",
+              "Svalbard",
+              "Swaziland",
+              "Sweden",
+              "Switzerland",
+              "Syria",
+              "Taiwan",
+              "Tajikistan",
+              "Tanzania",
+              "Thailand",
+              "The Bahamas",
+              "The Gambia",
+              "Timor-leste",
+              "Togo",
+              "Tokelau",
+              "Tonga",
+              "Trinidad and Tobago",
+              "Tromelin Island",
+              "Tunisia",
+              "Turkey",
+              "Turkmenistan",
+              "Turks and Caicos Islands",
+              "Tuvalu",
+              "Uganda",
+              "Ukraine",
+              "United Arab Emirates",
+              "United Kingdom",
+              "United States",
+              "Uruguay",
+              "Uzbekistan",
+              "Vanuatu",
+              "Venezuela",
+              "Vietnam",
+              "Virgin Islands",
+              "Wake Island",
+              "Wallis and Futuna",
+              "West Bank",
+              "Western Sahara",
+              "Yemen",
+              "Zambia",
+              "Zimbabwe"
+            ]
+          },
+          {
+            "id": 292,
+            "desc": "Any questions or concerns (MultiLine1)",
+            "action": "input_text"
+          },
+          {
+            "id": 293,
+            "desc": "Submit",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 294,
+            "desc": "Enter your name (name)",
+            "action": "input_text"
+          },
+          {
+            "id": 295,
+            "desc": "Enter your email (email)",
+            "action": "input_text"
+          },
+          {
+            "id": 296,
+            "desc": "Subscribe",
+            "action": "click_element_by_index"
+          }
+        ],
+        "buttons": [
+          {
+            "id": 3,
+            "desc": "Product",
+            "action": "hover item, not implemented yet"
+          },
+          {
+            "id": 4,
+            "desc": "Services",
+            "action": "hover item, not implemented yet"
+          },
+          {
+            "id": 9,
+            "desc": "Toggle theme",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 226,
+            "desc": "Owners & Contractors",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 227,
+            "desc": "Architects",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 228,
+            "desc": "Lithic Scanner",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 230,
+            "desc": "Start Free Trial",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 232,
+            "desc": "Start Free Trial",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 234,
+            "desc": "Start Free Trial",
+            "action": "click_element_by_index"
+          },
+          {
+            "id": 259,
+            "desc": "sales@inkers.ai",
+            "action": "click_element_by_index"
+          }
+        ],
+        "total": 47
+      },
+      "clicked_element_2A": 8
+    },
+    "memory": [
+      {
+        "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+        "result_requirement": "Final summary",
+        "summarizer_summary": "The following actions were performed:\n\n*   The [inkers.ai](https://www.inkers.ai) website was opened in a new tab.\n*   The 'Demo' button was clicked. The element ID for the 'Demo' button was **8**.\n*   The Decision module has been informed to save the current browser state, including the IDs of interactive elements, for future interactions. This allows for reuse of these IDs in subsequent steps.",
+        "confidence": 0.95,
+        "original_goal_achieved": true,
+        "route": "summarize"
+      }
+    ],
+    "graph": {
+      "directed": true,
+      "multigraph": false,
+      "graph": {},
+      "nodes": [
+        {
+          "data": {
+            "index": "ROOT",
+            "description": "initial query",
+            "type": "ROOT",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "inkers.ai",
+                "Demo Button",
+                "browser state",
+                "button IDs"
+              ],
+              "result_requirement": "Open inkers.ai, click Demo button, and inform Decision to save browser state (including IDs)",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The user query requires interaction with a webpage. The goal is to open a specific URL and click a button, and also to establish a protocol for how the Decision module will handle browser state. This requires tool use and is not solvable with existing memory or globals. I need to route to Decision to plan the steps.",
+              "local_reasoning": "The task requires tool use (opening a webpage and clicking a button).",
+              "last_tooluse_summary": "Not applicable",
+              "solution_summary": "Not ready yet.",
+              "route": "decision"
+            },
+            "from_step": null
+          },
+          "id": "ROOT"
+        },
+        {
+          "data": {
+            "index": "0",
+            "description": "Open https://www.inkers.ai in a new tab.",
+            "type": "CODE",
+            "status": "completed",
+            "result": {},
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "inkers.ai",
+                "Demo Button",
+                "browser state",
+                "button IDs"
+              ],
+              "result_requirement": "Click the Demo button on inkers.ai and retrieve the browser state, including element IDs.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": true,
+              "confidence": "0.85",
+              "reasoning": "The webpage has been opened successfully. The next step is to click the 'Demo' button and retrieve the browser state as requested. This requires further tool use. The `raw_input` shows that the previous step was successful in opening the webpage, but it lacks information about the button or browser state.",
+              "local_reasoning": "The webpage is open, but the 'Demo' button needs to be clicked, and browser state retrieved.",
+              "last_tooluse_summary": "Webpage opened successfully. No browser state retrieved.",
+              "solution_summary": "Webpage opened. Awaiting the next step to click the 'Demo' button and retrieve browser state.",
+              "route": "decision"
+            },
+            "from_step": "ROOT"
+          },
+          "id": "0"
+        },
+        {
+          "data": {
+            "index": "1",
+            "description": "Get interactive elements on the page to identify the 'Demo' button.",
+            "type": "CODE",
+            "status": "completed",
+            "result": {
+              "interactive_elements_1A": {
+                "success": true,
+                "nav": [
+                  {
+                    "id": 1,
+                    "desc": "Home",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 2,
+                    "desc": "About",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 5,
+                    "desc": "Team",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 6,
+                    "desc": "Pricing",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 7,
+                    "desc": "Contact",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 8,
+                    "desc": "Demo",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 10,
+                    "desc": "Owners",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 11,
+                    "desc": "Contractors",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 12,
+                    "desc": "Architects",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 14,
+                    "desc": "Request a demo (cta-demo-button)",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 229,
+                    "desc": "Link",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 231,
+                    "desc": "Link",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 233,
+                    "desc": "Link",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 301,
+                    "desc": "Contact",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 302,
+                    "desc": "Terms of Use",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 303,
+                    "desc": "About",
+                    "action": "click_element_by_index"
+                  }
+                ],
+                "forms": [
+                  {
+                    "id": 261,
+                    "desc": "Enter your first name (Name_First)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 263,
+                    "desc": "Enter your last name (Name_Last)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 265,
+                    "desc": "Enter country code (PhoneNumber_countrycodeval)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 267,
+                    "desc": "Enter your phone number (PhoneNumber_countrycode)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 269,
+                    "desc": "Enter your organization name (SingleLine1)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 271,
+                    "desc": "Enter your email (Email)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 273,
+                    "desc": "Enter area to scan (sqft) (Number)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 276,
+                    "desc": "Toggle option",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 280,
+                    "desc": "Toggle option",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 283,
+                    "desc": "Date Input",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 285,
+                    "desc": "Address Line 1 (Address_AddressLine1)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 286,
+                    "desc": "Address Line 2 (Address_AddressLine2)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 287,
+                    "desc": "City (Address_City)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 288,
+                    "desc": "State/Region/Province (Address_Region)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 289,
+                    "desc": "Postal / Zip Code (Address_ZipCode)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 290,
+                    "desc": "Select Address Country (Address_Country)",
+                    "action": "select_dropdown_option",
+                    "options": [
+                      "\u00c5land Islands",
+                      "Afghanistan",
+                      "Akrotiri",
+                      "Albania",
+                      "Algeria",
+                      "American Samoa",
+                      "Andorra",
+                      "Angola",
+                      "Anguilla",
+                      "Antarctica",
+                      "Antigua and Barbuda",
+                      "Argentina",
+                      "Armenia",
+                      "Aruba",
+                      "Ashmore and Cartier Islands",
+                      "Australia",
+                      "Austria",
+                      "Azerbaijan",
+                      "Bahrain",
+                      "Bangladesh",
+                      "Barbados",
+                      "Bassas Da India",
+                      "Belarus",
+                      "Belgium",
+                      "Belize",
+                      "Benin",
+                      "Bermuda",
+                      "Bhutan",
+                      "Bolivia",
+                      "Bosnia and Herzegovina",
+                      "Botswana",
+                      "Bouvet Island",
+                      "Brazil",
+                      "British Indian Ocean Territory",
+                      "British Virgin Islands",
+                      "Brunei",
+                      "Bulgaria",
+                      "Burkina Faso",
+                      "Burma",
+                      "Burundi",
+                      "Cambodia",
+                      "Cameroon",
+                      "Canada",
+                      "Cape Verde",
+                      "Caribbean Netherlands",
+                      "Cayman Islands",
+                      "Central African Republic",
+                      "Chad",
+                      "Chile",
+                      "China",
+                      "Christmas Island",
+                      "Clipperton Island",
+                      "Cocos (Keeling) Islands",
+                      "Colombia",
+                      "Comoros",
+                      "Cook Islands",
+                      "Coral Sea Islands",
+                      "Costa Rica",
+                      "Cote D'Ivoire",
+                      "Croatia",
+                      "Cuba",
+                      "Cura\u00e7ao",
+                      "Cyprus",
+                      "Czech Republic",
+                      "Democratic Republic of the Congo",
+                      "Denmark",
+                      "Dhekelia",
+                      "Djibouti",
+                      "Dominica",
+                      "Dominican Republic",
+                      "Ecuador",
+                      "Egypt",
+                      "El Salvador",
+                      "Equatorial Guinea",
+                      "Eritrea",
+                      "Estonia",
+                      "Ethiopia",
+                      "Europa Island",
+                      "Falkland Islands (Islas Malvinas)",
+                      "Faroe Islands",
+                      "Federated States of Micronesia",
+                      "Fiji",
+                      "Finland",
+                      "France",
+                      "French Guiana",
+                      "French Polynesia",
+                      "French Southern and Antarctic Lands",
+                      "Gabon",
+                      "Gaza Strip",
+                      "Georgia",
+                      "Germany",
+                      "Ghana",
+                      "Gibraltar",
+                      "Glorioso Islands",
+                      "Greece",
+                      "Greenland",
+                      "Grenada",
+                      "Guadeloupe",
+                      "Guam",
+                      "Guatemala",
+                      "Guernsey",
+                      "Guinea",
+                      "Guinea-bissau",
+                      "Guyana",
+                      "Haiti",
+                      "Heard Island and Mcdonald Islands",
+                      "Holy See (Vatican City)",
+                      "Honduras",
+                      "Hong Kong",
+                      "Hungary",
+                      "Iceland",
+                      "India",
+                      "Indonesia",
+                      "Iran",
+                      "Iraq",
+                      "Ireland",
+                      "Isle of Man",
+                      "Israel",
+                      "Italy",
+                      "Jamaica",
+                      "Jan Mayen",
+                      "Japan",
+                      "Jersey",
+                      "Jordan",
+                      "Juan De Nova Island",
+                      "Kazakhstan",
+                      "Kenya",
+                      "Kiribati",
+                      "Kosovo",
+                      "Kuwait",
+                      "Kyrgyzstan",
+                      "Laos",
+                      "Latvia",
+                      "Lebanon",
+                      "Lesotho",
+                      "Liberia",
+                      "Libya",
+                      "Liechtenstein",
+                      "Lithuania",
+                      "Luxembourg",
+                      "Macau",
+                      "Macedonia",
+                      "Madagascar",
+                      "Malawi",
+                      "Malaysia",
+                      "Maldives",
+                      "Mali",
+                      "Malta",
+                      "Marshall Islands",
+                      "Martinique",
+                      "Mauritania",
+                      "Mauritius",
+                      "Mayotte",
+                      "Mexico",
+                      "Moldova",
+                      "Monaco",
+                      "Mongolia",
+                      "Montenegro",
+                      "Montserrat",
+                      "Morocco",
+                      "Mozambique",
+                      "Myanmar",
+                      "Namibia",
+                      "Nauru",
+                      "Navassa Island",
+                      "Nepal",
+                      "Netherlands Antilles",
+                      "Netherlands",
+                      "New Caledonia",
+                      "New Zealand",
+                      "Nicaragua",
+                      "Niger",
+                      "Nigeria",
+                      "Niue",
+                      "Norfolk Island",
+                      "North Korea",
+                      "Northern Mariana Islands",
+                      "Norway",
+                      "Oman",
+                      "Pakistan",
+                      "Palau",
+                      "Palestine",
+                      "Panama",
+                      "Papua New Guinea",
+                      "Paracel Islands",
+                      "Paraguay",
+                      "Peru",
+                      "Philippines",
+                      "Pitcairn Islands",
+                      "Poland",
+                      "Portugal",
+                      "Puerto Rico",
+                      "Qatar",
+                      "Republic of the Congo",
+                      "Reunion",
+                      "Romania",
+                      "Russia",
+                      "Rwanda",
+                      "Saint Barth\u00c3\u00a9lemy",
+                      "Saint Helena",
+                      "Saint Kitts and Nevis",
+                      "Saint Lucia",
+                      "Saint Martin",
+                      "Saint Pierre and Miquelon",
+                      "Saint Vincent and the Grenadines",
+                      "Samoa",
+                      "San Marino",
+                      "Sao Tome and Principe",
+                      "Saudi Arabia",
+                      "Senegal",
+                      "Serbia",
+                      "Seychelles",
+                      "Sierra Leone",
+                      "Singapore",
+                      "Sint Maarten",
+                      "Slovakia",
+                      "Slovenia",
+                      "Solomon Islands",
+                      "Somalia",
+                      "South Africa",
+                      "South Georgia and the South Sandwich Islands",
+                      "South Korea",
+                      "South Sudan",
+                      "Spain",
+                      "Spratly Islands",
+                      "Sri Lanka",
+                      "Sudan",
+                      "Suriname",
+                      "Svalbard",
+                      "Swaziland",
+                      "Sweden",
+                      "Switzerland",
+                      "Syria",
+                      "Taiwan",
+                      "Tajikistan",
+                      "Tanzania",
+                      "Thailand",
+                      "The Bahamas",
+                      "The Gambia",
+                      "Timor-leste",
+                      "Togo",
+                      "Tokelau",
+                      "Tonga",
+                      "Trinidad and Tobago",
+                      "Tromelin Island",
+                      "Tunisia",
+                      "Turkey",
+                      "Turkmenistan",
+                      "Turks and Caicos Islands",
+                      "Tuvalu",
+                      "Uganda",
+                      "Ukraine",
+                      "United Arab Emirates",
+                      "United Kingdom",
+                      "United States",
+                      "Uruguay",
+                      "Uzbekistan",
+                      "Vanuatu",
+                      "Venezuela",
+                      "Vietnam",
+                      "Virgin Islands",
+                      "Wake Island",
+                      "Wallis and Futuna",
+                      "West Bank",
+                      "Western Sahara",
+                      "Yemen",
+                      "Zambia",
+                      "Zimbabwe"
+                    ]
+                  },
+                  {
+                    "id": 292,
+                    "desc": "Any questions or concerns (MultiLine1)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 293,
+                    "desc": "Submit",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 294,
+                    "desc": "Enter your name (name)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 295,
+                    "desc": "Enter your email (email)",
+                    "action": "input_text"
+                  },
+                  {
+                    "id": 296,
+                    "desc": "Subscribe",
+                    "action": "click_element_by_index"
+                  }
+                ],
+                "buttons": [
+                  {
+                    "id": 3,
+                    "desc": "Product",
+                    "action": "hover item, not implemented yet"
+                  },
+                  {
+                    "id": 4,
+                    "desc": "Services",
+                    "action": "hover item, not implemented yet"
+                  },
+                  {
+                    "id": 9,
+                    "desc": "Toggle theme",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 226,
+                    "desc": "Owners & Contractors",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 227,
+                    "desc": "Architects",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 228,
+                    "desc": "Lithic Scanner",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 230,
+                    "desc": "Start Free Trial",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 232,
+                    "desc": "Start Free Trial",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 234,
+                    "desc": "Start Free Trial",
+                    "action": "click_element_by_index"
+                  },
+                  {
+                    "id": 259,
+                    "desc": "sales@inkers.ai",
+                    "action": "click_element_by_index"
+                  }
+                ],
+                "total": 47
+              }
+            },
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "inkers.ai",
+                "Demo Button",
+                "browser state",
+                "button IDs"
+              ],
+              "result_requirement": "Click the Demo button on inkers.ai and retrieve the browser state, including element IDs.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": true,
+              "confidence": "0.9",
+              "reasoning": "The interactive elements have been successfully retrieved. The 'Demo' button can now be clicked. The 'Demo' button is present in the `nav` list with id 8. The next step is to click it using its ID.",
+              "local_reasoning": "The interactive element extraction was successful, and the Demo button is identified.",
+              "last_tooluse_summary": "Interactive elements retrieved successfully.",
+              "solution_summary": "Interactive elements retrieved. Ready to click the Demo button.",
+              "route": "decision"
+            },
+            "from_step": "1"
+          },
+          "id": "1"
+        },
+        {
+          "data": {
+            "index": "2",
+            "description": "Click the 'Demo' button (identified by id 8).",
+            "type": "CODE",
+            "status": "completed",
+            "result": {
+              "clicked_element_2A": 8
+            },
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "inkers.ai",
+                "Demo Button",
+                "browser state",
+                "button IDs"
+              ],
+              "result_requirement": "Click the Demo button on inkers.ai and inform Decision to save the browser state (including IDs) for future use.",
+              "original_goal_achieved": true,
+              "local_goal_achieved": true,
+              "confidence": "0.95",
+              "reasoning": "The original query was to open the inkers.ai website, click the Demo button, and ensure Decision saves the browser state with element IDs. All of these steps have been successfully completed. The 'Demo' button was identified and clicked. The instruction to save the browser state for future tool calls has been delivered to Decision through the original query. No further steps are required.",
+              "local_reasoning": "The 'Demo' button was clicked successfully based on its ID. The original query contained the instruction for Decision to save the browser state.",
+              "last_tooluse_summary": "Demo button clicked successfully. ID: 8.",
+              "solution_summary": "The inkers.ai website was opened, and the 'Demo' button was clicked. Decision module has been instructed to save the browser state with element IDs for future use.",
+              "route": "summarize",
+              "instruction_to_summarize": "Summarize the actions taken: the inkers.ai website was opened, the 'Demo' button was clicked, and the Decision module has been informed to save the browser state for future interactions. Ensure to mention that the Demo button was clicked using element ID 8. Output should be in markdown format."
+            },
+            "from_step": "2"
+          },
+          "id": "2"
+        },
+        {
+          "data": {
+            "index": "3",
+            "description": "Get current browser session snapshot.",
+            "type": "CODE",
+            "status": "Skipped",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": null,
+            "from_step": "1"
+          },
+          "id": "3"
+        }
+      ],
+      "links": [
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "0"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "1"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "2"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "3"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "1"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "2"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "3"
+        },
+        {
+          "type": "normal",
+          "source": "2",
+          "target": "2"
+        }
+      ]
+    }
+  },
+  "session": {
+    "session_id": "a7baa8f3-50ca-4035-b473-2e2b7959c232",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+    "perception_snapshots": [
+      {
+        "run_id": "a7baa8f3-50ca-4035-b473-2e2b7959c232-P",
+        "snapshot_type": "user_query",
+        "entities": [
+          "inkers.ai",
+          "Demo Button",
+          "browser state",
+          "button IDs"
+        ],
+        "result_requirement": "Open inkers.ai, click Demo button, and inform Decision to save browser state (including IDs)",
+        "original_goal_achieved": false,
+        "reasoning": "The user query requires interaction with a webpage. The goal is to open a specific URL and click a button, and also to establish a protocol for how the Decision module will handle browser state. This requires tool use and is not solvable with existing memory or globals. I need to route to Decision to plan the steps.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The task requires tool use (opening a webpage and clicking a button).",
+        "last_tooluse_summary": "Not applicable",
+        "solution_summary": "Not ready yet.",
+        "confidence": "0.9",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "a7baa8f3-50ca-4035-b473-2e2b7959c232-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "inkers.ai",
+          "Demo Button",
+          "browser state",
+          "button IDs"
+        ],
+        "result_requirement": "Click the Demo button on inkers.ai and retrieve the browser state, including element IDs.",
+        "original_goal_achieved": false,
+        "reasoning": "The webpage has been opened successfully. The next step is to click the 'Demo' button and retrieve the browser state as requested. This requires further tool use. The `raw_input` shows that the previous step was successful in opening the webpage, but it lacks information about the button or browser state.",
+        "local_goal_achieved": true,
+        "local_reasoning": "The webpage is open, but the 'Demo' button needs to be clicked, and browser state retrieved.",
+        "last_tooluse_summary": "Webpage opened successfully. No browser state retrieved.",
+        "solution_summary": "Webpage opened. Awaiting the next step to click the 'Demo' button and retrieve browser state.",
+        "confidence": "0.85",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "a7baa8f3-50ca-4035-b473-2e2b7959c232-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "inkers.ai",
+          "Demo Button",
+          "browser state",
+          "button IDs"
+        ],
+        "result_requirement": "Click the Demo button on inkers.ai and retrieve the browser state, including element IDs.",
+        "original_goal_achieved": false,
+        "reasoning": "The interactive elements have been successfully retrieved. The 'Demo' button can now be clicked. The 'Demo' button is present in the `nav` list with id 8. The next step is to click it using its ID.",
+        "local_goal_achieved": true,
+        "local_reasoning": "The interactive element extraction was successful, and the Demo button is identified.",
+        "last_tooluse_summary": "Interactive elements retrieved successfully.",
+        "solution_summary": "Interactive elements retrieved. Ready to click the Demo button.",
+        "confidence": "0.9",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "a7baa8f3-50ca-4035-b473-2e2b7959c232-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "inkers.ai",
+          "Demo Button",
+          "browser state",
+          "button IDs"
+        ],
+        "result_requirement": "Click the Demo button on inkers.ai and inform Decision to save the browser state (including IDs) for future use.",
+        "original_goal_achieved": true,
+        "reasoning": "The original query was to open the inkers.ai website, click the Demo button, and ensure Decision saves the browser state with element IDs. All of these steps have been successfully completed. The 'Demo' button was identified and clicked. The instruction to save the browser state for future tool calls has been delivered to Decision through the original query. No further steps are required.",
+        "local_goal_achieved": true,
+        "local_reasoning": "The 'Demo' button was clicked successfully based on its ID. The original query contained the instruction for Decision to save the browser state.",
+        "last_tooluse_summary": "Demo button clicked successfully. ID: 8.",
+        "solution_summary": "The inkers.ai website was opened, and the 'Demo' button was clicked. Decision module has been instructed to save the browser state with element IDs for future use.",
+        "confidence": "0.95",
+        "route": "summarize",
+        "timestamp": "...",
+        "return_to": ""
+      }
+    ],
+    "decision_snapshots": [
+      {
+        "run_id": "7bcef816-0041-4c8f-b47b-1cc60822ab5d",
+        "input": {
+          "current_time": "2025-05-27T16:33:44.053675",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "perception": {
+            "entities": [
+              "inkers.ai",
+              "Demo Button",
+              "browser state",
+              "button IDs"
+            ],
+            "result_requirement": "Open inkers.ai, click Demo button, and inform Decision to save browser state (including IDs)",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The user query requires interaction with a webpage. The goal is to open a specific URL and click a button, and also to establish a protocol for how the Decision module will handle browser state. This requires tool use and is not solvable with existing memory or globals. I need to route to Decision to plan the steps.",
+            "local_reasoning": "The task requires tool use (opening a webpage and clicking a button).",
+            "last_tooluse_summary": "Not applicable",
+            "solution_summary": "Not ready yet.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button IDs"
+                ],
+                "result_requirement": "Open inkers.ai, click Demo button, and inform Decision to save browser state (including IDs)",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires interaction with a webpage. The goal is to open a specific URL and click a button, and also to establish a protocol for how the Decision module will handle browser state. This requires tool use and is not solvable with existing memory or globals. I need to route to Decision to plan the steps.",
+                "local_reasoning": "The task requires tool use (opening a webpage and clicking a button).",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button IDs"
+                ],
+                "result_requirement": "Open inkers.ai, click Demo button, and inform Decision to save browser state (including IDs)",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires interaction with a webpage. The goal is to open a specific URL and click a button, and also to establish a protocol for how the Decision module will handle browser state. This requires tool use and is not solvable with existing memory or globals. I need to route to Decision to plan the steps.",
+                "local_reasoning": "The task requires tool use (opening a webpage and clicking a button).",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get the interactive elements of the page to identify the 'Demo Button'."
+              },
+              {
+                "id": "2",
+                "description": "Click the 'Demo Button'."
+              },
+              {
+                "id": "3",
+                "description": "Take a session snapshot to verify the 'Demo Button' has been clicked successfully."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "0",
+          "code_variants": {
+            "CODE_0A": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+            "CODE_0B": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+            "CODE_0C": "open_tab(\"https://www.inkers.ai\")\nreturn {}"
+          }
+        },
+        "next_step_id": "0",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get the interactive elements of the page to identify the 'Demo Button'."
+            },
+            {
+              "id": "2",
+              "description": "Click the 'Demo Button'."
+            },
+            {
+              "id": "3",
+              "description": "Take a session snapshot to verify the 'Demo Button' has been clicked successfully."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            },
+            {
+              "from": "2",
+              "to": "3",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_0A": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+          "CODE_0B": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+          "CODE_0C": "open_tab(\"https://www.inkers.ai\")\nreturn {}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      },
+      {
+        "run_id": "50147177-2dd6-47a1-bc0e-f281fd41bf95",
+        "input": {
+          "current_time": "2025-05-27T16:34:03.691569",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "perception": {
+            "entities": [
+              "inkers.ai",
+              "Demo Button",
+              "browser state",
+              "button IDs"
+            ],
+            "result_requirement": "Click the Demo button on inkers.ai and retrieve the browser state, including element IDs.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": true,
+            "confidence": "0.85",
+            "reasoning": "The webpage has been opened successfully. The next step is to click the 'Demo' button and retrieve the browser state as requested. This requires further tool use. The `raw_input` shows that the previous step was successful in opening the webpage, but it lacks information about the button or browser state.",
+            "local_reasoning": "The webpage is open, but the 'Demo' button needs to be clicked, and browser state retrieved.",
+            "last_tooluse_summary": "Webpage opened successfully. No browser state retrieved.",
+            "solution_summary": "Webpage opened. Awaiting the next step to click the 'Demo' button and retrieve browser state.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button IDs"
+                ],
+                "result_requirement": "Open inkers.ai, click Demo button, and inform Decision to save browser state (including IDs)",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires interaction with a webpage. The goal is to open a specific URL and click a button, and also to establish a protocol for how the Decision module will handle browser state. This requires tool use and is not solvable with existing memory or globals. I need to route to Decision to plan the steps.",
+                "local_reasoning": "The task requires tool use (opening a webpage and clicking a button).",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open https://www.inkers.ai in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {},
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button IDs"
+                ],
+                "result_requirement": "Click the Demo button on inkers.ai and retrieve the browser state, including element IDs.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": true,
+                "confidence": "0.85",
+                "reasoning": "The webpage has been opened successfully. The next step is to click the 'Demo' button and retrieve the browser state as requested. This requires further tool use. The `raw_input` shows that the previous step was successful in opening the webpage, but it lacks information about the button or browser state.",
+                "local_reasoning": "The webpage is open, but the 'Demo' button needs to be clicked, and browser state retrieved.",
+                "last_tooluse_summary": "Webpage opened successfully. No browser state retrieved.",
+                "solution_summary": "Webpage opened. Awaiting the next step to click the 'Demo' button and retrieve browser state.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button IDs"
+                ],
+                "result_requirement": "Open inkers.ai, click Demo button, and inform Decision to save browser state (including IDs)",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires interaction with a webpage. The goal is to open a specific URL and click a button, and also to establish a protocol for how the Decision module will handle browser state. This requires tool use and is not solvable with existing memory or globals. I need to route to Decision to plan the steps.",
+                "local_reasoning": "The task requires tool use (opening a webpage and clicking a button).",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get interactive elements on the page to identify the 'Demo' button."
+              },
+              {
+                "id": "2",
+                "description": "Click the 'Demo' button using its element ID."
+              },
+              {
+                "id": "3",
+                "description": "Get current browser session snapshot."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "1",
+          "code_variants": {
+            "CODE_1A": "interactive_elements = get_interactive_elements('Demo', True, True)\nreturn {\"interactive_elements_1A\": interactive_elements}",
+            "CODE_1B": "enhanced_page_structure = get_enhanced_page_structure()\nreturn {\"enhanced_page_structure_1B\": enhanced_page_structure}",
+            "CODE_1C": "comprehensive_markdown = get_comprehensive_markdown()\nreturn {\"comprehensive_markdown_1C\": comprehensive_markdown}"
+          }
+        },
+        "next_step_id": "1",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get interactive elements on the page to identify the 'Demo' button."
+            },
+            {
+              "id": "2",
+              "description": "Click the 'Demo' button using its element ID."
+            },
+            {
+              "id": "3",
+              "description": "Get current browser session snapshot."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            },
+            {
+              "from": "2",
+              "to": "3",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_1A": "interactive_elements = get_interactive_elements('Demo', True, True)\nreturn {\"interactive_elements_1A\": interactive_elements}",
+          "CODE_1B": "enhanced_page_structure = get_enhanced_page_structure()\nreturn {\"enhanced_page_structure_1B\": enhanced_page_structure}",
+          "CODE_1C": "comprehensive_markdown = get_comprehensive_markdown()\nreturn {\"comprehensive_markdown_1C\": comprehensive_markdown}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      },
+      {
+        "run_id": "883a1400-b49a-4cc4-a306-6011b899140f",
+        "input": {
+          "current_time": "2025-05-27T16:34:16.908746",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "perception": {
+            "entities": [
+              "inkers.ai",
+              "Demo Button",
+              "browser state",
+              "button IDs"
+            ],
+            "result_requirement": "Click the Demo button on inkers.ai and retrieve the browser state, including element IDs.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": true,
+            "confidence": "0.9",
+            "reasoning": "The interactive elements have been successfully retrieved. The 'Demo' button can now be clicked. The 'Demo' button is present in the `nav` list with id 8. The next step is to click it using its ID.",
+            "local_reasoning": "The interactive element extraction was successful, and the Demo button is identified.",
+            "last_tooluse_summary": "Interactive elements retrieved successfully.",
+            "solution_summary": "Interactive elements retrieved. Ready to click the Demo button.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button IDs"
+                ],
+                "result_requirement": "Open inkers.ai, click Demo button, and inform Decision to save browser state (including IDs)",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires interaction with a webpage. The goal is to open a specific URL and click a button, and also to establish a protocol for how the Decision module will handle browser state. This requires tool use and is not solvable with existing memory or globals. I need to route to Decision to plan the steps.",
+                "local_reasoning": "The task requires tool use (opening a webpage and clicking a button).",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open https://www.inkers.ai in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {},
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button IDs"
+                ],
+                "result_requirement": "Click the Demo button on inkers.ai and retrieve the browser state, including element IDs.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": true,
+                "confidence": "0.85",
+                "reasoning": "The webpage has been opened successfully. The next step is to click the 'Demo' button and retrieve the browser state as requested. This requires further tool use. The `raw_input` shows that the previous step was successful in opening the webpage, but it lacks information about the button or browser state.",
+                "local_reasoning": "The webpage is open, but the 'Demo' button needs to be clicked, and browser state retrieved.",
+                "last_tooluse_summary": "Webpage opened successfully. No browser state retrieved.",
+                "solution_summary": "Webpage opened. Awaiting the next step to click the 'Demo' button and retrieve browser state.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            },
+            {
+              "index": "1",
+              "description": "Get interactive elements on the page to identify the 'Demo' button.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "interactive_elements_1A": {
+                  "success": true,
+                  "nav": [
+                    {
+                      "id": 1,
+                      "desc": "Home",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 2,
+                      "desc": "About",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 5,
+                      "desc": "Team",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 6,
+                      "desc": "Pricing",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 7,
+                      "desc": "Contact",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 8,
+                      "desc": "Demo",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 10,
+                      "desc": "Owners",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 11,
+                      "desc": "Contractors",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 12,
+                      "desc": "Architects",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 14,
+                      "desc": "Request a demo (cta-demo-button)",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 229,
+                      "desc": "Link",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 231,
+                      "desc": "Link",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 233,
+                      "desc": "Link",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 301,
+                      "desc": "Contact",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 302,
+                      "desc": "Terms of Use",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 303,
+                      "desc": "About",
+                      "action": "click_element_by_index"
+                    }
+                  ],
+                  "forms": [
+                    {
+                      "id": 261,
+                      "desc": "Enter your first name (Name_First)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 263,
+                      "desc": "Enter your last name (Name_Last)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 265,
+                      "desc": "Enter country code (PhoneNumber_countrycodeval)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 267,
+                      "desc": "Enter your phone number (PhoneNumber_countrycode)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 269,
+                      "desc": "Enter your organization name (SingleLine1)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 271,
+                      "desc": "Enter your email (Email)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 273,
+                      "desc": "Enter area to scan (sqft) (Number)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 276,
+                      "desc": "Toggle option",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 280,
+                      "desc": "Toggle option",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 283,
+                      "desc": "Date Input",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 285,
+                      "desc": "Address Line 1 (Address_AddressLine1)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 286,
+                      "desc": "Address Line 2 (Address_AddressLine2)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 287,
+                      "desc": "City (Address_City)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 288,
+                      "desc": "State/Region/Province (Address_Region)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 289,
+                      "desc": "Postal / Zip Code (Address_ZipCode)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 290,
+                      "desc": "Select Address Country (Address_Country)",
+                      "action": "select_dropdown_option",
+                      "options": [
+                        "\u00c5land Islands",
+                        "Afghanistan",
+                        "Akrotiri",
+                        "Albania",
+                        "Algeria",
+                        "American Samoa",
+                        "Andorra",
+                        "Angola",
+                        "Anguilla",
+                        "Antarctica",
+                        "Antigua and Barbuda",
+                        "Argentina",
+                        "Armenia",
+                        "Aruba",
+                        "Ashmore and Cartier Islands",
+                        "Australia",
+                        "Austria",
+                        "Azerbaijan",
+                        "Bahrain",
+                        "Bangladesh",
+                        "Barbados",
+                        "Bassas Da India",
+                        "Belarus",
+                        "Belgium",
+                        "Belize",
+                        "Benin",
+                        "Bermuda",
+                        "Bhutan",
+                        "Bolivia",
+                        "Bosnia and Herzegovina",
+                        "Botswana",
+                        "Bouvet Island",
+                        "Brazil",
+                        "British Indian Ocean Territory",
+                        "British Virgin Islands",
+                        "Brunei",
+                        "Bulgaria",
+                        "Burkina Faso",
+                        "Burma",
+                        "Burundi",
+                        "Cambodia",
+                        "Cameroon",
+                        "Canada",
+                        "Cape Verde",
+                        "Caribbean Netherlands",
+                        "Cayman Islands",
+                        "Central African Republic",
+                        "Chad",
+                        "Chile",
+                        "China",
+                        "Christmas Island",
+                        "Clipperton Island",
+                        "Cocos (Keeling) Islands",
+                        "Colombia",
+                        "Comoros",
+                        "Cook Islands",
+                        "Coral Sea Islands",
+                        "Costa Rica",
+                        "Cote D'Ivoire",
+                        "Croatia",
+                        "Cuba",
+                        "Cura\u00e7ao",
+                        "Cyprus",
+                        "Czech Republic",
+                        "Democratic Republic of the Congo",
+                        "Denmark",
+                        "Dhekelia",
+                        "Djibouti",
+                        "Dominica",
+                        "Dominican Republic",
+                        "Ecuador",
+                        "Egypt",
+                        "El Salvador",
+                        "Equatorial Guinea",
+                        "Eritrea",
+                        "Estonia",
+                        "Ethiopia",
+                        "Europa Island",
+                        "Falkland Islands (Islas Malvinas)",
+                        "Faroe Islands",
+                        "Federated States of Micronesia",
+                        "Fiji",
+                        "Finland",
+                        "France",
+                        "French Guiana",
+                        "French Polynesia",
+                        "French Southern and Antarctic Lands",
+                        "Gabon",
+                        "Gaza Strip",
+                        "Georgia",
+                        "Germany",
+                        "Ghana",
+                        "Gibraltar",
+                        "Glorioso Islands",
+                        "Greece",
+                        "Greenland",
+                        "Grenada",
+                        "Guadeloupe",
+                        "Guam",
+                        "Guatemala",
+                        "Guernsey",
+                        "Guinea",
+                        "Guinea-bissau",
+                        "Guyana",
+                        "Haiti",
+                        "Heard Island and Mcdonald Islands",
+                        "Holy See (Vatican City)",
+                        "Honduras",
+                        "Hong Kong",
+                        "Hungary",
+                        "Iceland",
+                        "India",
+                        "Indonesia",
+                        "Iran",
+                        "Iraq",
+                        "Ireland",
+                        "Isle of Man",
+                        "Israel",
+                        "Italy",
+                        "Jamaica",
+                        "Jan Mayen",
+                        "Japan",
+                        "Jersey",
+                        "Jordan",
+                        "Juan De Nova Island",
+                        "Kazakhstan",
+                        "Kenya",
+                        "Kiribati",
+                        "Kosovo",
+                        "Kuwait",
+                        "Kyrgyzstan",
+                        "Laos",
+                        "Latvia",
+                        "Lebanon",
+                        "Lesotho",
+                        "Liberia",
+                        "Libya",
+                        "Liechtenstein",
+                        "Lithuania",
+                        "Luxembourg",
+                        "Macau",
+                        "Macedonia",
+                        "Madagascar",
+                        "Malawi",
+                        "Malaysia",
+                        "Maldives",
+                        "Mali",
+                        "Malta",
+                        "Marshall Islands",
+                        "Martinique",
+                        "Mauritania",
+                        "Mauritius",
+                        "Mayotte",
+                        "Mexico",
+                        "Moldova",
+                        "Monaco",
+                        "Mongolia",
+                        "Montenegro",
+                        "Montserrat",
+                        "Morocco",
+                        "Mozambique",
+                        "Myanmar",
+                        "Namibia",
+                        "Nauru",
+                        "Navassa Island",
+                        "Nepal",
+                        "Netherlands Antilles",
+                        "Netherlands",
+                        "New Caledonia",
+                        "New Zealand",
+                        "Nicaragua",
+                        "Niger",
+                        "Nigeria",
+                        "Niue",
+                        "Norfolk Island",
+                        "North Korea",
+                        "Northern Mariana Islands",
+                        "Norway",
+                        "Oman",
+                        "Pakistan",
+                        "Palau",
+                        "Palestine",
+                        "Panama",
+                        "Papua New Guinea",
+                        "Paracel Islands",
+                        "Paraguay",
+                        "Peru",
+                        "Philippines",
+                        "Pitcairn Islands",
+                        "Poland",
+                        "Portugal",
+                        "Puerto Rico",
+                        "Qatar",
+                        "Republic of the Congo",
+                        "Reunion",
+                        "Romania",
+                        "Russia",
+                        "Rwanda",
+                        "Saint Barth\u00c3\u00a9lemy",
+                        "Saint Helena",
+                        "Saint Kitts and Nevis",
+                        "Saint Lucia",
+                        "Saint Martin",
+                        "Saint Pierre and Miquelon",
+                        "Saint Vincent and the Grenadines",
+                        "Samoa",
+                        "San Marino",
+                        "Sao Tome and Principe",
+                        "Saudi Arabia",
+                        "Senegal",
+                        "Serbia",
+                        "Seychelles",
+                        "Sierra Leone",
+                        "Singapore",
+                        "Sint Maarten",
+                        "Slovakia",
+                        "Slovenia",
+                        "Solomon Islands",
+                        "Somalia",
+                        "South Africa",
+                        "South Georgia and the South Sandwich Islands",
+                        "South Korea",
+                        "South Sudan",
+                        "Spain",
+                        "Spratly Islands",
+                        "Sri Lanka",
+                        "Sudan",
+                        "Suriname",
+                        "Svalbard",
+                        "Swaziland",
+                        "Sweden",
+                        "Switzerland",
+                        "Syria",
+                        "Taiwan",
+                        "Tajikistan",
+                        "Tanzania",
+                        "Thailand",
+                        "The Bahamas",
+                        "The Gambia",
+                        "Timor-leste",
+                        "Togo",
+                        "Tokelau",
+                        "Tonga",
+                        "Trinidad and Tobago",
+                        "Tromelin Island",
+                        "Tunisia",
+                        "Turkey",
+                        "Turkmenistan",
+                        "Turks and Caicos Islands",
+                        "Tuvalu",
+                        "Uganda",
+                        "Ukraine",
+                        "United Arab Emirates",
+                        "United Kingdom",
+                        "United States",
+                        "Uruguay",
+                        "Uzbekistan",
+                        "Vanuatu",
+                        "Venezuela",
+                        "Vietnam",
+                        "Virgin Islands",
+                        "Wake Island",
+                        "Wallis and Futuna",
+                        "West Bank",
+                        "Western Sahara",
+                        "Yemen",
+                        "Zambia",
+                        "Zimbabwe"
+                      ]
+                    },
+                    {
+                      "id": 292,
+                      "desc": "Any questions or concerns (MultiLine1)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 293,
+                      "desc": "Submit",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 294,
+                      "desc": "Enter your name (name)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 295,
+                      "desc": "Enter your email (email)",
+                      "action": "input_text"
+                    },
+                    {
+                      "id": 296,
+                      "desc": "Subscribe",
+                      "action": "click_element_by_index"
+                    }
+                  ],
+                  "buttons": [
+                    {
+                      "id": 3,
+                      "desc": "Product",
+                      "action": "hover item, not implemented yet"
+                    },
+                    {
+                      "id": 4,
+                      "desc": "Services",
+                      "action": "hover item, not implemented yet"
+                    },
+                    {
+                      "id": 9,
+                      "desc": "Toggle theme",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 226,
+                      "desc": "Owners & Contractors",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 227,
+                      "desc": "Architects",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 228,
+                      "desc": "Lithic Scanner",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 230,
+                      "desc": "Start Free Trial",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 232,
+                      "desc": "Start Free Trial",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 234,
+                      "desc": "Start Free Trial",
+                      "action": "click_element_by_index"
+                    },
+                    {
+                      "id": 259,
+                      "desc": "sales@inkers.ai",
+                      "action": "click_element_by_index"
+                    }
+                  ],
+                  "total": 47
+                }
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button IDs"
+                ],
+                "result_requirement": "Click the Demo button on inkers.ai and retrieve the browser state, including element IDs.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": true,
+                "confidence": "0.9",
+                "reasoning": "The interactive elements have been successfully retrieved. The 'Demo' button can now be clicked. The 'Demo' button is present in the `nav` list with id 8. The next step is to click it using its ID.",
+                "local_reasoning": "The interactive element extraction was successful, and the Demo button is identified.",
+                "last_tooluse_summary": "Interactive elements retrieved successfully.",
+                "solution_summary": "Interactive elements retrieved. Ready to click the Demo button.",
+                "route": "decision"
+              },
+              "from_step": "1"
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "inkers.ai",
+                  "Demo Button",
+                  "browser state",
+                  "button IDs"
+                ],
+                "result_requirement": "Open inkers.ai, click Demo button, and inform Decision to save browser state (including IDs)",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The user query requires interaction with a webpage. The goal is to open a specific URL and click a button, and also to establish a protocol for how the Decision module will handle browser state. This requires tool use and is not solvable with existing memory or globals. I need to route to Decision to plan the steps.",
+                "local_reasoning": "The task requires tool use (opening a webpage and clicking a button).",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            },
+            "interactive_elements_1A": {
+              "type": "dict",
+              "preview": "{'success': True, 'nav': [{'id': 1, 'desc': 'Home', 'action': 'click_element_by_index'}, {'id': 2, 'desc': 'About', 'action': 'click_element_by_index'}, {'id': 5, 'desc': 'Team', 'action': 'click_element_by_index'}, {'id': 6, 'desc': 'Pricing', 'action': 'click_element_by_index'}, {'id': 7, 'desc': 'Contact', 'action': 'click_element_by_index'}, {'id': 8, 'desc': 'Demo', 'action': 'click_element_by_index'}, {'id': 10, 'desc': 'Owners', 'action': 'click_element_by_index'}, {'id': 11, 'desc': 'Con\u2026"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get interactive elements on the page to identify the 'Demo' button."
+              },
+              {
+                "id": "2",
+                "description": "Click the 'Demo' button (identified by id 8)."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "2",
+          "code_variants": {
+            "CODE_2A": "element_id = 8\nclick_element_by_index(element_id)\nreturn {\"clicked_element_2A\": element_id}",
+            "CODE_2B": "interactive_elements = globals_schema.get(\"interactive_elements_1A\", {})\nif interactive_elements and interactive_elements.get(\"nav\"):\n    for element in interactive_elements[\"nav\"]:\n        if element.get(\"desc\") == \"Demo\":\n            demo_id = element.get(\"id\")\n            click_element_by_index(demo_id)\n            return {\"clicked_element_2B\": demo_id}\nreturn {\"clicked_element_2B\": None}",
+            "CODE_2C": "element_id = 8\nclick_element_by_index(element_id)\nwait(2)\npage_structure = get_enhanced_page_structure()\nreturn {\"clicked_element_2C\": element_id, \"page_structure_2C\": page_structure}"
+          }
+        },
+        "next_step_id": "2",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get interactive elements on the page to identify the 'Demo' button."
+            },
+            {
+              "id": "2",
+              "description": "Click the 'Demo' button (identified by id 8)."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_2A": "element_id = 8\nclick_element_by_index(element_id)\nreturn {\"clicked_element_2A\": element_id}",
+          "CODE_2B": "interactive_elements = globals_schema.get(\"interactive_elements_1A\", {})\nif interactive_elements and interactive_elements.get(\"nav\"):\n    for element in interactive_elements[\"nav\"]:\n        if element.get(\"desc\") == \"Demo\":\n            demo_id = element.get(\"id\")\n            click_element_by_index(demo_id)\n            return {\"clicked_element_2B\": demo_id}\nreturn {\"clicked_element_2B\": None}",
+          "CODE_2C": "element_id = 8\nclick_element_by_index(element_id)\nwait(2)\npage_structure = get_enhanced_page_structure()\nreturn {\"clicked_element_2C\": element_id, \"page_structure_2C\": page_structure}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      }
+    ],
+    "execution_snapshots": [
+      {
+        "run_id": "190448be-7a9f-4175-8939-1cd91c33551e",
+        "step_id": "0",
+        "variant_used": "CODE_0A",
+        "code": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+        "status": "success",
+        "result": {},
+        "error": null,
+        "execution_time": "2025-05-27 22:03:49",
+        "total_time": "8.308",
+        "return_to": ""
+      },
+      {
+        "run_id": "a3b24d0b-13df-44b6-bacd-05ba1678ba8f",
+        "step_id": "1",
+        "variant_used": "CODE_1A",
+        "code": "interactive_elements = get_interactive_elements('Demo', True, True)\nreturn {\"interactive_elements_1A\": interactive_elements}",
+        "status": "success",
+        "result": {
+          "interactive_elements_1A": {
+            "success": true,
+            "nav": [
+              {
+                "id": 1,
+                "desc": "Home",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 2,
+                "desc": "About",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 5,
+                "desc": "Team",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 6,
+                "desc": "Pricing",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 7,
+                "desc": "Contact",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 8,
+                "desc": "Demo",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 10,
+                "desc": "Owners",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 11,
+                "desc": "Contractors",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 12,
+                "desc": "Architects",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 14,
+                "desc": "Request a demo (cta-demo-button)",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 229,
+                "desc": "Link",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 231,
+                "desc": "Link",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 233,
+                "desc": "Link",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 301,
+                "desc": "Contact",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 302,
+                "desc": "Terms of Use",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 303,
+                "desc": "About",
+                "action": "click_element_by_index"
+              }
+            ],
+            "forms": [
+              {
+                "id": 261,
+                "desc": "Enter your first name (Name_First)",
+                "action": "input_text"
+              },
+              {
+                "id": 263,
+                "desc": "Enter your last name (Name_Last)",
+                "action": "input_text"
+              },
+              {
+                "id": 265,
+                "desc": "Enter country code (PhoneNumber_countrycodeval)",
+                "action": "input_text"
+              },
+              {
+                "id": 267,
+                "desc": "Enter your phone number (PhoneNumber_countrycode)",
+                "action": "input_text"
+              },
+              {
+                "id": 269,
+                "desc": "Enter your organization name (SingleLine1)",
+                "action": "input_text"
+              },
+              {
+                "id": 271,
+                "desc": "Enter your email (Email)",
+                "action": "input_text"
+              },
+              {
+                "id": 273,
+                "desc": "Enter area to scan (sqft) (Number)",
+                "action": "input_text"
+              },
+              {
+                "id": 276,
+                "desc": "Toggle option",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 280,
+                "desc": "Toggle option",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 283,
+                "desc": "Date Input",
+                "action": "input_text"
+              },
+              {
+                "id": 285,
+                "desc": "Address Line 1 (Address_AddressLine1)",
+                "action": "input_text"
+              },
+              {
+                "id": 286,
+                "desc": "Address Line 2 (Address_AddressLine2)",
+                "action": "input_text"
+              },
+              {
+                "id": 287,
+                "desc": "City (Address_City)",
+                "action": "input_text"
+              },
+              {
+                "id": 288,
+                "desc": "State/Region/Province (Address_Region)",
+                "action": "input_text"
+              },
+              {
+                "id": 289,
+                "desc": "Postal / Zip Code (Address_ZipCode)",
+                "action": "input_text"
+              },
+              {
+                "id": 290,
+                "desc": "Select Address Country (Address_Country)",
+                "action": "select_dropdown_option",
+                "options": [
+                  "\u00c5land Islands",
+                  "Afghanistan",
+                  "Akrotiri",
+                  "Albania",
+                  "Algeria",
+                  "American Samoa",
+                  "Andorra",
+                  "Angola",
+                  "Anguilla",
+                  "Antarctica",
+                  "Antigua and Barbuda",
+                  "Argentina",
+                  "Armenia",
+                  "Aruba",
+                  "Ashmore and Cartier Islands",
+                  "Australia",
+                  "Austria",
+                  "Azerbaijan",
+                  "Bahrain",
+                  "Bangladesh",
+                  "Barbados",
+                  "Bassas Da India",
+                  "Belarus",
+                  "Belgium",
+                  "Belize",
+                  "Benin",
+                  "Bermuda",
+                  "Bhutan",
+                  "Bolivia",
+                  "Bosnia and Herzegovina",
+                  "Botswana",
+                  "Bouvet Island",
+                  "Brazil",
+                  "British Indian Ocean Territory",
+                  "British Virgin Islands",
+                  "Brunei",
+                  "Bulgaria",
+                  "Burkina Faso",
+                  "Burma",
+                  "Burundi",
+                  "Cambodia",
+                  "Cameroon",
+                  "Canada",
+                  "Cape Verde",
+                  "Caribbean Netherlands",
+                  "Cayman Islands",
+                  "Central African Republic",
+                  "Chad",
+                  "Chile",
+                  "China",
+                  "Christmas Island",
+                  "Clipperton Island",
+                  "Cocos (Keeling) Islands",
+                  "Colombia",
+                  "Comoros",
+                  "Cook Islands",
+                  "Coral Sea Islands",
+                  "Costa Rica",
+                  "Cote D'Ivoire",
+                  "Croatia",
+                  "Cuba",
+                  "Cura\u00e7ao",
+                  "Cyprus",
+                  "Czech Republic",
+                  "Democratic Republic of the Congo",
+                  "Denmark",
+                  "Dhekelia",
+                  "Djibouti",
+                  "Dominica",
+                  "Dominican Republic",
+                  "Ecuador",
+                  "Egypt",
+                  "El Salvador",
+                  "Equatorial Guinea",
+                  "Eritrea",
+                  "Estonia",
+                  "Ethiopia",
+                  "Europa Island",
+                  "Falkland Islands (Islas Malvinas)",
+                  "Faroe Islands",
+                  "Federated States of Micronesia",
+                  "Fiji",
+                  "Finland",
+                  "France",
+                  "French Guiana",
+                  "French Polynesia",
+                  "French Southern and Antarctic Lands",
+                  "Gabon",
+                  "Gaza Strip",
+                  "Georgia",
+                  "Germany",
+                  "Ghana",
+                  "Gibraltar",
+                  "Glorioso Islands",
+                  "Greece",
+                  "Greenland",
+                  "Grenada",
+                  "Guadeloupe",
+                  "Guam",
+                  "Guatemala",
+                  "Guernsey",
+                  "Guinea",
+                  "Guinea-bissau",
+                  "Guyana",
+                  "Haiti",
+                  "Heard Island and Mcdonald Islands",
+                  "Holy See (Vatican City)",
+                  "Honduras",
+                  "Hong Kong",
+                  "Hungary",
+                  "Iceland",
+                  "India",
+                  "Indonesia",
+                  "Iran",
+                  "Iraq",
+                  "Ireland",
+                  "Isle of Man",
+                  "Israel",
+                  "Italy",
+                  "Jamaica",
+                  "Jan Mayen",
+                  "Japan",
+                  "Jersey",
+                  "Jordan",
+                  "Juan De Nova Island",
+                  "Kazakhstan",
+                  "Kenya",
+                  "Kiribati",
+                  "Kosovo",
+                  "Kuwait",
+                  "Kyrgyzstan",
+                  "Laos",
+                  "Latvia",
+                  "Lebanon",
+                  "Lesotho",
+                  "Liberia",
+                  "Libya",
+                  "Liechtenstein",
+                  "Lithuania",
+                  "Luxembourg",
+                  "Macau",
+                  "Macedonia",
+                  "Madagascar",
+                  "Malawi",
+                  "Malaysia",
+                  "Maldives",
+                  "Mali",
+                  "Malta",
+                  "Marshall Islands",
+                  "Martinique",
+                  "Mauritania",
+                  "Mauritius",
+                  "Mayotte",
+                  "Mexico",
+                  "Moldova",
+                  "Monaco",
+                  "Mongolia",
+                  "Montenegro",
+                  "Montserrat",
+                  "Morocco",
+                  "Mozambique",
+                  "Myanmar",
+                  "Namibia",
+                  "Nauru",
+                  "Navassa Island",
+                  "Nepal",
+                  "Netherlands Antilles",
+                  "Netherlands",
+                  "New Caledonia",
+                  "New Zealand",
+                  "Nicaragua",
+                  "Niger",
+                  "Nigeria",
+                  "Niue",
+                  "Norfolk Island",
+                  "North Korea",
+                  "Northern Mariana Islands",
+                  "Norway",
+                  "Oman",
+                  "Pakistan",
+                  "Palau",
+                  "Palestine",
+                  "Panama",
+                  "Papua New Guinea",
+                  "Paracel Islands",
+                  "Paraguay",
+                  "Peru",
+                  "Philippines",
+                  "Pitcairn Islands",
+                  "Poland",
+                  "Portugal",
+                  "Puerto Rico",
+                  "Qatar",
+                  "Republic of the Congo",
+                  "Reunion",
+                  "Romania",
+                  "Russia",
+                  "Rwanda",
+                  "Saint Barth\u00c3\u00a9lemy",
+                  "Saint Helena",
+                  "Saint Kitts and Nevis",
+                  "Saint Lucia",
+                  "Saint Martin",
+                  "Saint Pierre and Miquelon",
+                  "Saint Vincent and the Grenadines",
+                  "Samoa",
+                  "San Marino",
+                  "Sao Tome and Principe",
+                  "Saudi Arabia",
+                  "Senegal",
+                  "Serbia",
+                  "Seychelles",
+                  "Sierra Leone",
+                  "Singapore",
+                  "Sint Maarten",
+                  "Slovakia",
+                  "Slovenia",
+                  "Solomon Islands",
+                  "Somalia",
+                  "South Africa",
+                  "South Georgia and the South Sandwich Islands",
+                  "South Korea",
+                  "South Sudan",
+                  "Spain",
+                  "Spratly Islands",
+                  "Sri Lanka",
+                  "Sudan",
+                  "Suriname",
+                  "Svalbard",
+                  "Swaziland",
+                  "Sweden",
+                  "Switzerland",
+                  "Syria",
+                  "Taiwan",
+                  "Tajikistan",
+                  "Tanzania",
+                  "Thailand",
+                  "The Bahamas",
+                  "The Gambia",
+                  "Timor-leste",
+                  "Togo",
+                  "Tokelau",
+                  "Tonga",
+                  "Trinidad and Tobago",
+                  "Tromelin Island",
+                  "Tunisia",
+                  "Turkey",
+                  "Turkmenistan",
+                  "Turks and Caicos Islands",
+                  "Tuvalu",
+                  "Uganda",
+                  "Ukraine",
+                  "United Arab Emirates",
+                  "United Kingdom",
+                  "United States",
+                  "Uruguay",
+                  "Uzbekistan",
+                  "Vanuatu",
+                  "Venezuela",
+                  "Vietnam",
+                  "Virgin Islands",
+                  "Wake Island",
+                  "Wallis and Futuna",
+                  "West Bank",
+                  "Western Sahara",
+                  "Yemen",
+                  "Zambia",
+                  "Zimbabwe"
+                ]
+              },
+              {
+                "id": 292,
+                "desc": "Any questions or concerns (MultiLine1)",
+                "action": "input_text"
+              },
+              {
+                "id": 293,
+                "desc": "Submit",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 294,
+                "desc": "Enter your name (name)",
+                "action": "input_text"
+              },
+              {
+                "id": 295,
+                "desc": "Enter your email (email)",
+                "action": "input_text"
+              },
+              {
+                "id": 296,
+                "desc": "Subscribe",
+                "action": "click_element_by_index"
+              }
+            ],
+            "buttons": [
+              {
+                "id": 3,
+                "desc": "Product",
+                "action": "hover item, not implemented yet"
+              },
+              {
+                "id": 4,
+                "desc": "Services",
+                "action": "hover item, not implemented yet"
+              },
+              {
+                "id": 9,
+                "desc": "Toggle theme",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 226,
+                "desc": "Owners & Contractors",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 227,
+                "desc": "Architects",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 228,
+                "desc": "Lithic Scanner",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 230,
+                "desc": "Start Free Trial",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 232,
+                "desc": "Start Free Trial",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 234,
+                "desc": "Start Free Trial",
+                "action": "click_element_by_index"
+              },
+              {
+                "id": 259,
+                "desc": "sales@inkers.ai",
+                "action": "click_element_by_index"
+              }
+            ],
+            "total": 47
+          }
+        },
+        "error": null,
+        "execution_time": "2025-05-27 22:04:09",
+        "total_time": "1.645",
+        "return_to": ""
+      },
+      {
+        "run_id": "8a195f79-371c-4277-86fb-05cf81a8979a",
+        "step_id": "2",
+        "variant_used": "CODE_2A",
+        "code": "element_id = 8\nclick_element_by_index(element_id)\nreturn {\"clicked_element_2A\": element_id}",
+        "status": "success",
+        "result": {
+          "clicked_element_2A": 8
+        },
+        "error": null,
+        "execution_time": "2025-05-27 22:04:22",
+        "total_time": "1.94",
+        "return_to": ""
+      }
+    ],
+    "summarizer_snapshots": [
+      {
+        "run_id": "18cc4044-ae89-43a2-a8dd-dc7c38e75a79",
+        "input": {
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+          "globals_schema": {
+            "memory": null,
+            "interactive_elements_1A": {
+              "success": true,
+              "nav": [
+                {
+                  "id": 1,
+                  "desc": "Home",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 2,
+                  "desc": "About",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 5,
+                  "desc": "Team",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 6,
+                  "desc": "Pricing",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 7,
+                  "desc": "Contact",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 8,
+                  "desc": "Demo",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 10,
+                  "desc": "Owners",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 11,
+                  "desc": "Contractors",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 12,
+                  "desc": "Architects",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 14,
+                  "desc": "Request a demo (cta-demo-button)",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 229,
+                  "desc": "Link",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 231,
+                  "desc": "Link",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 233,
+                  "desc": "Link",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 301,
+                  "desc": "Contact",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 302,
+                  "desc": "Terms of Use",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 303,
+                  "desc": "About",
+                  "action": "click_element_by_index"
+                }
+              ],
+              "forms": [
+                {
+                  "id": 261,
+                  "desc": "Enter your first name (Name_First)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 263,
+                  "desc": "Enter your last name (Name_Last)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 265,
+                  "desc": "Enter country code (PhoneNumber_countrycodeval)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 267,
+                  "desc": "Enter your phone number (PhoneNumber_countrycode)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 269,
+                  "desc": "Enter your organization name (SingleLine1)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 271,
+                  "desc": "Enter your email (Email)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 273,
+                  "desc": "Enter area to scan (sqft) (Number)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 276,
+                  "desc": "Toggle option",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 280,
+                  "desc": "Toggle option",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 283,
+                  "desc": "Date Input",
+                  "action": "input_text"
+                },
+                {
+                  "id": 285,
+                  "desc": "Address Line 1 (Address_AddressLine1)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 286,
+                  "desc": "Address Line 2 (Address_AddressLine2)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 287,
+                  "desc": "City (Address_City)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 288,
+                  "desc": "State/Region/Province (Address_Region)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 289,
+                  "desc": "Postal / Zip Code (Address_ZipCode)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 290,
+                  "desc": "Select Address Country (Address_Country)",
+                  "action": "select_dropdown_option",
+                  "options": [
+                    "\u00c5land Islands",
+                    "Afghanistan",
+                    "Akrotiri",
+                    "Albania",
+                    "Algeria",
+                    "American Samoa",
+                    "Andorra",
+                    "Angola",
+                    "Anguilla",
+                    "Antarctica",
+                    "Antigua and Barbuda",
+                    "Argentina",
+                    "Armenia",
+                    "Aruba",
+                    "Ashmore and Cartier Islands",
+                    "Australia",
+                    "Austria",
+                    "Azerbaijan",
+                    "Bahrain",
+                    "Bangladesh",
+                    "Barbados",
+                    "Bassas Da India",
+                    "Belarus",
+                    "Belgium",
+                    "Belize",
+                    "Benin",
+                    "Bermuda",
+                    "Bhutan",
+                    "Bolivia",
+                    "Bosnia and Herzegovina",
+                    "Botswana",
+                    "Bouvet Island",
+                    "Brazil",
+                    "British Indian Ocean Territory",
+                    "British Virgin Islands",
+                    "Brunei",
+                    "Bulgaria",
+                    "Burkina Faso",
+                    "Burma",
+                    "Burundi",
+                    "Cambodia",
+                    "Cameroon",
+                    "Canada",
+                    "Cape Verde",
+                    "Caribbean Netherlands",
+                    "Cayman Islands",
+                    "Central African Republic",
+                    "Chad",
+                    "Chile",
+                    "China",
+                    "Christmas Island",
+                    "Clipperton Island",
+                    "Cocos (Keeling) Islands",
+                    "Colombia",
+                    "Comoros",
+                    "Cook Islands",
+                    "Coral Sea Islands",
+                    "Costa Rica",
+                    "Cote D'Ivoire",
+                    "Croatia",
+                    "Cuba",
+                    "Cura\u00e7ao",
+                    "Cyprus",
+                    "Czech Republic",
+                    "Democratic Republic of the Congo",
+                    "Denmark",
+                    "Dhekelia",
+                    "Djibouti",
+                    "Dominica",
+                    "Dominican Republic",
+                    "Ecuador",
+                    "Egypt",
+                    "El Salvador",
+                    "Equatorial Guinea",
+                    "Eritrea",
+                    "Estonia",
+                    "Ethiopia",
+                    "Europa Island",
+                    "Falkland Islands (Islas Malvinas)",
+                    "Faroe Islands",
+                    "Federated States of Micronesia",
+                    "Fiji",
+                    "Finland",
+                    "France",
+                    "French Guiana",
+                    "French Polynesia",
+                    "French Southern and Antarctic Lands",
+                    "Gabon",
+                    "Gaza Strip",
+                    "Georgia",
+                    "Germany",
+                    "Ghana",
+                    "Gibraltar",
+                    "Glorioso Islands",
+                    "Greece",
+                    "Greenland",
+                    "Grenada",
+                    "Guadeloupe",
+                    "Guam",
+                    "Guatemala",
+                    "Guernsey",
+                    "Guinea",
+                    "Guinea-bissau",
+                    "Guyana",
+                    "Haiti",
+                    "Heard Island and Mcdonald Islands",
+                    "Holy See (Vatican City)",
+                    "Honduras",
+                    "Hong Kong",
+                    "Hungary",
+                    "Iceland",
+                    "India",
+                    "Indonesia",
+                    "Iran",
+                    "Iraq",
+                    "Ireland",
+                    "Isle of Man",
+                    "Israel",
+                    "Italy",
+                    "Jamaica",
+                    "Jan Mayen",
+                    "Japan",
+                    "Jersey",
+                    "Jordan",
+                    "Juan De Nova Island",
+                    "Kazakhstan",
+                    "Kenya",
+                    "Kiribati",
+                    "Kosovo",
+                    "Kuwait",
+                    "Kyrgyzstan",
+                    "Laos",
+                    "Latvia",
+                    "Lebanon",
+                    "Lesotho",
+                    "Liberia",
+                    "Libya",
+                    "Liechtenstein",
+                    "Lithuania",
+                    "Luxembourg",
+                    "Macau",
+                    "Macedonia",
+                    "Madagascar",
+                    "Malawi",
+                    "Malaysia",
+                    "Maldives",
+                    "Mali",
+                    "Malta",
+                    "Marshall Islands",
+                    "Martinique",
+                    "Mauritania",
+                    "Mauritius",
+                    "Mayotte",
+                    "Mexico",
+                    "Moldova",
+                    "Monaco",
+                    "Mongolia",
+                    "Montenegro",
+                    "Montserrat",
+                    "Morocco",
+                    "Mozambique",
+                    "Myanmar",
+                    "Namibia",
+                    "Nauru",
+                    "Navassa Island",
+                    "Nepal",
+                    "Netherlands Antilles",
+                    "Netherlands",
+                    "New Caledonia",
+                    "New Zealand",
+                    "Nicaragua",
+                    "Niger",
+                    "Nigeria",
+                    "Niue",
+                    "Norfolk Island",
+                    "North Korea",
+                    "Northern Mariana Islands",
+                    "Norway",
+                    "Oman",
+                    "Pakistan",
+                    "Palau",
+                    "Palestine",
+                    "Panama",
+                    "Papua New Guinea",
+                    "Paracel Islands",
+                    "Paraguay",
+                    "Peru",
+                    "Philippines",
+                    "Pitcairn Islands",
+                    "Poland",
+                    "Portugal",
+                    "Puerto Rico",
+                    "Qatar",
+                    "Republic of the Congo",
+                    "Reunion",
+                    "Romania",
+                    "Russia",
+                    "Rwanda",
+                    "Saint Barth\u00c3\u00a9lemy",
+                    "Saint Helena",
+                    "Saint Kitts and Nevis",
+                    "Saint Lucia",
+                    "Saint Martin",
+                    "Saint Pierre and Miquelon",
+                    "Saint Vincent and the Grenadines",
+                    "Samoa",
+                    "San Marino",
+                    "Sao Tome and Principe",
+                    "Saudi Arabia",
+                    "Senegal",
+                    "Serbia",
+                    "Seychelles",
+                    "Sierra Leone",
+                    "Singapore",
+                    "Sint Maarten",
+                    "Slovakia",
+                    "Slovenia",
+                    "Solomon Islands",
+                    "Somalia",
+                    "South Africa",
+                    "South Georgia and the South Sandwich Islands",
+                    "South Korea",
+                    "South Sudan",
+                    "Spain",
+                    "Spratly Islands",
+                    "Sri Lanka",
+                    "Sudan",
+                    "Suriname",
+                    "Svalbard",
+                    "Swaziland",
+                    "Sweden",
+                    "Switzerland",
+                    "Syria",
+                    "Taiwan",
+                    "Tajikistan",
+                    "Tanzania",
+                    "Thailand",
+                    "The Bahamas",
+                    "The Gambia",
+                    "Timor-leste",
+                    "Togo",
+                    "Tokelau",
+                    "Tonga",
+                    "Trinidad and Tobago",
+                    "Tromelin Island",
+                    "Tunisia",
+                    "Turkey",
+                    "Turkmenistan",
+                    "Turks and Caicos Islands",
+                    "Tuvalu",
+                    "Uganda",
+                    "Ukraine",
+                    "United Arab Emirates",
+                    "United Kingdom",
+                    "United States",
+                    "Uruguay",
+                    "Uzbekistan",
+                    "Vanuatu",
+                    "Venezuela",
+                    "Vietnam",
+                    "Virgin Islands",
+                    "Wake Island",
+                    "Wallis and Futuna",
+                    "West Bank",
+                    "Western Sahara",
+                    "Yemen",
+                    "Zambia",
+                    "Zimbabwe"
+                  ]
+                },
+                {
+                  "id": 292,
+                  "desc": "Any questions or concerns (MultiLine1)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 293,
+                  "desc": "Submit",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 294,
+                  "desc": "Enter your name (name)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 295,
+                  "desc": "Enter your email (email)",
+                  "action": "input_text"
+                },
+                {
+                  "id": 296,
+                  "desc": "Subscribe",
+                  "action": "click_element_by_index"
+                }
+              ],
+              "buttons": [
+                {
+                  "id": 3,
+                  "desc": "Product",
+                  "action": "hover item, not implemented yet"
+                },
+                {
+                  "id": 4,
+                  "desc": "Services",
+                  "action": "hover item, not implemented yet"
+                },
+                {
+                  "id": 9,
+                  "desc": "Toggle theme",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 226,
+                  "desc": "Owners & Contractors",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 227,
+                  "desc": "Architects",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 228,
+                  "desc": "Lithic Scanner",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 230,
+                  "desc": "Start Free Trial",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 232,
+                  "desc": "Start Free Trial",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 234,
+                  "desc": "Start Free Trial",
+                  "action": "click_element_by_index"
+                },
+                {
+                  "id": 259,
+                  "desc": "sales@inkers.ai",
+                  "action": "click_element_by_index"
+                }
+              ],
+              "total": 47
+            },
+            "clicked_element_2A": 8
+          },
+          "plan_graph": {
+            "directed": true,
+            "multigraph": false,
+            "graph": {},
+            "nodes": [
+              {
+                "data": {
+                  "index": "ROOT",
+                  "description": "initial query",
+                  "type": "ROOT",
+                  "status": "completed",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "inkers.ai",
+                      "Demo Button",
+                      "browser state",
+                      "button IDs"
+                    ],
+                    "result_requirement": "Open inkers.ai, click Demo button, and inform Decision to save browser state (including IDs)",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.9",
+                    "reasoning": "The user query requires interaction with a webpage. The goal is to open a specific URL and click a button, and also to establish a protocol for how the Decision module will handle browser state. This requires tool use and is not solvable with existing memory or globals. I need to route to Decision to plan the steps.",
+                    "local_reasoning": "The task requires tool use (opening a webpage and clicking a button).",
+                    "last_tooluse_summary": "Not applicable",
+                    "solution_summary": "Not ready yet.",
+                    "route": "decision"
+                  },
+                  "from_step": null
+                },
+                "id": "ROOT"
+              },
+              {
+                "data": {
+                  "index": "0",
+                  "description": "Open https://www.inkers.ai in a new tab.",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": {},
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "inkers.ai",
+                      "Demo Button",
+                      "browser state",
+                      "button IDs"
+                    ],
+                    "result_requirement": "Click the Demo button on inkers.ai and retrieve the browser state, including element IDs.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": true,
+                    "confidence": "0.85",
+                    "reasoning": "The webpage has been opened successfully. The next step is to click the 'Demo' button and retrieve the browser state as requested. This requires further tool use. The `raw_input` shows that the previous step was successful in opening the webpage, but it lacks information about the button or browser state.",
+                    "local_reasoning": "The webpage is open, but the 'Demo' button needs to be clicked, and browser state retrieved.",
+                    "last_tooluse_summary": "Webpage opened successfully. No browser state retrieved.",
+                    "solution_summary": "Webpage opened. Awaiting the next step to click the 'Demo' button and retrieve browser state.",
+                    "route": "decision"
+                  },
+                  "from_step": "ROOT"
+                },
+                "id": "0"
+              },
+              {
+                "data": {
+                  "index": "1",
+                  "description": "Get interactive elements on the page to identify the 'Demo' button.",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": {
+                    "interactive_elements_1A": {
+                      "success": true,
+                      "nav": [
+                        {
+                          "id": 1,
+                          "desc": "Home",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 2,
+                          "desc": "About",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 5,
+                          "desc": "Team",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 6,
+                          "desc": "Pricing",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 7,
+                          "desc": "Contact",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 8,
+                          "desc": "Demo",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 10,
+                          "desc": "Owners",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 11,
+                          "desc": "Contractors",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 12,
+                          "desc": "Architects",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 14,
+                          "desc": "Request a demo (cta-demo-button)",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 229,
+                          "desc": "Link",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 231,
+                          "desc": "Link",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 233,
+                          "desc": "Link",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 301,
+                          "desc": "Contact",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 302,
+                          "desc": "Terms of Use",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 303,
+                          "desc": "About",
+                          "action": "click_element_by_index"
+                        }
+                      ],
+                      "forms": [
+                        {
+                          "id": 261,
+                          "desc": "Enter your first name (Name_First)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 263,
+                          "desc": "Enter your last name (Name_Last)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 265,
+                          "desc": "Enter country code (PhoneNumber_countrycodeval)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 267,
+                          "desc": "Enter your phone number (PhoneNumber_countrycode)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 269,
+                          "desc": "Enter your organization name (SingleLine1)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 271,
+                          "desc": "Enter your email (Email)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 273,
+                          "desc": "Enter area to scan (sqft) (Number)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 276,
+                          "desc": "Toggle option",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 280,
+                          "desc": "Toggle option",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 283,
+                          "desc": "Date Input",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 285,
+                          "desc": "Address Line 1 (Address_AddressLine1)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 286,
+                          "desc": "Address Line 2 (Address_AddressLine2)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 287,
+                          "desc": "City (Address_City)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 288,
+                          "desc": "State/Region/Province (Address_Region)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 289,
+                          "desc": "Postal / Zip Code (Address_ZipCode)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 290,
+                          "desc": "Select Address Country (Address_Country)",
+                          "action": "select_dropdown_option",
+                          "options": [
+                            "\u00c5land Islands",
+                            "Afghanistan",
+                            "Akrotiri",
+                            "Albania",
+                            "Algeria",
+                            "American Samoa",
+                            "Andorra",
+                            "Angola",
+                            "Anguilla",
+                            "Antarctica",
+                            "Antigua and Barbuda",
+                            "Argentina",
+                            "Armenia",
+                            "Aruba",
+                            "Ashmore and Cartier Islands",
+                            "Australia",
+                            "Austria",
+                            "Azerbaijan",
+                            "Bahrain",
+                            "Bangladesh",
+                            "Barbados",
+                            "Bassas Da India",
+                            "Belarus",
+                            "Belgium",
+                            "Belize",
+                            "Benin",
+                            "Bermuda",
+                            "Bhutan",
+                            "Bolivia",
+                            "Bosnia and Herzegovina",
+                            "Botswana",
+                            "Bouvet Island",
+                            "Brazil",
+                            "British Indian Ocean Territory",
+                            "British Virgin Islands",
+                            "Brunei",
+                            "Bulgaria",
+                            "Burkina Faso",
+                            "Burma",
+                            "Burundi",
+                            "Cambodia",
+                            "Cameroon",
+                            "Canada",
+                            "Cape Verde",
+                            "Caribbean Netherlands",
+                            "Cayman Islands",
+                            "Central African Republic",
+                            "Chad",
+                            "Chile",
+                            "China",
+                            "Christmas Island",
+                            "Clipperton Island",
+                            "Cocos (Keeling) Islands",
+                            "Colombia",
+                            "Comoros",
+                            "Cook Islands",
+                            "Coral Sea Islands",
+                            "Costa Rica",
+                            "Cote D'Ivoire",
+                            "Croatia",
+                            "Cuba",
+                            "Cura\u00e7ao",
+                            "Cyprus",
+                            "Czech Republic",
+                            "Democratic Republic of the Congo",
+                            "Denmark",
+                            "Dhekelia",
+                            "Djibouti",
+                            "Dominica",
+                            "Dominican Republic",
+                            "Ecuador",
+                            "Egypt",
+                            "El Salvador",
+                            "Equatorial Guinea",
+                            "Eritrea",
+                            "Estonia",
+                            "Ethiopia",
+                            "Europa Island",
+                            "Falkland Islands (Islas Malvinas)",
+                            "Faroe Islands",
+                            "Federated States of Micronesia",
+                            "Fiji",
+                            "Finland",
+                            "France",
+                            "French Guiana",
+                            "French Polynesia",
+                            "French Southern and Antarctic Lands",
+                            "Gabon",
+                            "Gaza Strip",
+                            "Georgia",
+                            "Germany",
+                            "Ghana",
+                            "Gibraltar",
+                            "Glorioso Islands",
+                            "Greece",
+                            "Greenland",
+                            "Grenada",
+                            "Guadeloupe",
+                            "Guam",
+                            "Guatemala",
+                            "Guernsey",
+                            "Guinea",
+                            "Guinea-bissau",
+                            "Guyana",
+                            "Haiti",
+                            "Heard Island and Mcdonald Islands",
+                            "Holy See (Vatican City)",
+                            "Honduras",
+                            "Hong Kong",
+                            "Hungary",
+                            "Iceland",
+                            "India",
+                            "Indonesia",
+                            "Iran",
+                            "Iraq",
+                            "Ireland",
+                            "Isle of Man",
+                            "Israel",
+                            "Italy",
+                            "Jamaica",
+                            "Jan Mayen",
+                            "Japan",
+                            "Jersey",
+                            "Jordan",
+                            "Juan De Nova Island",
+                            "Kazakhstan",
+                            "Kenya",
+                            "Kiribati",
+                            "Kosovo",
+                            "Kuwait",
+                            "Kyrgyzstan",
+                            "Laos",
+                            "Latvia",
+                            "Lebanon",
+                            "Lesotho",
+                            "Liberia",
+                            "Libya",
+                            "Liechtenstein",
+                            "Lithuania",
+                            "Luxembourg",
+                            "Macau",
+                            "Macedonia",
+                            "Madagascar",
+                            "Malawi",
+                            "Malaysia",
+                            "Maldives",
+                            "Mali",
+                            "Malta",
+                            "Marshall Islands",
+                            "Martinique",
+                            "Mauritania",
+                            "Mauritius",
+                            "Mayotte",
+                            "Mexico",
+                            "Moldova",
+                            "Monaco",
+                            "Mongolia",
+                            "Montenegro",
+                            "Montserrat",
+                            "Morocco",
+                            "Mozambique",
+                            "Myanmar",
+                            "Namibia",
+                            "Nauru",
+                            "Navassa Island",
+                            "Nepal",
+                            "Netherlands Antilles",
+                            "Netherlands",
+                            "New Caledonia",
+                            "New Zealand",
+                            "Nicaragua",
+                            "Niger",
+                            "Nigeria",
+                            "Niue",
+                            "Norfolk Island",
+                            "North Korea",
+                            "Northern Mariana Islands",
+                            "Norway",
+                            "Oman",
+                            "Pakistan",
+                            "Palau",
+                            "Palestine",
+                            "Panama",
+                            "Papua New Guinea",
+                            "Paracel Islands",
+                            "Paraguay",
+                            "Peru",
+                            "Philippines",
+                            "Pitcairn Islands",
+                            "Poland",
+                            "Portugal",
+                            "Puerto Rico",
+                            "Qatar",
+                            "Republic of the Congo",
+                            "Reunion",
+                            "Romania",
+                            "Russia",
+                            "Rwanda",
+                            "Saint Barth\u00c3\u00a9lemy",
+                            "Saint Helena",
+                            "Saint Kitts and Nevis",
+                            "Saint Lucia",
+                            "Saint Martin",
+                            "Saint Pierre and Miquelon",
+                            "Saint Vincent and the Grenadines",
+                            "Samoa",
+                            "San Marino",
+                            "Sao Tome and Principe",
+                            "Saudi Arabia",
+                            "Senegal",
+                            "Serbia",
+                            "Seychelles",
+                            "Sierra Leone",
+                            "Singapore",
+                            "Sint Maarten",
+                            "Slovakia",
+                            "Slovenia",
+                            "Solomon Islands",
+                            "Somalia",
+                            "South Africa",
+                            "South Georgia and the South Sandwich Islands",
+                            "South Korea",
+                            "South Sudan",
+                            "Spain",
+                            "Spratly Islands",
+                            "Sri Lanka",
+                            "Sudan",
+                            "Suriname",
+                            "Svalbard",
+                            "Swaziland",
+                            "Sweden",
+                            "Switzerland",
+                            "Syria",
+                            "Taiwan",
+                            "Tajikistan",
+                            "Tanzania",
+                            "Thailand",
+                            "The Bahamas",
+                            "The Gambia",
+                            "Timor-leste",
+                            "Togo",
+                            "Tokelau",
+                            "Tonga",
+                            "Trinidad and Tobago",
+                            "Tromelin Island",
+                            "Tunisia",
+                            "Turkey",
+                            "Turkmenistan",
+                            "Turks and Caicos Islands",
+                            "Tuvalu",
+                            "Uganda",
+                            "Ukraine",
+                            "United Arab Emirates",
+                            "United Kingdom",
+                            "United States",
+                            "Uruguay",
+                            "Uzbekistan",
+                            "Vanuatu",
+                            "Venezuela",
+                            "Vietnam",
+                            "Virgin Islands",
+                            "Wake Island",
+                            "Wallis and Futuna",
+                            "West Bank",
+                            "Western Sahara",
+                            "Yemen",
+                            "Zambia",
+                            "Zimbabwe"
+                          ]
+                        },
+                        {
+                          "id": 292,
+                          "desc": "Any questions or concerns (MultiLine1)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 293,
+                          "desc": "Submit",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 294,
+                          "desc": "Enter your name (name)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 295,
+                          "desc": "Enter your email (email)",
+                          "action": "input_text"
+                        },
+                        {
+                          "id": 296,
+                          "desc": "Subscribe",
+                          "action": "click_element_by_index"
+                        }
+                      ],
+                      "buttons": [
+                        {
+                          "id": 3,
+                          "desc": "Product",
+                          "action": "hover item, not implemented yet"
+                        },
+                        {
+                          "id": 4,
+                          "desc": "Services",
+                          "action": "hover item, not implemented yet"
+                        },
+                        {
+                          "id": 9,
+                          "desc": "Toggle theme",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 226,
+                          "desc": "Owners & Contractors",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 227,
+                          "desc": "Architects",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 228,
+                          "desc": "Lithic Scanner",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 230,
+                          "desc": "Start Free Trial",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 232,
+                          "desc": "Start Free Trial",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 234,
+                          "desc": "Start Free Trial",
+                          "action": "click_element_by_index"
+                        },
+                        {
+                          "id": 259,
+                          "desc": "sales@inkers.ai",
+                          "action": "click_element_by_index"
+                        }
+                      ],
+                      "total": 47
+                    }
+                  },
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "inkers.ai",
+                      "Demo Button",
+                      "browser state",
+                      "button IDs"
+                    ],
+                    "result_requirement": "Click the Demo button on inkers.ai and retrieve the browser state, including element IDs.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": true,
+                    "confidence": "0.9",
+                    "reasoning": "The interactive elements have been successfully retrieved. The 'Demo' button can now be clicked. The 'Demo' button is present in the `nav` list with id 8. The next step is to click it using its ID.",
+                    "local_reasoning": "The interactive element extraction was successful, and the Demo button is identified.",
+                    "last_tooluse_summary": "Interactive elements retrieved successfully.",
+                    "solution_summary": "Interactive elements retrieved. Ready to click the Demo button.",
+                    "route": "decision"
+                  },
+                  "from_step": "1"
+                },
+                "id": "1"
+              },
+              {
+                "data": {
+                  "index": "2",
+                  "description": "Click the 'Demo' button (identified by id 8).",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": {
+                    "clicked_element_2A": 8
+                  },
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "inkers.ai",
+                      "Demo Button",
+                      "browser state",
+                      "button IDs"
+                    ],
+                    "result_requirement": "Click the Demo button on inkers.ai and inform Decision to save the browser state (including IDs) for future use.",
+                    "original_goal_achieved": true,
+                    "local_goal_achieved": true,
+                    "confidence": "0.95",
+                    "reasoning": "The original query was to open the inkers.ai website, click the Demo button, and ensure Decision saves the browser state with element IDs. All of these steps have been successfully completed. The 'Demo' button was identified and clicked. The instruction to save the browser state for future tool calls has been delivered to Decision through the original query. No further steps are required.",
+                    "local_reasoning": "The 'Demo' button was clicked successfully based on its ID. The original query contained the instruction for Decision to save the browser state.",
+                    "last_tooluse_summary": "Demo button clicked successfully. ID: 8.",
+                    "solution_summary": "The inkers.ai website was opened, and the 'Demo' button was clicked. Decision module has been instructed to save the browser state with element IDs for future use.",
+                    "route": "summarize",
+                    "instruction_to_summarize": "Summarize the actions taken: the inkers.ai website was opened, the 'Demo' button was clicked, and the Decision module has been informed to save the browser state for future interactions. Ensure to mention that the Demo button was clicked using element ID 8. Output should be in markdown format."
+                  },
+                  "from_step": "2"
+                },
+                "id": "2"
+              },
+              {
+                "data": {
+                  "index": "3",
+                  "description": "Get current browser session snapshot.",
+                  "type": "CODE",
+                  "status": "Skipped",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": null,
+                  "from_step": "1"
+                },
+                "id": "3"
+              }
+            ],
+            "links": [
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "0"
+              },
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "1"
+              },
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "2"
+              },
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "3"
+              },
+              {
+                "type": "normal",
+                "source": "1",
+                "target": "1"
+              },
+              {
+                "type": "normal",
+                "source": "1",
+                "target": "2"
+              },
+              {
+                "type": "normal",
+                "source": "1",
+                "target": "3"
+              },
+              {
+                "type": "normal",
+                "source": "2",
+                "target": "2"
+              }
+            ]
+          },
+          "perception": {
+            "entities": [
+              "inkers.ai",
+              "Demo Button",
+              "browser state",
+              "button IDs"
+            ],
+            "result_requirement": "Click the Demo button on inkers.ai and inform Decision to save the browser state (including IDs) for future use.",
+            "original_goal_achieved": true,
+            "local_goal_achieved": true,
+            "confidence": "0.95",
+            "reasoning": "The original query was to open the inkers.ai website, click the Demo button, and ensure Decision saves the browser state with element IDs. All of these steps have been successfully completed. The 'Demo' button was identified and clicked. The instruction to save the browser state for future tool calls has been delivered to Decision through the original query. No further steps are required.",
+            "local_reasoning": "The 'Demo' button was clicked successfully based on its ID. The original query contained the instruction for Decision to save the browser state.",
+            "last_tooluse_summary": "Demo button clicked successfully. ID: 8.",
+            "solution_summary": "The inkers.ai website was opened, and the 'Demo' button was clicked. Decision module has been instructed to save the browser state with element IDs for future use.",
+            "route": "summarize",
+            "instruction_to_summarize": "Summarize the actions taken: the inkers.ai website was opened, the 'Demo' button was clicked, and the Decision module has been informed to save the browser state for future interactions. Ensure to mention that the Demo button was clicked using element ID 8. Output should be in markdown format."
+          }
+        },
+        "summary_output": "The following actions were performed:\n\n*   The [inkers.ai](https://www.inkers.ai) website was opened in a new tab.\n*   The 'Demo' button was clicked. The element ID for the 'Demo' button was **8**.\n*   The Decision module has been informed to save the current browser state, including the IDs of interactive elements, for future interactions. This allows for reuse of these IDs in subsequent steps.",
+        "success": true,
+        "error": null,
+        "timestamp": "2025-05-27T16:32:35Z",
+        "return_to": ""
+      }
+    ],
+    "final_summary": "The following actions were performed:\n\n*   The [inkers.ai](https://www.inkers.ai) website was opened in a new tab.\n*   The 'Demo' button was clicked. The element ID for the 'Demo' button was **8**.\n*   The Decision module has been informed to save the current browser state, including the IDs of interactive elements, for future interactions. This allows for reuse of these IDs in subsequent steps.",
+    "status": "success",
+    "completed_at": "2025-05-27T16:34:35.724517"
+  },
+  "status": "success",
+  "final_step_id": "2",
+  "reason": "Summarized successfully",
+  "timestamp": "2025-05-27T16:34:35.730141",
+  "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button. Inform Decision that whenever it calls any tool, it will immediately return the broswer state, which will have id's for buttons and things it can interact with. So it will have to save them for reuse for next step.",
+  "final_summary": "The following actions were performed:\n\n*   The [inkers.ai](https://www.inkers.ai) website was opened in a new tab.\n*   The 'Demo' button was clicked. The element ID for the 'Demo' button was **8**.\n*   The Decision module has been informed to save the current browser state, including the IDs of interactive elements, for future interactions. This allows for reuse of these IDs in subsequent steps."
+}

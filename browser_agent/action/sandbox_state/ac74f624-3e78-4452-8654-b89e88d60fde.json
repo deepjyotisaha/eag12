@@ -1,0 +1,53 @@
+{
+  "interactive_elements_1A": {
+    "success": true,
+    "nav": [
+      {
+        "id": 10,
+        "desc": "Report",
+        "action": "click_element_by_index"
+      },
+      {
+        "id": 11,
+        "desc": "Forms",
+        "action": "click_element_by_index"
+      }
+    ],
+    "forms": [
+      {
+        "id": 2,
+        "desc": "Text Input",
+        "action": "input_text"
+      },
+      {
+        "id": 3,
+        "desc": "Text Input",
+        "action": "input_text"
+      },
+      {
+        "id": 4,
+        "desc": "Text Input",
+        "action": "input_text"
+      },
+      {
+        "id": 5,
+        "desc": "Date Input",
+        "action": "input_text"
+      }
+    ],
+    "buttons": [
+      {
+        "id": 7,
+        "desc": "Submit",
+        "action": "click_element_by_index"
+      },
+      {
+        "id": 9,
+        "desc": "Clear form",
+        "action": "click_element_by_index"
+      }
+    ],
+    "total": 8
+  },
+  "filled_2A": true
+}
