@@ -1,0 +1,248 @@
+2025-05-28 13:24:49,121 - INFO - main:interactive:34 - 🟦 Specialized Browser agent is enabled: True
+2025-05-28 13:25:09,279 - INFO - sse:sse_client:55 - Connecting to SSE endpoint: http://localhost:8100/sse
+2025-05-28 13:25:10,506 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8100/sse "HTTP/1.1 200 OK"
+2025-05-28 13:25:10,507 - INFO - sse:sse_reader:75 - Received endpoint URL: http://localhost:8100/messages?session_id=16249d633fae4e92b9471f22fdaba368
+2025-05-28 13:25:10,507 - INFO - sse:sse_client:148 - Starting post writer with endpoint URL: http://localhost:8100/messages?session_id=16249d633fae4e92b9471f22fdaba368
+2025-05-28 13:25:10,779 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8100/messages?session_id=16249d633fae4e92b9471f22fdaba368 "HTTP/1.1 202 Accepted"
+2025-05-28 13:25:10,786 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8100/messages?session_id=16249d633fae4e92b9471f22fdaba368 "HTTP/1.1 202 Accepted"
+2025-05-28 13:25:10,793 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8100/messages?session_id=16249d633fae4e92b9471f22fdaba368 "HTTP/1.1 202 Accepted"
+2025-05-28 13:25:17,693 - INFO - main:interactive:42 - 🟦 Browser agent is enabled. Using browser perception prompt.
+2025-05-28 13:25:30,336 - WARNING - agent_loop3:_initialize_session:80 - ⚠️ WARNING: MemorySearch has been disabled from code!! Enable it to use memory.
+2025-05-28 13:25:30,336 - INFO - agent_loop3:_run_initial_perception:85 - 📝 Initial Perception
+2025-05-28 13:25:30,336 - JSON_BLOCK - log_config:logger_json_block:56 - 
+================================================================================
+📌 Inital Perception input:
+================================================================================
+{
+  "current_time": "2025-05-28T07:55:30.336988",
+  "run_id": "d234ea10-babd-47b7-85a2-ecb62443e09f-P",
+  "snapshot_type": "user_query",
+  "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+  "raw_input": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+  "memory_excerpt": null,
+  "current_plan": {},
+  "completed_steps": [
+    {
+      "index": "ROOT",
+      "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+      "type": "ROOT",
+      "status": "completed",
+      "result": null,
+      "conclusion": null,
+      "error": null,
+      "perception": null,
+      "from_step": null
+    }
+  ],
+  "failed_steps": [],
+  "globals_schema": {
+    "memory": [
+      "NoneType",
+      "None"
+    ]
+  },
+  "timestamp": "...",
+  "schema_version": 1
+}
+================================================================================
+
+2025-05-28 13:25:30,339 - PROMPT_BLOCK - log_config:logger_prompt:83 - 
+================================================================================
+📝 📝 Perception prompt:
+================================================================================
+  ############################################################
+  #  Perception Module Prompt – Gemini Flash 2.0
+  #  Role  : High-Level Interpreter & Controller
+  #  Output: ERORLL snapshot + Routing Decision + Summarization Directive
+  #  Format: STRICT JSON only – no markdown, no prose
+  ############################################################
+  You are the PERCEPTION module of an agentic reasoning system.
+  Your job is to **observe**, **assess**, and **route**:
+  - Understand the original user query or the result of an executed step
+  - Decide if the goal is achieved (→ route to Summarizer)
+  - Or if planning is required for browser interactions tasks (→ route to Browser)
+  - Or if planning is required for any other tasks (→ route to Decision)
+  - When routing to Summarizer, provide a clear summarization instruction
+  You do not conclude. You do not plan.  
+  You **control the loop** by issuing structured, routable status reports.
+  ## ✅ MODES
+  ### Mode: `"user_query"`
+  You are analyzing the original user query.
+  Your tasks:
+  - Identify key entities (named things, people, topics, values)
+  - Describe the expected result type (number, list, explanation, etc.)
+  - Check memory and globals to see if the query is already solvable
+  - Decide:
+    - If solvable now → `route = "summarize"`
+    - Else → `route = "decision" OR "browser"`
+  ### Mode: `"step_result"`
+  You are analyzing the output of the most recently executed step.
+  Your tasks:
+  - Extract any useful entities or insights
+  - Evaluate tool success/failure
+  - Check if the result solves the query or helps progress
+  - Decide:
+    - If final goal is met or no more steps help → `route = "summarize"`
+    - Otherwise → `route = "decision" OR "browser"`
+  ## ✅ INPUT FORMAT
+  {
+    "snapshot_type": "user_query" | "step_result",
+    "original_query": "...",
+    "raw_input": "...",             // user query or step output
+    "memory_excerpt": [...],        // past solved graphs or summaries
+    "globals_schema": { ... },      // currently available variables
+    "current_plan": [...],          // nodes + steps if available
+    "completed_steps": [...],       // history of successful nodes
+    "failed_steps": [...]           // history of failed nodes/tools
+  }
+  ````
+  ## ✅ OUTPUT FORMAT (ERORLL + route + summarization instruction)
+  {
+    "entities": ["..."],
+    "result_requirement": "...",
+    "original_goal_achieved": true/false,
+    "local_goal_achieved": true/false,
+    "confidence": "0.84",
+    "reasoning": "...",
+    "local_reasoning": "...",
+    "last_tooluse_summary": "...",
+    "solution_summary": "...",
+    "route": "summarize" | "decision" | "browser",
+    "instruction_to_summarize": "..."   // only when route = "summarize"
+  }
+  ## ✅ INSTRUCTION TO SUMMARIZE – Guidelines
+  This field is only required when:
+  "route": "summarize"
+  It must:
+  * Be descriptive.
+  * Tell the Summarizer **exactly what to include**
+  * Specify format, tone, or structure if needed
+  * Format might be requested by the user, if not then fall back to markdown. 
+  Examples:
+  * `"Write a short user-facing summary of project price, name, and location in markdown format."`
+  * `"Summarize the extracted chunks and highlight whether any contain dates or financial data. Return data in html format."`
+  * `"Summarize the final tool results for the user in plain language"`
+  ## ✅ ROUTING LOGIC
+  * Use `route = "summarize"` **only if**:
+    * Goal is solved (`original_goal_achieved = true`), you have all the details, and the query/step cannot be solved by python code.
+    * OR tools failed repeatedly and further steps are unhelpful
+    * In both cases, you must provide `instruction_to_summarize`
+    * Summarization task does not requise complex mathematical operations that actually need calculator/tools.
+  * Use `route = "browser"` when:
+    * Only for tasks with browser interactions where planning is possible or required. 
+    * Browser interactions are navigating webpages, clicking on elements, filling forms 
+    * Fetching content from webpages is NOT browser interactions
+    * `instruction_to_summarize` must be omitted or `"Not applicable"`
+  * Use `route = "decision"` when:
+    * Other tasks where tool-based planning is possible or required. 
+    * `instruction_to_summarize` must be omitted or `"Not applicable"`
+  ## ✅ EXAMPLES
+  {
+    "entities": ["DLF", "project price"],
+    "result_requirement": "Price of DLF project in NCR",
+    "original_goal_achieved": true,
+    "local_goal_achieved": true,
+    "confidence": "0.95",
+    "reasoning": "Search result included name, price, and location.",
+    "local_reasoning": "Tool output directly listed the required values.",
+    "last_tooluse_summary": "webpage_url_to_llm_summary succeeded",
+    "solution_summary": "Price: ₹2.65 Cr. Project: DLF Crest, Sector 54, Gurgaon.",
+    "route": "summarize",
+    "instruction_to_summarize": "Generate a concise user-facing summary of project name, price, and location. Avoid raw tool output. Markdown formatting"
+  }
+  {
+    "entities": ["TCS", "stock price"],
+    "result_requirement": "Click on demo",
+    "original_goal_achieved": false,
+    "local_goal_achieved": true,
+    "confidence": "0.72",
+    "reasoning": "Tool ran successfully, but the content was not structured or informative.",
+    "local_reasoning": "HTML fetched, but lacked financial data.",
+    "last_tooluse_summary": "webpage_url_to_raw_text succeeded but no price found",
+    "solution_summary": "Not ready yet.",
+    "route": "decision"
+  }
+  {
+    "entities": ["Inkers.ai", "Demo Button"],
+    "result_requirement": "Click the Demo button on Inkers.ai and save the browser state including element IDs.",
+    "original_goal_achieved": false,
+    "local_goal_achieved": true,
+    "confidence": "0.72",
+    "reasoning": "The webpage has been opened, and the page structure including element IDs has been retrieved. The next step is to click the Demo button. The raw input shows that navigation link with text Demo exists. The Id for it is 8.  The original query asked to immediately return browser state. So, we just need to click demo button",
+    "local_reasoning": "The page structure includes the 'Demo' button with id 8 which is a navigation link. The next logical step is to click this button to fulfill the original query.",
+    "last_tooluse_summary": "Successfully opened Inkers.ai and retrieved page structure using get_comprehensive_markdown.", 
+    "solution_summary": "Not ready yet.",
+    "route": "browser"
+  }
+  ## ✅ FINAL NOTES
+  * No markdown. No prose. Output strict JSON only.
+  * Do not hallucinate tool success or failure.
+  * Always refer to tool names in `last_tooluse_summary`.
+  * Be deterministic and helpful.
+  - You will be given `"globals_schema"` inside which you can find a lot of information regarding past run. 
+    - If you think you have all information and we can summarize, then Information within `"globals_schema"` MUST be used to summarize in as fewer steps as possible.
+  - If you see a lot of `"failed_steps"` then fall back to information within `"globals_schema"` and call summarize.
+  * Remember Decision can only write python code to call tools. IT DOES NOT HAVE SEMANTIC CAPABILITIES. So, you need to be careful when you route to `decision`. If YOU have all the information, then skip to `summarize` and provide all available information in `instruction_to_summarize` to summarize.
+  * Remember Decision will try to use keyword search to extract information. That is BAD, and will not help extract sematics or detailed information. If you see that is what Decision planning to do in the next step, pivot to `summarize`.
+  * DO NOT let Decision execute any code that is trying to summarize or extract. Route to Summarizer immediately. 
+  * Remember Summarizer can only read what you send or `global_schema`, it doesn't have access to any other tools or ways to access internet or any other information outside what you send or is already available in `global_schema`. 
+  You control the flow. Decide cleanly. Route responsibly. Solve in as fewer steps as possible.
+  {
+    "current_time": "2025-05-28T07:55:30.336988",
+    "run_id": "d234ea10-babd-47b7-85a2-ecb62443e09f-P",
+    "snapshot_type": "user_query",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+    "raw_input": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+    "memory_excerpt": null,
+    "current_plan": {},
+    "completed_steps": [
+      {
+        "index": "ROOT",
+        "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+        "type": "ROOT",
+        "status": "completed",
+        "result": null,
+        "conclusion": null,
+        "error": null,
+        "perception": null,
+        "from_step": null
+      }
+    ],
+    "failed_steps": [],
+    "globals_schema": {
+      "memory": [
+        "NoneType",
+        "None"
+      ]
+    },
+    "timestamp": "...",
+    "schema_version": 1
+  }
+================================================================================
+
+2025-05-28 13:25:32,343 - INFO - models:generate_content:7118 - AFC is enabled with max remote calls: 10.
+2025-05-28 13:25:34,457 - INFO - _client:_send_single_request:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-28 13:25:34,462 - INFO - agent_loop3:_run_initial_perception:88 - 📝 Initial Perception output
+2025-05-28 13:25:34,462 - JSON_BLOCK - log_config:logger_json_block:56 - 
+================================================================================
+📌 Initial Perception output:
+================================================================================
+{
+  "entities": [
+    "Inkers.ai",
+    "Demo Button"
+  ],
+  "result_requirement": "Click the Demo button on Inkers.ai and save the browser state including element IDs.",
+  "original_goal_achieved": false,
+  "local_goal_achieved": false,
+  "confidence": "0.9",
+  "reasoning": "The user wants to open a webpage and click a button. This requires browser interaction and planning.",
+  "local_reasoning": "The task involves opening a URL in a browser and interacting with it, specifically clicking a button. Therefore, it falls under browser interaction tasks.",
+  "last_tooluse_summary": "Not applicable",
+  "solution_summary": "Not ready yet.",
+  "route": "browser",
+  "instruction_to_summarize": "Not applicable"
+}
+================================================================================
+
+2025-05-28 13:25:34,470 - INFO - agent_loop3:run:55 - ⚙️ Routing to BrowserAgent for browser-related query.

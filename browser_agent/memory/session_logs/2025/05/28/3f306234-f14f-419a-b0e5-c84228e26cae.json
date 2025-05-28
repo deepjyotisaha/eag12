@@ -1,0 +1,788 @@
+{
+  "context": {
+    "session_id": "3f306234-f14f-419a-b0e5-c84228e26cae",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+    "globals": {
+      "memory": null,
+      "demo_button_clicked_1A": true
+    },
+    "memory": [
+      {
+        "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+        "result_requirement": "Final summary",
+        "summarizer_summary": "The website [https://www.inkers.ai](https://www.inkers.ai) was opened, and the Demo button was clicked, fulfilling the original query.",
+        "confidence": 0.95,
+        "original_goal_achieved": true,
+        "route": "summarize"
+      }
+    ],
+    "graph": {
+      "directed": true,
+      "multigraph": false,
+      "graph": {},
+      "nodes": [
+        {
+          "data": {
+            "index": "ROOT",
+            "description": "initial query",
+            "type": "ROOT",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button"
+              ],
+              "result_requirement": "Open the website and click the demo button.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.95",
+              "reasoning": "The query requires interacting with a website, which necessitates a tool to open the URL and then click the specified button.  This cannot be achieved directly and requires a tool that can interact with web pages.",
+              "local_reasoning": "The user query explicitly asks to open a URL and click a button, indicating a need for web interaction.",
+              "last_tooluse_summary": "Not applicable",
+              "solution_summary": "Not ready yet.",
+              "route": "decision",
+              "instruction_to_summarize": "Not applicable"
+            },
+            "from_step": null
+          },
+          "id": "ROOT"
+        },
+        {
+          "data": {
+            "index": "0",
+            "description": "Open the website https://www.inkers.ai in a new tab.",
+            "type": "CODE",
+            "status": "completed",
+            "result": {},
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button"
+              ],
+              "result_requirement": "Open the website and click the demo button.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The website has been opened, but clicking the 'Demo Button' is the next step. The raw input only indicates the memory is None. The goal has not been achieved.",
+              "local_reasoning": "The previous step only opened the website. The task is not complete until the button is clicked.",
+              "last_tooluse_summary": "Website opened in the previous step.",
+              "solution_summary": "Website opened, but demo button needs to be clicked.",
+              "route": "decision"
+            },
+            "from_step": "ROOT"
+          },
+          "id": "0"
+        },
+        {
+          "data": {
+            "index": "1",
+            "description": "Click on the 'Demo Button' on the webpage.",
+            "type": "CODE",
+            "status": "completed",
+            "result": {
+              "demo_button_clicked_1A": true
+            },
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button"
+              ],
+              "result_requirement": "Open the website and click the demo button.",
+              "original_goal_achieved": true,
+              "local_goal_achieved": true,
+              "confidence": "0.95",
+              "reasoning": "The website was opened, and the demo button was clicked. The `globals_schema` confirms that `demo_button_clicked_1A` is True, indicating the task is complete.",
+              "local_reasoning": "The raw input and `globals_schema` provide all the information needed to confirm the successful completion of the task.",
+              "last_tooluse_summary": "Website opened and Demo button clicked.",
+              "solution_summary": "Website opened, and the demo button was clicked.",
+              "route": "summarize",
+              "instruction_to_summarize": "Summarize that the website https://www.inkers.ai was opened and the Demo button was clicked, fulfilling the original query. Use markdown."
+            },
+            "from_step": "1"
+          },
+          "id": "1"
+        },
+        {
+          "data": {
+            "index": "2",
+            "description": "Click the 'Demo Button'.",
+            "type": "CODE",
+            "status": "Skipped",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": null,
+            "from_step": "ROOT"
+          },
+          "id": "2"
+        }
+      ],
+      "links": [
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "0"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "1"
+        },
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "2"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "1"
+        }
+      ]
+    }
+  },
+  "session": {
+    "session_id": "3f306234-f14f-419a-b0e5-c84228e26cae",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+    "perception_snapshots": [
+      {
+        "run_id": "3f306234-f14f-419a-b0e5-c84228e26cae-P",
+        "snapshot_type": "user_query",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button"
+        ],
+        "result_requirement": "Open the website and click the demo button.",
+        "original_goal_achieved": false,
+        "reasoning": "The query requires interacting with a website, which necessitates a tool to open the URL and then click the specified button.  This cannot be achieved directly and requires a tool that can interact with web pages.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The user query explicitly asks to open a URL and click a button, indicating a need for web interaction.",
+        "last_tooluse_summary": "Not applicable",
+        "solution_summary": "Not ready yet.",
+        "confidence": "0.95",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "3f306234-f14f-419a-b0e5-c84228e26cae-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button"
+        ],
+        "result_requirement": "Open the website and click the demo button.",
+        "original_goal_achieved": false,
+        "reasoning": "The website has been opened, but clicking the 'Demo Button' is the next step. The raw input only indicates the memory is None. The goal has not been achieved.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The previous step only opened the website. The task is not complete until the button is clicked.",
+        "last_tooluse_summary": "Website opened in the previous step.",
+        "solution_summary": "Website opened, but demo button needs to be clicked.",
+        "confidence": "0.9",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "3f306234-f14f-419a-b0e5-c84228e26cae-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button"
+        ],
+        "result_requirement": "Open the website and click the demo button.",
+        "original_goal_achieved": true,
+        "reasoning": "The website was opened, and the demo button was clicked. The `globals_schema` confirms that `demo_button_clicked_1A` is True, indicating the task is complete.",
+        "local_goal_achieved": true,
+        "local_reasoning": "The raw input and `globals_schema` provide all the information needed to confirm the successful completion of the task.",
+        "last_tooluse_summary": "Website opened and Demo button clicked.",
+        "solution_summary": "Website opened, and the demo button was clicked.",
+        "confidence": "0.95",
+        "route": "summarize",
+        "timestamp": "...",
+        "return_to": ""
+      }
+    ],
+    "decision_snapshots": [
+      {
+        "run_id": "bd63c90e-f111-4439-822a-d51c7a662a32",
+        "input": {
+          "current_time": "2025-05-28T07:51:58.171093",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button"
+            ],
+            "result_requirement": "Open the website and click the demo button.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.95",
+            "reasoning": "The query requires interacting with a website, which necessitates a tool to open the URL and then click the specified button.  This cannot be achieved directly and requires a tool that can interact with web pages.",
+            "local_reasoning": "The user query explicitly asks to open a URL and click a button, indicating a need for web interaction.",
+            "last_tooluse_summary": "Not applicable",
+            "solution_summary": "Not ready yet.",
+            "route": "decision",
+            "instruction_to_summarize": "Not applicable"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the demo button.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.95",
+                "reasoning": "The query requires interacting with a website, which necessitates a tool to open the URL and then click the specified button.  This cannot be achieved directly and requires a tool that can interact with web pages.",
+                "local_reasoning": "The user query explicitly asks to open a URL and click a button, indicating a need for web interaction.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision",
+                "instruction_to_summarize": "Not applicable"
+              },
+              "from_step": null
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the demo button.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.95",
+                "reasoning": "The query requires interacting with a website, which necessitates a tool to open the URL and then click the specified button.  This cannot be achieved directly and requires a tool that can interact with web pages.",
+                "local_reasoning": "The user query explicitly asks to open a URL and click a button, indicating a need for web interaction.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision",
+                "instruction_to_summarize": "Not applicable"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open the website https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Get interactive elements to locate the 'Demo Button'."
+              },
+              {
+                "id": "2",
+                "description": "Click the 'Demo Button'."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "0",
+          "code_variants": {
+            "CODE_0A": "open_tab('https://www.inkers.ai')\nreturn {}",
+            "CODE_0B": "open_tab('https://www.inkers.ai')\nreturn {}",
+            "CODE_0C": "open_tab('https://www.inkers.ai')\nreturn {}"
+          }
+        },
+        "next_step_id": "0",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open the website https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Get interactive elements to locate the 'Demo Button'."
+            },
+            {
+              "id": "2",
+              "description": "Click the 'Demo Button'."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_0A": "open_tab('https://www.inkers.ai')\nreturn {}",
+          "CODE_0B": "open_tab('https://www.inkers.ai')\nreturn {}",
+          "CODE_0C": "open_tab('https://www.inkers.ai')\nreturn {}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      },
+      {
+        "run_id": "8dd5ec4c-d0e8-4039-a3d6-6a9dde773523",
+        "input": {
+          "current_time": "2025-05-28T07:52:35.288143",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button"
+            ],
+            "result_requirement": "Open the website and click the demo button.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The website has been opened, but clicking the 'Demo Button' is the next step. The raw input only indicates the memory is None. The goal has not been achieved.",
+            "local_reasoning": "The previous step only opened the website. The task is not complete until the button is clicked.",
+            "last_tooluse_summary": "Website opened in the previous step.",
+            "solution_summary": "Website opened, but demo button needs to be clicked.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the demo button.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.95",
+                "reasoning": "The query requires interacting with a website, which necessitates a tool to open the URL and then click the specified button.  This cannot be achieved directly and requires a tool that can interact with web pages.",
+                "local_reasoning": "The user query explicitly asks to open a URL and click a button, indicating a need for web interaction.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision",
+                "instruction_to_summarize": "Not applicable"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open the website https://www.inkers.ai in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {},
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the demo button.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened, but clicking the 'Demo Button' is the next step. The raw input only indicates the memory is None. The goal has not been achieved.",
+                "local_reasoning": "The previous step only opened the website. The task is not complete until the button is clicked.",
+                "last_tooluse_summary": "Website opened in the previous step.",
+                "solution_summary": "Website opened, but demo button needs to be clicked.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "initial query",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the demo button.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.95",
+                "reasoning": "The query requires interacting with a website, which necessitates a tool to open the URL and then click the specified button.  This cannot be achieved directly and requires a tool that can interact with web pages.",
+                "local_reasoning": "The user query explicitly asks to open a URL and click a button, indicating a need for web interaction.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision",
+                "instruction_to_summarize": "Not applicable"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open the website https://www.inkers.ai in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {},
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button"
+                ],
+                "result_requirement": "Open the website and click the demo button.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened, but clicking the 'Demo Button' is the next step. The raw input only indicates the memory is None. The goal has not been achieved.",
+                "local_reasoning": "The previous step only opened the website. The task is not complete until the button is clicked.",
+                "last_tooluse_summary": "Website opened in the previous step.",
+                "solution_summary": "Website opened, but demo button needs to be clicked.",
+                "route": "decision"
+              },
+              "from_step": "ROOT"
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open the website https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Click on the 'Demo Button' on the webpage."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "1",
+          "code_variants": {
+            "CODE_1A": "interactive_elements = get_interactive_elements('Demo Button', False, False)\nif interactive_elements:\n    click_element_by_index(0)\n    return {\"demo_button_clicked_1A\": True}\nelse:\n    return {\"demo_button_clicked_1A\": False}",
+            "CODE_1B": "interactive_elements = get_interactive_elements('Demo', False, False)\nif interactive_elements:\n    click_element_by_index(0)\n    return {\"demo_button_clicked_1B\": True}\nelse:\n    return {\"demo_button_clicked_1B\": False}",
+            "CODE_1C": "scroll_to_text('Demo Button')\ninteractive_elements = get_interactive_elements('Demo Button', False, False)\nif interactive_elements:\n    click_element_by_index(0)\n    return {\"demo_button_clicked_1C\": True}\nelse:\n    return {\"demo_button_clicked_1C\": False}"
+          }
+        },
+        "next_step_id": "1",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open the website https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Click on the 'Demo Button' on the webpage."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_1A": "interactive_elements = get_interactive_elements('Demo Button', False, False)\nif interactive_elements:\n    click_element_by_index(0)\n    return {\"demo_button_clicked_1A\": True}\nelse:\n    return {\"demo_button_clicked_1A\": False}",
+          "CODE_1B": "interactive_elements = get_interactive_elements('Demo', False, False)\nif interactive_elements:\n    click_element_by_index(0)\n    return {\"demo_button_clicked_1B\": True}\nelse:\n    return {\"demo_button_clicked_1B\": False}",
+          "CODE_1C": "scroll_to_text('Demo Button')\ninteractive_elements = get_interactive_elements('Demo Button', False, False)\nif interactive_elements:\n    click_element_by_index(0)\n    return {\"demo_button_clicked_1C\": True}\nelse:\n    return {\"demo_button_clicked_1C\": False}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      }
+    ],
+    "execution_snapshots": [
+      {
+        "run_id": "35228e45-940e-4343-b1fb-b8ce8d6e22dc",
+        "step_id": "0",
+        "variant_used": "CODE_0A",
+        "code": "open_tab('https://www.inkers.ai')\nreturn {}",
+        "status": "success",
+        "result": {},
+        "error": null,
+        "execution_time": "2025-05-28 13:22:03",
+        "total_time": "28.228",
+        "return_to": ""
+      },
+      {
+        "run_id": "0e10e0bb-c85c-4c14-8379-bb78c22b17f6",
+        "step_id": "1",
+        "variant_used": "CODE_1A",
+        "code": "interactive_elements = get_interactive_elements('Demo Button', False, False)\nif interactive_elements:\n    click_element_by_index(0)\n    return {\"demo_button_clicked_1A\": True}\nelse:\n    return {\"demo_button_clicked_1A\": False}",
+        "status": "success",
+        "result": {
+          "demo_button_clicked_1A": true
+        },
+        "error": null,
+        "execution_time": "2025-05-28 13:22:41",
+        "total_time": "3.222",
+        "return_to": ""
+      }
+    ],
+    "summarizer_snapshots": [
+      {
+        "run_id": "b2c3cf10-12d0-4282-b6c1-7e37df3bd087",
+        "input": {
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+          "globals_schema": {
+            "memory": null,
+            "demo_button_clicked_1A": true
+          },
+          "plan_graph": {
+            "directed": true,
+            "multigraph": false,
+            "graph": {},
+            "nodes": [
+              {
+                "data": {
+                  "index": "ROOT",
+                  "description": "initial query",
+                  "type": "ROOT",
+                  "status": "completed",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "https://www.inkers.ai",
+                      "Demo Button"
+                    ],
+                    "result_requirement": "Open the website and click the demo button.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.95",
+                    "reasoning": "The query requires interacting with a website, which necessitates a tool to open the URL and then click the specified button.  This cannot be achieved directly and requires a tool that can interact with web pages.",
+                    "local_reasoning": "The user query explicitly asks to open a URL and click a button, indicating a need for web interaction.",
+                    "last_tooluse_summary": "Not applicable",
+                    "solution_summary": "Not ready yet.",
+                    "route": "decision",
+                    "instruction_to_summarize": "Not applicable"
+                  },
+                  "from_step": null
+                },
+                "id": "ROOT"
+              },
+              {
+                "data": {
+                  "index": "0",
+                  "description": "Open the website https://www.inkers.ai in a new tab.",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": {},
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "https://www.inkers.ai",
+                      "Demo Button"
+                    ],
+                    "result_requirement": "Open the website and click the demo button.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.9",
+                    "reasoning": "The website has been opened, but clicking the 'Demo Button' is the next step. The raw input only indicates the memory is None. The goal has not been achieved.",
+                    "local_reasoning": "The previous step only opened the website. The task is not complete until the button is clicked.",
+                    "last_tooluse_summary": "Website opened in the previous step.",
+                    "solution_summary": "Website opened, but demo button needs to be clicked.",
+                    "route": "decision"
+                  },
+                  "from_step": "ROOT"
+                },
+                "id": "0"
+              },
+              {
+                "data": {
+                  "index": "1",
+                  "description": "Click on the 'Demo Button' on the webpage.",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": {
+                    "demo_button_clicked_1A": true
+                  },
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "https://www.inkers.ai",
+                      "Demo Button"
+                    ],
+                    "result_requirement": "Open the website and click the demo button.",
+                    "original_goal_achieved": true,
+                    "local_goal_achieved": true,
+                    "confidence": "0.95",
+                    "reasoning": "The website was opened, and the demo button was clicked. The `globals_schema` confirms that `demo_button_clicked_1A` is True, indicating the task is complete.",
+                    "local_reasoning": "The raw input and `globals_schema` provide all the information needed to confirm the successful completion of the task.",
+                    "last_tooluse_summary": "Website opened and Demo button clicked.",
+                    "solution_summary": "Website opened, and the demo button was clicked.",
+                    "route": "summarize",
+                    "instruction_to_summarize": "Summarize that the website https://www.inkers.ai was opened and the Demo button was clicked, fulfilling the original query. Use markdown."
+                  },
+                  "from_step": "1"
+                },
+                "id": "1"
+              },
+              {
+                "data": {
+                  "index": "2",
+                  "description": "Click the 'Demo Button'.",
+                  "type": "CODE",
+                  "status": "Skipped",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": null,
+                  "from_step": "ROOT"
+                },
+                "id": "2"
+              }
+            ],
+            "links": [
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "0"
+              },
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "1"
+              },
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "2"
+              },
+              {
+                "type": "normal",
+                "source": "1",
+                "target": "1"
+              }
+            ]
+          },
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button"
+            ],
+            "result_requirement": "Open the website and click the demo button.",
+            "original_goal_achieved": true,
+            "local_goal_achieved": true,
+            "confidence": "0.95",
+            "reasoning": "The website was opened, and the demo button was clicked. The `globals_schema` confirms that `demo_button_clicked_1A` is True, indicating the task is complete.",
+            "local_reasoning": "The raw input and `globals_schema` provide all the information needed to confirm the successful completion of the task.",
+            "last_tooluse_summary": "Website opened and Demo button clicked.",
+            "solution_summary": "Website opened, and the demo button was clicked.",
+            "route": "summarize",
+            "instruction_to_summarize": "Summarize that the website https://www.inkers.ai was opened and the Demo button was clicked, fulfilling the original query. Use markdown."
+          }
+        },
+        "summary_output": "The website [https://www.inkers.ai](https://www.inkers.ai) was opened, and the Demo button was clicked, fulfilling the original query.",
+        "success": true,
+        "error": null,
+        "timestamp": "2025-05-28T07:51:17Z",
+        "return_to": ""
+      }
+    ],
+    "final_summary": "The website [https://www.inkers.ai](https://www.inkers.ai) was opened, and the Demo button was clicked, fulfilling the original query.",
+    "status": "success",
+    "completed_at": "2025-05-28T07:52:53.157465"
+  },
+  "status": "success",
+  "final_step_id": "1",
+  "reason": "Summarized successfully",
+  "timestamp": "2025-05-28T07:52:53.159462",
+  "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button",
+  "final_summary": "The website [https://www.inkers.ai](https://www.inkers.ai) was opened, and the Demo button was clicked, fulfilling the original query."
+}

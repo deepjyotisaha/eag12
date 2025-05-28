@@ -26,10 +26,14 @@ async def interactive() -> None:
         profile = yaml.safe_load(f)
         mcp_servers_list = profile.get("mcp_servers", [])
         configs = list(mcp_servers_list)
-        # Read specialized browser agent config
-        specialized_browser_agent_cfg = profile.get("specialized_browser_agent", {})
+    # Load profiles config
+    with open("config/profiles.yaml", "r") as f:
+        profiles = yaml.safe_load(f)
+        specialized_browser_agent_cfg = profiles.get("specialized_browser_agent", {})
         browser_agent_enabled = specialized_browser_agent_cfg.get("enabled", False)
+        log.info(f"🟦 Specialized Browser agent is enabled: {browser_agent_enabled}")
 
+        
     # Initialize MultiMCP dispatcher
     multi_mcp = MultiMCP(server_configs=configs)
     await multi_mcp.initialize()
