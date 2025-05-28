@@ -1,22 +1,128 @@
+import os
+import json
+from pathlib import Path
+from utils.utils import log_step, log_error, log_json_block
+from google.genai.errors import ServerError
+import re
+from utils.json_parser import parse_llm_json
+from agent.agentSession import DecisionSnapshot
+from mcp_servers.multiMCP import MultiMCP
+import ast
+import time
+from utils.utils import log_step
+import asyncio
+from typing import Any, Literal, Optional
+from agent.agentSession import AgentSession
+import uuid
+from datetime import datetime
+from agent.model_manager import ModelManager
+from config.log_config import setup_logging, logger_prompt
+
+log = setup_logging(__name__)
+
 class BrowserDecision:
-    def decide(self, query, context=None):
-        # Placeholder: simple keyword-based mapping
-        plan = []
-        q = query.lower()
-        if "open" in q and ("http" in q or ".com" in q):
-            # Extract URL (very basic)
-            import re
-            match = re.search(r'(https?://\S+|\b\w+\.com\b)', q)
-            url = match.group(0) if match else None
-            if url:
-                plan.append({"action": "navigate", "url": url})
-        if "search" in q:
-            # Extract search term (very basic)
-            import re
-            match = re.search(r'search for ([\w\s]+)', q)
-            term = match.group(1) if match else ""
-            plan.append({"action": "search", "term": term})
-        # Add more rules as needed
-        if not plan:
-            plan.append({"action": "unknown", "query": query})
-        return plan 
+    def __init__(self, decision_prompt_path: str, multi_mcp: MultiMCP, api_key: str | None = None, model: str = "gemini-2.0-flash"):
+        self.decision_prompt_path = decision_prompt_path
+        self.multi_mcp = multi_mcp
+        self.model = ModelManager()
+        
+    async def run(self, decision_input: dict, session: Optional[AgentSession] = None) -> dict:
+        prompt_template = Path(self.decision_prompt_path).read_text(encoding="utf-8")
+        # Filter for browser-specific tools only
+        function_list_text = [tool for tool in self.multi_mcp.tool_description_wrapper() if "webbrowsing" in tool]
+        tool_descriptions = "\n".join(f"- `{desc.strip()}`" for desc in function_list_text)
+        tool_descriptions = "\n\n### The ONLY Available Browser Tools\n\n---\n\n" + tool_descriptions
+        log.info(f"🟦 Tool descriptions in Browser Decision: {tool_descriptions}")
+        full_prompt = f"{prompt_template.strip()}\n{tool_descriptions}\n\n```json\n{json.dumps(decision_input, indent=2)}\n```"
+
+        raw_text = ""
+        try:
+            log_step("[SENDING PROMPT TO BROWSER DECISION...]", symbol="→")
+            time.sleep(2)
+            
+            logger_prompt(log, "📝 Browser Decision prompt:", full_prompt)
+
+            response = await self.model.generate_text(
+                prompt=full_prompt
+            )
+            log_step("[RECEIVED OUTPUT FROM BROWSER DECISION...]", symbol="←")
+
+            output = parse_llm_json(response, required_keys=["plan_graph", "next_step_id", "code_variants"])
+
+            if session:
+                session.add_decision_snapshot(
+                    DecisionSnapshot(
+                        run_id=decision_input.get("run_id", str(uuid.uuid4())),
+                        input=decision_input,
+                        plan_graph=output["plan_graph"],
+                        next_step_id=output["next_step_id"],
+                        code_variants=output["code_variants"],
+                        output=output,
+                        timestamp=decision_input.get("timestamp"),
+                        return_to=""
+                    )
+                )
+
+            return output
+
+        except ServerError as e:
+            log_error(f"🚫 BROWSER DECISION LLM ServerError: {e}")
+            if session:
+                session.add_decision_snapshot(
+                    DecisionSnapshot(
+                        run_id=decision_input.get("run_id", str(uuid.uuid4())),
+                        input=decision_input,
+                        plan_graph={},
+                        next_step_id="",
+                        code_variants={},
+                        output={"error": "ServerError", "message": str(e)},
+                        timestamp=decision_input.get("timestamp"),
+                        return_to=""
+                    )
+                )
+            return {
+                "plan_graph": {},
+                "next_step_id": "",
+                "code_variants": {},
+                "error": "Browser Decision ServerError: LLM unavailable"
+            }
+
+        except Exception as e:
+            log_error(f"🛑 BROWSER DECISION ERROR: {str(e)}")
+            if session:
+                session.add_decision_snapshot(
+                    DecisionSnapshot(
+                        run_id=decision_input.get("run_id", str(uuid.uuid4())),
+                        input=decision_input,
+                        plan_graph={},
+                        next_step_id="",
+                        code_variants={},
+                        output={"error": str(e), "raw_text": raw_text},
+                        timestamp=decision_input.get("timestamp"),
+                        return_to=""
+                    )
+                )
+            return {
+                "plan_graph": {},
+                "next_step_id": "",
+                "code_variants": {},
+                "error": "Browser Decision failed due to malformed response"
+            }
+
+def build_browser_decision_input(ctx, query, p_out, strategy):
+    return {
+        "current_time": datetime.utcnow().isoformat(),
+        "plan_mode": "initial",
+        "planning_strategy": strategy,
+        "original_query": query,
+        "perception": p_out,
+        "plan_graph": {},  # initially empty
+        "completed_steps": [ctx.graph.nodes[n]["data"].__dict__ for n in ctx.graph.nodes if ctx.graph.nodes[n]["data"].status == "completed"],
+        "failed_steps": [ctx.graph.nodes[n]["data"].__dict__ for n in ctx.failed_nodes],
+        "globals_schema": {
+            k: {
+                "type": type(v).__name__,
+                "preview": str(v)[:500] + ("…" if len(str(v)) > 500 else "")
+            } for k, v in ctx.globals.items()
+        }
+    } 
