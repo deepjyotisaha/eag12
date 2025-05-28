@@ -29,6 +29,10 @@ persona:
   verbosity: low
   behavior_tags: [rational, focused, tool-using]
 
+specialized_browser_agent:
+  enabled: true
+  description: "Enables the specialized browser agent for handling browser-related tasks."
+
 # mcp_servers:
 #   - id: math
 #     script: mcp_server_1.py

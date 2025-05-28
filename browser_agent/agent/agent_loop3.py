@@ -11,12 +11,14 @@ from action.execute_step import execute_step_with_mode
 from utils.utils import log_step, log_error, save_final_plan, log_json_block
 from config.log_config import setup_logging
 from config.log_config import logger_json_block
+from browser.browser_agent import BrowserAgent
 
 log = setup_logging(__name__)
 
 class Route:
     SUMMARIZE = "summarize"
     DECISION = "decision"
+    BROWSER = "browser"
 
 class StepType:
     ROOT = "ROOT"
@@ -24,13 +26,14 @@ class StepType:
 
 
 class AgentLoop:
-    def __init__(self, perception_prompt, decision_prompt, summarizer_prompt, multi_mcp, strategy="exploratory"):
+    def __init__(self, perception_prompt, decision_prompt, summarizer_prompt, multi_mcp, strategy="exploratory", browser_agent_enabled=False):
         self.perception = Perception(perception_prompt)
         self.decision = Decision(decision_prompt, multi_mcp)
         self.summarizer = Summarizer(summarizer_prompt)
         self.multi_mcp = multi_mcp
         self.strategy = strategy
         self.status: str = "in_progress"
+        self.browser_agent_enabled = browser_agent_enabled
 
     async def run(self, query: str):
         self._initialize_session(query)
@@ -41,20 +44,30 @@ class AgentLoop:
             return await self._summarize()
 
         # ✅ Missing early exit guard added
-        if self.p_out.get("route") != Route.DECISION:
+        if self.p_out.get("route") != Route.DECISION and self.p_out.get("route") != Route.BROWSER:
             log.error(f"🚩 Invalid perception route. Exiting.")
             log_error("🚩 Invalid perception route. Exiting.")
             return "Summary generation failed."
+        
+        if self.browser_agent_enabled and self.p_out.get("route") == Route.BROWSER:
+            if self.browser_agent_enabled:
+                browser_agent = BrowserAgent()
+                log.info("⚙️ Routing to BrowserAgent for browser-related query.")
+                return await browser_agent.run(query, context=self.ctx)
+            else:
+                log.error("⚙️ Browser agent is not enabled. Cannot execute browser route.")
+                return await self._handle_failure()
 
-        log.info(f"⚙️ Running decision loop...")
-        await self._run_decision_loop()
+        if self.p_out.get("route") == Route.DECISION:
+            log.info(f"⚙️ Routing to decision loop...")
+            await self._run_decision_loop()
 
-        if self.status == "success":
-            log.info(f"✅ Successfully completed all steps. Returning final output...")
-            return self.final_output
+            if self.status == "success":
+                log.info(f"✅ Successfully completed all steps. Returning final output...")
+                return self.final_output
 
-        log.error(f"❌ Failed to complete all steps. Handling failure...")
-        return await self._handle_failure()
+            log.error(f"❌ Failed to complete all steps. Handling failure...")
+            return await self._handle_failure()
 
     def _initialize_session(self, query):
         self.session_id = str(uuid.uuid4())

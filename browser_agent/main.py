@@ -26,18 +26,29 @@ async def interactive() -> None:
         profile = yaml.safe_load(f)
         mcp_servers_list = profile.get("mcp_servers", [])
         configs = list(mcp_servers_list)
+        # Read specialized browser agent config
+        specialized_browser_agent_cfg = profile.get("specialized_browser_agent", {})
+        browser_agent_enabled = specialized_browser_agent_cfg.get("enabled", False)
 
     # Initialize MultiMCP dispatcher
     multi_mcp = MultiMCP(server_configs=configs)
     await multi_mcp.initialize()
 
+    if browser_agent_enabled:
+        log.info("🟦 Browser agent is enabled. Using browser perception prompt.")
+        perception_prompt = "prompts/perception_prompt_browser.txt"
+    else:
+        log.info("🟦 Browser agent is disabled. Using default perception prompt.")
+        perception_prompt = "prompts/perception_prompt.txt"
+
     # Create a single persistent AgentLoop instance
     loop = AgentLoop(
-        perception_prompt="prompts/perception_prompt.txt",
+        perception_prompt=perception_prompt,
         decision_prompt="prompts/decision_prompt.txt",
         summarizer_prompt="prompts/summarizer_prompt.txt",
         multi_mcp=multi_mcp,
-        strategy="exploratory"
+        strategy="exploratory",
+        browser_agent_enabled=browser_agent_enabled
     )
 
     conversation_history = []  # stores (query, response) tuples
