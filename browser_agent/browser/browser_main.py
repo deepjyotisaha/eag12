@@ -64,9 +64,17 @@ async def main():
                 break
                 
             log.info(f"Processing query: {query}")
-            result = await agent.run(query)
-            log.info(f"Query result: {result}")
-            print(f"\nResult: {result}")
+            final_plan = await agent.run(query)
+            
+            # Display the final summary
+            if final_plan["status"] == "success":
+                print("\n🔚 Browser Operation Summary:")
+                print(final_plan["final_summary"])
+            else:
+                print(f"\n❌ Browser Operation Failed:")
+                print(final_plan["reason"])
+            
+            return final_plan
             
     except Exception as e:
         log_error("Fatal error in browser agent", e)

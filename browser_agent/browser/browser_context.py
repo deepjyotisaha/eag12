@@ -47,7 +47,7 @@ class BrowserContext:
         self.failed_nodes: list[str] = []     # Node labels of failed steps
         self.globals: Dict[str, Any] = {}  # Store variables between steps
         self.graph = nx.DiGraph()
-        self.latest_step_id: Optional[str] = None
+        self.latest_node_id = None  # Add this to track latest node
         self.memory: list[dict] = []
         
         log.info("Initializing BrowserContext, creating root node...")
@@ -59,6 +59,14 @@ class BrowserContext:
             status="pending"
         )
         self.graph.add_node("ROOT", data=root_node)
+
+    def get_latest_node(self) -> Optional[str]:
+        """Get the ID of the latest node in the graph
+        
+        Returns:
+            Optional[str]: ID of the latest node, or None if graph is empty
+        """
+        return self.latest_node_id
 
     def add_step(self, step_id: str, description: str, from_step: str = "ROOT", step_type: str = "browser"):
         """Add a step to the context
@@ -81,7 +89,7 @@ class BrowserContext:
         if from_step:
             self.graph.add_edge(from_step, step_id)
         
-        self.latest_step_id = step_id
+        self.latest_node_id = step_id
         return step_id
 
     def is_step_completed(self, step_id: str) -> bool:
@@ -106,7 +114,7 @@ class BrowserContext:
         """Update global variables with new values"""
         for k, v in new_vars.items():
             if k in self.globals:
-                versioned_key = f"{k}__{self.latest_step_id}"
+                versioned_key = f"{k}__{self.latest_node_id}"
                 self.globals[versioned_key] = v
             else:
                 self.globals[k] = v
@@ -159,4 +167,3 @@ class BrowserContext:
         """Print the execution graph for debugging"""
         if only_if:
             render_graph(self.graph, depth=depth, title=title, color=color)
-            

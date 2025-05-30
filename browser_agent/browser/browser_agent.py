@@ -20,6 +20,7 @@ from browser.browser_context import BrowserContext
 from browser.browser_perception import BrowserPerception, build_browser_perception_input
 from perception.perception import build_perception_input
 from browser.browser_decision import BrowserDecision, build_browser_decision_input
+from browser.browser_summarize import BrowserAgentSummarizer
 
 log = setup_logging(__name__)
 
@@ -28,7 +29,7 @@ class StepType:
     BROWSEROPERATION = "BROWSEROPERATION"
 
 class Route:
-    CONCLUDE = "conclude"
+    SUMMARIZE = "summarize"
     BROWSER = "browser"
 
 class BrowserAgent:
@@ -56,7 +57,12 @@ class BrowserAgent:
             multi_mcp=multi_mcp
         )
         
-    async def run(self, query: str) -> str:
+        # Initialize summarizer
+        self.summarizer = BrowserAgentSummarizer(
+            summarizer_prompt_path="prompts/browser_agent_summarizer_prompt.txt"
+        )
+        
+    async def run(self, query: str) -> dict:
         """
         Execute browser operations based on user query
         
@@ -64,7 +70,7 @@ class BrowserAgent:
             query: User's browser-related query
             
         Returns:
-            str: Result of the operation
+            dict: Result of the operation
         """
         try:
             log.info("Starting browser operation...")
@@ -74,15 +80,25 @@ class BrowserAgent:
 
             await self._run_initial_perception()
                   
+            log.info(f"Perception result: {self.p_out}")
+                  
             # If perception suggests a different route, handle it
             if self.p_out["route"] != "browser":
-                return f"Perception suggests this query should be handled by {self.p_out['route']} module"
+                return {
+                    "status": "failed",
+                    "reason": f"Perception suggests this query should be handled by {self.p_out['route']} module",
+                    "browser_operation": True
+                }
             
             # Continue with existing browser operation logic...
             tools = await self.multi_mcp.list_all_tools()
             if not tools:
                 log_error("No browser tools available", "Please check MCP server configuration")
-                return "No browser tools available. Please check MCP server configuration."
+                return {
+                    "status": "failed",
+                    "reason": "No browser tools available. Please check MCP server configuration.",
+                    "browser_operation": True
+                }
             
             log.info(f"Available tools: {tools}")
             
@@ -92,14 +108,25 @@ class BrowserAgent:
             # 5. Execute steps
             success = await self._execute_steps(plan)
             if not success:
-                return "Failed to execute browser operation"
+                return {
+                    "status": "failed",
+                    "reason": "Failed to execute browser operation",
+                    "browser_operation": True
+                }
             
+            # 6. Summarize and create final plan
+            final_plan = await self.summarizer.summarize(query, self.ctx, self.p_out)
             log.info("Browser operation completed successfully")
-            return plan["summary"]
+            
+            return final_plan
             
         except Exception as e:
             log_error("Browser operation failed", e)
-            return f"Browser operation failed: {str(e)}"
+            return {
+                "status": "failed",
+                "reason": f"Browser operation failed: {str(e)}",
+                "browser_operation": True
+            }
             
     
     async def _run_initial_perception(self):
@@ -219,9 +246,9 @@ class BrowserAgent:
             log_json_block(f"📌 Browser Agent Perception output ({self.next_step_id})", self.p_out)
             self.ctx._print_graph(depth=3, title="Browser Agent", color="green")
 
-            if self.p_out.get("original_goal_achieved") or self.p_out.get("route") == Route.CONCLUDE:
-                log.info(f"✅✅ Original goal achieved or route is conclude, Now concluding...")
-                log_step(f"✅✅ Original goal achieved or route is conclude, Now concluding...")
+            if self.p_out.get("original_goal_achieved") or self.p_out.get("route") == Route.SUMMARIZE:
+                log.info(f"✅✅ Original goal achieved or route is summarize, Now concluding...")
+                log_step(f"✅✅ Original goal achieved or route is summarize, Now concluding...")
                 return True
 
             if self.p_out.get("route") != Route.BROWSER:
