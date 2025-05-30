@@ -1,0 +1,1275 @@
+{
+  "context": {
+    "session_id": "09fa45ad-621d-4fb9-8498-d7e679afa5e6",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+    "globals": {
+      "memory": null,
+      "click_result_1A": "\ud83d\uddb1\ufe0f  Clicked button with index 0: \n\nInteractive Elements:\n{\n  \"success\": true,\n  \"nav\": [\n    {\n      \"id\": 1,\n      \"desc\": \"Home\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 2,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 5,\n      \"desc\": \"Team\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 6,\n      \"desc\": \"Pricing\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 7,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 8,\n      \"desc\": \"Demo\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 10,\n      \"desc\": \"Owners\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 11,\n      \"desc\": \"Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 12,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 14,\n      \"desc\": \"Request a demo (cta-demo-button)\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 229,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 231,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 233,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 301,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 302,\n      \"desc\": \"Terms of Use\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 303,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"forms\": [\n    {\n      \"id\": 261,\n      \"desc\": \"Enter your first name (Name_First)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 263,\n      \"desc\": \"Enter your last name (Name_Last)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 265,\n      \"desc\": \"Enter country code (PhoneNumber_countrycodeval)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 267,\n      \"desc\": \"Enter your phone number (PhoneNumber_countrycode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 269,\n      \"desc\": \"Enter your organization name (SingleLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 271,\n      \"desc\": \"Enter your email (Email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 273,\n      \"desc\": \"Enter area to scan (sqft) (Number)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 276,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 280,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 283,\n      \"desc\": \"Date Input\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 285,\n      \"desc\": \"Address Line 1 (Address_AddressLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 286,\n      \"desc\": \"Address Line 2 (Address_AddressLine2)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 287,\n      \"desc\": \"City (Address_City)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 288,\n      \"desc\": \"State/Region/Province (Address_Region)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 289,\n      \"desc\": \"Postal / Zip Code (Address_ZipCode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 290,\n      \"desc\": \"Select Address Country (Address_Country)\",\n      \"action\": \"select_dropdown_option\",\n      \"options\": [\n        \"\u00c5land Islands\",\n        \"Afghanistan\",\n        \"Akrotiri\",\n        \"Albania\",\n        \"Algeria\",\n        \"American Samoa\",\n        \"Andorra\",\n        \"Angola\",\n        \"Anguilla\",\n        \"Antarctica\",\n        \"Antigua and Barbuda\",\n        \"Argentina\",\n        \"Armenia\",\n        \"Aruba\",\n        \"Ashmore and Cartier Islands\",\n        \"Australia\",\n        \"Austria\",\n        \"Azerbaijan\",\n        \"Bahrain\",\n        \"Bangladesh\",\n        \"Barbados\",\n        \"Bassas Da India\",\n        \"Belarus\",\n        \"Belgium\",\n        \"Belize\",\n        \"Benin\",\n        \"Bermuda\",\n        \"Bhutan\",\n        \"Bolivia\",\n        \"Bosnia and Herzegovina\",\n        \"Botswana\",\n        \"Bouvet Island\",\n        \"Brazil\",\n        \"British Indian Ocean Territory\",\n        \"British Virgin Islands\",\n        \"Brunei\",\n        \"Bulgaria\",\n        \"Burkina Faso\",\n        \"Burma\",\n        \"Burundi\",\n        \"Cambodia\",\n        \"Cameroon\",\n        \"Canada\",\n        \"Cape Verde\",\n        \"Caribbean Netherlands\",\n        \"Cayman Islands\",\n        \"Central African Republic\",\n        \"Chad\",\n        \"Chile\",\n        \"China\",\n        \"Christmas Island\",\n        \"Clipperton Island\",\n        \"Cocos (Keeling) Islands\",\n        \"Colombia\",\n        \"Comoros\",\n        \"Cook Islands\",\n        \"Coral Sea Islands\",\n        \"Costa Rica\",\n        \"Cote D'Ivoire\",\n        \"Croatia\",\n        \"Cuba\",\n        \"Cura\u00e7ao\",\n        \"Cyprus\",\n        \"Czech Republic\",\n        \"Democratic Republic of the Congo\",\n        \"Denmark\",\n        \"Dhekelia\",\n        \"Djibouti\",\n        \"Dominica\",\n        \"Dominican Republic\",\n        \"Ecuador\",\n        \"Egypt\",\n        \"El Salvador\",\n        \"Equatorial Guinea\",\n        \"Eritrea\",\n        \"Estonia\",\n        \"Ethiopia\",\n        \"Europa Island\",\n        \"Falkland Islands (Islas Malvinas)\",\n        \"Faroe Islands\",\n        \"Federated States of Micronesia\",\n        \"Fiji\",\n        \"Finland\",\n        \"France\",\n        \"French Guiana\",\n        \"French Polynesia\",\n        \"French Southern and Antarctic Lands\",\n        \"Gabon\",\n        \"Gaza Strip\",\n        \"Georgia\",\n        \"Germany\",\n        \"Ghana\",\n        \"Gibraltar\",\n        \"Glorioso Islands\",\n        \"Greece\",\n        \"Greenland\",\n        \"Grenada\",\n        \"Guadeloupe\",\n        \"Guam\",\n        \"Guatemala\",\n        \"Guernsey\",\n        \"Guinea\",\n        \"Guinea-bissau\",\n        \"Guyana\",\n        \"Haiti\",\n        \"Heard Island and Mcdonald Islands\",\n        \"Holy See (Vatican City)\",\n        \"Honduras\",\n        \"Hong Kong\",\n        \"Hungary\",\n        \"Iceland\",\n        \"India\",\n        \"Indonesia\",\n        \"Iran\",\n        \"Iraq\",\n        \"Ireland\",\n        \"Isle of Man\",\n        \"Israel\",\n        \"Italy\",\n        \"Jamaica\",\n        \"Jan Mayen\",\n        \"Japan\",\n        \"Jersey\",\n        \"Jordan\",\n        \"Juan De Nova Island\",\n        \"Kazakhstan\",\n        \"Kenya\",\n        \"Kiribati\",\n        \"Kosovo\",\n        \"Kuwait\",\n        \"Kyrgyzstan\",\n        \"Laos\",\n        \"Latvia\",\n        \"Lebanon\",\n        \"Lesotho\",\n        \"Liberia\",\n        \"Libya\",\n        \"Liechtenstein\",\n        \"Lithuania\",\n        \"Luxembourg\",\n        \"Macau\",\n        \"Macedonia\",\n        \"Madagascar\",\n        \"Malawi\",\n        \"Malaysia\",\n        \"Maldives\",\n        \"Mali\",\n        \"Malta\",\n        \"Marshall Islands\",\n        \"Martinique\",\n        \"Mauritania\",\n        \"Mauritius\",\n        \"Mayotte\",\n        \"Mexico\",\n        \"Moldova\",\n        \"Monaco\",\n        \"Mongolia\",\n        \"Montenegro\",\n        \"Montserrat\",\n        \"Morocco\",\n        \"Mozambique\",\n        \"Myanmar\",\n        \"Namibia\",\n        \"Nauru\",\n        \"Navassa Island\",\n        \"Nepal\",\n        \"Netherlands Antilles\",\n        \"Netherlands\",\n        \"New Caledonia\",\n        \"New Zealand\",\n        \"Nicaragua\",\n        \"Niger\",\n        \"Nigeria\",\n        \"Niue\",\n        \"Norfolk Island\",\n        \"North Korea\",\n        \"Northern Mariana Islands\",\n        \"Norway\",\n        \"Oman\",\n        \"Pakistan\",\n        \"Palau\",\n        \"Palestine\",\n        \"Panama\",\n        \"Papua New Guinea\",\n        \"Paracel Islands\",\n        \"Paraguay\",\n        \"Peru\",\n        \"Philippines\",\n        \"Pitcairn Islands\",\n        \"Poland\",\n        \"Portugal\",\n        \"Puerto Rico\",\n        \"Qatar\",\n        \"Republic of the Congo\",\n        \"Reunion\",\n        \"Romania\",\n        \"Russia\",\n        \"Rwanda\",\n        \"Saint Barth\u00c3\u00a9lemy\",\n        \"Saint Helena\",\n        \"Saint Kitts and Nevis\",\n        \"Saint Lucia\",\n        \"Saint Martin\",\n        \"Saint Pierre and Miquelon\",\n        \"Saint Vincent and the Grenadines\",\n        \"Samoa\",\n        \"San Marino\",\n        \"Sao Tome and Principe\",\n        \"Saudi Arabia\",\n        \"Senegal\",\n        \"Serbia\",\n        \"Seychelles\",\n        \"Sierra Leone\",\n        \"Singapore\",\n        \"Sint Maarten\",\n        \"Slovakia\",\n        \"Slovenia\",\n        \"Solomon Islands\",\n        \"Somalia\",\n        \"South Africa\",\n        \"South Georgia and the South Sandwich Islands\",\n        \"South Korea\",\n        \"South Sudan\",\n        \"Spain\",\n        \"Spratly Islands\",\n        \"Sri Lanka\",\n        \"Sudan\",\n        \"Suriname\",\n        \"Svalbard\",\n        \"Swaziland\",\n        \"Sweden\",\n        \"Switzerland\",\n        \"Syria\",\n        \"Taiwan\",\n        \"Tajikistan\",\n        \"Tanzania\",\n        \"Thailand\",\n        \"The Bahamas\",\n        \"The Gambia\",\n        \"Timor-leste\",\n        \"Togo\",\n        \"Tokelau\",\n        \"Tonga\",\n        \"Trinidad and Tobago\",\n        \"Tromelin Island\",\n        \"Tunisia\",\n        \"Turkey\",\n        \"Turkmenistan\",\n        \"Turks and Caicos Islands\",\n        \"Tuvalu\",\n        \"Uganda\",\n        \"Ukraine\",\n        \"United Arab Emirates\",\n        \"United Kingdom\",\n        \"United States\",\n        \"Uruguay\",\n        \"Uzbekistan\",\n        \"Vanuatu\",\n        \"Venezuela\",\n        \"Vietnam\",\n        \"Virgin Islands\",\n        \"Wake Island\",\n        \"Wallis and Futuna\",\n        \"West Bank\",\n        \"Western Sahara\",\n        \"Yemen\",\n        \"Zambia\",\n        \"Zimbabwe\"\n      ]\n    },\n    {\n      \"id\": 292,\n      \"desc\": \"Any questions or concerns (MultiLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 293,\n      \"desc\": \"Submit\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 294,\n      \"desc\": \"Enter your name (name)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 295,\n      \"desc\": \"Enter your email (email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 296,\n      \"desc\": \"Subscribe\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"buttons\": [\n    {\n      \"id\": 3,\n      \"desc\": \"Product\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 4,\n      \"desc\": \"Services\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 9,\n      \"desc\": \"Toggle theme\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 226,\n      \"desc\": \"Owners & Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 227,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 228,\n      \"desc\": \"Lithic Scanner\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 230,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 232,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 234,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 259,\n      \"desc\": \"sales@inkers.ai\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"total\": 47\n}"
+    },
+    "memory": [
+      {
+        "query": "Fill out the form with dummy data.",
+        "result_requirement": "Tool failed",
+        "solution_summary": "Too many functions (23 > 20)"
+      },
+      {
+        "query": "Fill out the form with dummy data.",
+        "result_requirement": "Tool failed",
+        "solution_summary": "Too many functions (23 > 20)"
+      },
+      {
+        "query": "Fill out the form with dummy data.",
+        "result_requirement": "Tool failed",
+        "solution_summary": "Too many functions (23 > 20)"
+      },
+      {
+        "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+        "result_requirement": "Final summary",
+        "summarizer_summary": "The agent successfully opened the [Inkers AI website](https://www.inkers.ai) and clicked the Demo button. The agent identified the form elements available on the page after clicking the \"Demo\" button. However, the agent encountered an error when attempting to fill out the form due to function limitations (\"Too many functions (23 > 20)\"). Consequently, the form filling process could not be completed.",
+        "confidence": 0.95,
+        "original_goal_achieved": true,
+        "route": "summarize"
+      }
+    ],
+    "graph": {
+      "directed": true,
+      "multigraph": false,
+      "graph": {},
+      "nodes": [
+        {
+          "data": {
+            "index": "ROOT",
+            "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+            "type": "ROOT",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button",
+                "form"
+              ],
+              "result_requirement": "Open the website, click the demo button and fill out the form.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.95",
+              "reasoning": "The user query requires interaction with a website, specifically opening a URL, clicking a button, and filling out a form. This requires a tool to interact with a webpage.",
+              "local_reasoning": "The query is not solvable with current information, as it requires web interaction.",
+              "last_tooluse_summary": "Not applicable",
+              "solution_summary": "Not ready yet.",
+              "route": "decision",
+              "instruction_to_summarize": "Not applicable"
+            },
+            "from_step": null
+          },
+          "id": "ROOT"
+        },
+        {
+          "data": {
+            "index": "0",
+            "description": "Open https://www.inkers.ai in a new tab.",
+            "type": "CODE",
+            "status": "completed",
+            "result": {},
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button",
+                "form"
+              ],
+              "result_requirement": "Click on the Demo button and fill out the form on the website.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The website has been opened. The next step is to click on the 'Demo Button' and fill out the form.  Since the current result only indicates that the website was opened, further action is required to complete the original query.",
+              "local_reasoning": "The previous step only opened the website; it did not click the demo button or fill out the form. A tool is needed to interact with the webpage.",
+              "last_tooluse_summary": "Website opened successfully, but further interaction is needed.",
+              "solution_summary": "Not ready yet.",
+              "route": "decision"
+            },
+            "from_step": null
+          },
+          "id": "0"
+        },
+        {
+          "data": {
+            "index": "1",
+            "description": "Click on the 'Demo Button'.",
+            "type": "CODE",
+            "status": "completed",
+            "result": {
+              "click_result_1A": "\ud83d\uddb1\ufe0f  Clicked button with index 0: \n\nInteractive Elements:\n{\n  \"success\": true,\n  \"nav\": [\n    {\n      \"id\": 1,\n      \"desc\": \"Home\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 2,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 5,\n      \"desc\": \"Team\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 6,\n      \"desc\": \"Pricing\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 7,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 8,\n      \"desc\": \"Demo\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 10,\n      \"desc\": \"Owners\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 11,\n      \"desc\": \"Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 12,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 14,\n      \"desc\": \"Request a demo (cta-demo-button)\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 229,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 231,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 233,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 301,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 302,\n      \"desc\": \"Terms of Use\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 303,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"forms\": [\n    {\n      \"id\": 261,\n      \"desc\": \"Enter your first name (Name_First)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 263,\n      \"desc\": \"Enter your last name (Name_Last)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 265,\n      \"desc\": \"Enter country code (PhoneNumber_countrycodeval)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 267,\n      \"desc\": \"Enter your phone number (PhoneNumber_countrycode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 269,\n      \"desc\": \"Enter your organization name (SingleLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 271,\n      \"desc\": \"Enter your email (Email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 273,\n      \"desc\": \"Enter area to scan (sqft) (Number)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 276,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 280,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 283,\n      \"desc\": \"Date Input\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 285,\n      \"desc\": \"Address Line 1 (Address_AddressLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 286,\n      \"desc\": \"Address Line 2 (Address_AddressLine2)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 287,\n      \"desc\": \"City (Address_City)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 288,\n      \"desc\": \"State/Region/Province (Address_Region)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 289,\n      \"desc\": \"Postal / Zip Code (Address_ZipCode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 290,\n      \"desc\": \"Select Address Country (Address_Country)\",\n      \"action\": \"select_dropdown_option\",\n      \"options\": [\n        \"\u00c5land Islands\",\n        \"Afghanistan\",\n        \"Akrotiri\",\n        \"Albania\",\n        \"Algeria\",\n        \"American Samoa\",\n        \"Andorra\",\n        \"Angola\",\n        \"Anguilla\",\n        \"Antarctica\",\n        \"Antigua and Barbuda\",\n        \"Argentina\",\n        \"Armenia\",\n        \"Aruba\",\n        \"Ashmore and Cartier Islands\",\n        \"Australia\",\n        \"Austria\",\n        \"Azerbaijan\",\n        \"Bahrain\",\n        \"Bangladesh\",\n        \"Barbados\",\n        \"Bassas Da India\",\n        \"Belarus\",\n        \"Belgium\",\n        \"Belize\",\n        \"Benin\",\n        \"Bermuda\",\n        \"Bhutan\",\n        \"Bolivia\",\n        \"Bosnia and Herzegovina\",\n        \"Botswana\",\n        \"Bouvet Island\",\n        \"Brazil\",\n        \"British Indian Ocean Territory\",\n        \"British Virgin Islands\",\n        \"Brunei\",\n        \"Bulgaria\",\n        \"Burkina Faso\",\n        \"Burma\",\n        \"Burundi\",\n        \"Cambodia\",\n        \"Cameroon\",\n        \"Canada\",\n        \"Cape Verde\",\n        \"Caribbean Netherlands\",\n        \"Cayman Islands\",\n        \"Central African Republic\",\n        \"Chad\",\n        \"Chile\",\n        \"China\",\n        \"Christmas Island\",\n        \"Clipperton Island\",\n        \"Cocos (Keeling) Islands\",\n        \"Colombia\",\n        \"Comoros\",\n        \"Cook Islands\",\n        \"Coral Sea Islands\",\n        \"Costa Rica\",\n        \"Cote D'Ivoire\",\n        \"Croatia\",\n        \"Cuba\",\n        \"Cura\u00e7ao\",\n        \"Cyprus\",\n        \"Czech Republic\",\n        \"Democratic Republic of the Congo\",\n        \"Denmark\",\n        \"Dhekelia\",\n        \"Djibouti\",\n        \"Dominica\",\n        \"Dominican Republic\",\n        \"Ecuador\",\n        \"Egypt\",\n        \"El Salvador\",\n        \"Equatorial Guinea\",\n        \"Eritrea\",\n        \"Estonia\",\n        \"Ethiopia\",\n        \"Europa Island\",\n        \"Falkland Islands (Islas Malvinas)\",\n        \"Faroe Islands\",\n        \"Federated States of Micronesia\",\n        \"Fiji\",\n        \"Finland\",\n        \"France\",\n        \"French Guiana\",\n        \"French Polynesia\",\n        \"French Southern and Antarctic Lands\",\n        \"Gabon\",\n        \"Gaza Strip\",\n        \"Georgia\",\n        \"Germany\",\n        \"Ghana\",\n        \"Gibraltar\",\n        \"Glorioso Islands\",\n        \"Greece\",\n        \"Greenland\",\n        \"Grenada\",\n        \"Guadeloupe\",\n        \"Guam\",\n        \"Guatemala\",\n        \"Guernsey\",\n        \"Guinea\",\n        \"Guinea-bissau\",\n        \"Guyana\",\n        \"Haiti\",\n        \"Heard Island and Mcdonald Islands\",\n        \"Holy See (Vatican City)\",\n        \"Honduras\",\n        \"Hong Kong\",\n        \"Hungary\",\n        \"Iceland\",\n        \"India\",\n        \"Indonesia\",\n        \"Iran\",\n        \"Iraq\",\n        \"Ireland\",\n        \"Isle of Man\",\n        \"Israel\",\n        \"Italy\",\n        \"Jamaica\",\n        \"Jan Mayen\",\n        \"Japan\",\n        \"Jersey\",\n        \"Jordan\",\n        \"Juan De Nova Island\",\n        \"Kazakhstan\",\n        \"Kenya\",\n        \"Kiribati\",\n        \"Kosovo\",\n        \"Kuwait\",\n        \"Kyrgyzstan\",\n        \"Laos\",\n        \"Latvia\",\n        \"Lebanon\",\n        \"Lesotho\",\n        \"Liberia\",\n        \"Libya\",\n        \"Liechtenstein\",\n        \"Lithuania\",\n        \"Luxembourg\",\n        \"Macau\",\n        \"Macedonia\",\n        \"Madagascar\",\n        \"Malawi\",\n        \"Malaysia\",\n        \"Maldives\",\n        \"Mali\",\n        \"Malta\",\n        \"Marshall Islands\",\n        \"Martinique\",\n        \"Mauritania\",\n        \"Mauritius\",\n        \"Mayotte\",\n        \"Mexico\",\n        \"Moldova\",\n        \"Monaco\",\n        \"Mongolia\",\n        \"Montenegro\",\n        \"Montserrat\",\n        \"Morocco\",\n        \"Mozambique\",\n        \"Myanmar\",\n        \"Namibia\",\n        \"Nauru\",\n        \"Navassa Island\",\n        \"Nepal\",\n        \"Netherlands Antilles\",\n        \"Netherlands\",\n        \"New Caledonia\",\n        \"New Zealand\",\n        \"Nicaragua\",\n        \"Niger\",\n        \"Nigeria\",\n        \"Niue\",\n        \"Norfolk Island\",\n        \"North Korea\",\n        \"Northern Mariana Islands\",\n        \"Norway\",\n        \"Oman\",\n        \"Pakistan\",\n        \"Palau\",\n        \"Palestine\",\n        \"Panama\",\n        \"Papua New Guinea\",\n        \"Paracel Islands\",\n        \"Paraguay\",\n        \"Peru\",\n        \"Philippines\",\n        \"Pitcairn Islands\",\n        \"Poland\",\n        \"Portugal\",\n        \"Puerto Rico\",\n        \"Qatar\",\n        \"Republic of the Congo\",\n        \"Reunion\",\n        \"Romania\",\n        \"Russia\",\n        \"Rwanda\",\n        \"Saint Barth\u00c3\u00a9lemy\",\n        \"Saint Helena\",\n        \"Saint Kitts and Nevis\",\n        \"Saint Lucia\",\n        \"Saint Martin\",\n        \"Saint Pierre and Miquelon\",\n        \"Saint Vincent and the Grenadines\",\n        \"Samoa\",\n        \"San Marino\",\n        \"Sao Tome and Principe\",\n        \"Saudi Arabia\",\n        \"Senegal\",\n        \"Serbia\",\n        \"Seychelles\",\n        \"Sierra Leone\",\n        \"Singapore\",\n        \"Sint Maarten\",\n        \"Slovakia\",\n        \"Slovenia\",\n        \"Solomon Islands\",\n        \"Somalia\",\n        \"South Africa\",\n        \"South Georgia and the South Sandwich Islands\",\n        \"South Korea\",\n        \"South Sudan\",\n        \"Spain\",\n        \"Spratly Islands\",\n        \"Sri Lanka\",\n        \"Sudan\",\n        \"Suriname\",\n        \"Svalbard\",\n        \"Swaziland\",\n        \"Sweden\",\n        \"Switzerland\",\n        \"Syria\",\n        \"Taiwan\",\n        \"Tajikistan\",\n        \"Tanzania\",\n        \"Thailand\",\n        \"The Bahamas\",\n        \"The Gambia\",\n        \"Timor-leste\",\n        \"Togo\",\n        \"Tokelau\",\n        \"Tonga\",\n        \"Trinidad and Tobago\",\n        \"Tromelin Island\",\n        \"Tunisia\",\n        \"Turkey\",\n        \"Turkmenistan\",\n        \"Turks and Caicos Islands\",\n        \"Tuvalu\",\n        \"Uganda\",\n        \"Ukraine\",\n        \"United Arab Emirates\",\n        \"United Kingdom\",\n        \"United States\",\n        \"Uruguay\",\n        \"Uzbekistan\",\n        \"Vanuatu\",\n        \"Venezuela\",\n        \"Vietnam\",\n        \"Virgin Islands\",\n        \"Wake Island\",\n        \"Wallis and Futuna\",\n        \"West Bank\",\n        \"Western Sahara\",\n        \"Yemen\",\n        \"Zambia\",\n        \"Zimbabwe\"\n      ]\n    },\n    {\n      \"id\": 292,\n      \"desc\": \"Any questions or concerns (MultiLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 293,\n      \"desc\": \"Submit\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 294,\n      \"desc\": \"Enter your name (name)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 295,\n      \"desc\": \"Enter your email (email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 296,\n      \"desc\": \"Subscribe\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"buttons\": [\n    {\n      \"id\": 3,\n      \"desc\": \"Product\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 4,\n      \"desc\": \"Services\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 9,\n      \"desc\": \"Toggle theme\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 226,\n      \"desc\": \"Owners & Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 227,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 228,\n      \"desc\": \"Lithic Scanner\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 230,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 232,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 234,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 259,\n      \"desc\": \"sales@inkers.ai\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"total\": 47\n}"
+            },
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button",
+                "form"
+              ],
+              "result_requirement": "Fill out the form on the website after clicking the Demo button.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": true,
+              "confidence": "0.9",
+              "reasoning": "The 'Demo' button was clicked successfully. The raw input shows a list of forms that can be filled. The next step is to fill out the form fields.",
+              "local_reasoning": "The tool successfully identified the form fields after clicking the demo button. Now requires filling the forms.",
+              "last_tooluse_summary": "click_element_by_index succeeded. Form elements identified.",
+              "solution_summary": "Not ready yet.",
+              "route": "decision"
+            },
+            "from_step": "1"
+          },
+          "id": "1"
+        },
+        {
+          "data": {
+            "index": "2",
+            "description": "Fill out the form with dummy data.",
+            "type": "CODE",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": "Too many functions (23 > 20)",
+            "perception": {
+              "entities": [
+                "https://www.inkers.ai",
+                "Demo Button",
+                "form"
+              ],
+              "result_requirement": "Fill out the form on the website after clicking the Demo button.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.7",
+              "reasoning": "The 'Demo' button was clicked successfully, and the form elements are identified. However, the attempt to fill the form has failed repeatedly with the error 'Too many functions (23 > 20)'. Since the form filling step is failing consistently, further attempts are unlikely to succeed. The original goal is not achieved.",
+              "local_reasoning": "The tool identified the form fields, but subsequent attempts to fill them resulted in errors due to the function limitations. Since the filling step is failing, we need to cut the loop here and summarize.",
+              "last_tooluse_summary": "click_element_by_index succeeded. Form elements identified. Attempts to fill the form failed.",
+              "solution_summary": "The website was opened, the 'Demo' button was clicked, and the form elements were identified. However, the form could not be filled due to function limitations.",
+              "route": "summarize",
+              "instruction_to_summarize": "The agent successfully opened the website and clicked the Demo button, identifying the form. However, the agent encountered an error when attempting to fill out the form due to function limitations. The form filling process could not be completed."
+            },
+            "from_step": "2"
+          },
+          "id": "2"
+        },
+        {
+          "data": {
+            "index": "3",
+            "description": "Submit the form.",
+            "type": "CODE",
+            "status": "Skipped",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": null,
+            "from_step": "2"
+          },
+          "id": "3"
+        }
+      ],
+      "links": [
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "0"
+        },
+        {
+          "type": "normal",
+          "source": "0",
+          "target": "1"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "2"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "1"
+        },
+        {
+          "type": "normal",
+          "source": "1",
+          "target": "3"
+        },
+        {
+          "type": "normal",
+          "source": "2",
+          "target": "2"
+        },
+        {
+          "type": "normal",
+          "source": "2",
+          "target": "3"
+        }
+      ]
+    }
+  },
+  "session": {
+    "session_id": "09fa45ad-621d-4fb9-8498-d7e679afa5e6",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+    "perception_snapshots": [
+      {
+        "run_id": "09fa45ad-621d-4fb9-8498-d7e679afa5e6-P",
+        "snapshot_type": "user_query",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button",
+          "form"
+        ],
+        "result_requirement": "Open the website, click the demo button and fill out the form.",
+        "original_goal_achieved": false,
+        "reasoning": "The user query requires interaction with a website, specifically opening a URL, clicking a button, and filling out a form. This requires a tool to interact with a webpage.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The query is not solvable with current information, as it requires web interaction.",
+        "last_tooluse_summary": "Not applicable",
+        "solution_summary": "Not ready yet.",
+        "confidence": "0.95",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "09fa45ad-621d-4fb9-8498-d7e679afa5e6-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button",
+          "form"
+        ],
+        "result_requirement": "Click on the Demo button and fill out the form on the website.",
+        "original_goal_achieved": false,
+        "reasoning": "The website has been opened. The next step is to click on the 'Demo Button' and fill out the form.  Since the current result only indicates that the website was opened, further action is required to complete the original query.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The previous step only opened the website; it did not click the demo button or fill out the form. A tool is needed to interact with the webpage.",
+        "last_tooluse_summary": "Website opened successfully, but further interaction is needed.",
+        "solution_summary": "Not ready yet.",
+        "confidence": "0.9",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "09fa45ad-621d-4fb9-8498-d7e679afa5e6-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button",
+          "form"
+        ],
+        "result_requirement": "Fill out the form on the website after clicking the Demo button.",
+        "original_goal_achieved": false,
+        "reasoning": "The 'Demo' button was clicked successfully. The raw input shows a list of forms that can be filled. The next step is to fill out the form fields.",
+        "local_goal_achieved": true,
+        "local_reasoning": "The tool successfully identified the form fields after clicking the demo button. Now requires filling the forms.",
+        "last_tooluse_summary": "click_element_by_index succeeded. Form elements identified.",
+        "solution_summary": "Not ready yet.",
+        "confidence": "0.9",
+        "route": "decision",
+        "timestamp": "...",
+        "return_to": ""
+      },
+      {
+        "run_id": "09fa45ad-621d-4fb9-8498-d7e679afa5e6-P",
+        "snapshot_type": "step_result",
+        "entities": [
+          "https://www.inkers.ai",
+          "Demo Button",
+          "form"
+        ],
+        "result_requirement": "Fill out the form on the website after clicking the Demo button.",
+        "original_goal_achieved": false,
+        "reasoning": "The 'Demo' button was clicked successfully, and the form elements are identified. However, the attempt to fill the form has failed repeatedly with the error 'Too many functions (23 > 20)'. Since the form filling step is failing consistently, further attempts are unlikely to succeed. The original goal is not achieved.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The tool identified the form fields, but subsequent attempts to fill them resulted in errors due to the function limitations. Since the filling step is failing, we need to cut the loop here and summarize.",
+        "last_tooluse_summary": "click_element_by_index succeeded. Form elements identified. Attempts to fill the form failed.",
+        "solution_summary": "The website was opened, the 'Demo' button was clicked, and the form elements were identified. However, the form could not be filled due to function limitations.",
+        "confidence": "0.7",
+        "route": "summarize",
+        "timestamp": "...",
+        "return_to": ""
+      }
+    ],
+    "decision_snapshots": [
+      {
+        "run_id": "511fef0e-0507-485b-8b27-e9ec8481c2af",
+        "input": {
+          "current_time": "2025-05-30T12:28:54.404084",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button",
+              "form"
+            ],
+            "result_requirement": "Open the website, click the demo button and fill out the form.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.95",
+            "reasoning": "The user query requires interaction with a website, specifically opening a URL, clicking a button, and filling out a form. This requires a tool to interact with a webpage.",
+            "local_reasoning": "The query is not solvable with current information, as it requires web interaction.",
+            "last_tooluse_summary": "Not applicable",
+            "solution_summary": "Not ready yet.",
+            "route": "decision",
+            "instruction_to_summarize": "Not applicable"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button",
+                  "form"
+                ],
+                "result_requirement": "Open the website, click the demo button and fill out the form.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.95",
+                "reasoning": "The user query requires interaction with a website, specifically opening a URL, clicking a button, and filling out a form. This requires a tool to interact with a webpage.",
+                "local_reasoning": "The query is not solvable with current information, as it requires web interaction.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision",
+                "instruction_to_summarize": "Not applicable"
+              },
+              "from_step": null
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button",
+                  "form"
+                ],
+                "result_requirement": "Open the website, click the demo button and fill out the form.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.95",
+                "reasoning": "The user query requires interaction with a website, specifically opening a URL, clicking a button, and filling out a form. This requires a tool to interact with a webpage.",
+                "local_reasoning": "The query is not solvable with current information, as it requires web interaction.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision",
+                "instruction_to_summarize": "Not applicable"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Click on the 'Demo Button'."
+              },
+              {
+                "id": "2",
+                "description": "Fill the form on the page."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "0",
+          "code_variants": {
+            "CODE_0A": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+            "CODE_0B": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+            "CODE_0C": "open_tab(\"https://www.inkers.ai\")\nreturn {}"
+          }
+        },
+        "next_step_id": "0",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Click on the 'Demo Button'."
+            },
+            {
+              "id": "2",
+              "description": "Fill the form on the page."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_0A": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+          "CODE_0B": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+          "CODE_0C": "open_tab(\"https://www.inkers.ai\")\nreturn {}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      },
+      {
+        "run_id": "aa5a7e03-c38a-4baf-b994-c2f72832f691",
+        "input": {
+          "current_time": "2025-05-30T12:29:07.980464",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button",
+              "form"
+            ],
+            "result_requirement": "Click on the Demo button and fill out the form on the website.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The website has been opened. The next step is to click on the 'Demo Button' and fill out the form.  Since the current result only indicates that the website was opened, further action is required to complete the original query.",
+            "local_reasoning": "The previous step only opened the website; it did not click the demo button or fill out the form. A tool is needed to interact with the webpage.",
+            "last_tooluse_summary": "Website opened successfully, but further interaction is needed.",
+            "solution_summary": "Not ready yet.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button",
+                  "form"
+                ],
+                "result_requirement": "Open the website, click the demo button and fill out the form.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.95",
+                "reasoning": "The user query requires interaction with a website, specifically opening a URL, clicking a button, and filling out a form. This requires a tool to interact with a webpage.",
+                "local_reasoning": "The query is not solvable with current information, as it requires web interaction.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision",
+                "instruction_to_summarize": "Not applicable"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open https://www.inkers.ai in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {},
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button",
+                  "form"
+                ],
+                "result_requirement": "Click on the Demo button and fill out the form on the website.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened. The next step is to click on the 'Demo Button' and fill out the form.  Since the current result only indicates that the website was opened, further action is required to complete the original query.",
+                "local_reasoning": "The previous step only opened the website; it did not click the demo button or fill out the form. A tool is needed to interact with the webpage.",
+                "last_tooluse_summary": "Website opened successfully, but further interaction is needed.",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button",
+                  "form"
+                ],
+                "result_requirement": "Open the website, click the demo button and fill out the form.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.95",
+                "reasoning": "The user query requires interaction with a website, specifically opening a URL, clicking a button, and filling out a form. This requires a tool to interact with a webpage.",
+                "local_reasoning": "The query is not solvable with current information, as it requires web interaction.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision",
+                "instruction_to_summarize": "Not applicable"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open https://www.inkers.ai in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {},
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button",
+                  "form"
+                ],
+                "result_requirement": "Click on the Demo button and fill out the form on the website.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened. The next step is to click on the 'Demo Button' and fill out the form.  Since the current result only indicates that the website was opened, further action is required to complete the original query.",
+                "local_reasoning": "The previous step only opened the website; it did not click the demo button or fill out the form. A tool is needed to interact with the webpage.",
+                "last_tooluse_summary": "Website opened successfully, but further interaction is needed.",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Click on the 'Demo Button'."
+              },
+              {
+                "id": "2",
+                "description": "Get the enhanced page structure."
+              },
+              {
+                "id": "3",
+                "description": "Fill the form."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "1",
+          "code_variants": {
+            "CODE_1A": "elements = get_interactive_elements('Demo Button', True, True)\nif elements:\n  return {\"click_result_1A\": click_element_by_index(0)}\nelse:\n  return {\"click_result_1A\": 'No Demo Button found.'}",
+            "CODE_1B": "scroll_to_text('Demo Button')\nelements = get_interactive_elements('Demo Button', True, True)\nif elements:\n  return {\"click_result_1B\": click_element_by_index(0)}\nelse:\n  return {\"click_result_1B\": 'No Demo Button found.'}",
+            "CODE_1C": "elements = get_interactive_elements('Demo', True, True)\nif elements:\n  return {\"click_result_1C\": click_element_by_index(0)}\nelse:\n  return {\"click_result_1C\": 'No Demo Button found.'}"
+          }
+        },
+        "next_step_id": "1",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Click on the 'Demo Button'."
+            },
+            {
+              "id": "2",
+              "description": "Get the enhanced page structure."
+            },
+            {
+              "id": "3",
+              "description": "Fill the form."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            },
+            {
+              "from": "2",
+              "to": "3",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_1A": "elements = get_interactive_elements('Demo Button', True, True)\nif elements:\n  return {\"click_result_1A\": click_element_by_index(0)}\nelse:\n  return {\"click_result_1A\": 'No Demo Button found.'}",
+          "CODE_1B": "scroll_to_text('Demo Button')\nelements = get_interactive_elements('Demo Button', True, True)\nif elements:\n  return {\"click_result_1B\": click_element_by_index(0)}\nelse:\n  return {\"click_result_1B\": 'No Demo Button found.'}",
+          "CODE_1C": "elements = get_interactive_elements('Demo', True, True)\nif elements:\n  return {\"click_result_1C\": click_element_by_index(0)}\nelse:\n  return {\"click_result_1C\": 'No Demo Button found.'}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      },
+      {
+        "run_id": "76f93949-ee5a-4393-8757-f904c524d617",
+        "input": {
+          "current_time": "2025-05-30T12:29:21.166259",
+          "plan_mode": "initial",
+          "planning_strategy": "exploratory",
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button",
+              "form"
+            ],
+            "result_requirement": "Fill out the form on the website after clicking the Demo button.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": true,
+            "confidence": "0.9",
+            "reasoning": "The 'Demo' button was clicked successfully. The raw input shows a list of forms that can be filled. The next step is to fill out the form fields.",
+            "local_reasoning": "The tool successfully identified the form fields after clicking the demo button. Now requires filling the forms.",
+            "last_tooluse_summary": "click_element_by_index succeeded. Form elements identified.",
+            "solution_summary": "Not ready yet.",
+            "route": "decision"
+          },
+          "plan_graph": {},
+          "completed_steps": [
+            {
+              "index": "ROOT",
+              "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button",
+                  "form"
+                ],
+                "result_requirement": "Open the website, click the demo button and fill out the form.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.95",
+                "reasoning": "The user query requires interaction with a website, specifically opening a URL, clicking a button, and filling out a form. This requires a tool to interact with a webpage.",
+                "local_reasoning": "The query is not solvable with current information, as it requires web interaction.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision",
+                "instruction_to_summarize": "Not applicable"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open https://www.inkers.ai in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {},
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button",
+                  "form"
+                ],
+                "result_requirement": "Click on the Demo button and fill out the form on the website.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened. The next step is to click on the 'Demo Button' and fill out the form.  Since the current result only indicates that the website was opened, further action is required to complete the original query.",
+                "local_reasoning": "The previous step only opened the website; it did not click the demo button or fill out the form. A tool is needed to interact with the webpage.",
+                "last_tooluse_summary": "Website opened successfully, but further interaction is needed.",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            },
+            {
+              "index": "1",
+              "description": "Click on the 'Demo Button'.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {
+                "click_result_1A": "\ud83d\uddb1\ufe0f  Clicked button with index 0: \n\nInteractive Elements:\n{\n  \"success\": true,\n  \"nav\": [\n    {\n      \"id\": 1,\n      \"desc\": \"Home\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 2,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 5,\n      \"desc\": \"Team\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 6,\n      \"desc\": \"Pricing\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 7,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 8,\n      \"desc\": \"Demo\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 10,\n      \"desc\": \"Owners\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 11,\n      \"desc\": \"Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 12,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 14,\n      \"desc\": \"Request a demo (cta-demo-button)\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 229,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 231,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 233,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 301,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 302,\n      \"desc\": \"Terms of Use\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 303,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"forms\": [\n    {\n      \"id\": 261,\n      \"desc\": \"Enter your first name (Name_First)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 263,\n      \"desc\": \"Enter your last name (Name_Last)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 265,\n      \"desc\": \"Enter country code (PhoneNumber_countrycodeval)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 267,\n      \"desc\": \"Enter your phone number (PhoneNumber_countrycode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 269,\n      \"desc\": \"Enter your organization name (SingleLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 271,\n      \"desc\": \"Enter your email (Email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 273,\n      \"desc\": \"Enter area to scan (sqft) (Number)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 276,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 280,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 283,\n      \"desc\": \"Date Input\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 285,\n      \"desc\": \"Address Line 1 (Address_AddressLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 286,\n      \"desc\": \"Address Line 2 (Address_AddressLine2)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 287,\n      \"desc\": \"City (Address_City)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 288,\n      \"desc\": \"State/Region/Province (Address_Region)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 289,\n      \"desc\": \"Postal / Zip Code (Address_ZipCode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 290,\n      \"desc\": \"Select Address Country (Address_Country)\",\n      \"action\": \"select_dropdown_option\",\n      \"options\": [\n        \"\u00c5land Islands\",\n        \"Afghanistan\",\n        \"Akrotiri\",\n        \"Albania\",\n        \"Algeria\",\n        \"American Samoa\",\n        \"Andorra\",\n        \"Angola\",\n        \"Anguilla\",\n        \"Antarctica\",\n        \"Antigua and Barbuda\",\n        \"Argentina\",\n        \"Armenia\",\n        \"Aruba\",\n        \"Ashmore and Cartier Islands\",\n        \"Australia\",\n        \"Austria\",\n        \"Azerbaijan\",\n        \"Bahrain\",\n        \"Bangladesh\",\n        \"Barbados\",\n        \"Bassas Da India\",\n        \"Belarus\",\n        \"Belgium\",\n        \"Belize\",\n        \"Benin\",\n        \"Bermuda\",\n        \"Bhutan\",\n        \"Bolivia\",\n        \"Bosnia and Herzegovina\",\n        \"Botswana\",\n        \"Bouvet Island\",\n        \"Brazil\",\n        \"British Indian Ocean Territory\",\n        \"British Virgin Islands\",\n        \"Brunei\",\n        \"Bulgaria\",\n        \"Burkina Faso\",\n        \"Burma\",\n        \"Burundi\",\n        \"Cambodia\",\n        \"Cameroon\",\n        \"Canada\",\n        \"Cape Verde\",\n        \"Caribbean Netherlands\",\n        \"Cayman Islands\",\n        \"Central African Republic\",\n        \"Chad\",\n        \"Chile\",\n        \"China\",\n        \"Christmas Island\",\n        \"Clipperton Island\",\n        \"Cocos (Keeling) Islands\",\n        \"Colombia\",\n        \"Comoros\",\n        \"Cook Islands\",\n        \"Coral Sea Islands\",\n        \"Costa Rica\",\n        \"Cote D'Ivoire\",\n        \"Croatia\",\n        \"Cuba\",\n        \"Cura\u00e7ao\",\n        \"Cyprus\",\n        \"Czech Republic\",\n        \"Democratic Republic of the Congo\",\n        \"Denmark\",\n        \"Dhekelia\",\n        \"Djibouti\",\n        \"Dominica\",\n        \"Dominican Republic\",\n        \"Ecuador\",\n        \"Egypt\",\n        \"El Salvador\",\n        \"Equatorial Guinea\",\n        \"Eritrea\",\n        \"Estonia\",\n        \"Ethiopia\",\n        \"Europa Island\",\n        \"Falkland Islands (Islas Malvinas)\",\n        \"Faroe Islands\",\n        \"Federated States of Micronesia\",\n        \"Fiji\",\n        \"Finland\",\n        \"France\",\n        \"French Guiana\",\n        \"French Polynesia\",\n        \"French Southern and Antarctic Lands\",\n        \"Gabon\",\n        \"Gaza Strip\",\n        \"Georgia\",\n        \"Germany\",\n        \"Ghana\",\n        \"Gibraltar\",\n        \"Glorioso Islands\",\n        \"Greece\",\n        \"Greenland\",\n        \"Grenada\",\n        \"Guadeloupe\",\n        \"Guam\",\n        \"Guatemala\",\n        \"Guernsey\",\n        \"Guinea\",\n        \"Guinea-bissau\",\n        \"Guyana\",\n        \"Haiti\",\n        \"Heard Island and Mcdonald Islands\",\n        \"Holy See (Vatican City)\",\n        \"Honduras\",\n        \"Hong Kong\",\n        \"Hungary\",\n        \"Iceland\",\n        \"India\",\n        \"Indonesia\",\n        \"Iran\",\n        \"Iraq\",\n        \"Ireland\",\n        \"Isle of Man\",\n        \"Israel\",\n        \"Italy\",\n        \"Jamaica\",\n        \"Jan Mayen\",\n        \"Japan\",\n        \"Jersey\",\n        \"Jordan\",\n        \"Juan De Nova Island\",\n        \"Kazakhstan\",\n        \"Kenya\",\n        \"Kiribati\",\n        \"Kosovo\",\n        \"Kuwait\",\n        \"Kyrgyzstan\",\n        \"Laos\",\n        \"Latvia\",\n        \"Lebanon\",\n        \"Lesotho\",\n        \"Liberia\",\n        \"Libya\",\n        \"Liechtenstein\",\n        \"Lithuania\",\n        \"Luxembourg\",\n        \"Macau\",\n        \"Macedonia\",\n        \"Madagascar\",\n        \"Malawi\",\n        \"Malaysia\",\n        \"Maldives\",\n        \"Mali\",\n        \"Malta\",\n        \"Marshall Islands\",\n        \"Martinique\",\n        \"Mauritania\",\n        \"Mauritius\",\n        \"Mayotte\",\n        \"Mexico\",\n        \"Moldova\",\n        \"Monaco\",\n        \"Mongolia\",\n        \"Montenegro\",\n        \"Montserrat\",\n        \"Morocco\",\n        \"Mozambique\",\n        \"Myanmar\",\n        \"Namibia\",\n        \"Nauru\",\n        \"Navassa Island\",\n        \"Nepal\",\n        \"Netherlands Antilles\",\n        \"Netherlands\",\n        \"New Caledonia\",\n        \"New Zealand\",\n        \"Nicaragua\",\n        \"Niger\",\n        \"Nigeria\",\n        \"Niue\",\n        \"Norfolk Island\",\n        \"North Korea\",\n        \"Northern Mariana Islands\",\n        \"Norway\",\n        \"Oman\",\n        \"Pakistan\",\n        \"Palau\",\n        \"Palestine\",\n        \"Panama\",\n        \"Papua New Guinea\",\n        \"Paracel Islands\",\n        \"Paraguay\",\n        \"Peru\",\n        \"Philippines\",\n        \"Pitcairn Islands\",\n        \"Poland\",\n        \"Portugal\",\n        \"Puerto Rico\",\n        \"Qatar\",\n        \"Republic of the Congo\",\n        \"Reunion\",\n        \"Romania\",\n        \"Russia\",\n        \"Rwanda\",\n        \"Saint Barth\u00c3\u00a9lemy\",\n        \"Saint Helena\",\n        \"Saint Kitts and Nevis\",\n        \"Saint Lucia\",\n        \"Saint Martin\",\n        \"Saint Pierre and Miquelon\",\n        \"Saint Vincent and the Grenadines\",\n        \"Samoa\",\n        \"San Marino\",\n        \"Sao Tome and Principe\",\n        \"Saudi Arabia\",\n        \"Senegal\",\n        \"Serbia\",\n        \"Seychelles\",\n        \"Sierra Leone\",\n        \"Singapore\",\n        \"Sint Maarten\",\n        \"Slovakia\",\n        \"Slovenia\",\n        \"Solomon Islands\",\n        \"Somalia\",\n        \"South Africa\",\n        \"South Georgia and the South Sandwich Islands\",\n        \"South Korea\",\n        \"South Sudan\",\n        \"Spain\",\n        \"Spratly Islands\",\n        \"Sri Lanka\",\n        \"Sudan\",\n        \"Suriname\",\n        \"Svalbard\",\n        \"Swaziland\",\n        \"Sweden\",\n        \"Switzerland\",\n        \"Syria\",\n        \"Taiwan\",\n        \"Tajikistan\",\n        \"Tanzania\",\n        \"Thailand\",\n        \"The Bahamas\",\n        \"The Gambia\",\n        \"Timor-leste\",\n        \"Togo\",\n        \"Tokelau\",\n        \"Tonga\",\n        \"Trinidad and Tobago\",\n        \"Tromelin Island\",\n        \"Tunisia\",\n        \"Turkey\",\n        \"Turkmenistan\",\n        \"Turks and Caicos Islands\",\n        \"Tuvalu\",\n        \"Uganda\",\n        \"Ukraine\",\n        \"United Arab Emirates\",\n        \"United Kingdom\",\n        \"United States\",\n        \"Uruguay\",\n        \"Uzbekistan\",\n        \"Vanuatu\",\n        \"Venezuela\",\n        \"Vietnam\",\n        \"Virgin Islands\",\n        \"Wake Island\",\n        \"Wallis and Futuna\",\n        \"West Bank\",\n        \"Western Sahara\",\n        \"Yemen\",\n        \"Zambia\",\n        \"Zimbabwe\"\n      ]\n    },\n    {\n      \"id\": 292,\n      \"desc\": \"Any questions or concerns (MultiLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 293,\n      \"desc\": \"Submit\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 294,\n      \"desc\": \"Enter your name (name)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 295,\n      \"desc\": \"Enter your email (email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 296,\n      \"desc\": \"Subscribe\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"buttons\": [\n    {\n      \"id\": 3,\n      \"desc\": \"Product\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 4,\n      \"desc\": \"Services\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 9,\n      \"desc\": \"Toggle theme\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 226,\n      \"desc\": \"Owners & Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 227,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 228,\n      \"desc\": \"Lithic Scanner\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 230,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 232,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 234,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 259,\n      \"desc\": \"sales@inkers.ai\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"total\": 47\n}"
+              },
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button",
+                  "form"
+                ],
+                "result_requirement": "Fill out the form on the website after clicking the Demo button.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": true,
+                "confidence": "0.9",
+                "reasoning": "The 'Demo' button was clicked successfully. The raw input shows a list of forms that can be filled. The next step is to fill out the form fields.",
+                "local_reasoning": "The tool successfully identified the form fields after clicking the demo button. Now requires filling the forms.",
+                "last_tooluse_summary": "click_element_by_index succeeded. Form elements identified.",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": "1"
+            }
+          ],
+          "failed_steps": [
+            {
+              "index": "ROOT",
+              "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+              "type": "ROOT",
+              "status": "completed",
+              "result": null,
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button",
+                  "form"
+                ],
+                "result_requirement": "Open the website, click the demo button and fill out the form.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.95",
+                "reasoning": "The user query requires interaction with a website, specifically opening a URL, clicking a button, and filling out a form. This requires a tool to interact with a webpage.",
+                "local_reasoning": "The query is not solvable with current information, as it requires web interaction.",
+                "last_tooluse_summary": "Not applicable",
+                "solution_summary": "Not ready yet.",
+                "route": "decision",
+                "instruction_to_summarize": "Not applicable"
+              },
+              "from_step": null
+            },
+            {
+              "index": "0",
+              "description": "Open https://www.inkers.ai in a new tab.",
+              "type": "CODE",
+              "status": "completed",
+              "result": {},
+              "conclusion": null,
+              "error": null,
+              "perception": {
+                "entities": [
+                  "https://www.inkers.ai",
+                  "Demo Button",
+                  "form"
+                ],
+                "result_requirement": "Click on the Demo button and fill out the form on the website.",
+                "original_goal_achieved": false,
+                "local_goal_achieved": false,
+                "confidence": "0.9",
+                "reasoning": "The website has been opened. The next step is to click on the 'Demo Button' and fill out the form.  Since the current result only indicates that the website was opened, further action is required to complete the original query.",
+                "local_reasoning": "The previous step only opened the website; it did not click the demo button or fill out the form. A tool is needed to interact with the webpage.",
+                "last_tooluse_summary": "Website opened successfully, but further interaction is needed.",
+                "solution_summary": "Not ready yet.",
+                "route": "decision"
+              },
+              "from_step": null
+            }
+          ],
+          "globals_schema": {
+            "memory": {
+              "type": "NoneType",
+              "preview": "None"
+            },
+            "click_result_1A": {
+              "type": "str",
+              "preview": "\ud83d\uddb1\ufe0f  Clicked button with index 0: \n\nInteractive Elements:\n{\n  \"success\": true,\n  \"nav\": [\n    {\n      \"id\": 1,\n      \"desc\": \"Home\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 2,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 5,\n      \"desc\": \"Team\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 6,\n      \"desc\": \"Pricing\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 7,\n      \"desc\": \"Contact\u2026"
+            }
+          }
+        },
+        "output": {
+          "plan_graph": {
+            "nodes": [
+              {
+                "id": "0",
+                "description": "Open https://www.inkers.ai in a new tab."
+              },
+              {
+                "id": "1",
+                "description": "Click on the 'Demo Button'."
+              },
+              {
+                "id": "2",
+                "description": "Fill out the form with dummy data."
+              },
+              {
+                "id": "3",
+                "description": "Submit the form."
+              }
+            ],
+            "edges": [
+              {
+                "from": "ROOT",
+                "to": "0",
+                "type": "normal"
+              },
+              {
+                "from": "0",
+                "to": "1",
+                "type": "normal"
+              },
+              {
+                "from": "1",
+                "to": "2",
+                "type": "normal"
+              },
+              {
+                "from": "2",
+                "to": "3",
+                "type": "normal"
+              }
+            ]
+          },
+          "next_step_id": "2",
+          "code_variants": {
+            "CODE_2A": "interactive_elements = globals_schema.get(\"click_result_1A\", \"{}\")\nforms = interactive_elements.get(\"forms\", []) if isinstance(interactive_elements, dict) else []\n\nfilled_values = {}\n\nif forms:\n    for form in forms:\n        element_id = form.get(\"id\")\n        action = form.get(\"action\")\n        desc = form.get(\"desc\")\n\n        if action == \"input_text\":\n            if \"Name_First\" in desc:\n                input_text(element_id, \"John\")\n                filled_values[element_id] = \"John\"\n            elif \"Name_Last\" in desc:\n                input_text(element_id, \"Doe\")\n                filled_values[element_id] = \"Doe\"\n            elif \"PhoneNumber_countrycodeval\" in desc:\n                input_text(element_id, \"1\")\n                filled_values[element_id] = \"1\"\n            elif \"PhoneNumber_countrycode\" in desc:\n                input_text(element_id, \"5551234567\")\n                filled_values[element_id] = \"5551234567\"\n            elif \"SingleLine1\" in desc:\n                input_text(element_id, \"Example Org\")\n                filled_values[element_id] = \"Example Org\"\n            elif \"Email\" in desc:\n                input_text(element_id, \"john.doe@example.com\")\n                filled_values[element_id] = \"john.doe@example.com\"\n            elif \"Number\" in desc:\n                input_text(element_id, \"1000\")\n                filled_values[element_id] = \"1000\"\n            elif \"Address_AddressLine1\" in desc:\n                input_text(element_id, \"123 Main St\")\n                filled_values[element_id] = \"123 Main St\"\n            elif \"Address_AddressLine2\" in desc:\n                input_text(element_id, \"Apt 4\")\n                filled_values[element_id] = \"Apt 4\"\n            elif \"Address_City\" in desc:\n                input_text(element_id, \"Anytown\")\n                filled_values[element_id] = \"Anytown\"\n            elif \"Address_Region\" in desc:\n                input_text(element_id, \"CA\")\n                filled_values[element_id] = \"CA\"\n            elif \"Address_ZipCode\" in desc:\n                input_text(element_id, \"90210\")\n                filled_values[element_id] = \"90210\"\n            elif \"MultiLine1\" in desc:\n                input_text(element_id, \"This is a test submission.\")\n                filled_values[element_id] = \"This is a test submission.\"\n            elif \"name\" in desc:\n                input_text(element_id, \"Jane Doe\")\n                filled_values[element_id] = \"Jane Doe\"\n            elif \"email\" in desc:\n                input_text(element_id, \"jane.doe@example.com\")\n                filled_values[element_id] = \"jane.doe@example.com\"\n\n        elif action == \"select_dropdown_option\":\n            if \"Address_Country\" in desc:\n                select_dropdown_option(element_id, \"United States\")\n                filled_values[element_id] = \"United States\"\n        elif action == \"click_element_by_index\" and (\"Toggle option\" in desc):\n          click_element_by_index(element_id)\n\n\nreturn {\"filled_values_2A\": filled_values}",
+            "CODE_2B": "interactive_elements = globals_schema.get(\"click_result_1A\", \"{}\")\nforms = interactive_elements.get(\"forms\", []) if isinstance(interactive_elements, dict) else []\n\nfilled_values = {}\n\nif forms:\n    for form in forms:\n        element_id = form.get(\"id\")\n        action = form.get(\"action\")\n        desc = form.get(\"desc\")\n\n        if action == \"input_text\":\n            if \"Name_First\" in desc:\n                input_text(element_id, \"Alice\")\n                filled_values[element_id] = \"Alice\"\n            elif \"Name_Last\" in desc:\n                input_text(element_id, \"Smith\")\n                filled_values[element_id] = \"Smith\"\n            elif \"PhoneNumber_countrycodeval\" in desc:\n                input_text(element_id, \"44\")\n                filled_values[element_id] = \"44\"\n            elif \"PhoneNumber_countrycode\" in desc:\n                input_text(element_id, \"1234567890\")\n                filled_values[element_id] = \"1234567890\"\n            elif \"SingleLine1\" in desc:\n                input_text(element_id, \"Another Org\")\n                filled_values[element_id] = \"Another Org\"\n            elif \"Email\" in desc:\n                input_text(element_id, \"alice.smith@example.com\")\n                filled_values[element_id] = \"alice.smith@example.com\"\n            elif \"Number\" in desc:\n                input_text(element_id, \"2000\")\n                filled_values[element_id] = \"2000\"\n            elif \"Address_AddressLine1\" in desc:\n                input_text(element_id, \"456 Oak Ave\")\n                filled_values[element_id] = \"456 Oak Ave\"\n            elif \"Address_AddressLine2\" in desc:\n                input_text(element_id, \"Unit B\")\n                filled_values[element_id] = \"Unit B\"\n            elif \"Address_City\" in desc:\n                input_text(element_id, \"Springfield\")\n                filled_values[element_id] = \"Springfield\"\n            elif \"Address_Region\" in desc:\n                input_text(element_id, \"IL\")\n                filled_values[element_id] = \"IL\"\n            elif \"Address_ZipCode\" in desc:\n                input_text(element_id, \"62704\")\n                filled_values[element_id] = \"62704\"\n            elif \"MultiLine1\" in desc:\n                input_text(element_id, \"Another test submission.\")\n                filled_values[element_id] = \"Another test submission.\"\n            elif \"name\" in desc:\n                input_text(element_id, \"Bob Johnson\")\n                filled_values[element_id] = \"Bob Johnson\"\n            elif \"email\" in desc:\n                input_text(element_id, \"bob.johnson@example.com\")\n                filled_values[element_id] = \"bob.johnson@example.com\"\n\n        elif action == \"select_dropdown_option\":\n            if \"Address_Country\" in desc:\n                select_dropdown_option(element_id, \"Canada\")\n                filled_values[element_id] = \"Canada\"\n        elif action == \"click_element_by_index\" and (\"Toggle option\" in desc):\n          click_element_by_index(element_id)\n\nreturn {\"filled_values_2B\": filled_values}",
+            "CODE_2C": "interactive_elements = globals_schema.get(\"click_result_1A\", \"{}\")\nforms = interactive_elements.get(\"forms\", []) if isinstance(interactive_elements, dict) else []\n\nfilled_values = {}\n\nif forms:\n    for form in forms:\n        element_id = form.get(\"id\")\n        action = form.get(\"action\")\n        desc = form.get(\"desc\")\n\n        if action == \"input_text\":\n            if \"Name_First\" in desc:\n                input_text(element_id, \"Charlie\")\n                filled_values[element_id] = \"Charlie\"\n            elif \"Name_Last\" in desc:\n                input_text(element_id, \"Brown\")\n                filled_values[element_id] = \"Brown\"\n            elif \"PhoneNumber_countrycodeval\" in desc:\n                input_text(element_id, \"33\")\n                filled_values[element_id] = \"33\"\n            elif \"PhoneNumber_countrycode\" in desc:\n                input_text(element_id, \"9876543210\")\n                filled_values[element_id] = \"9876543210\"\n            elif \"SingleLine1\" in desc:\n                input_text(element_id, \"Yet Another Org\")\n                filled_values[element_id] = \"Yet Another Org\"\n            elif \"Email\" in desc:\n                input_text(element_id, \"charlie.brown@example.com\")\n                filled_values[element_id] = \"charlie.brown@example.com\"\n            elif \"Number\" in desc:\n                input_text(element_id, \"3000\")\n                filled_values[element_id] = \"3000\"\n            elif \"Address_AddressLine1\" in desc:\n                input_text(element_id, \"789 Pine Ln\")\n                filled_values[element_id] = \"789 Pine Ln\"\n            elif \"Address_AddressLine2\" in desc:\n                no_input()\n            elif \"Address_City\" in desc:\n                input_text(element_id, \"Hill Valley\")\n                filled_values[element_id] = \"Hill Valley\"\n            elif \"Address_Region\" in desc:\n                input_text(element_id, \"TN\")\n                filled_values[element_id] = \"TN\"\n            elif \"Address_ZipCode\" in desc:\n                input_text(element_id, \"37201\")\n                filled_values[element_id] = \"37201\"\n            elif \"MultiLine1\" in desc:\n                input_text(element_id, \"Yet another test submission.\")\n                filled_values[element_id] = \"Yet another test submission.\"\n            elif \"name\" in desc:\n                input_text(element_id, \"Lucy Van Pelt\")\n                filled_values[element_id] = \"Lucy Van Pelt\"\n            elif \"email\" in desc:\n                input_text(element_id, \"lucy.vanpelt@example.com\")\n                filled_values[element_id] = \"lucy.vanpelt@example.com\"\n\n        elif action == \"select_dropdown_option\":\n            if \"Address_Country\" in desc:\n                select_dropdown_option(element_id, \"France\")\n                filled_values[element_id] = \"France\"\n        elif action == \"click_element_by_index\" and (\"Toggle option\" in desc):\n          click_element_by_index(element_id)\n\nreturn {\"filled_values_2C\": filled_values}"
+          }
+        },
+        "next_step_id": "2",
+        "plan_graph": {
+          "nodes": [
+            {
+              "id": "0",
+              "description": "Open https://www.inkers.ai in a new tab."
+            },
+            {
+              "id": "1",
+              "description": "Click on the 'Demo Button'."
+            },
+            {
+              "id": "2",
+              "description": "Fill out the form with dummy data."
+            },
+            {
+              "id": "3",
+              "description": "Submit the form."
+            }
+          ],
+          "edges": [
+            {
+              "from": "ROOT",
+              "to": "0",
+              "type": "normal"
+            },
+            {
+              "from": "0",
+              "to": "1",
+              "type": "normal"
+            },
+            {
+              "from": "1",
+              "to": "2",
+              "type": "normal"
+            },
+            {
+              "from": "2",
+              "to": "3",
+              "type": "normal"
+            }
+          ]
+        },
+        "code_variants": {
+          "CODE_2A": "interactive_elements = globals_schema.get(\"click_result_1A\", \"{}\")\nforms = interactive_elements.get(\"forms\", []) if isinstance(interactive_elements, dict) else []\n\nfilled_values = {}\n\nif forms:\n    for form in forms:\n        element_id = form.get(\"id\")\n        action = form.get(\"action\")\n        desc = form.get(\"desc\")\n\n        if action == \"input_text\":\n            if \"Name_First\" in desc:\n                input_text(element_id, \"John\")\n                filled_values[element_id] = \"John\"\n            elif \"Name_Last\" in desc:\n                input_text(element_id, \"Doe\")\n                filled_values[element_id] = \"Doe\"\n            elif \"PhoneNumber_countrycodeval\" in desc:\n                input_text(element_id, \"1\")\n                filled_values[element_id] = \"1\"\n            elif \"PhoneNumber_countrycode\" in desc:\n                input_text(element_id, \"5551234567\")\n                filled_values[element_id] = \"5551234567\"\n            elif \"SingleLine1\" in desc:\n                input_text(element_id, \"Example Org\")\n                filled_values[element_id] = \"Example Org\"\n            elif \"Email\" in desc:\n                input_text(element_id, \"john.doe@example.com\")\n                filled_values[element_id] = \"john.doe@example.com\"\n            elif \"Number\" in desc:\n                input_text(element_id, \"1000\")\n                filled_values[element_id] = \"1000\"\n            elif \"Address_AddressLine1\" in desc:\n                input_text(element_id, \"123 Main St\")\n                filled_values[element_id] = \"123 Main St\"\n            elif \"Address_AddressLine2\" in desc:\n                input_text(element_id, \"Apt 4\")\n                filled_values[element_id] = \"Apt 4\"\n            elif \"Address_City\" in desc:\n                input_text(element_id, \"Anytown\")\n                filled_values[element_id] = \"Anytown\"\n            elif \"Address_Region\" in desc:\n                input_text(element_id, \"CA\")\n                filled_values[element_id] = \"CA\"\n            elif \"Address_ZipCode\" in desc:\n                input_text(element_id, \"90210\")\n                filled_values[element_id] = \"90210\"\n            elif \"MultiLine1\" in desc:\n                input_text(element_id, \"This is a test submission.\")\n                filled_values[element_id] = \"This is a test submission.\"\n            elif \"name\" in desc:\n                input_text(element_id, \"Jane Doe\")\n                filled_values[element_id] = \"Jane Doe\"\n            elif \"email\" in desc:\n                input_text(element_id, \"jane.doe@example.com\")\n                filled_values[element_id] = \"jane.doe@example.com\"\n\n        elif action == \"select_dropdown_option\":\n            if \"Address_Country\" in desc:\n                select_dropdown_option(element_id, \"United States\")\n                filled_values[element_id] = \"United States\"\n        elif action == \"click_element_by_index\" and (\"Toggle option\" in desc):\n          click_element_by_index(element_id)\n\n\nreturn {\"filled_values_2A\": filled_values}",
+          "CODE_2B": "interactive_elements = globals_schema.get(\"click_result_1A\", \"{}\")\nforms = interactive_elements.get(\"forms\", []) if isinstance(interactive_elements, dict) else []\n\nfilled_values = {}\n\nif forms:\n    for form in forms:\n        element_id = form.get(\"id\")\n        action = form.get(\"action\")\n        desc = form.get(\"desc\")\n\n        if action == \"input_text\":\n            if \"Name_First\" in desc:\n                input_text(element_id, \"Alice\")\n                filled_values[element_id] = \"Alice\"\n            elif \"Name_Last\" in desc:\n                input_text(element_id, \"Smith\")\n                filled_values[element_id] = \"Smith\"\n            elif \"PhoneNumber_countrycodeval\" in desc:\n                input_text(element_id, \"44\")\n                filled_values[element_id] = \"44\"\n            elif \"PhoneNumber_countrycode\" in desc:\n                input_text(element_id, \"1234567890\")\n                filled_values[element_id] = \"1234567890\"\n            elif \"SingleLine1\" in desc:\n                input_text(element_id, \"Another Org\")\n                filled_values[element_id] = \"Another Org\"\n            elif \"Email\" in desc:\n                input_text(element_id, \"alice.smith@example.com\")\n                filled_values[element_id] = \"alice.smith@example.com\"\n            elif \"Number\" in desc:\n                input_text(element_id, \"2000\")\n                filled_values[element_id] = \"2000\"\n            elif \"Address_AddressLine1\" in desc:\n                input_text(element_id, \"456 Oak Ave\")\n                filled_values[element_id] = \"456 Oak Ave\"\n            elif \"Address_AddressLine2\" in desc:\n                input_text(element_id, \"Unit B\")\n                filled_values[element_id] = \"Unit B\"\n            elif \"Address_City\" in desc:\n                input_text(element_id, \"Springfield\")\n                filled_values[element_id] = \"Springfield\"\n            elif \"Address_Region\" in desc:\n                input_text(element_id, \"IL\")\n                filled_values[element_id] = \"IL\"\n            elif \"Address_ZipCode\" in desc:\n                input_text(element_id, \"62704\")\n                filled_values[element_id] = \"62704\"\n            elif \"MultiLine1\" in desc:\n                input_text(element_id, \"Another test submission.\")\n                filled_values[element_id] = \"Another test submission.\"\n            elif \"name\" in desc:\n                input_text(element_id, \"Bob Johnson\")\n                filled_values[element_id] = \"Bob Johnson\"\n            elif \"email\" in desc:\n                input_text(element_id, \"bob.johnson@example.com\")\n                filled_values[element_id] = \"bob.johnson@example.com\"\n\n        elif action == \"select_dropdown_option\":\n            if \"Address_Country\" in desc:\n                select_dropdown_option(element_id, \"Canada\")\n                filled_values[element_id] = \"Canada\"\n        elif action == \"click_element_by_index\" and (\"Toggle option\" in desc):\n          click_element_by_index(element_id)\n\nreturn {\"filled_values_2B\": filled_values}",
+          "CODE_2C": "interactive_elements = globals_schema.get(\"click_result_1A\", \"{}\")\nforms = interactive_elements.get(\"forms\", []) if isinstance(interactive_elements, dict) else []\n\nfilled_values = {}\n\nif forms:\n    for form in forms:\n        element_id = form.get(\"id\")\n        action = form.get(\"action\")\n        desc = form.get(\"desc\")\n\n        if action == \"input_text\":\n            if \"Name_First\" in desc:\n                input_text(element_id, \"Charlie\")\n                filled_values[element_id] = \"Charlie\"\n            elif \"Name_Last\" in desc:\n                input_text(element_id, \"Brown\")\n                filled_values[element_id] = \"Brown\"\n            elif \"PhoneNumber_countrycodeval\" in desc:\n                input_text(element_id, \"33\")\n                filled_values[element_id] = \"33\"\n            elif \"PhoneNumber_countrycode\" in desc:\n                input_text(element_id, \"9876543210\")\n                filled_values[element_id] = \"9876543210\"\n            elif \"SingleLine1\" in desc:\n                input_text(element_id, \"Yet Another Org\")\n                filled_values[element_id] = \"Yet Another Org\"\n            elif \"Email\" in desc:\n                input_text(element_id, \"charlie.brown@example.com\")\n                filled_values[element_id] = \"charlie.brown@example.com\"\n            elif \"Number\" in desc:\n                input_text(element_id, \"3000\")\n                filled_values[element_id] = \"3000\"\n            elif \"Address_AddressLine1\" in desc:\n                input_text(element_id, \"789 Pine Ln\")\n                filled_values[element_id] = \"789 Pine Ln\"\n            elif \"Address_AddressLine2\" in desc:\n                no_input()\n            elif \"Address_City\" in desc:\n                input_text(element_id, \"Hill Valley\")\n                filled_values[element_id] = \"Hill Valley\"\n            elif \"Address_Region\" in desc:\n                input_text(element_id, \"TN\")\n                filled_values[element_id] = \"TN\"\n            elif \"Address_ZipCode\" in desc:\n                input_text(element_id, \"37201\")\n                filled_values[element_id] = \"37201\"\n            elif \"MultiLine1\" in desc:\n                input_text(element_id, \"Yet another test submission.\")\n                filled_values[element_id] = \"Yet another test submission.\"\n            elif \"name\" in desc:\n                input_text(element_id, \"Lucy Van Pelt\")\n                filled_values[element_id] = \"Lucy Van Pelt\"\n            elif \"email\" in desc:\n                input_text(element_id, \"lucy.vanpelt@example.com\")\n                filled_values[element_id] = \"lucy.vanpelt@example.com\"\n\n        elif action == \"select_dropdown_option\":\n            if \"Address_Country\" in desc:\n                select_dropdown_option(element_id, \"France\")\n                filled_values[element_id] = \"France\"\n        elif action == \"click_element_by_index\" and (\"Toggle option\" in desc):\n          click_element_by_index(element_id)\n\nreturn {\"filled_values_2C\": filled_values}"
+        },
+        "timestamp": null,
+        "return_to": ""
+      }
+    ],
+    "execution_snapshots": [
+      {
+        "run_id": "53cb9d9b-16d8-4fec-a721-056ed5be1811",
+        "step_id": "0",
+        "variant_used": "CODE_0A",
+        "code": "open_tab(\"https://www.inkers.ai\")\nreturn {}",
+        "status": "success",
+        "result": {},
+        "error": null,
+        "execution_time": "2025-05-30 17:58:58",
+        "total_time": "4.019",
+        "return_to": ""
+      },
+      {
+        "run_id": "4554ee2f-a111-48d0-a5ab-e8073ef19f13",
+        "step_id": "1",
+        "variant_used": "CODE_1A",
+        "code": "elements = get_interactive_elements('Demo Button', True, True)\nif elements:\n  return {\"click_result_1A\": click_element_by_index(0)}\nelse:\n  return {\"click_result_1A\": 'No Demo Button found.'}",
+        "status": "success",
+        "result": {
+          "click_result_1A": "\ud83d\uddb1\ufe0f  Clicked button with index 0: \n\nInteractive Elements:\n{\n  \"success\": true,\n  \"nav\": [\n    {\n      \"id\": 1,\n      \"desc\": \"Home\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 2,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 5,\n      \"desc\": \"Team\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 6,\n      \"desc\": \"Pricing\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 7,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 8,\n      \"desc\": \"Demo\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 10,\n      \"desc\": \"Owners\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 11,\n      \"desc\": \"Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 12,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 14,\n      \"desc\": \"Request a demo (cta-demo-button)\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 229,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 231,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 233,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 301,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 302,\n      \"desc\": \"Terms of Use\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 303,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"forms\": [\n    {\n      \"id\": 261,\n      \"desc\": \"Enter your first name (Name_First)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 263,\n      \"desc\": \"Enter your last name (Name_Last)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 265,\n      \"desc\": \"Enter country code (PhoneNumber_countrycodeval)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 267,\n      \"desc\": \"Enter your phone number (PhoneNumber_countrycode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 269,\n      \"desc\": \"Enter your organization name (SingleLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 271,\n      \"desc\": \"Enter your email (Email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 273,\n      \"desc\": \"Enter area to scan (sqft) (Number)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 276,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 280,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 283,\n      \"desc\": \"Date Input\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 285,\n      \"desc\": \"Address Line 1 (Address_AddressLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 286,\n      \"desc\": \"Address Line 2 (Address_AddressLine2)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 287,\n      \"desc\": \"City (Address_City)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 288,\n      \"desc\": \"State/Region/Province (Address_Region)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 289,\n      \"desc\": \"Postal / Zip Code (Address_ZipCode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 290,\n      \"desc\": \"Select Address Country (Address_Country)\",\n      \"action\": \"select_dropdown_option\",\n      \"options\": [\n        \"\u00c5land Islands\",\n        \"Afghanistan\",\n        \"Akrotiri\",\n        \"Albania\",\n        \"Algeria\",\n        \"American Samoa\",\n        \"Andorra\",\n        \"Angola\",\n        \"Anguilla\",\n        \"Antarctica\",\n        \"Antigua and Barbuda\",\n        \"Argentina\",\n        \"Armenia\",\n        \"Aruba\",\n        \"Ashmore and Cartier Islands\",\n        \"Australia\",\n        \"Austria\",\n        \"Azerbaijan\",\n        \"Bahrain\",\n        \"Bangladesh\",\n        \"Barbados\",\n        \"Bassas Da India\",\n        \"Belarus\",\n        \"Belgium\",\n        \"Belize\",\n        \"Benin\",\n        \"Bermuda\",\n        \"Bhutan\",\n        \"Bolivia\",\n        \"Bosnia and Herzegovina\",\n        \"Botswana\",\n        \"Bouvet Island\",\n        \"Brazil\",\n        \"British Indian Ocean Territory\",\n        \"British Virgin Islands\",\n        \"Brunei\",\n        \"Bulgaria\",\n        \"Burkina Faso\",\n        \"Burma\",\n        \"Burundi\",\n        \"Cambodia\",\n        \"Cameroon\",\n        \"Canada\",\n        \"Cape Verde\",\n        \"Caribbean Netherlands\",\n        \"Cayman Islands\",\n        \"Central African Republic\",\n        \"Chad\",\n        \"Chile\",\n        \"China\",\n        \"Christmas Island\",\n        \"Clipperton Island\",\n        \"Cocos (Keeling) Islands\",\n        \"Colombia\",\n        \"Comoros\",\n        \"Cook Islands\",\n        \"Coral Sea Islands\",\n        \"Costa Rica\",\n        \"Cote D'Ivoire\",\n        \"Croatia\",\n        \"Cuba\",\n        \"Cura\u00e7ao\",\n        \"Cyprus\",\n        \"Czech Republic\",\n        \"Democratic Republic of the Congo\",\n        \"Denmark\",\n        \"Dhekelia\",\n        \"Djibouti\",\n        \"Dominica\",\n        \"Dominican Republic\",\n        \"Ecuador\",\n        \"Egypt\",\n        \"El Salvador\",\n        \"Equatorial Guinea\",\n        \"Eritrea\",\n        \"Estonia\",\n        \"Ethiopia\",\n        \"Europa Island\",\n        \"Falkland Islands (Islas Malvinas)\",\n        \"Faroe Islands\",\n        \"Federated States of Micronesia\",\n        \"Fiji\",\n        \"Finland\",\n        \"France\",\n        \"French Guiana\",\n        \"French Polynesia\",\n        \"French Southern and Antarctic Lands\",\n        \"Gabon\",\n        \"Gaza Strip\",\n        \"Georgia\",\n        \"Germany\",\n        \"Ghana\",\n        \"Gibraltar\",\n        \"Glorioso Islands\",\n        \"Greece\",\n        \"Greenland\",\n        \"Grenada\",\n        \"Guadeloupe\",\n        \"Guam\",\n        \"Guatemala\",\n        \"Guernsey\",\n        \"Guinea\",\n        \"Guinea-bissau\",\n        \"Guyana\",\n        \"Haiti\",\n        \"Heard Island and Mcdonald Islands\",\n        \"Holy See (Vatican City)\",\n        \"Honduras\",\n        \"Hong Kong\",\n        \"Hungary\",\n        \"Iceland\",\n        \"India\",\n        \"Indonesia\",\n        \"Iran\",\n        \"Iraq\",\n        \"Ireland\",\n        \"Isle of Man\",\n        \"Israel\",\n        \"Italy\",\n        \"Jamaica\",\n        \"Jan Mayen\",\n        \"Japan\",\n        \"Jersey\",\n        \"Jordan\",\n        \"Juan De Nova Island\",\n        \"Kazakhstan\",\n        \"Kenya\",\n        \"Kiribati\",\n        \"Kosovo\",\n        \"Kuwait\",\n        \"Kyrgyzstan\",\n        \"Laos\",\n        \"Latvia\",\n        \"Lebanon\",\n        \"Lesotho\",\n        \"Liberia\",\n        \"Libya\",\n        \"Liechtenstein\",\n        \"Lithuania\",\n        \"Luxembourg\",\n        \"Macau\",\n        \"Macedonia\",\n        \"Madagascar\",\n        \"Malawi\",\n        \"Malaysia\",\n        \"Maldives\",\n        \"Mali\",\n        \"Malta\",\n        \"Marshall Islands\",\n        \"Martinique\",\n        \"Mauritania\",\n        \"Mauritius\",\n        \"Mayotte\",\n        \"Mexico\",\n        \"Moldova\",\n        \"Monaco\",\n        \"Mongolia\",\n        \"Montenegro\",\n        \"Montserrat\",\n        \"Morocco\",\n        \"Mozambique\",\n        \"Myanmar\",\n        \"Namibia\",\n        \"Nauru\",\n        \"Navassa Island\",\n        \"Nepal\",\n        \"Netherlands Antilles\",\n        \"Netherlands\",\n        \"New Caledonia\",\n        \"New Zealand\",\n        \"Nicaragua\",\n        \"Niger\",\n        \"Nigeria\",\n        \"Niue\",\n        \"Norfolk Island\",\n        \"North Korea\",\n        \"Northern Mariana Islands\",\n        \"Norway\",\n        \"Oman\",\n        \"Pakistan\",\n        \"Palau\",\n        \"Palestine\",\n        \"Panama\",\n        \"Papua New Guinea\",\n        \"Paracel Islands\",\n        \"Paraguay\",\n        \"Peru\",\n        \"Philippines\",\n        \"Pitcairn Islands\",\n        \"Poland\",\n        \"Portugal\",\n        \"Puerto Rico\",\n        \"Qatar\",\n        \"Republic of the Congo\",\n        \"Reunion\",\n        \"Romania\",\n        \"Russia\",\n        \"Rwanda\",\n        \"Saint Barth\u00c3\u00a9lemy\",\n        \"Saint Helena\",\n        \"Saint Kitts and Nevis\",\n        \"Saint Lucia\",\n        \"Saint Martin\",\n        \"Saint Pierre and Miquelon\",\n        \"Saint Vincent and the Grenadines\",\n        \"Samoa\",\n        \"San Marino\",\n        \"Sao Tome and Principe\",\n        \"Saudi Arabia\",\n        \"Senegal\",\n        \"Serbia\",\n        \"Seychelles\",\n        \"Sierra Leone\",\n        \"Singapore\",\n        \"Sint Maarten\",\n        \"Slovakia\",\n        \"Slovenia\",\n        \"Solomon Islands\",\n        \"Somalia\",\n        \"South Africa\",\n        \"South Georgia and the South Sandwich Islands\",\n        \"South Korea\",\n        \"South Sudan\",\n        \"Spain\",\n        \"Spratly Islands\",\n        \"Sri Lanka\",\n        \"Sudan\",\n        \"Suriname\",\n        \"Svalbard\",\n        \"Swaziland\",\n        \"Sweden\",\n        \"Switzerland\",\n        \"Syria\",\n        \"Taiwan\",\n        \"Tajikistan\",\n        \"Tanzania\",\n        \"Thailand\",\n        \"The Bahamas\",\n        \"The Gambia\",\n        \"Timor-leste\",\n        \"Togo\",\n        \"Tokelau\",\n        \"Tonga\",\n        \"Trinidad and Tobago\",\n        \"Tromelin Island\",\n        \"Tunisia\",\n        \"Turkey\",\n        \"Turkmenistan\",\n        \"Turks and Caicos Islands\",\n        \"Tuvalu\",\n        \"Uganda\",\n        \"Ukraine\",\n        \"United Arab Emirates\",\n        \"United Kingdom\",\n        \"United States\",\n        \"Uruguay\",\n        \"Uzbekistan\",\n        \"Vanuatu\",\n        \"Venezuela\",\n        \"Vietnam\",\n        \"Virgin Islands\",\n        \"Wake Island\",\n        \"Wallis and Futuna\",\n        \"West Bank\",\n        \"Western Sahara\",\n        \"Yemen\",\n        \"Zambia\",\n        \"Zimbabwe\"\n      ]\n    },\n    {\n      \"id\": 292,\n      \"desc\": \"Any questions or concerns (MultiLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 293,\n      \"desc\": \"Submit\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 294,\n      \"desc\": \"Enter your name (name)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 295,\n      \"desc\": \"Enter your email (email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 296,\n      \"desc\": \"Subscribe\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"buttons\": [\n    {\n      \"id\": 3,\n      \"desc\": \"Product\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 4,\n      \"desc\": \"Services\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 9,\n      \"desc\": \"Toggle theme\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 226,\n      \"desc\": \"Owners & Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 227,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 228,\n      \"desc\": \"Lithic Scanner\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 230,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 232,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 234,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 259,\n      \"desc\": \"sales@inkers.ai\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"total\": 47\n}"
+        },
+        "error": null,
+        "execution_time": "2025-05-30 17:59:13",
+        "total_time": "3.004",
+        "return_to": ""
+      },
+      {
+        "run_id": "3e76036a-90f6-4782-9c5d-acf436cca231",
+        "step_id": "2",
+        "variant_used": "CODE_2A",
+        "code": "interactive_elements = globals_schema.get(\"click_result_1A\", \"{}\")\nforms = interactive_elements.get(\"forms\", []) if isinstance(interactive_elements, dict) else []\n\nfilled_values = {}\n\nif forms:\n    for form in forms:\n        element_id = form.get(\"id\")\n        action = form.get(\"action\")\n        desc = form.get(\"desc\")\n\n        if action == \"input_text\":\n            if \"Name_First\" in desc:\n                input_text(element_id, \"John\")\n                filled_values[element_id] = \"John\"\n            elif \"Name_Last\" in desc:\n                input_text(element_id, \"Doe\")\n                filled_values[element_id] = \"Doe\"\n            elif \"PhoneNumber_countrycodeval\" in desc:\n                input_text(element_id, \"1\")\n                filled_values[element_id] = \"1\"\n            elif \"PhoneNumber_countrycode\" in desc:\n                input_text(element_id, \"5551234567\")\n                filled_values[element_id] = \"5551234567\"\n            elif \"SingleLine1\" in desc:\n                input_text(element_id, \"Example Org\")\n                filled_values[element_id] = \"Example Org\"\n            elif \"Email\" in desc:\n                input_text(element_id, \"john.doe@example.com\")\n                filled_values[element_id] = \"john.doe@example.com\"\n            elif \"Number\" in desc:\n                input_text(element_id, \"1000\")\n                filled_values[element_id] = \"1000\"\n            elif \"Address_AddressLine1\" in desc:\n                input_text(element_id, \"123 Main St\")\n                filled_values[element_id] = \"123 Main St\"\n            elif \"Address_AddressLine2\" in desc:\n                input_text(element_id, \"Apt 4\")\n                filled_values[element_id] = \"Apt 4\"\n            elif \"Address_City\" in desc:\n                input_text(element_id, \"Anytown\")\n                filled_values[element_id] = \"Anytown\"\n            elif \"Address_Region\" in desc:\n                input_text(element_id, \"CA\")\n                filled_values[element_id] = \"CA\"\n            elif \"Address_ZipCode\" in desc:\n                input_text(element_id, \"90210\")\n                filled_values[element_id] = \"90210\"\n            elif \"MultiLine1\" in desc:\n                input_text(element_id, \"This is a test submission.\")\n                filled_values[element_id] = \"This is a test submission.\"\n            elif \"name\" in desc:\n                input_text(element_id, \"Jane Doe\")\n                filled_values[element_id] = \"Jane Doe\"\n            elif \"email\" in desc:\n                input_text(element_id, \"jane.doe@example.com\")\n                filled_values[element_id] = \"jane.doe@example.com\"\n\n        elif action == \"select_dropdown_option\":\n            if \"Address_Country\" in desc:\n                select_dropdown_option(element_id, \"United States\")\n                filled_values[element_id] = \"United States\"\n        elif action == \"click_element_by_index\" and (\"Toggle option\" in desc):\n          click_element_by_index(element_id)\n\n\nreturn {\"filled_values_2A\": filled_values}",
+        "status": "error",
+        "result": null,
+        "error": "Too many functions (23 > 20)",
+        "execution_time": "2025-05-30 17:59:39",
+        "total_time": "0.003",
+        "return_to": ""
+      },
+      {
+        "run_id": "ba8935be-5d41-4512-9f08-bcbf79c1ba61",
+        "step_id": "2",
+        "variant_used": "CODE_2B",
+        "code": "interactive_elements = globals_schema.get(\"click_result_1A\", \"{}\")\nforms = interactive_elements.get(\"forms\", []) if isinstance(interactive_elements, dict) else []\n\nfilled_values = {}\n\nif forms:\n    for form in forms:\n        element_id = form.get(\"id\")\n        action = form.get(\"action\")\n        desc = form.get(\"desc\")\n\n        if action == \"input_text\":\n            if \"Name_First\" in desc:\n                input_text(element_id, \"Alice\")\n                filled_values[element_id] = \"Alice\"\n            elif \"Name_Last\" in desc:\n                input_text(element_id, \"Smith\")\n                filled_values[element_id] = \"Smith\"\n            elif \"PhoneNumber_countrycodeval\" in desc:\n                input_text(element_id, \"44\")\n                filled_values[element_id] = \"44\"\n            elif \"PhoneNumber_countrycode\" in desc:\n                input_text(element_id, \"1234567890\")\n                filled_values[element_id] = \"1234567890\"\n            elif \"SingleLine1\" in desc:\n                input_text(element_id, \"Another Org\")\n                filled_values[element_id] = \"Another Org\"\n            elif \"Email\" in desc:\n                input_text(element_id, \"alice.smith@example.com\")\n                filled_values[element_id] = \"alice.smith@example.com\"\n            elif \"Number\" in desc:\n                input_text(element_id, \"2000\")\n                filled_values[element_id] = \"2000\"\n            elif \"Address_AddressLine1\" in desc:\n                input_text(element_id, \"456 Oak Ave\")\n                filled_values[element_id] = \"456 Oak Ave\"\n            elif \"Address_AddressLine2\" in desc:\n                input_text(element_id, \"Unit B\")\n                filled_values[element_id] = \"Unit B\"\n            elif \"Address_City\" in desc:\n                input_text(element_id, \"Springfield\")\n                filled_values[element_id] = \"Springfield\"\n            elif \"Address_Region\" in desc:\n                input_text(element_id, \"IL\")\n                filled_values[element_id] = \"IL\"\n            elif \"Address_ZipCode\" in desc:\n                input_text(element_id, \"62704\")\n                filled_values[element_id] = \"62704\"\n            elif \"MultiLine1\" in desc:\n                input_text(element_id, \"Another test submission.\")\n                filled_values[element_id] = \"Another test submission.\"\n            elif \"name\" in desc:\n                input_text(element_id, \"Bob Johnson\")\n                filled_values[element_id] = \"Bob Johnson\"\n            elif \"email\" in desc:\n                input_text(element_id, \"bob.johnson@example.com\")\n                filled_values[element_id] = \"bob.johnson@example.com\"\n\n        elif action == \"select_dropdown_option\":\n            if \"Address_Country\" in desc:\n                select_dropdown_option(element_id, \"Canada\")\n                filled_values[element_id] = \"Canada\"\n        elif action == \"click_element_by_index\" and (\"Toggle option\" in desc):\n          click_element_by_index(element_id)\n\nreturn {\"filled_values_2B\": filled_values}",
+        "status": "error",
+        "result": null,
+        "error": "Too many functions (23 > 20)",
+        "execution_time": "2025-05-30 17:59:39",
+        "total_time": "0.002",
+        "return_to": ""
+      },
+      {
+        "run_id": "95605baa-1d18-439b-8dc9-7e28da982781",
+        "step_id": "2",
+        "variant_used": "CODE_2C",
+        "code": "interactive_elements = globals_schema.get(\"click_result_1A\", \"{}\")\nforms = interactive_elements.get(\"forms\", []) if isinstance(interactive_elements, dict) else []\n\nfilled_values = {}\n\nif forms:\n    for form in forms:\n        element_id = form.get(\"id\")\n        action = form.get(\"action\")\n        desc = form.get(\"desc\")\n\n        if action == \"input_text\":\n            if \"Name_First\" in desc:\n                input_text(element_id, \"Charlie\")\n                filled_values[element_id] = \"Charlie\"\n            elif \"Name_Last\" in desc:\n                input_text(element_id, \"Brown\")\n                filled_values[element_id] = \"Brown\"\n            elif \"PhoneNumber_countrycodeval\" in desc:\n                input_text(element_id, \"33\")\n                filled_values[element_id] = \"33\"\n            elif \"PhoneNumber_countrycode\" in desc:\n                input_text(element_id, \"9876543210\")\n                filled_values[element_id] = \"9876543210\"\n            elif \"SingleLine1\" in desc:\n                input_text(element_id, \"Yet Another Org\")\n                filled_values[element_id] = \"Yet Another Org\"\n            elif \"Email\" in desc:\n                input_text(element_id, \"charlie.brown@example.com\")\n                filled_values[element_id] = \"charlie.brown@example.com\"\n            elif \"Number\" in desc:\n                input_text(element_id, \"3000\")\n                filled_values[element_id] = \"3000\"\n            elif \"Address_AddressLine1\" in desc:\n                input_text(element_id, \"789 Pine Ln\")\n                filled_values[element_id] = \"789 Pine Ln\"\n            elif \"Address_AddressLine2\" in desc:\n                no_input()\n            elif \"Address_City\" in desc:\n                input_text(element_id, \"Hill Valley\")\n                filled_values[element_id] = \"Hill Valley\"\n            elif \"Address_Region\" in desc:\n                input_text(element_id, \"TN\")\n                filled_values[element_id] = \"TN\"\n            elif \"Address_ZipCode\" in desc:\n                input_text(element_id, \"37201\")\n                filled_values[element_id] = \"37201\"\n            elif \"MultiLine1\" in desc:\n                input_text(element_id, \"Yet another test submission.\")\n                filled_values[element_id] = \"Yet another test submission.\"\n            elif \"name\" in desc:\n                input_text(element_id, \"Lucy Van Pelt\")\n                filled_values[element_id] = \"Lucy Van Pelt\"\n            elif \"email\" in desc:\n                input_text(element_id, \"lucy.vanpelt@example.com\")\n                filled_values[element_id] = \"lucy.vanpelt@example.com\"\n\n        elif action == \"select_dropdown_option\":\n            if \"Address_Country\" in desc:\n                select_dropdown_option(element_id, \"France\")\n                filled_values[element_id] = \"France\"\n        elif action == \"click_element_by_index\" and (\"Toggle option\" in desc):\n          click_element_by_index(element_id)\n\nreturn {\"filled_values_2C\": filled_values}",
+        "status": "error",
+        "result": null,
+        "error": "Too many functions (23 > 20)",
+        "execution_time": "2025-05-30 17:59:39",
+        "total_time": "0.001",
+        "return_to": ""
+      }
+    ],
+    "summarizer_snapshots": [
+      {
+        "run_id": "107e15ab-0aff-4005-8f9a-a08746d82d75",
+        "input": {
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+          "globals_schema": {
+            "memory": null,
+            "click_result_1A": "\ud83d\uddb1\ufe0f  Clicked button with index 0: \n\nInteractive Elements:\n{\n  \"success\": true,\n  \"nav\": [\n    {\n      \"id\": 1,\n      \"desc\": \"Home\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 2,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 5,\n      \"desc\": \"Team\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 6,\n      \"desc\": \"Pricing\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 7,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 8,\n      \"desc\": \"Demo\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 10,\n      \"desc\": \"Owners\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 11,\n      \"desc\": \"Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 12,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 14,\n      \"desc\": \"Request a demo (cta-demo-button)\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 229,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 231,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 233,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 301,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 302,\n      \"desc\": \"Terms of Use\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 303,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"forms\": [\n    {\n      \"id\": 261,\n      \"desc\": \"Enter your first name (Name_First)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 263,\n      \"desc\": \"Enter your last name (Name_Last)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 265,\n      \"desc\": \"Enter country code (PhoneNumber_countrycodeval)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 267,\n      \"desc\": \"Enter your phone number (PhoneNumber_countrycode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 269,\n      \"desc\": \"Enter your organization name (SingleLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 271,\n      \"desc\": \"Enter your email (Email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 273,\n      \"desc\": \"Enter area to scan (sqft) (Number)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 276,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 280,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 283,\n      \"desc\": \"Date Input\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 285,\n      \"desc\": \"Address Line 1 (Address_AddressLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 286,\n      \"desc\": \"Address Line 2 (Address_AddressLine2)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 287,\n      \"desc\": \"City (Address_City)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 288,\n      \"desc\": \"State/Region/Province (Address_Region)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 289,\n      \"desc\": \"Postal / Zip Code (Address_ZipCode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 290,\n      \"desc\": \"Select Address Country (Address_Country)\",\n      \"action\": \"select_dropdown_option\",\n      \"options\": [\n        \"\u00c5land Islands\",\n        \"Afghanistan\",\n        \"Akrotiri\",\n        \"Albania\",\n        \"Algeria\",\n        \"American Samoa\",\n        \"Andorra\",\n        \"Angola\",\n        \"Anguilla\",\n        \"Antarctica\",\n        \"Antigua and Barbuda\",\n        \"Argentina\",\n        \"Armenia\",\n        \"Aruba\",\n        \"Ashmore and Cartier Islands\",\n        \"Australia\",\n        \"Austria\",\n        \"Azerbaijan\",\n        \"Bahrain\",\n        \"Bangladesh\",\n        \"Barbados\",\n        \"Bassas Da India\",\n        \"Belarus\",\n        \"Belgium\",\n        \"Belize\",\n        \"Benin\",\n        \"Bermuda\",\n        \"Bhutan\",\n        \"Bolivia\",\n        \"Bosnia and Herzegovina\",\n        \"Botswana\",\n        \"Bouvet Island\",\n        \"Brazil\",\n        \"British Indian Ocean Territory\",\n        \"British Virgin Islands\",\n        \"Brunei\",\n        \"Bulgaria\",\n        \"Burkina Faso\",\n        \"Burma\",\n        \"Burundi\",\n        \"Cambodia\",\n        \"Cameroon\",\n        \"Canada\",\n        \"Cape Verde\",\n        \"Caribbean Netherlands\",\n        \"Cayman Islands\",\n        \"Central African Republic\",\n        \"Chad\",\n        \"Chile\",\n        \"China\",\n        \"Christmas Island\",\n        \"Clipperton Island\",\n        \"Cocos (Keeling) Islands\",\n        \"Colombia\",\n        \"Comoros\",\n        \"Cook Islands\",\n        \"Coral Sea Islands\",\n        \"Costa Rica\",\n        \"Cote D'Ivoire\",\n        \"Croatia\",\n        \"Cuba\",\n        \"Cura\u00e7ao\",\n        \"Cyprus\",\n        \"Czech Republic\",\n        \"Democratic Republic of the Congo\",\n        \"Denmark\",\n        \"Dhekelia\",\n        \"Djibouti\",\n        \"Dominica\",\n        \"Dominican Republic\",\n        \"Ecuador\",\n        \"Egypt\",\n        \"El Salvador\",\n        \"Equatorial Guinea\",\n        \"Eritrea\",\n        \"Estonia\",\n        \"Ethiopia\",\n        \"Europa Island\",\n        \"Falkland Islands (Islas Malvinas)\",\n        \"Faroe Islands\",\n        \"Federated States of Micronesia\",\n        \"Fiji\",\n        \"Finland\",\n        \"France\",\n        \"French Guiana\",\n        \"French Polynesia\",\n        \"French Southern and Antarctic Lands\",\n        \"Gabon\",\n        \"Gaza Strip\",\n        \"Georgia\",\n        \"Germany\",\n        \"Ghana\",\n        \"Gibraltar\",\n        \"Glorioso Islands\",\n        \"Greece\",\n        \"Greenland\",\n        \"Grenada\",\n        \"Guadeloupe\",\n        \"Guam\",\n        \"Guatemala\",\n        \"Guernsey\",\n        \"Guinea\",\n        \"Guinea-bissau\",\n        \"Guyana\",\n        \"Haiti\",\n        \"Heard Island and Mcdonald Islands\",\n        \"Holy See (Vatican City)\",\n        \"Honduras\",\n        \"Hong Kong\",\n        \"Hungary\",\n        \"Iceland\",\n        \"India\",\n        \"Indonesia\",\n        \"Iran\",\n        \"Iraq\",\n        \"Ireland\",\n        \"Isle of Man\",\n        \"Israel\",\n        \"Italy\",\n        \"Jamaica\",\n        \"Jan Mayen\",\n        \"Japan\",\n        \"Jersey\",\n        \"Jordan\",\n        \"Juan De Nova Island\",\n        \"Kazakhstan\",\n        \"Kenya\",\n        \"Kiribati\",\n        \"Kosovo\",\n        \"Kuwait\",\n        \"Kyrgyzstan\",\n        \"Laos\",\n        \"Latvia\",\n        \"Lebanon\",\n        \"Lesotho\",\n        \"Liberia\",\n        \"Libya\",\n        \"Liechtenstein\",\n        \"Lithuania\",\n        \"Luxembourg\",\n        \"Macau\",\n        \"Macedonia\",\n        \"Madagascar\",\n        \"Malawi\",\n        \"Malaysia\",\n        \"Maldives\",\n        \"Mali\",\n        \"Malta\",\n        \"Marshall Islands\",\n        \"Martinique\",\n        \"Mauritania\",\n        \"Mauritius\",\n        \"Mayotte\",\n        \"Mexico\",\n        \"Moldova\",\n        \"Monaco\",\n        \"Mongolia\",\n        \"Montenegro\",\n        \"Montserrat\",\n        \"Morocco\",\n        \"Mozambique\",\n        \"Myanmar\",\n        \"Namibia\",\n        \"Nauru\",\n        \"Navassa Island\",\n        \"Nepal\",\n        \"Netherlands Antilles\",\n        \"Netherlands\",\n        \"New Caledonia\",\n        \"New Zealand\",\n        \"Nicaragua\",\n        \"Niger\",\n        \"Nigeria\",\n        \"Niue\",\n        \"Norfolk Island\",\n        \"North Korea\",\n        \"Northern Mariana Islands\",\n        \"Norway\",\n        \"Oman\",\n        \"Pakistan\",\n        \"Palau\",\n        \"Palestine\",\n        \"Panama\",\n        \"Papua New Guinea\",\n        \"Paracel Islands\",\n        \"Paraguay\",\n        \"Peru\",\n        \"Philippines\",\n        \"Pitcairn Islands\",\n        \"Poland\",\n        \"Portugal\",\n        \"Puerto Rico\",\n        \"Qatar\",\n        \"Republic of the Congo\",\n        \"Reunion\",\n        \"Romania\",\n        \"Russia\",\n        \"Rwanda\",\n        \"Saint Barth\u00c3\u00a9lemy\",\n        \"Saint Helena\",\n        \"Saint Kitts and Nevis\",\n        \"Saint Lucia\",\n        \"Saint Martin\",\n        \"Saint Pierre and Miquelon\",\n        \"Saint Vincent and the Grenadines\",\n        \"Samoa\",\n        \"San Marino\",\n        \"Sao Tome and Principe\",\n        \"Saudi Arabia\",\n        \"Senegal\",\n        \"Serbia\",\n        \"Seychelles\",\n        \"Sierra Leone\",\n        \"Singapore\",\n        \"Sint Maarten\",\n        \"Slovakia\",\n        \"Slovenia\",\n        \"Solomon Islands\",\n        \"Somalia\",\n        \"South Africa\",\n        \"South Georgia and the South Sandwich Islands\",\n        \"South Korea\",\n        \"South Sudan\",\n        \"Spain\",\n        \"Spratly Islands\",\n        \"Sri Lanka\",\n        \"Sudan\",\n        \"Suriname\",\n        \"Svalbard\",\n        \"Swaziland\",\n        \"Sweden\",\n        \"Switzerland\",\n        \"Syria\",\n        \"Taiwan\",\n        \"Tajikistan\",\n        \"Tanzania\",\n        \"Thailand\",\n        \"The Bahamas\",\n        \"The Gambia\",\n        \"Timor-leste\",\n        \"Togo\",\n        \"Tokelau\",\n        \"Tonga\",\n        \"Trinidad and Tobago\",\n        \"Tromelin Island\",\n        \"Tunisia\",\n        \"Turkey\",\n        \"Turkmenistan\",\n        \"Turks and Caicos Islands\",\n        \"Tuvalu\",\n        \"Uganda\",\n        \"Ukraine\",\n        \"United Arab Emirates\",\n        \"United Kingdom\",\n        \"United States\",\n        \"Uruguay\",\n        \"Uzbekistan\",\n        \"Vanuatu\",\n        \"Venezuela\",\n        \"Vietnam\",\n        \"Virgin Islands\",\n        \"Wake Island\",\n        \"Wallis and Futuna\",\n        \"West Bank\",\n        \"Western Sahara\",\n        \"Yemen\",\n        \"Zambia\",\n        \"Zimbabwe\"\n      ]\n    },\n    {\n      \"id\": 292,\n      \"desc\": \"Any questions or concerns (MultiLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 293,\n      \"desc\": \"Submit\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 294,\n      \"desc\": \"Enter your name (name)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 295,\n      \"desc\": \"Enter your email (email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 296,\n      \"desc\": \"Subscribe\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"buttons\": [\n    {\n      \"id\": 3,\n      \"desc\": \"Product\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 4,\n      \"desc\": \"Services\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 9,\n      \"desc\": \"Toggle theme\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 226,\n      \"desc\": \"Owners & Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 227,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 228,\n      \"desc\": \"Lithic Scanner\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 230,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 232,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 234,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 259,\n      \"desc\": \"sales@inkers.ai\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"total\": 47\n}"
+          },
+          "plan_graph": {
+            "directed": true,
+            "multigraph": false,
+            "graph": {},
+            "nodes": [
+              {
+                "data": {
+                  "index": "ROOT",
+                  "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+                  "type": "ROOT",
+                  "status": "completed",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "https://www.inkers.ai",
+                      "Demo Button",
+                      "form"
+                    ],
+                    "result_requirement": "Open the website, click the demo button and fill out the form.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.95",
+                    "reasoning": "The user query requires interaction with a website, specifically opening a URL, clicking a button, and filling out a form. This requires a tool to interact with a webpage.",
+                    "local_reasoning": "The query is not solvable with current information, as it requires web interaction.",
+                    "last_tooluse_summary": "Not applicable",
+                    "solution_summary": "Not ready yet.",
+                    "route": "decision",
+                    "instruction_to_summarize": "Not applicable"
+                  },
+                  "from_step": null
+                },
+                "id": "ROOT"
+              },
+              {
+                "data": {
+                  "index": "0",
+                  "description": "Open https://www.inkers.ai in a new tab.",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": {},
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "https://www.inkers.ai",
+                      "Demo Button",
+                      "form"
+                    ],
+                    "result_requirement": "Click on the Demo button and fill out the form on the website.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.9",
+                    "reasoning": "The website has been opened. The next step is to click on the 'Demo Button' and fill out the form.  Since the current result only indicates that the website was opened, further action is required to complete the original query.",
+                    "local_reasoning": "The previous step only opened the website; it did not click the demo button or fill out the form. A tool is needed to interact with the webpage.",
+                    "last_tooluse_summary": "Website opened successfully, but further interaction is needed.",
+                    "solution_summary": "Not ready yet.",
+                    "route": "decision"
+                  },
+                  "from_step": null
+                },
+                "id": "0"
+              },
+              {
+                "data": {
+                  "index": "1",
+                  "description": "Click on the 'Demo Button'.",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": {
+                    "click_result_1A": "\ud83d\uddb1\ufe0f  Clicked button with index 0: \n\nInteractive Elements:\n{\n  \"success\": true,\n  \"nav\": [\n    {\n      \"id\": 1,\n      \"desc\": \"Home\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 2,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 5,\n      \"desc\": \"Team\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 6,\n      \"desc\": \"Pricing\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 7,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 8,\n      \"desc\": \"Demo\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 10,\n      \"desc\": \"Owners\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 11,\n      \"desc\": \"Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 12,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 14,\n      \"desc\": \"Request a demo (cta-demo-button)\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 229,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 231,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 233,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 301,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 302,\n      \"desc\": \"Terms of Use\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 303,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"forms\": [\n    {\n      \"id\": 261,\n      \"desc\": \"Enter your first name (Name_First)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 263,\n      \"desc\": \"Enter your last name (Name_Last)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 265,\n      \"desc\": \"Enter country code (PhoneNumber_countrycodeval)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 267,\n      \"desc\": \"Enter your phone number (PhoneNumber_countrycode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 269,\n      \"desc\": \"Enter your organization name (SingleLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 271,\n      \"desc\": \"Enter your email (Email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 273,\n      \"desc\": \"Enter area to scan (sqft) (Number)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 276,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 280,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 283,\n      \"desc\": \"Date Input\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 285,\n      \"desc\": \"Address Line 1 (Address_AddressLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 286,\n      \"desc\": \"Address Line 2 (Address_AddressLine2)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 287,\n      \"desc\": \"City (Address_City)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 288,\n      \"desc\": \"State/Region/Province (Address_Region)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 289,\n      \"desc\": \"Postal / Zip Code (Address_ZipCode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 290,\n      \"desc\": \"Select Address Country (Address_Country)\",\n      \"action\": \"select_dropdown_option\",\n      \"options\": [\n        \"\u00c5land Islands\",\n        \"Afghanistan\",\n        \"Akrotiri\",\n        \"Albania\",\n        \"Algeria\",\n        \"American Samoa\",\n        \"Andorra\",\n        \"Angola\",\n        \"Anguilla\",\n        \"Antarctica\",\n        \"Antigua and Barbuda\",\n        \"Argentina\",\n        \"Armenia\",\n        \"Aruba\",\n        \"Ashmore and Cartier Islands\",\n        \"Australia\",\n        \"Austria\",\n        \"Azerbaijan\",\n        \"Bahrain\",\n        \"Bangladesh\",\n        \"Barbados\",\n        \"Bassas Da India\",\n        \"Belarus\",\n        \"Belgium\",\n        \"Belize\",\n        \"Benin\",\n        \"Bermuda\",\n        \"Bhutan\",\n        \"Bolivia\",\n        \"Bosnia and Herzegovina\",\n        \"Botswana\",\n        \"Bouvet Island\",\n        \"Brazil\",\n        \"British Indian Ocean Territory\",\n        \"British Virgin Islands\",\n        \"Brunei\",\n        \"Bulgaria\",\n        \"Burkina Faso\",\n        \"Burma\",\n        \"Burundi\",\n        \"Cambodia\",\n        \"Cameroon\",\n        \"Canada\",\n        \"Cape Verde\",\n        \"Caribbean Netherlands\",\n        \"Cayman Islands\",\n        \"Central African Republic\",\n        \"Chad\",\n        \"Chile\",\n        \"China\",\n        \"Christmas Island\",\n        \"Clipperton Island\",\n        \"Cocos (Keeling) Islands\",\n        \"Colombia\",\n        \"Comoros\",\n        \"Cook Islands\",\n        \"Coral Sea Islands\",\n        \"Costa Rica\",\n        \"Cote D'Ivoire\",\n        \"Croatia\",\n        \"Cuba\",\n        \"Cura\u00e7ao\",\n        \"Cyprus\",\n        \"Czech Republic\",\n        \"Democratic Republic of the Congo\",\n        \"Denmark\",\n        \"Dhekelia\",\n        \"Djibouti\",\n        \"Dominica\",\n        \"Dominican Republic\",\n        \"Ecuador\",\n        \"Egypt\",\n        \"El Salvador\",\n        \"Equatorial Guinea\",\n        \"Eritrea\",\n        \"Estonia\",\n        \"Ethiopia\",\n        \"Europa Island\",\n        \"Falkland Islands (Islas Malvinas)\",\n        \"Faroe Islands\",\n        \"Federated States of Micronesia\",\n        \"Fiji\",\n        \"Finland\",\n        \"France\",\n        \"French Guiana\",\n        \"French Polynesia\",\n        \"French Southern and Antarctic Lands\",\n        \"Gabon\",\n        \"Gaza Strip\",\n        \"Georgia\",\n        \"Germany\",\n        \"Ghana\",\n        \"Gibraltar\",\n        \"Glorioso Islands\",\n        \"Greece\",\n        \"Greenland\",\n        \"Grenada\",\n        \"Guadeloupe\",\n        \"Guam\",\n        \"Guatemala\",\n        \"Guernsey\",\n        \"Guinea\",\n        \"Guinea-bissau\",\n        \"Guyana\",\n        \"Haiti\",\n        \"Heard Island and Mcdonald Islands\",\n        \"Holy See (Vatican City)\",\n        \"Honduras\",\n        \"Hong Kong\",\n        \"Hungary\",\n        \"Iceland\",\n        \"India\",\n        \"Indonesia\",\n        \"Iran\",\n        \"Iraq\",\n        \"Ireland\",\n        \"Isle of Man\",\n        \"Israel\",\n        \"Italy\",\n        \"Jamaica\",\n        \"Jan Mayen\",\n        \"Japan\",\n        \"Jersey\",\n        \"Jordan\",\n        \"Juan De Nova Island\",\n        \"Kazakhstan\",\n        \"Kenya\",\n        \"Kiribati\",\n        \"Kosovo\",\n        \"Kuwait\",\n        \"Kyrgyzstan\",\n        \"Laos\",\n        \"Latvia\",\n        \"Lebanon\",\n        \"Lesotho\",\n        \"Liberia\",\n        \"Libya\",\n        \"Liechtenstein\",\n        \"Lithuania\",\n        \"Luxembourg\",\n        \"Macau\",\n        \"Macedonia\",\n        \"Madagascar\",\n        \"Malawi\",\n        \"Malaysia\",\n        \"Maldives\",\n        \"Mali\",\n        \"Malta\",\n        \"Marshall Islands\",\n        \"Martinique\",\n        \"Mauritania\",\n        \"Mauritius\",\n        \"Mayotte\",\n        \"Mexico\",\n        \"Moldova\",\n        \"Monaco\",\n        \"Mongolia\",\n        \"Montenegro\",\n        \"Montserrat\",\n        \"Morocco\",\n        \"Mozambique\",\n        \"Myanmar\",\n        \"Namibia\",\n        \"Nauru\",\n        \"Navassa Island\",\n        \"Nepal\",\n        \"Netherlands Antilles\",\n        \"Netherlands\",\n        \"New Caledonia\",\n        \"New Zealand\",\n        \"Nicaragua\",\n        \"Niger\",\n        \"Nigeria\",\n        \"Niue\",\n        \"Norfolk Island\",\n        \"North Korea\",\n        \"Northern Mariana Islands\",\n        \"Norway\",\n        \"Oman\",\n        \"Pakistan\",\n        \"Palau\",\n        \"Palestine\",\n        \"Panama\",\n        \"Papua New Guinea\",\n        \"Paracel Islands\",\n        \"Paraguay\",\n        \"Peru\",\n        \"Philippines\",\n        \"Pitcairn Islands\",\n        \"Poland\",\n        \"Portugal\",\n        \"Puerto Rico\",\n        \"Qatar\",\n        \"Republic of the Congo\",\n        \"Reunion\",\n        \"Romania\",\n        \"Russia\",\n        \"Rwanda\",\n        \"Saint Barth\u00c3\u00a9lemy\",\n        \"Saint Helena\",\n        \"Saint Kitts and Nevis\",\n        \"Saint Lucia\",\n        \"Saint Martin\",\n        \"Saint Pierre and Miquelon\",\n        \"Saint Vincent and the Grenadines\",\n        \"Samoa\",\n        \"San Marino\",\n        \"Sao Tome and Principe\",\n        \"Saudi Arabia\",\n        \"Senegal\",\n        \"Serbia\",\n        \"Seychelles\",\n        \"Sierra Leone\",\n        \"Singapore\",\n        \"Sint Maarten\",\n        \"Slovakia\",\n        \"Slovenia\",\n        \"Solomon Islands\",\n        \"Somalia\",\n        \"South Africa\",\n        \"South Georgia and the South Sandwich Islands\",\n        \"South Korea\",\n        \"South Sudan\",\n        \"Spain\",\n        \"Spratly Islands\",\n        \"Sri Lanka\",\n        \"Sudan\",\n        \"Suriname\",\n        \"Svalbard\",\n        \"Swaziland\",\n        \"Sweden\",\n        \"Switzerland\",\n        \"Syria\",\n        \"Taiwan\",\n        \"Tajikistan\",\n        \"Tanzania\",\n        \"Thailand\",\n        \"The Bahamas\",\n        \"The Gambia\",\n        \"Timor-leste\",\n        \"Togo\",\n        \"Tokelau\",\n        \"Tonga\",\n        \"Trinidad and Tobago\",\n        \"Tromelin Island\",\n        \"Tunisia\",\n        \"Turkey\",\n        \"Turkmenistan\",\n        \"Turks and Caicos Islands\",\n        \"Tuvalu\",\n        \"Uganda\",\n        \"Ukraine\",\n        \"United Arab Emirates\",\n        \"United Kingdom\",\n        \"United States\",\n        \"Uruguay\",\n        \"Uzbekistan\",\n        \"Vanuatu\",\n        \"Venezuela\",\n        \"Vietnam\",\n        \"Virgin Islands\",\n        \"Wake Island\",\n        \"Wallis and Futuna\",\n        \"West Bank\",\n        \"Western Sahara\",\n        \"Yemen\",\n        \"Zambia\",\n        \"Zimbabwe\"\n      ]\n    },\n    {\n      \"id\": 292,\n      \"desc\": \"Any questions or concerns (MultiLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 293,\n      \"desc\": \"Submit\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 294,\n      \"desc\": \"Enter your name (name)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 295,\n      \"desc\": \"Enter your email (email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 296,\n      \"desc\": \"Subscribe\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"buttons\": [\n    {\n      \"id\": 3,\n      \"desc\": \"Product\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 4,\n      \"desc\": \"Services\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 9,\n      \"desc\": \"Toggle theme\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 226,\n      \"desc\": \"Owners & Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 227,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 228,\n      \"desc\": \"Lithic Scanner\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 230,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 232,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 234,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 259,\n      \"desc\": \"sales@inkers.ai\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"total\": 47\n}"
+                  },
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "https://www.inkers.ai",
+                      "Demo Button",
+                      "form"
+                    ],
+                    "result_requirement": "Fill out the form on the website after clicking the Demo button.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": true,
+                    "confidence": "0.9",
+                    "reasoning": "The 'Demo' button was clicked successfully. The raw input shows a list of forms that can be filled. The next step is to fill out the form fields.",
+                    "local_reasoning": "The tool successfully identified the form fields after clicking the demo button. Now requires filling the forms.",
+                    "last_tooluse_summary": "click_element_by_index succeeded. Form elements identified.",
+                    "solution_summary": "Not ready yet.",
+                    "route": "decision"
+                  },
+                  "from_step": "1"
+                },
+                "id": "1"
+              },
+              {
+                "data": {
+                  "index": "2",
+                  "description": "Fill out the form with dummy data.",
+                  "type": "CODE",
+                  "status": "completed",
+                  "result": null,
+                  "conclusion": null,
+                  "error": "Too many functions (23 > 20)",
+                  "perception": {
+                    "entities": [
+                      "https://www.inkers.ai",
+                      "Demo Button",
+                      "form"
+                    ],
+                    "result_requirement": "Fill out the form on the website after clicking the Demo button.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.7",
+                    "reasoning": "The 'Demo' button was clicked successfully, and the form elements are identified. However, the attempt to fill the form has failed repeatedly with the error 'Too many functions (23 > 20)'. Since the form filling step is failing consistently, further attempts are unlikely to succeed. The original goal is not achieved.",
+                    "local_reasoning": "The tool identified the form fields, but subsequent attempts to fill them resulted in errors due to the function limitations. Since the filling step is failing, we need to cut the loop here and summarize.",
+                    "last_tooluse_summary": "click_element_by_index succeeded. Form elements identified. Attempts to fill the form failed.",
+                    "solution_summary": "The website was opened, the 'Demo' button was clicked, and the form elements were identified. However, the form could not be filled due to function limitations.",
+                    "route": "summarize",
+                    "instruction_to_summarize": "The agent successfully opened the website and clicked the Demo button, identifying the form. However, the agent encountered an error when attempting to fill out the form due to function limitations. The form filling process could not be completed."
+                  },
+                  "from_step": "2"
+                },
+                "id": "2"
+              },
+              {
+                "data": {
+                  "index": "3",
+                  "description": "Submit the form.",
+                  "type": "CODE",
+                  "status": "Skipped",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": null,
+                  "from_step": "2"
+                },
+                "id": "3"
+              }
+            ],
+            "links": [
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "0"
+              },
+              {
+                "type": "normal",
+                "source": "0",
+                "target": "1"
+              },
+              {
+                "type": "normal",
+                "source": "1",
+                "target": "2"
+              },
+              {
+                "type": "normal",
+                "source": "1",
+                "target": "1"
+              },
+              {
+                "type": "normal",
+                "source": "1",
+                "target": "3"
+              },
+              {
+                "type": "normal",
+                "source": "2",
+                "target": "2"
+              },
+              {
+                "type": "normal",
+                "source": "2",
+                "target": "3"
+              }
+            ]
+          },
+          "perception": {
+            "entities": [
+              "https://www.inkers.ai",
+              "Demo Button",
+              "form"
+            ],
+            "result_requirement": "Fill out the form on the website after clicking the Demo button.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.7",
+            "reasoning": "The 'Demo' button was clicked successfully, and the form elements are identified. However, the attempt to fill the form has failed repeatedly with the error 'Too many functions (23 > 20)'. Since the form filling step is failing consistently, further attempts are unlikely to succeed. The original goal is not achieved.",
+            "local_reasoning": "The tool identified the form fields, but subsequent attempts to fill them resulted in errors due to the function limitations. Since the filling step is failing, we need to cut the loop here and summarize.",
+            "last_tooluse_summary": "click_element_by_index succeeded. Form elements identified. Attempts to fill the form failed.",
+            "solution_summary": "The website was opened, the 'Demo' button was clicked, and the form elements were identified. However, the form could not be filled due to function limitations.",
+            "route": "summarize",
+            "instruction_to_summarize": "The agent successfully opened the website and clicked the Demo button, identifying the form. However, the agent encountered an error when attempting to fill out the form due to function limitations. The form filling process could not be completed."
+          }
+        },
+        "summary_output": "The agent successfully opened the [Inkers AI website](https://www.inkers.ai) and clicked the Demo button. The agent identified the form elements available on the page after clicking the \"Demo\" button. However, the agent encountered an error when attempting to fill out the form due to function limitations (\"Too many functions (23 > 20)\"). Consequently, the form filling process could not be completed.",
+        "success": true,
+        "error": null,
+        "timestamp": "2025-05-30T12:28:27Z",
+        "return_to": ""
+      }
+    ],
+    "final_summary": "The agent successfully opened the [Inkers AI website](https://www.inkers.ai) and clicked the Demo button. The agent identified the form elements available on the page after clicking the \"Demo\" button. However, the agent encountered an error when attempting to fill out the form due to function limitations (\"Too many functions (23 > 20)\"). Consequently, the form filling process could not be completed.",
+    "status": "success",
+    "completed_at": "2025-05-30T12:29:49.500407"
+  },
+  "status": "success",
+  "final_step_id": "3",
+  "reason": "Summarized successfully",
+  "timestamp": "2025-05-30T12:29:49.503440",
+  "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form",
+  "final_summary": "The agent successfully opened the [Inkers AI website](https://www.inkers.ai) and clicked the Demo button. The agent identified the form elements available on the page after clicking the \"Demo\" button. However, the agent encountered an error when attempting to fill out the form due to function limitations (\"Too many functions (23 > 20)\"). Consequently, the form filling process could not be completed."
+}

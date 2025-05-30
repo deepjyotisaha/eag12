@@ -30,7 +30,7 @@ persona:
   behavior_tags: [rational, focused, tool-using]
 
 specialized_browser_agent:
-  enabled: false
+  enabled: true
   description: "Enables the specialized browser agent for handling browser-related tasks."
 
 # mcp_servers:

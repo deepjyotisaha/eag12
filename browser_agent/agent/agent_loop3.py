@@ -23,6 +23,7 @@ class Route:
 class StepType:
     ROOT = "ROOT"
     CODE = "CODE"
+    BROWSEROPERATION = "BROWSEROPERATION"
 
 
 class AgentLoop:
@@ -34,6 +35,8 @@ class AgentLoop:
         self.strategy = strategy
         self.status: str = "in_progress"
         self.browser_agent_enabled = browser_agent_enabled
+        if self.browser_agent_enabled:
+            self.browser_agent = BrowserAgent(multi_mcp)
 
     async def run(self, query: str):
         self._initialize_session(query)
@@ -50,12 +53,33 @@ class AgentLoop:
             return "Summary generation failed."
         
         if self.browser_agent_enabled and self.p_out.get("route") == Route.BROWSER:
-            if self.browser_agent_enabled:
-                browser_agent = BrowserAgent()
-                log.info("⚙️ Routing to BrowserAgent for browser-related query.")
-                return await browser_agent.run(query, context=self.ctx)
+            if self.browser_agent_enabled and self.browser_agent:
+                log.info("🔄 Routing to BrowserAgent for browser-related query.")
+                log_step("🔄🔄🔄 Routing to BrowserAgent for browser-related query. 🔄🔄🔄")
+                browser_agent_result = await self.browser_agent.run(query)
+                log.info(f"📌 Browser output")
+                logger_json_block(log,f"📌 Browser output", browser_agent_result)
+                log_step("🔄🔄🔄 BrowserAgent completed. 🔄🔄🔄")
+                log_json_block(f"📌 BrowserAgent Output", browser_agent_result["final_summary"], 300)
+
+                # Add browser operation to context
+                self.ctx.add_step(
+                    step_id="BROWSER",
+                    description="Browser operation",
+                    step_type=StepType.BROWSEROPERATION,
+                    from_node=StepType.ROOT
+                )
+            
+                if browser_agent_result["status"] == "success":
+                    self.ctx.mark_step_completed("BROWSER")
+                    self.ctx.update_step_result("BROWSER", browser_agent_result)
+                    return browser_agent_result["final_summary"]
+                else:
+                    self.ctx.mark_step_failed("BROWSER", browser_agent_result["reason"])
+                    return browser_agent_result["reason"]
+
             else:
-                log.error("⚙️ Browser agent is not enabled. Cannot execute browser route.")
+                log.error("🚨 Browser agent is not enabled. Cannot execute browser route.")
                 return await self._handle_failure()
 
         if self.p_out.get("route") == Route.DECISION:

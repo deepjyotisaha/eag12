@@ -15,13 +15,13 @@ def log_error(message: str, err: Exception = None):
     if err:
         print(f"[dim]{str(err)}[/dim]")
 
-def log_json_block(title: str, block):
+def log_json_block(title: str, block, max_length: int = 150):
     from rich.panel import Panel
     from rich.console import Console
 
     console = Console()
 
-    def truncate(value, max_length=150):
+    def truncate(value, max_length=max_length):
         value = str(value)
         return value if len(value) <= max_length else value[:max_length] + "..."
 

@@ -74,6 +74,8 @@ class BrowserAgent:
         """
         try:
             log.info("Starting browser operation...")
+
+            log_step("🌐 Starting browser operation with BrowserAgent 🌐")
             
             # Initialize context
             self.ctx = BrowserContext(self.session_id, query)
@@ -117,6 +119,7 @@ class BrowserAgent:
             # 6. Summarize and create final plan
             final_plan = await self.summarizer.summarize(query, self.ctx, self.p_out)
             log.info("Browser operation completed successfully")
+            log_step("🌐 Browser operation completed successfully, handing over to Cortex Agent 🌐")
             
             return final_plan
             
