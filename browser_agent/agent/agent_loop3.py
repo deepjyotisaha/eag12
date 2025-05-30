@@ -73,13 +73,14 @@ class AgentLoop:
                 if browser_agent_result["status"] == "success":
                     self.ctx.mark_step_completed("BROWSER")
                     self.ctx.update_step_result("BROWSER", browser_agent_result)
-                    #return browser_agent_result["final_summary"]
+                    #return 
                     self.status = "success"
-                    self.final_output = await self._summarize()
-                    return
+                    self.final_output = browser_agent_result["final_summary"]
+                    return await self._summarize()
                 else:
                     self.ctx.mark_step_failed("BROWSER", browser_agent_result["reason"])
-                    return browser_agent_result["reason"]
+                    log.error(f"❌ Browser operation failed. Reason: {browser_agent_result['reason']}")
+                    return self._handle_failure()
 
             else:
                 log.error("🚨 Browser agent is not enabled. Cannot execute browser route.")

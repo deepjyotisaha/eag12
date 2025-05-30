@@ -47,7 +47,7 @@ class BrowserAgent:
         self.model = ModelManager()
         self.session_id = str(uuid.uuid4())
         log.info(f"BrowserAgent initialized with session ID: {self.session_id}")
-
+        
         # Load MCP server configs
         config_path = Path("config/mcp_server_config.yaml")
         with open(config_path, "r") as f:
@@ -77,7 +77,7 @@ class BrowserAgent:
         """
         try:
             log.info("Starting browser operation...")
-
+            
             log_step("🌐 Starting browser operation with BrowserAgent 🌐")
 
             await self.multi_mcp.initialize()       
@@ -215,9 +215,8 @@ class BrowserAgent:
         self.next_step_id = plan["next_step_id"]
 
         self.ctx._print_graph(depth=3, title="Browser Agent", color="green")
-        
         return plan
-
+            
     async def _execute_steps(self, plan: Dict[str, Any]) -> bool:
         """Execute the planned steps
         
