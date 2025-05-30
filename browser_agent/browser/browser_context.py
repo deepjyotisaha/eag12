@@ -12,15 +12,15 @@ log = setup_logging(__name__)
 @dataclass
 class BrowserStepNode:
     """Represents a step in the browser operation plan"""
-    step_id: str
+    index: str  # Now string to support labels like "0A", "0B"
     description: str
-    type: str = "BROWSEROPERATION"
+    type: str  # CODE, CONCLUDE, NOP
     status: str = "pending"  # pending, completed, failed
     result: Optional[Dict[str, Any]] = None
     conclusion: Optional[str] = None
     error: Optional[str] = None
     perception: Optional[Dict[str, Any]] = None
-    from_step: Optional[str] = None
+    from_step: Optional[str] = None  # for debugging lineage
 
 @dataclass
 class BrowserPerceptionResult:
@@ -53,12 +53,13 @@ class BrowserContext:
         log.info("Initializing BrowserContext, creating root node...")
         # Add root node
         root_node = BrowserStepNode(
-            step_id="ROOT",
+            index="ROOT",
             type="ROOT",
             description=query,
-            status="pending"
+            status="completed"
         )
         self.graph.add_node("ROOT", data=root_node)
+        self.latest_node_id = "ROOT"
 
     def get_latest_node(self) -> Optional[str]:
         """Get the ID of the latest node in the graph
@@ -68,26 +69,27 @@ class BrowserContext:
         """
         return self.latest_node_id
 
-    def add_step(self, step_id: str, description: str, from_step: str = "ROOT", step_type: str = "browser"):
+    def add_step(self, step_id: str, description: str, step_type: str, from_node: Optional[str] = None, edge_type: str = "normal") -> str:
         """Add a step to the context
         
         Args:
             step_id: Unique identifier for the step
             description: Description of what the step does
-            from_step: ID of the step this step follows from (default: "ROOT")
-            step_type: Type of the step (default: "browser")
+            step_type: Type of the step
+            from_node: ID of the step this step follows from (default: None)
+            edge_type: Type of the edge between steps (default: "normal")
         """
-        node = BrowserStepNode(
-            step_id=step_id,
-            type=step_type,
+        step_node = BrowserStepNode(
+            index=step_id,
             description=description,
-            from_step=from_step
+            type=step_type,
+            from_step=from_node
         )
-        self.graph.add_node(step_id, data=node)
+        self.graph.add_node(step_id, data=step_node)
         
-        # Always add the edge if from_step is provided
-        if from_step:
-            self.graph.add_edge(from_step, step_id)
+        # Always add the edge if from_node is provided
+        if from_node:
+            self.graph.add_edge(from_node, step_id, type=edge_type)
         
         self.latest_node_id = step_id
         return step_id
@@ -142,7 +144,7 @@ class BrowserContext:
         """Attach perception result to a step"""
         if step_id not in self.graph.nodes:
             fallback_node = BrowserStepNode(
-                step_id=step_id,
+                index=step_id,
                 description="Perception-only node",
                 type="PERCEPTION"
             )
@@ -167,3 +169,11 @@ class BrowserContext:
         """Print the execution graph for debugging"""
         if only_if:
             render_graph(self.graph, depth=depth, title=title, color=color)
+
+    def _pick_next_step(self, ctx) -> str:
+        """Pick the next uncompleted step from the graph"""
+        for node_id in ctx.graph.nodes:
+            node = ctx.graph.nodes[node_id]["data"]
+            if node.status == "pending":
+                return node.index  # Now using index instead of step_id
+        return "ROOT"
