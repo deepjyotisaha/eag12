@@ -135,20 +135,6 @@ eag12/
 - **State Management**: Persistent state tracking
 - **Logging**: Detailed operation logging
 
-## Queries
-
-1. Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.
-2. How much Anmol singh paid for his DLF apartment via Capbridge? 
-3. What do you know about Don Tapscott and Anthony Williams?
-4. What is the relationship between Gensol and Go-Auto?
-5. which course are we teaching on Canvas LMS? "H:\DownloadsH\How to use Canvas LMS.pdf"
-6. Summarize this page: https://theschoolof.ai/
-7. What is the log value of the amount that Anmol singh paid for his DLF apartment via Capbridge? Hint: use local 
-8. find the the main difference between latest BMW 7 and 5 series online. Reply back in detail and in markdown.
-9. How much money did Anmol Singh paid to DLF to buy an apartment in Camelias indirectly? Search local storage agian?
-10. What are the main differences between Mercedes S Class end E Class. Reply back in markdown list. 
-11. Who is the current chairman of DLF? Search local documents. 
-
 ### Contributing
 
 1. Fork the repository
@@ -159,7 +145,4 @@ eag12/
 
 ## License
 
-[Add your license information here]
-
-
-
+[Add your license information here] 
