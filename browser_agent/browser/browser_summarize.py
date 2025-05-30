@@ -18,11 +18,24 @@ class BrowserAgentSummarizer:
         if not self.api_key:
             raise ValueError("GOOGLE_API_KEY not found in environment or explicitly provided.")
         self.model = ModelManager()
-        self.summarizer_prompt_path = summarizer_prompt_path
+        
+        # Convert to absolute path
+        base_dir = Path(__file__).parent.parent  # Get browser_agent directory
+        self.summarizer_prompt_path = str(base_dir / summarizer_prompt_path)
+        
+        # Verify prompt file exists
+        if not Path(self.summarizer_prompt_path).exists():
+            raise FileNotFoundError(f"Browser summarizer prompt file not found: {self.summarizer_prompt_path}")
 
     async def run(self, s_input: dict) -> str:
         try:
-            prompt_template = Path(self.summarizer_prompt_path).read_text(encoding="utf-8")
+            # Read prompt with explicit encoding
+            with open(self.summarizer_prompt_path, 'r', encoding='utf-8') as f:
+                prompt_template = f.read()
+                
+            if not prompt_template:
+                raise ValueError(f"Browser summarizer prompt file is empty: {self.summarizer_prompt_path}")
+
             full_prompt = (
                 f"Current Time: {datetime.utcnow().isoformat()}\n\n"
                 f"{prompt_template.strip()}\n\n"
@@ -35,11 +48,17 @@ class BrowserAgentSummarizer:
                 prompt=full_prompt
             )
             return response
+        except FileNotFoundError as e:
+            log_error(f"Browser summarizer prompt file not found: {e}")
+            return "Browser operation summary unavailable due to missing prompt file."
+        except ValueError as e:
+            log_error(f"Browser summarizer prompt file error: {e}")
+            return "Browser operation summary unavailable due to invalid prompt file."
         except ServerError as e:
-            print(f"🚫 Browser Summarizer LLM ServerError: {e}")
+            log_error(f"Browser summarizer LLM ServerError: {e}")
             return "Browser operation summary unavailable due to model error (503)."
         except Exception as e:
-            print(f"❌ Unexpected Browser Summarizer Exception: {e}")
+            log_error(f"Unexpected browser summarizer error: {e}")
             return "Browser operation summary generation failed due to internal error."
 
     async def summarize(self, query: str, ctx, latest_perception: dict) -> dict:

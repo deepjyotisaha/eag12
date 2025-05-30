@@ -73,7 +73,10 @@ class AgentLoop:
                 if browser_agent_result["status"] == "success":
                     self.ctx.mark_step_completed("BROWSER")
                     self.ctx.update_step_result("BROWSER", browser_agent_result)
-                    return browser_agent_result["final_summary"]
+                    #return browser_agent_result["final_summary"]
+                    self.status = "success"
+                    self.final_output = await self._summarize()
+                    return
                 else:
                     self.ctx.mark_step_failed("BROWSER", browser_agent_result["reason"])
                     return browser_agent_result["reason"]

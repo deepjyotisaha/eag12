@@ -57,7 +57,7 @@ class BrowserAgent:
             multi_mcp=multi_mcp
         )
         
-        # Initialize summarizer
+        # Initialize summarizer with path
         self.summarizer = BrowserAgentSummarizer(
             summarizer_prompt_path="prompts/browser_agent_summarizer_prompt.txt"
         )
