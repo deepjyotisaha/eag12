@@ -113,8 +113,8 @@ class BrowserAgent:
         self.ctx.mark_step_completed(StepType.ROOT)
         self.ctx.attach_perception(StepType.ROOT, self.p_out)
 
-        log_json_block('📌 Perception output (ROOT)', self.p_out)
-        self.ctx._print_graph(depth=2)
+        log_json_block('📌 Browser Agent Perception output (ROOT)', self.p_out)
+        self.ctx._print_graph(depth=2, title="Browser Agent", color="green")
 
     async def _plan_next_steps(self, query: str) -> Dict[str, Any]:
         """Plan the next steps for browser operation
@@ -151,7 +151,7 @@ class BrowserAgent:
         self.code_variants = plan["code_variants"]
         self.next_step_id = plan["next_step_id"]
 
-        self.ctx._print_graph(depth=3)
+        self.ctx._print_graph(depth=3, title="Browser Agent", color="green")
         
         return plan
 
@@ -169,8 +169,8 @@ class BrowserAgent:
 
         while tracker.should_continue():
             tracker.increment()
-            log.info(f"🔁 Loop {tracker.tries} — Executing step {self.next_step_id}")
-            log_step(f"🔁 Loop {tracker.tries} — Executing step {self.next_step_id}")
+            log.info(f"🔁 Browser Agent Loop {tracker.tries} — Executing step {self.next_step_id}")
+            log_step(f"🔁 Browser Agent - Loop {tracker.tries} — Executing step {self.next_step_id}")
 
             if self.ctx.is_step_completed(self.next_step_id):
                 log.info(f"✅ Step {self.next_step_id} already completed. Skipping.")
@@ -216,11 +216,12 @@ class BrowserAgent:
             log.info(f"Perception output:")
             logger_json_block(log,'Perception output:', self.p_out)
             self.ctx.attach_perception(self.next_step_id, self.p_out)
-            log_json_block(f"📌 Perception output ({self.next_step_id})", self.p_out)
-            self.ctx._print_graph(depth=3)
+            log_json_block(f"📌 Browser Agent Perception output ({self.next_step_id})", self.p_out)
+            self.ctx._print_graph(depth=3, title="Browser Agent", color="green")
 
             if self.p_out.get("original_goal_achieved") or self.p_out.get("route") == Route.CONCLUDE:
-                log.info(f"🔍 Original goal achieved or route is conclude, Now concluding...")
+                log.info(f"✅✅ Original goal achieved or route is conclude, Now concluding...")
+                log_step(f"✅✅ Original goal achieved or route is conclude, Now concluding...")
                 return True
 
             if self.p_out.get("route") != Route.BROWSER:
@@ -229,20 +230,20 @@ class BrowserAgent:
                 return False
 
             # 🔁 Decision again
-            log.info(f"🔁 Running Decision again")
+            log.info(f"🔁 Browser Agent - Running Decision again")
             d_input = build_browser_decision_input(self.ctx, self.ctx.query, self.p_out)
             log.info(f"Decision input:")
             logger_json_block(log,'Decision input:', d_input)
             d_out = await self.decision.run(d_input)
             log.info(f"Decision output:")
             logger_json_block(log,'Decision output:', d_out)
-            log_json_block(f"📌 Decision Output ({tracker.tries})", d_out)
+            log_json_block(f"📌 Browser Agent Decision output ({tracker.tries})", d_out)
 
             self.next_step_id = d_out["next_step_id"]
             self.code_variants = d_out["code_variants"]
             plan_graph = d_out["plan_graph"]
             self.update_plan_graph(self.ctx, plan_graph, self.next_step_id)
-            self.ctx._print_graph(depth=3)
+            self.ctx._print_graph(depth=3, title="Browser Agent", color="green")
 
         return True
 

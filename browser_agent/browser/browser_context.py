@@ -155,8 +155,8 @@ class BrowserContext:
             node.result = result
             self._update_globals(result)
 
-    def _print_graph(self, depth: int = 1, only_if: bool = True):
+    def _print_graph(self, depth: int = 1, only_if: bool = True, title: str = "Browser Agent", color: str = "green"):
         """Print the execution graph for debugging"""
         if only_if:
-            render_graph(self.graph, depth=depth)
+            render_graph(self.graph, depth=depth, title=title, color=color)
             

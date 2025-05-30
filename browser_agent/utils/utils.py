@@ -65,7 +65,7 @@ def log_json_block(title: str, block):
 
 
 
-def render_graph(graph, depth=1):
+def render_graph(graph, depth=1, title="Agent", color="yellow"):
     from rich.panel import Panel
     from rich.table import Table
     from rich.console import Console
@@ -78,7 +78,7 @@ def render_graph(graph, depth=1):
         text = str(text)
         return text if len(text) <= limit else text[:limit] + "..."
 
-    print("\n[bold yellow]🧠 Agent Step Graph (Depth {})[/bold yellow]".format(depth))
+    print(f"\n[bold {color}]🧠 {title} Step Graph (Depth {depth})[/bold {color}]")
 
     table = Table(show_header=True, header_style="bold magenta", box=None)
     table.add_column("Step ID", style="cyan", no_wrap=True)
