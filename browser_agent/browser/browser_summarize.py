@@ -80,6 +80,6 @@ class BrowserAgentSummarizer:
             "browser_operation": True  # Flag to identify this as a browser operation result
         }
 
-        log.info(f"Final plan: {final_plan}")
+        logger_json_block(log, "Final plan", final_plan)
 
         return final_plan
