@@ -186,7 +186,8 @@ class AgentLoop:
                 self.multi_mcp
             )
 
-            if not success:
+            #if not success:
+            if success.get("status") != "success":
                 log.error(f"❌ Step {retry_step_id} failed. Marking as failed.")
                 self.ctx.mark_step_failed(self.next_step_id, "All fallback variants failed")
                 tracker.record_failure(self.next_step_id)

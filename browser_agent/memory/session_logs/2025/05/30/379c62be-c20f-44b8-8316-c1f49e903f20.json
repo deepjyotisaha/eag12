@@ -1,0 +1,2395 @@
+{
+  "context": {
+    "session_id": "379c62be-c20f-44b8-8316-c1f49e903f20",
+    "original_query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+    "globals": {
+      "memory": null,
+      "context": {
+        "session_id": "12e6c3d9-81ac-442e-bee6-64d5a514ecf1",
+        "query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+        "globals": {
+          "form_url_0A": "https://forms.gle/6Nc6QaaJyDvePxLv7",
+          "page_structure_1A": {
+            "page_structure": {
+              "total_interactive_elements": 10,
+              "categories": {
+                "navigation": 2,
+                "forms": 4,
+                "buttons": 4
+              }
+            },
+            "content": [
+              {
+                "type": "heading",
+                "level": 2,
+                "content": "Agentic Form"
+              },
+              {
+                "type": "text",
+                "content": "Hello Agent! You need to fill this form!"
+              },
+              {
+                "type": "text",
+                "content": "[Sign in to Google]"
+              },
+              {
+                "type": "text",
+                "content": "to save your progress."
+              },
+              {
+                "type": "heading",
+                "level": 2,
+                "content": "What is the name of your Master? Required question"
+              },
+              {
+                "type": "text",
+                "content": "What is the name of your Master? Required question 1 point"
+              },
+              {
+                "type": "heading",
+                "level": 2,
+                "content": "Which course is he/she taking? Required question"
+              },
+              {
+                "type": "section",
+                "content": "Which course is he/she taking? Required question 250 points",
+                "level": 3
+              },
+              {
+                "type": "interactive",
+                "element_type": "button",
+                "id": 4,
+                "text": "Choose",
+                "action": "click_element_by_index",
+                "category": "button"
+              },
+              {
+                "type": "interactive",
+                "element_type": "button",
+                "id": 3,
+                "text": "ERA",
+                "action": "click_element_by_index",
+                "category": "button"
+              },
+              {
+                "type": "heading",
+                "level": 2,
+                "content": "Is he/she married? Required question"
+              },
+              {
+                "type": "heading",
+                "level": 2,
+                "content": "What course is he/her in? Required question"
+              },
+              {
+                "type": "text",
+                "content": "What course is he/her in? Required question 1 point"
+              },
+              {
+                "type": "heading",
+                "level": 2,
+                "content": "What is his/her Date of Birth? Required question"
+              },
+              {
+                "type": "text",
+                "content": "What is his/her Date of Birth? Required question 1 point"
+              },
+              {
+                "type": "heading",
+                "level": 2,
+                "content": "What is his/her email id? Required question"
+              },
+              {
+                "type": "text",
+                "content": "What is his/her email id? Required question 1 point"
+              },
+              {
+                "type": "interactive",
+                "element_type": "button",
+                "id": 15,
+                "text": "Submit",
+                "action": "click_element_by_index",
+                "category": "button"
+              },
+              {
+                "type": "interactive",
+                "element_type": "button",
+                "id": 17,
+                "text": "Clear form",
+                "action": "click_element_by_index",
+                "category": "button"
+              },
+              {
+                "type": "text",
+                "content": "Never submit passwords through Google Forms."
+              },
+              {
+                "type": "text",
+                "content": "This form was created inside The School of AI."
+              },
+              {
+                "type": "text",
+                "content": "Does this form look suspicious?"
+              },
+              {
+                "type": "interactive",
+                "element_type": "nav_link",
+                "id": 18,
+                "text": "Report",
+                "action": "click_element_by_index",
+                "category": "navigation"
+              },
+              {
+                "type": "text",
+                "content": "[Google Forms]"
+              },
+              {
+                "type": "section",
+                "content": "Additional Interactive Elements",
+                "level": 2
+              },
+              {
+                "type": "interactive",
+                "element_type": "nav_link",
+                "id": 19,
+                "text": "Forms",
+                "action": "click_element_by_index",
+                "category": "navigation"
+              },
+              {
+                "type": "interactive",
+                "element_type": "text_input",
+                "id": 2,
+                "text": "Text Input",
+                "action": "input_text",
+                "category": "form"
+              },
+              {
+                "type": "interactive",
+                "element_type": "text_input",
+                "id": 11,
+                "text": "Text Input",
+                "action": "input_text",
+                "category": "form"
+              },
+              {
+                "type": "interactive",
+                "element_type": "text_input",
+                "id": 12,
+                "text": "Text Input",
+                "action": "input_text",
+                "category": "form"
+              },
+              {
+                "type": "interactive",
+                "element_type": "text_input",
+                "id": 13,
+                "text": "Text Input",
+                "action": "input_text",
+                "category": "form"
+              }
+            ]
+          }
+        },
+        "graph": {
+          "directed": true,
+          "multigraph": false,
+          "graph": {},
+          "nodes": [
+            {
+              "data": {
+                "index": "ROOT",
+                "description": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+                "type": "ROOT",
+                "status": "completed",
+                "result": null,
+                "conclusion": null,
+                "error": null,
+                "perception": {
+                  "entities": [
+                    "Google Form",
+                    "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                    "Form Filling"
+                  ],
+                  "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                  "original_goal_achieved": false,
+                  "local_goal_achieved": false,
+                  "confidence": "0.95",
+                  "reasoning": "The user query requires opening a Google Form, filling it with assumed values, and saving the browser state without submitting. Since this involves browser interaction (opening the form and filling it), the task needs to be routed to the browser for execution. We need to identify the input elements, fill them and finally save current browser state.",
+                  "local_reasoning": "The query requires opening a form and interacting with it. This cannot be solved without browser interaction. Hence route = browser.",
+                  "last_tooluse_summary": "Not applicable",
+                  "solution_summary": "Not ready yet.",
+                  "current_browser_state": "Not applicable",
+                  "route": "browser",
+                  "instruction_to_summarize": "Not applicable"
+                },
+                "from_step": null
+              },
+              "id": "ROOT"
+            },
+            {
+              "data": {
+                "index": "0",
+                "description": "Open the Google Form URL in a new tab.",
+                "type": "BROWSEROPERATION",
+                "status": "completed",
+                "result": {
+                  "form_url_0A": "https://forms.gle/6Nc6QaaJyDvePxLv7"
+                },
+                "conclusion": null,
+                "error": null,
+                "perception": {
+                  "entities": [
+                    "Google Form",
+                    "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                    "Form Filling"
+                  ],
+                  "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                  "original_goal_achieved": false,
+                  "local_goal_achieved": false,
+                  "confidence": "0.95",
+                  "reasoning": "The Google Form at the specified URL has been opened. The next step is to identify the form fields and fill them with assumed values. The current_browser_state should then be saved without submitting the form. Since filling a form requires browser interaction, route to browser.",
+                  "local_reasoning": "The form has been opened, but not filled. The next logical step is to fill the form and save state without submitting.",
+                  "last_tooluse_summary": "Successfully opened the Google Form using browser tools.",
+                  "solution_summary": "Not ready yet.",
+                  "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser.",
+                  "route": "browser"
+                },
+                "from_step": null
+              },
+              "id": "0"
+            },
+            {
+              "data": {
+                "index": "1",
+                "description": "Get the enhanced page structure of the form.",
+                "type": "BROWSEROPERATION",
+                "status": "completed",
+                "result": {
+                  "page_structure_1A": {
+                    "page_structure": {
+                      "total_interactive_elements": 10,
+                      "categories": {
+                        "navigation": 2,
+                        "forms": 4,
+                        "buttons": 4
+                      }
+                    },
+                    "content": [
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "Agentic Form"
+                      },
+                      {
+                        "type": "text",
+                        "content": "Hello Agent! You need to fill this form!"
+                      },
+                      {
+                        "type": "text",
+                        "content": "[Sign in to Google]"
+                      },
+                      {
+                        "type": "text",
+                        "content": "to save your progress."
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "What is the name of your Master? Required question"
+                      },
+                      {
+                        "type": "text",
+                        "content": "What is the name of your Master? Required question 1 point"
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "Which course is he/she taking? Required question"
+                      },
+                      {
+                        "type": "section",
+                        "content": "Which course is he/she taking? Required question 250 points",
+                        "level": 3
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "button",
+                        "id": 4,
+                        "text": "Choose",
+                        "action": "click_element_by_index",
+                        "category": "button"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "button",
+                        "id": 3,
+                        "text": "ERA",
+                        "action": "click_element_by_index",
+                        "category": "button"
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "Is he/she married? Required question"
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "What course is he/her in? Required question"
+                      },
+                      {
+                        "type": "text",
+                        "content": "What course is he/her in? Required question 1 point"
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "What is his/her Date of Birth? Required question"
+                      },
+                      {
+                        "type": "text",
+                        "content": "What is his/her Date of Birth? Required question 1 point"
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "What is his/her email id? Required question"
+                      },
+                      {
+                        "type": "text",
+                        "content": "What is his/her email id? Required question 1 point"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "button",
+                        "id": 15,
+                        "text": "Submit",
+                        "action": "click_element_by_index",
+                        "category": "button"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "button",
+                        "id": 17,
+                        "text": "Clear form",
+                        "action": "click_element_by_index",
+                        "category": "button"
+                      },
+                      {
+                        "type": "text",
+                        "content": "Never submit passwords through Google Forms."
+                      },
+                      {
+                        "type": "text",
+                        "content": "This form was created inside The School of AI."
+                      },
+                      {
+                        "type": "text",
+                        "content": "Does this form look suspicious?"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "nav_link",
+                        "id": 18,
+                        "text": "Report",
+                        "action": "click_element_by_index",
+                        "category": "navigation"
+                      },
+                      {
+                        "type": "text",
+                        "content": "[Google Forms]"
+                      },
+                      {
+                        "type": "section",
+                        "content": "Additional Interactive Elements",
+                        "level": 2
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "nav_link",
+                        "id": 19,
+                        "text": "Forms",
+                        "action": "click_element_by_index",
+                        "category": "navigation"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "text_input",
+                        "id": 2,
+                        "text": "Text Input",
+                        "action": "input_text",
+                        "category": "form"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "text_input",
+                        "id": 11,
+                        "text": "Text Input",
+                        "action": "input_text",
+                        "category": "form"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "text_input",
+                        "id": 12,
+                        "text": "Text Input",
+                        "action": "input_text",
+                        "category": "form"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "text_input",
+                        "id": 13,
+                        "text": "Text Input",
+                        "action": "input_text",
+                        "category": "form"
+                      }
+                    ]
+                  }
+                },
+                "conclusion": null,
+                "error": null,
+                "perception": {
+                  "entities": [
+                    "Google Form",
+                    "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                    "Agentic Form",
+                    "Form Fields"
+                  ],
+                  "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                  "original_goal_achieved": false,
+                  "local_goal_achieved": false,
+                  "confidence": "0.9",
+                  "reasoning": "The Google Form at the specified URL has been opened, and the page structure has been retrieved, showing various interactive elements including text input fields and buttons. The next step is to fill the form with assumed values. Since interacting with the form requires browser interaction and involves filling out the form fields, the task needs to be routed to the browser.",
+                  "local_reasoning": "The form is opened and page structure is extracted. It is not possible to fill the form and save the state without interacting with the browser. Hence, route = browser",
+                  "last_tooluse_summary": "Successfully retrieved the page structure of the opened Google Form.",
+                  "solution_summary": "Not ready yet.",
+                  "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser and its structure is known.",
+                  "route": "browser",
+                  "instruction_to_summarize": "Not applicable"
+                },
+                "from_step": null
+              },
+              "id": "1"
+            },
+            {
+              "data": {
+                "index": "2",
+                "description": "Fill the form fields with assumed values.",
+                "type": "BROWSEROPERATION",
+                "status": "completed",
+                "result": {},
+                "conclusion": null,
+                "error": null,
+                "perception": {
+                  "entities": [
+                    "Google Form",
+                    "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                    "Form Fields",
+                    "Agentic Form"
+                  ],
+                  "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                  "original_goal_achieved": false,
+                  "local_goal_achieved": false,
+                  "confidence": "0.3",
+                  "reasoning": "The Google Form was opened and its structure was extracted. However, filling the form with assumed values failed. Since filling the form is essential to achieve the original goal and it failed, and there are repeated failed attempts, it's unlikely that further steps will succeed. It's best to summarize the current state, highlighting the form's structure and the failure to fill it. The current state includes the form URL and the page structure from globals_schema.",
+                  "local_reasoning": "Filling the form failed. Further attempts may not be helpful. Summarizing the available information is the best course of action.",
+                  "last_tooluse_summary": "Opening the form and extracting its structure were successful. Filling the form failed.",
+                  "solution_summary": "Failed to fill the form with assumed values.  Form URL is https://forms.gle/6Nc6QaaJyDvePxLv7. The structure was extracted successfully, including text inputs and buttons.",
+                  "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser, and its structure has been extracted, but the form could not be filled.",
+                  "route": "summarize",
+                  "instruction_to_summarize": "Summarize the current state. Include the Google Form URL (https://forms.gle/6Nc6QaaJyDvePxLv7) and a brief description of the page structure from `globals_schema['page_structure_1A']`, mentioning the number of interactive elements and categories (navigation, forms, buttons). Highlight that the attempt to fill the form with assumed values failed. Return the summary in markdown format."
+                },
+                "from_step": null
+              },
+              "id": "2"
+            },
+            {
+              "data": {
+                "index": "3",
+                "description": "Save the current browser state.",
+                "type": "BROWSEROPERATION",
+                "status": "Skipped",
+                "result": null,
+                "conclusion": null,
+                "error": null,
+                "perception": null,
+                "from_step": null
+              },
+              "id": "3"
+            }
+          ],
+          "links": [
+            {
+              "type": "normal",
+              "source": "ROOT",
+              "target": "0"
+            },
+            {
+              "type": "normal",
+              "source": "0",
+              "target": "1"
+            },
+            {
+              "type": "normal",
+              "source": "1",
+              "target": "2"
+            },
+            {
+              "type": "normal",
+              "source": "2",
+              "target": "3"
+            }
+          ]
+        }
+      },
+      "status": "success",
+      "final_step_id": "3",
+      "reason": "Browser operation summarized successfully",
+      "timestamp": "2025-05-30T18:08:35.689395",
+      "original_query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+      "final_summary": "Summary of Browser Operations:\n\n1.  **Browser Operations Performed:**\n    *   The browser opened the Google Form at the URL: `https://forms.gle/6Nc6QaaJyDvePxLv7`.\n    *   The page structure of the form was extracted.\n\n2.  **Key Results/Findings:**\n    *   The form has a total of 10 interactive elements.\n    *   The interactive elements are categorized as follows: 2 navigation elements, 4 form elements, and 4 button elements.\n\n3.  **Important Data Extracted:**\n    *   The form includes text input fields and buttons, essential for form filling.\n    *   The URL of the form is: `https://forms.gle/6Nc6QaaJyDvePxLv7`.\n\n4.  **Final Outcome:**\n    *   While the form was successfully opened and its structure was analyzed, the attempt to fill the form with assumed values **failed**. The form remains open in the browser, with its structure known, but the input fields are not populated.",
+      "browser_operation": true
+    },
+    "memory": [
+      {
+        "original_query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+        "result_requirement": "Final summary",
+        "summarizer_summary": "The agent attempted to open and fill the Google Form located at [https://forms.gle/6Nc6QaaJyDvePxLv7](https://forms.gle/6Nc6QaaJyDvePxLv7). The form's structure was successfully extracted.\n\nThe form, named \"Agentic Form,\" contains a total of **10 interactive elements**, categorized as:\n\n*   **2 navigation** elements\n*   **4 form** elements (text input fields)\n*   **4 button** elements\n\nUnfortunately, the attempt to **fill the form with assumed values failed.** The form is currently open with its structure known, but the input fields are not populated.",
+        "confidence": 0.95,
+        "original_goal_achieved": true,
+        "route": "summarize"
+      }
+    ],
+    "graph": {
+      "directed": true,
+      "multigraph": false,
+      "graph": {},
+      "nodes": [
+        {
+          "data": {
+            "index": "ROOT",
+            "description": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+            "type": "ROOT",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "Google Form",
+                "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                "Form Filling"
+              ],
+              "result_requirement": "Fill the google form with dummy values without submitting.",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The user wants to fill a Google Form. This involves browser interaction to open the form, identify the form fields, fill them with assumed values, and not submit. Planning for browser interaction is required.",
+              "local_reasoning": "The task involves interaction with a webpage (Google Form) and needs planning for form filling.",
+              "last_tooluse_summary": "Not applicable",
+              "solution_summary": "Not ready yet.",
+              "route": "browser",
+              "instruction_to_summarize": "Not applicable"
+            },
+            "from_step": null
+          },
+          "id": "ROOT"
+        },
+        {
+          "data": {
+            "index": "BROWSER",
+            "description": "Browser operation",
+            "type": "BROWSEROPERATION",
+            "status": "completed",
+            "result": {
+              "context": {
+                "session_id": "12e6c3d9-81ac-442e-bee6-64d5a514ecf1",
+                "query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+                "globals": {
+                  "form_url_0A": "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                  "page_structure_1A": {
+                    "page_structure": {
+                      "total_interactive_elements": 10,
+                      "categories": {
+                        "navigation": 2,
+                        "forms": 4,
+                        "buttons": 4
+                      }
+                    },
+                    "content": [
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "Agentic Form"
+                      },
+                      {
+                        "type": "text",
+                        "content": "Hello Agent! You need to fill this form!"
+                      },
+                      {
+                        "type": "text",
+                        "content": "[Sign in to Google]"
+                      },
+                      {
+                        "type": "text",
+                        "content": "to save your progress."
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "What is the name of your Master? Required question"
+                      },
+                      {
+                        "type": "text",
+                        "content": "What is the name of your Master? Required question 1 point"
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "Which course is he/she taking? Required question"
+                      },
+                      {
+                        "type": "section",
+                        "content": "Which course is he/she taking? Required question 250 points",
+                        "level": 3
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "button",
+                        "id": 4,
+                        "text": "Choose",
+                        "action": "click_element_by_index",
+                        "category": "button"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "button",
+                        "id": 3,
+                        "text": "ERA",
+                        "action": "click_element_by_index",
+                        "category": "button"
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "Is he/she married? Required question"
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "What course is he/her in? Required question"
+                      },
+                      {
+                        "type": "text",
+                        "content": "What course is he/her in? Required question 1 point"
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "What is his/her Date of Birth? Required question"
+                      },
+                      {
+                        "type": "text",
+                        "content": "What is his/her Date of Birth? Required question 1 point"
+                      },
+                      {
+                        "type": "heading",
+                        "level": 2,
+                        "content": "What is his/her email id? Required question"
+                      },
+                      {
+                        "type": "text",
+                        "content": "What is his/her email id? Required question 1 point"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "button",
+                        "id": 15,
+                        "text": "Submit",
+                        "action": "click_element_by_index",
+                        "category": "button"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "button",
+                        "id": 17,
+                        "text": "Clear form",
+                        "action": "click_element_by_index",
+                        "category": "button"
+                      },
+                      {
+                        "type": "text",
+                        "content": "Never submit passwords through Google Forms."
+                      },
+                      {
+                        "type": "text",
+                        "content": "This form was created inside The School of AI."
+                      },
+                      {
+                        "type": "text",
+                        "content": "Does this form look suspicious?"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "nav_link",
+                        "id": 18,
+                        "text": "Report",
+                        "action": "click_element_by_index",
+                        "category": "navigation"
+                      },
+                      {
+                        "type": "text",
+                        "content": "[Google Forms]"
+                      },
+                      {
+                        "type": "section",
+                        "content": "Additional Interactive Elements",
+                        "level": 2
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "nav_link",
+                        "id": 19,
+                        "text": "Forms",
+                        "action": "click_element_by_index",
+                        "category": "navigation"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "text_input",
+                        "id": 2,
+                        "text": "Text Input",
+                        "action": "input_text",
+                        "category": "form"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "text_input",
+                        "id": 11,
+                        "text": "Text Input",
+                        "action": "input_text",
+                        "category": "form"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "text_input",
+                        "id": 12,
+                        "text": "Text Input",
+                        "action": "input_text",
+                        "category": "form"
+                      },
+                      {
+                        "type": "interactive",
+                        "element_type": "text_input",
+                        "id": 13,
+                        "text": "Text Input",
+                        "action": "input_text",
+                        "category": "form"
+                      }
+                    ]
+                  }
+                },
+                "graph": {
+                  "directed": true,
+                  "multigraph": false,
+                  "graph": {},
+                  "nodes": [
+                    {
+                      "data": {
+                        "index": "ROOT",
+                        "description": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+                        "type": "ROOT",
+                        "status": "completed",
+                        "result": null,
+                        "conclusion": null,
+                        "error": null,
+                        "perception": {
+                          "entities": [
+                            "Google Form",
+                            "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                            "Form Filling"
+                          ],
+                          "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                          "original_goal_achieved": false,
+                          "local_goal_achieved": false,
+                          "confidence": "0.95",
+                          "reasoning": "The user query requires opening a Google Form, filling it with assumed values, and saving the browser state without submitting. Since this involves browser interaction (opening the form and filling it), the task needs to be routed to the browser for execution. We need to identify the input elements, fill them and finally save current browser state.",
+                          "local_reasoning": "The query requires opening a form and interacting with it. This cannot be solved without browser interaction. Hence route = browser.",
+                          "last_tooluse_summary": "Not applicable",
+                          "solution_summary": "Not ready yet.",
+                          "current_browser_state": "Not applicable",
+                          "route": "browser",
+                          "instruction_to_summarize": "Not applicable"
+                        },
+                        "from_step": null
+                      },
+                      "id": "ROOT"
+                    },
+                    {
+                      "data": {
+                        "index": "0",
+                        "description": "Open the Google Form URL in a new tab.",
+                        "type": "BROWSEROPERATION",
+                        "status": "completed",
+                        "result": {
+                          "form_url_0A": "https://forms.gle/6Nc6QaaJyDvePxLv7"
+                        },
+                        "conclusion": null,
+                        "error": null,
+                        "perception": {
+                          "entities": [
+                            "Google Form",
+                            "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                            "Form Filling"
+                          ],
+                          "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                          "original_goal_achieved": false,
+                          "local_goal_achieved": false,
+                          "confidence": "0.95",
+                          "reasoning": "The Google Form at the specified URL has been opened. The next step is to identify the form fields and fill them with assumed values. The current_browser_state should then be saved without submitting the form. Since filling a form requires browser interaction, route to browser.",
+                          "local_reasoning": "The form has been opened, but not filled. The next logical step is to fill the form and save state without submitting.",
+                          "last_tooluse_summary": "Successfully opened the Google Form using browser tools.",
+                          "solution_summary": "Not ready yet.",
+                          "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser.",
+                          "route": "browser"
+                        },
+                        "from_step": null
+                      },
+                      "id": "0"
+                    },
+                    {
+                      "data": {
+                        "index": "1",
+                        "description": "Get the enhanced page structure of the form.",
+                        "type": "BROWSEROPERATION",
+                        "status": "completed",
+                        "result": {
+                          "page_structure_1A": {
+                            "page_structure": {
+                              "total_interactive_elements": 10,
+                              "categories": {
+                                "navigation": 2,
+                                "forms": 4,
+                                "buttons": 4
+                              }
+                            },
+                            "content": [
+                              {
+                                "type": "heading",
+                                "level": 2,
+                                "content": "Agentic Form"
+                              },
+                              {
+                                "type": "text",
+                                "content": "Hello Agent! You need to fill this form!"
+                              },
+                              {
+                                "type": "text",
+                                "content": "[Sign in to Google]"
+                              },
+                              {
+                                "type": "text",
+                                "content": "to save your progress."
+                              },
+                              {
+                                "type": "heading",
+                                "level": 2,
+                                "content": "What is the name of your Master? Required question"
+                              },
+                              {
+                                "type": "text",
+                                "content": "What is the name of your Master? Required question 1 point"
+                              },
+                              {
+                                "type": "heading",
+                                "level": 2,
+                                "content": "Which course is he/she taking? Required question"
+                              },
+                              {
+                                "type": "section",
+                                "content": "Which course is he/she taking? Required question 250 points",
+                                "level": 3
+                              },
+                              {
+                                "type": "interactive",
+                                "element_type": "button",
+                                "id": 4,
+                                "text": "Choose",
+                                "action": "click_element_by_index",
+                                "category": "button"
+                              },
+                              {
+                                "type": "interactive",
+                                "element_type": "button",
+                                "id": 3,
+                                "text": "ERA",
+                                "action": "click_element_by_index",
+                                "category": "button"
+                              },
+                              {
+                                "type": "heading",
+                                "level": 2,
+                                "content": "Is he/she married? Required question"
+                              },
+                              {
+                                "type": "heading",
+                                "level": 2,
+                                "content": "What course is he/her in? Required question"
+                              },
+                              {
+                                "type": "text",
+                                "content": "What course is he/her in? Required question 1 point"
+                              },
+                              {
+                                "type": "heading",
+                                "level": 2,
+                                "content": "What is his/her Date of Birth? Required question"
+                              },
+                              {
+                                "type": "text",
+                                "content": "What is his/her Date of Birth? Required question 1 point"
+                              },
+                              {
+                                "type": "heading",
+                                "level": 2,
+                                "content": "What is his/her email id? Required question"
+                              },
+                              {
+                                "type": "text",
+                                "content": "What is his/her email id? Required question 1 point"
+                              },
+                              {
+                                "type": "interactive",
+                                "element_type": "button",
+                                "id": 15,
+                                "text": "Submit",
+                                "action": "click_element_by_index",
+                                "category": "button"
+                              },
+                              {
+                                "type": "interactive",
+                                "element_type": "button",
+                                "id": 17,
+                                "text": "Clear form",
+                                "action": "click_element_by_index",
+                                "category": "button"
+                              },
+                              {
+                                "type": "text",
+                                "content": "Never submit passwords through Google Forms."
+                              },
+                              {
+                                "type": "text",
+                                "content": "This form was created inside The School of AI."
+                              },
+                              {
+                                "type": "text",
+                                "content": "Does this form look suspicious?"
+                              },
+                              {
+                                "type": "interactive",
+                                "element_type": "nav_link",
+                                "id": 18,
+                                "text": "Report",
+                                "action": "click_element_by_index",
+                                "category": "navigation"
+                              },
+                              {
+                                "type": "text",
+                                "content": "[Google Forms]"
+                              },
+                              {
+                                "type": "section",
+                                "content": "Additional Interactive Elements",
+                                "level": 2
+                              },
+                              {
+                                "type": "interactive",
+                                "element_type": "nav_link",
+                                "id": 19,
+                                "text": "Forms",
+                                "action": "click_element_by_index",
+                                "category": "navigation"
+                              },
+                              {
+                                "type": "interactive",
+                                "element_type": "text_input",
+                                "id": 2,
+                                "text": "Text Input",
+                                "action": "input_text",
+                                "category": "form"
+                              },
+                              {
+                                "type": "interactive",
+                                "element_type": "text_input",
+                                "id": 11,
+                                "text": "Text Input",
+                                "action": "input_text",
+                                "category": "form"
+                              },
+                              {
+                                "type": "interactive",
+                                "element_type": "text_input",
+                                "id": 12,
+                                "text": "Text Input",
+                                "action": "input_text",
+                                "category": "form"
+                              },
+                              {
+                                "type": "interactive",
+                                "element_type": "text_input",
+                                "id": 13,
+                                "text": "Text Input",
+                                "action": "input_text",
+                                "category": "form"
+                              }
+                            ]
+                          }
+                        },
+                        "conclusion": null,
+                        "error": null,
+                        "perception": {
+                          "entities": [
+                            "Google Form",
+                            "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                            "Agentic Form",
+                            "Form Fields"
+                          ],
+                          "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                          "original_goal_achieved": false,
+                          "local_goal_achieved": false,
+                          "confidence": "0.9",
+                          "reasoning": "The Google Form at the specified URL has been opened, and the page structure has been retrieved, showing various interactive elements including text input fields and buttons. The next step is to fill the form with assumed values. Since interacting with the form requires browser interaction and involves filling out the form fields, the task needs to be routed to the browser.",
+                          "local_reasoning": "The form is opened and page structure is extracted. It is not possible to fill the form and save the state without interacting with the browser. Hence, route = browser",
+                          "last_tooluse_summary": "Successfully retrieved the page structure of the opened Google Form.",
+                          "solution_summary": "Not ready yet.",
+                          "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser and its structure is known.",
+                          "route": "browser",
+                          "instruction_to_summarize": "Not applicable"
+                        },
+                        "from_step": null
+                      },
+                      "id": "1"
+                    },
+                    {
+                      "data": {
+                        "index": "2",
+                        "description": "Fill the form fields with assumed values.",
+                        "type": "BROWSEROPERATION",
+                        "status": "completed",
+                        "result": {},
+                        "conclusion": null,
+                        "error": null,
+                        "perception": {
+                          "entities": [
+                            "Google Form",
+                            "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                            "Form Fields",
+                            "Agentic Form"
+                          ],
+                          "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                          "original_goal_achieved": false,
+                          "local_goal_achieved": false,
+                          "confidence": "0.3",
+                          "reasoning": "The Google Form was opened and its structure was extracted. However, filling the form with assumed values failed. Since filling the form is essential to achieve the original goal and it failed, and there are repeated failed attempts, it's unlikely that further steps will succeed. It's best to summarize the current state, highlighting the form's structure and the failure to fill it. The current state includes the form URL and the page structure from globals_schema.",
+                          "local_reasoning": "Filling the form failed. Further attempts may not be helpful. Summarizing the available information is the best course of action.",
+                          "last_tooluse_summary": "Opening the form and extracting its structure were successful. Filling the form failed.",
+                          "solution_summary": "Failed to fill the form with assumed values.  Form URL is https://forms.gle/6Nc6QaaJyDvePxLv7. The structure was extracted successfully, including text inputs and buttons.",
+                          "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser, and its structure has been extracted, but the form could not be filled.",
+                          "route": "summarize",
+                          "instruction_to_summarize": "Summarize the current state. Include the Google Form URL (https://forms.gle/6Nc6QaaJyDvePxLv7) and a brief description of the page structure from `globals_schema['page_structure_1A']`, mentioning the number of interactive elements and categories (navigation, forms, buttons). Highlight that the attempt to fill the form with assumed values failed. Return the summary in markdown format."
+                        },
+                        "from_step": null
+                      },
+                      "id": "2"
+                    },
+                    {
+                      "data": {
+                        "index": "3",
+                        "description": "Save the current browser state.",
+                        "type": "BROWSEROPERATION",
+                        "status": "Skipped",
+                        "result": null,
+                        "conclusion": null,
+                        "error": null,
+                        "perception": null,
+                        "from_step": null
+                      },
+                      "id": "3"
+                    }
+                  ],
+                  "links": [
+                    {
+                      "type": "normal",
+                      "source": "ROOT",
+                      "target": "0"
+                    },
+                    {
+                      "type": "normal",
+                      "source": "0",
+                      "target": "1"
+                    },
+                    {
+                      "type": "normal",
+                      "source": "1",
+                      "target": "2"
+                    },
+                    {
+                      "type": "normal",
+                      "source": "2",
+                      "target": "3"
+                    }
+                  ]
+                }
+              },
+              "status": "success",
+              "final_step_id": "3",
+              "reason": "Browser operation summarized successfully",
+              "timestamp": "2025-05-30T18:08:35.689395",
+              "original_query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+              "final_summary": "Summary of Browser Operations:\n\n1.  **Browser Operations Performed:**\n    *   The browser opened the Google Form at the URL: `https://forms.gle/6Nc6QaaJyDvePxLv7`.\n    *   The page structure of the form was extracted.\n\n2.  **Key Results/Findings:**\n    *   The form has a total of 10 interactive elements.\n    *   The interactive elements are categorized as follows: 2 navigation elements, 4 form elements, and 4 button elements.\n\n3.  **Important Data Extracted:**\n    *   The form includes text input fields and buttons, essential for form filling.\n    *   The URL of the form is: `https://forms.gle/6Nc6QaaJyDvePxLv7`.\n\n4.  **Final Outcome:**\n    *   While the form was successfully opened and its structure was analyzed, the attempt to fill the form with assumed values **failed**. The form remains open in the browser, with its structure known, but the input fields are not populated.",
+              "browser_operation": true
+            },
+            "conclusion": null,
+            "error": null,
+            "perception": null,
+            "from_step": "ROOT"
+          },
+          "id": "BROWSER"
+        }
+      ],
+      "links": [
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "BROWSER"
+        }
+      ]
+    }
+  },
+  "session": {
+    "session_id": "379c62be-c20f-44b8-8316-c1f49e903f20",
+    "original_query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+    "perception_snapshots": [
+      {
+        "run_id": "379c62be-c20f-44b8-8316-c1f49e903f20-P",
+        "snapshot_type": "user_query",
+        "entities": [
+          "Google Form",
+          "https://forms.gle/6Nc6QaaJyDvePxLv7",
+          "Form Filling"
+        ],
+        "result_requirement": "Fill the google form with dummy values without submitting.",
+        "original_goal_achieved": false,
+        "reasoning": "The user wants to fill a Google Form. This involves browser interaction to open the form, identify the form fields, fill them with assumed values, and not submit. Planning for browser interaction is required.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The task involves interaction with a webpage (Google Form) and needs planning for form filling.",
+        "last_tooluse_summary": "Not applicable",
+        "solution_summary": "Not ready yet.",
+        "confidence": "0.9",
+        "route": "browser",
+        "timestamp": "...",
+        "return_to": ""
+      }
+    ],
+    "decision_snapshots": [],
+    "execution_snapshots": [],
+    "summarizer_snapshots": [
+      {
+        "run_id": "311ec099-8d5c-4c36-af60-b092a42b88d2",
+        "input": {
+          "original_query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+          "globals_schema": {
+            "memory": null,
+            "context": {
+              "session_id": "12e6c3d9-81ac-442e-bee6-64d5a514ecf1",
+              "query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+              "globals": {
+                "form_url_0A": "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                "page_structure_1A": {
+                  "page_structure": {
+                    "total_interactive_elements": 10,
+                    "categories": {
+                      "navigation": 2,
+                      "forms": 4,
+                      "buttons": 4
+                    }
+                  },
+                  "content": [
+                    {
+                      "type": "heading",
+                      "level": 2,
+                      "content": "Agentic Form"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Hello Agent! You need to fill this form!"
+                    },
+                    {
+                      "type": "text",
+                      "content": "[Sign in to Google]"
+                    },
+                    {
+                      "type": "text",
+                      "content": "to save your progress."
+                    },
+                    {
+                      "type": "heading",
+                      "level": 2,
+                      "content": "What is the name of your Master? Required question"
+                    },
+                    {
+                      "type": "text",
+                      "content": "What is the name of your Master? Required question 1 point"
+                    },
+                    {
+                      "type": "heading",
+                      "level": 2,
+                      "content": "Which course is he/she taking? Required question"
+                    },
+                    {
+                      "type": "section",
+                      "content": "Which course is he/she taking? Required question 250 points",
+                      "level": 3
+                    },
+                    {
+                      "type": "interactive",
+                      "element_type": "button",
+                      "id": 4,
+                      "text": "Choose",
+                      "action": "click_element_by_index",
+                      "category": "button"
+                    },
+                    {
+                      "type": "interactive",
+                      "element_type": "button",
+                      "id": 3,
+                      "text": "ERA",
+                      "action": "click_element_by_index",
+                      "category": "button"
+                    },
+                    {
+                      "type": "heading",
+                      "level": 2,
+                      "content": "Is he/she married? Required question"
+                    },
+                    {
+                      "type": "heading",
+                      "level": 2,
+                      "content": "What course is he/her in? Required question"
+                    },
+                    {
+                      "type": "text",
+                      "content": "What course is he/her in? Required question 1 point"
+                    },
+                    {
+                      "type": "heading",
+                      "level": 2,
+                      "content": "What is his/her Date of Birth? Required question"
+                    },
+                    {
+                      "type": "text",
+                      "content": "What is his/her Date of Birth? Required question 1 point"
+                    },
+                    {
+                      "type": "heading",
+                      "level": 2,
+                      "content": "What is his/her email id? Required question"
+                    },
+                    {
+                      "type": "text",
+                      "content": "What is his/her email id? Required question 1 point"
+                    },
+                    {
+                      "type": "interactive",
+                      "element_type": "button",
+                      "id": 15,
+                      "text": "Submit",
+                      "action": "click_element_by_index",
+                      "category": "button"
+                    },
+                    {
+                      "type": "interactive",
+                      "element_type": "button",
+                      "id": 17,
+                      "text": "Clear form",
+                      "action": "click_element_by_index",
+                      "category": "button"
+                    },
+                    {
+                      "type": "text",
+                      "content": "Never submit passwords through Google Forms."
+                    },
+                    {
+                      "type": "text",
+                      "content": "This form was created inside The School of AI."
+                    },
+                    {
+                      "type": "text",
+                      "content": "Does this form look suspicious?"
+                    },
+                    {
+                      "type": "interactive",
+                      "element_type": "nav_link",
+                      "id": 18,
+                      "text": "Report",
+                      "action": "click_element_by_index",
+                      "category": "navigation"
+                    },
+                    {
+                      "type": "text",
+                      "content": "[Google Forms]"
+                    },
+                    {
+                      "type": "section",
+                      "content": "Additional Interactive Elements",
+                      "level": 2
+                    },
+                    {
+                      "type": "interactive",
+                      "element_type": "nav_link",
+                      "id": 19,
+                      "text": "Forms",
+                      "action": "click_element_by_index",
+                      "category": "navigation"
+                    },
+                    {
+                      "type": "interactive",
+                      "element_type": "text_input",
+                      "id": 2,
+                      "text": "Text Input",
+                      "action": "input_text",
+                      "category": "form"
+                    },
+                    {
+                      "type": "interactive",
+                      "element_type": "text_input",
+                      "id": 11,
+                      "text": "Text Input",
+                      "action": "input_text",
+                      "category": "form"
+                    },
+                    {
+                      "type": "interactive",
+                      "element_type": "text_input",
+                      "id": 12,
+                      "text": "Text Input",
+                      "action": "input_text",
+                      "category": "form"
+                    },
+                    {
+                      "type": "interactive",
+                      "element_type": "text_input",
+                      "id": 13,
+                      "text": "Text Input",
+                      "action": "input_text",
+                      "category": "form"
+                    }
+                  ]
+                }
+              },
+              "graph": {
+                "directed": true,
+                "multigraph": false,
+                "graph": {},
+                "nodes": [
+                  {
+                    "data": {
+                      "index": "ROOT",
+                      "description": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+                      "type": "ROOT",
+                      "status": "completed",
+                      "result": null,
+                      "conclusion": null,
+                      "error": null,
+                      "perception": {
+                        "entities": [
+                          "Google Form",
+                          "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                          "Form Filling"
+                        ],
+                        "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                        "original_goal_achieved": false,
+                        "local_goal_achieved": false,
+                        "confidence": "0.95",
+                        "reasoning": "The user query requires opening a Google Form, filling it with assumed values, and saving the browser state without submitting. Since this involves browser interaction (opening the form and filling it), the task needs to be routed to the browser for execution. We need to identify the input elements, fill them and finally save current browser state.",
+                        "local_reasoning": "The query requires opening a form and interacting with it. This cannot be solved without browser interaction. Hence route = browser.",
+                        "last_tooluse_summary": "Not applicable",
+                        "solution_summary": "Not ready yet.",
+                        "current_browser_state": "Not applicable",
+                        "route": "browser",
+                        "instruction_to_summarize": "Not applicable"
+                      },
+                      "from_step": null
+                    },
+                    "id": "ROOT"
+                  },
+                  {
+                    "data": {
+                      "index": "0",
+                      "description": "Open the Google Form URL in a new tab.",
+                      "type": "BROWSEROPERATION",
+                      "status": "completed",
+                      "result": {
+                        "form_url_0A": "https://forms.gle/6Nc6QaaJyDvePxLv7"
+                      },
+                      "conclusion": null,
+                      "error": null,
+                      "perception": {
+                        "entities": [
+                          "Google Form",
+                          "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                          "Form Filling"
+                        ],
+                        "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                        "original_goal_achieved": false,
+                        "local_goal_achieved": false,
+                        "confidence": "0.95",
+                        "reasoning": "The Google Form at the specified URL has been opened. The next step is to identify the form fields and fill them with assumed values. The current_browser_state should then be saved without submitting the form. Since filling a form requires browser interaction, route to browser.",
+                        "local_reasoning": "The form has been opened, but not filled. The next logical step is to fill the form and save state without submitting.",
+                        "last_tooluse_summary": "Successfully opened the Google Form using browser tools.",
+                        "solution_summary": "Not ready yet.",
+                        "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser.",
+                        "route": "browser"
+                      },
+                      "from_step": null
+                    },
+                    "id": "0"
+                  },
+                  {
+                    "data": {
+                      "index": "1",
+                      "description": "Get the enhanced page structure of the form.",
+                      "type": "BROWSEROPERATION",
+                      "status": "completed",
+                      "result": {
+                        "page_structure_1A": {
+                          "page_structure": {
+                            "total_interactive_elements": 10,
+                            "categories": {
+                              "navigation": 2,
+                              "forms": 4,
+                              "buttons": 4
+                            }
+                          },
+                          "content": [
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "Agentic Form"
+                            },
+                            {
+                              "type": "text",
+                              "content": "Hello Agent! You need to fill this form!"
+                            },
+                            {
+                              "type": "text",
+                              "content": "[Sign in to Google]"
+                            },
+                            {
+                              "type": "text",
+                              "content": "to save your progress."
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "What is the name of your Master? Required question"
+                            },
+                            {
+                              "type": "text",
+                              "content": "What is the name of your Master? Required question 1 point"
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "Which course is he/she taking? Required question"
+                            },
+                            {
+                              "type": "section",
+                              "content": "Which course is he/she taking? Required question 250 points",
+                              "level": 3
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "button",
+                              "id": 4,
+                              "text": "Choose",
+                              "action": "click_element_by_index",
+                              "category": "button"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "button",
+                              "id": 3,
+                              "text": "ERA",
+                              "action": "click_element_by_index",
+                              "category": "button"
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "Is he/she married? Required question"
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "What course is he/her in? Required question"
+                            },
+                            {
+                              "type": "text",
+                              "content": "What course is he/her in? Required question 1 point"
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "What is his/her Date of Birth? Required question"
+                            },
+                            {
+                              "type": "text",
+                              "content": "What is his/her Date of Birth? Required question 1 point"
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "What is his/her email id? Required question"
+                            },
+                            {
+                              "type": "text",
+                              "content": "What is his/her email id? Required question 1 point"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "button",
+                              "id": 15,
+                              "text": "Submit",
+                              "action": "click_element_by_index",
+                              "category": "button"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "button",
+                              "id": 17,
+                              "text": "Clear form",
+                              "action": "click_element_by_index",
+                              "category": "button"
+                            },
+                            {
+                              "type": "text",
+                              "content": "Never submit passwords through Google Forms."
+                            },
+                            {
+                              "type": "text",
+                              "content": "This form was created inside The School of AI."
+                            },
+                            {
+                              "type": "text",
+                              "content": "Does this form look suspicious?"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "nav_link",
+                              "id": 18,
+                              "text": "Report",
+                              "action": "click_element_by_index",
+                              "category": "navigation"
+                            },
+                            {
+                              "type": "text",
+                              "content": "[Google Forms]"
+                            },
+                            {
+                              "type": "section",
+                              "content": "Additional Interactive Elements",
+                              "level": 2
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "nav_link",
+                              "id": 19,
+                              "text": "Forms",
+                              "action": "click_element_by_index",
+                              "category": "navigation"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "text_input",
+                              "id": 2,
+                              "text": "Text Input",
+                              "action": "input_text",
+                              "category": "form"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "text_input",
+                              "id": 11,
+                              "text": "Text Input",
+                              "action": "input_text",
+                              "category": "form"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "text_input",
+                              "id": 12,
+                              "text": "Text Input",
+                              "action": "input_text",
+                              "category": "form"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "text_input",
+                              "id": 13,
+                              "text": "Text Input",
+                              "action": "input_text",
+                              "category": "form"
+                            }
+                          ]
+                        }
+                      },
+                      "conclusion": null,
+                      "error": null,
+                      "perception": {
+                        "entities": [
+                          "Google Form",
+                          "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                          "Agentic Form",
+                          "Form Fields"
+                        ],
+                        "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                        "original_goal_achieved": false,
+                        "local_goal_achieved": false,
+                        "confidence": "0.9",
+                        "reasoning": "The Google Form at the specified URL has been opened, and the page structure has been retrieved, showing various interactive elements including text input fields and buttons. The next step is to fill the form with assumed values. Since interacting with the form requires browser interaction and involves filling out the form fields, the task needs to be routed to the browser.",
+                        "local_reasoning": "The form is opened and page structure is extracted. It is not possible to fill the form and save the state without interacting with the browser. Hence, route = browser",
+                        "last_tooluse_summary": "Successfully retrieved the page structure of the opened Google Form.",
+                        "solution_summary": "Not ready yet.",
+                        "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser and its structure is known.",
+                        "route": "browser",
+                        "instruction_to_summarize": "Not applicable"
+                      },
+                      "from_step": null
+                    },
+                    "id": "1"
+                  },
+                  {
+                    "data": {
+                      "index": "2",
+                      "description": "Fill the form fields with assumed values.",
+                      "type": "BROWSEROPERATION",
+                      "status": "completed",
+                      "result": {},
+                      "conclusion": null,
+                      "error": null,
+                      "perception": {
+                        "entities": [
+                          "Google Form",
+                          "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                          "Form Fields",
+                          "Agentic Form"
+                        ],
+                        "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                        "original_goal_achieved": false,
+                        "local_goal_achieved": false,
+                        "confidence": "0.3",
+                        "reasoning": "The Google Form was opened and its structure was extracted. However, filling the form with assumed values failed. Since filling the form is essential to achieve the original goal and it failed, and there are repeated failed attempts, it's unlikely that further steps will succeed. It's best to summarize the current state, highlighting the form's structure and the failure to fill it. The current state includes the form URL and the page structure from globals_schema.",
+                        "local_reasoning": "Filling the form failed. Further attempts may not be helpful. Summarizing the available information is the best course of action.",
+                        "last_tooluse_summary": "Opening the form and extracting its structure were successful. Filling the form failed.",
+                        "solution_summary": "Failed to fill the form with assumed values.  Form URL is https://forms.gle/6Nc6QaaJyDvePxLv7. The structure was extracted successfully, including text inputs and buttons.",
+                        "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser, and its structure has been extracted, but the form could not be filled.",
+                        "route": "summarize",
+                        "instruction_to_summarize": "Summarize the current state. Include the Google Form URL (https://forms.gle/6Nc6QaaJyDvePxLv7) and a brief description of the page structure from `globals_schema['page_structure_1A']`, mentioning the number of interactive elements and categories (navigation, forms, buttons). Highlight that the attempt to fill the form with assumed values failed. Return the summary in markdown format."
+                      },
+                      "from_step": null
+                    },
+                    "id": "2"
+                  },
+                  {
+                    "data": {
+                      "index": "3",
+                      "description": "Save the current browser state.",
+                      "type": "BROWSEROPERATION",
+                      "status": "Skipped",
+                      "result": null,
+                      "conclusion": null,
+                      "error": null,
+                      "perception": null,
+                      "from_step": null
+                    },
+                    "id": "3"
+                  }
+                ],
+                "links": [
+                  {
+                    "type": "normal",
+                    "source": "ROOT",
+                    "target": "0"
+                  },
+                  {
+                    "type": "normal",
+                    "source": "0",
+                    "target": "1"
+                  },
+                  {
+                    "type": "normal",
+                    "source": "1",
+                    "target": "2"
+                  },
+                  {
+                    "type": "normal",
+                    "source": "2",
+                    "target": "3"
+                  }
+                ]
+              }
+            },
+            "status": "success",
+            "final_step_id": "3",
+            "reason": "Browser operation summarized successfully",
+            "timestamp": "2025-05-30T18:08:35.689395",
+            "original_query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+            "final_summary": "Summary of Browser Operations:\n\n1.  **Browser Operations Performed:**\n    *   The browser opened the Google Form at the URL: `https://forms.gle/6Nc6QaaJyDvePxLv7`.\n    *   The page structure of the form was extracted.\n\n2.  **Key Results/Findings:**\n    *   The form has a total of 10 interactive elements.\n    *   The interactive elements are categorized as follows: 2 navigation elements, 4 form elements, and 4 button elements.\n\n3.  **Important Data Extracted:**\n    *   The form includes text input fields and buttons, essential for form filling.\n    *   The URL of the form is: `https://forms.gle/6Nc6QaaJyDvePxLv7`.\n\n4.  **Final Outcome:**\n    *   While the form was successfully opened and its structure was analyzed, the attempt to fill the form with assumed values **failed**. The form remains open in the browser, with its structure known, but the input fields are not populated.",
+            "browser_operation": true
+          },
+          "plan_graph": {
+            "directed": true,
+            "multigraph": false,
+            "graph": {},
+            "nodes": [
+              {
+                "data": {
+                  "index": "ROOT",
+                  "description": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+                  "type": "ROOT",
+                  "status": "completed",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "Google Form",
+                      "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                      "Form Filling"
+                    ],
+                    "result_requirement": "Fill the google form with dummy values without submitting.",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.9",
+                    "reasoning": "The user wants to fill a Google Form. This involves browser interaction to open the form, identify the form fields, fill them with assumed values, and not submit. Planning for browser interaction is required.",
+                    "local_reasoning": "The task involves interaction with a webpage (Google Form) and needs planning for form filling.",
+                    "last_tooluse_summary": "Not applicable",
+                    "solution_summary": "Not ready yet.",
+                    "route": "browser",
+                    "instruction_to_summarize": "Not applicable"
+                  },
+                  "from_step": null
+                },
+                "id": "ROOT"
+              },
+              {
+                "data": {
+                  "index": "BROWSER",
+                  "description": "Browser operation",
+                  "type": "BROWSEROPERATION",
+                  "status": "completed",
+                  "result": {
+                    "context": {
+                      "session_id": "12e6c3d9-81ac-442e-bee6-64d5a514ecf1",
+                      "query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+                      "globals": {
+                        "form_url_0A": "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                        "page_structure_1A": {
+                          "page_structure": {
+                            "total_interactive_elements": 10,
+                            "categories": {
+                              "navigation": 2,
+                              "forms": 4,
+                              "buttons": 4
+                            }
+                          },
+                          "content": [
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "Agentic Form"
+                            },
+                            {
+                              "type": "text",
+                              "content": "Hello Agent! You need to fill this form!"
+                            },
+                            {
+                              "type": "text",
+                              "content": "[Sign in to Google]"
+                            },
+                            {
+                              "type": "text",
+                              "content": "to save your progress."
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "What is the name of your Master? Required question"
+                            },
+                            {
+                              "type": "text",
+                              "content": "What is the name of your Master? Required question 1 point"
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "Which course is he/she taking? Required question"
+                            },
+                            {
+                              "type": "section",
+                              "content": "Which course is he/she taking? Required question 250 points",
+                              "level": 3
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "button",
+                              "id": 4,
+                              "text": "Choose",
+                              "action": "click_element_by_index",
+                              "category": "button"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "button",
+                              "id": 3,
+                              "text": "ERA",
+                              "action": "click_element_by_index",
+                              "category": "button"
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "Is he/she married? Required question"
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "What course is he/her in? Required question"
+                            },
+                            {
+                              "type": "text",
+                              "content": "What course is he/her in? Required question 1 point"
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "What is his/her Date of Birth? Required question"
+                            },
+                            {
+                              "type": "text",
+                              "content": "What is his/her Date of Birth? Required question 1 point"
+                            },
+                            {
+                              "type": "heading",
+                              "level": 2,
+                              "content": "What is his/her email id? Required question"
+                            },
+                            {
+                              "type": "text",
+                              "content": "What is his/her email id? Required question 1 point"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "button",
+                              "id": 15,
+                              "text": "Submit",
+                              "action": "click_element_by_index",
+                              "category": "button"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "button",
+                              "id": 17,
+                              "text": "Clear form",
+                              "action": "click_element_by_index",
+                              "category": "button"
+                            },
+                            {
+                              "type": "text",
+                              "content": "Never submit passwords through Google Forms."
+                            },
+                            {
+                              "type": "text",
+                              "content": "This form was created inside The School of AI."
+                            },
+                            {
+                              "type": "text",
+                              "content": "Does this form look suspicious?"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "nav_link",
+                              "id": 18,
+                              "text": "Report",
+                              "action": "click_element_by_index",
+                              "category": "navigation"
+                            },
+                            {
+                              "type": "text",
+                              "content": "[Google Forms]"
+                            },
+                            {
+                              "type": "section",
+                              "content": "Additional Interactive Elements",
+                              "level": 2
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "nav_link",
+                              "id": 19,
+                              "text": "Forms",
+                              "action": "click_element_by_index",
+                              "category": "navigation"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "text_input",
+                              "id": 2,
+                              "text": "Text Input",
+                              "action": "input_text",
+                              "category": "form"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "text_input",
+                              "id": 11,
+                              "text": "Text Input",
+                              "action": "input_text",
+                              "category": "form"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "text_input",
+                              "id": 12,
+                              "text": "Text Input",
+                              "action": "input_text",
+                              "category": "form"
+                            },
+                            {
+                              "type": "interactive",
+                              "element_type": "text_input",
+                              "id": 13,
+                              "text": "Text Input",
+                              "action": "input_text",
+                              "category": "form"
+                            }
+                          ]
+                        }
+                      },
+                      "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                          {
+                            "data": {
+                              "index": "ROOT",
+                              "description": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+                              "type": "ROOT",
+                              "status": "completed",
+                              "result": null,
+                              "conclusion": null,
+                              "error": null,
+                              "perception": {
+                                "entities": [
+                                  "Google Form",
+                                  "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                                  "Form Filling"
+                                ],
+                                "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                                "original_goal_achieved": false,
+                                "local_goal_achieved": false,
+                                "confidence": "0.95",
+                                "reasoning": "The user query requires opening a Google Form, filling it with assumed values, and saving the browser state without submitting. Since this involves browser interaction (opening the form and filling it), the task needs to be routed to the browser for execution. We need to identify the input elements, fill them and finally save current browser state.",
+                                "local_reasoning": "The query requires opening a form and interacting with it. This cannot be solved without browser interaction. Hence route = browser.",
+                                "last_tooluse_summary": "Not applicable",
+                                "solution_summary": "Not ready yet.",
+                                "current_browser_state": "Not applicable",
+                                "route": "browser",
+                                "instruction_to_summarize": "Not applicable"
+                              },
+                              "from_step": null
+                            },
+                            "id": "ROOT"
+                          },
+                          {
+                            "data": {
+                              "index": "0",
+                              "description": "Open the Google Form URL in a new tab.",
+                              "type": "BROWSEROPERATION",
+                              "status": "completed",
+                              "result": {
+                                "form_url_0A": "https://forms.gle/6Nc6QaaJyDvePxLv7"
+                              },
+                              "conclusion": null,
+                              "error": null,
+                              "perception": {
+                                "entities": [
+                                  "Google Form",
+                                  "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                                  "Form Filling"
+                                ],
+                                "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                                "original_goal_achieved": false,
+                                "local_goal_achieved": false,
+                                "confidence": "0.95",
+                                "reasoning": "The Google Form at the specified URL has been opened. The next step is to identify the form fields and fill them with assumed values. The current_browser_state should then be saved without submitting the form. Since filling a form requires browser interaction, route to browser.",
+                                "local_reasoning": "The form has been opened, but not filled. The next logical step is to fill the form and save state without submitting.",
+                                "last_tooluse_summary": "Successfully opened the Google Form using browser tools.",
+                                "solution_summary": "Not ready yet.",
+                                "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser.",
+                                "route": "browser"
+                              },
+                              "from_step": null
+                            },
+                            "id": "0"
+                          },
+                          {
+                            "data": {
+                              "index": "1",
+                              "description": "Get the enhanced page structure of the form.",
+                              "type": "BROWSEROPERATION",
+                              "status": "completed",
+                              "result": {
+                                "page_structure_1A": {
+                                  "page_structure": {
+                                    "total_interactive_elements": 10,
+                                    "categories": {
+                                      "navigation": 2,
+                                      "forms": 4,
+                                      "buttons": 4
+                                    }
+                                  },
+                                  "content": [
+                                    {
+                                      "type": "heading",
+                                      "level": 2,
+                                      "content": "Agentic Form"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "Hello Agent! You need to fill this form!"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "[Sign in to Google]"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "to save your progress."
+                                    },
+                                    {
+                                      "type": "heading",
+                                      "level": 2,
+                                      "content": "What is the name of your Master? Required question"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "What is the name of your Master? Required question 1 point"
+                                    },
+                                    {
+                                      "type": "heading",
+                                      "level": 2,
+                                      "content": "Which course is he/she taking? Required question"
+                                    },
+                                    {
+                                      "type": "section",
+                                      "content": "Which course is he/she taking? Required question 250 points",
+                                      "level": 3
+                                    },
+                                    {
+                                      "type": "interactive",
+                                      "element_type": "button",
+                                      "id": 4,
+                                      "text": "Choose",
+                                      "action": "click_element_by_index",
+                                      "category": "button"
+                                    },
+                                    {
+                                      "type": "interactive",
+                                      "element_type": "button",
+                                      "id": 3,
+                                      "text": "ERA",
+                                      "action": "click_element_by_index",
+                                      "category": "button"
+                                    },
+                                    {
+                                      "type": "heading",
+                                      "level": 2,
+                                      "content": "Is he/she married? Required question"
+                                    },
+                                    {
+                                      "type": "heading",
+                                      "level": 2,
+                                      "content": "What course is he/her in? Required question"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "What course is he/her in? Required question 1 point"
+                                    },
+                                    {
+                                      "type": "heading",
+                                      "level": 2,
+                                      "content": "What is his/her Date of Birth? Required question"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "What is his/her Date of Birth? Required question 1 point"
+                                    },
+                                    {
+                                      "type": "heading",
+                                      "level": 2,
+                                      "content": "What is his/her email id? Required question"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "What is his/her email id? Required question 1 point"
+                                    },
+                                    {
+                                      "type": "interactive",
+                                      "element_type": "button",
+                                      "id": 15,
+                                      "text": "Submit",
+                                      "action": "click_element_by_index",
+                                      "category": "button"
+                                    },
+                                    {
+                                      "type": "interactive",
+                                      "element_type": "button",
+                                      "id": 17,
+                                      "text": "Clear form",
+                                      "action": "click_element_by_index",
+                                      "category": "button"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "Never submit passwords through Google Forms."
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "This form was created inside The School of AI."
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "Does this form look suspicious?"
+                                    },
+                                    {
+                                      "type": "interactive",
+                                      "element_type": "nav_link",
+                                      "id": 18,
+                                      "text": "Report",
+                                      "action": "click_element_by_index",
+                                      "category": "navigation"
+                                    },
+                                    {
+                                      "type": "text",
+                                      "content": "[Google Forms]"
+                                    },
+                                    {
+                                      "type": "section",
+                                      "content": "Additional Interactive Elements",
+                                      "level": 2
+                                    },
+                                    {
+                                      "type": "interactive",
+                                      "element_type": "nav_link",
+                                      "id": 19,
+                                      "text": "Forms",
+                                      "action": "click_element_by_index",
+                                      "category": "navigation"
+                                    },
+                                    {
+                                      "type": "interactive",
+                                      "element_type": "text_input",
+                                      "id": 2,
+                                      "text": "Text Input",
+                                      "action": "input_text",
+                                      "category": "form"
+                                    },
+                                    {
+                                      "type": "interactive",
+                                      "element_type": "text_input",
+                                      "id": 11,
+                                      "text": "Text Input",
+                                      "action": "input_text",
+                                      "category": "form"
+                                    },
+                                    {
+                                      "type": "interactive",
+                                      "element_type": "text_input",
+                                      "id": 12,
+                                      "text": "Text Input",
+                                      "action": "input_text",
+                                      "category": "form"
+                                    },
+                                    {
+                                      "type": "interactive",
+                                      "element_type": "text_input",
+                                      "id": 13,
+                                      "text": "Text Input",
+                                      "action": "input_text",
+                                      "category": "form"
+                                    }
+                                  ]
+                                }
+                              },
+                              "conclusion": null,
+                              "error": null,
+                              "perception": {
+                                "entities": [
+                                  "Google Form",
+                                  "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                                  "Agentic Form",
+                                  "Form Fields"
+                                ],
+                                "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                                "original_goal_achieved": false,
+                                "local_goal_achieved": false,
+                                "confidence": "0.9",
+                                "reasoning": "The Google Form at the specified URL has been opened, and the page structure has been retrieved, showing various interactive elements including text input fields and buttons. The next step is to fill the form with assumed values. Since interacting with the form requires browser interaction and involves filling out the form fields, the task needs to be routed to the browser.",
+                                "local_reasoning": "The form is opened and page structure is extracted. It is not possible to fill the form and save the state without interacting with the browser. Hence, route = browser",
+                                "last_tooluse_summary": "Successfully retrieved the page structure of the opened Google Form.",
+                                "solution_summary": "Not ready yet.",
+                                "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser and its structure is known.",
+                                "route": "browser",
+                                "instruction_to_summarize": "Not applicable"
+                              },
+                              "from_step": null
+                            },
+                            "id": "1"
+                          },
+                          {
+                            "data": {
+                              "index": "2",
+                              "description": "Fill the form fields with assumed values.",
+                              "type": "BROWSEROPERATION",
+                              "status": "completed",
+                              "result": {},
+                              "conclusion": null,
+                              "error": null,
+                              "perception": {
+                                "entities": [
+                                  "Google Form",
+                                  "https://forms.gle/6Nc6QaaJyDvePxLv7",
+                                  "Form Fields",
+                                  "Agentic Form"
+                                ],
+                                "result_requirement": "Fill the google form at the specified URL with assumed values and save browser state. Do not submit.",
+                                "original_goal_achieved": false,
+                                "local_goal_achieved": false,
+                                "confidence": "0.3",
+                                "reasoning": "The Google Form was opened and its structure was extracted. However, filling the form with assumed values failed. Since filling the form is essential to achieve the original goal and it failed, and there are repeated failed attempts, it's unlikely that further steps will succeed. It's best to summarize the current state, highlighting the form's structure and the failure to fill it. The current state includes the form URL and the page structure from globals_schema.",
+                                "local_reasoning": "Filling the form failed. Further attempts may not be helpful. Summarizing the available information is the best course of action.",
+                                "last_tooluse_summary": "Opening the form and extracting its structure were successful. Filling the form failed.",
+                                "solution_summary": "Failed to fill the form with assumed values.  Form URL is https://forms.gle/6Nc6QaaJyDvePxLv7. The structure was extracted successfully, including text inputs and buttons.",
+                                "current_browser_state": "The Google Form https://forms.gle/6Nc6QaaJyDvePxLv7 is open in the browser, and its structure has been extracted, but the form could not be filled.",
+                                "route": "summarize",
+                                "instruction_to_summarize": "Summarize the current state. Include the Google Form URL (https://forms.gle/6Nc6QaaJyDvePxLv7) and a brief description of the page structure from `globals_schema['page_structure_1A']`, mentioning the number of interactive elements and categories (navigation, forms, buttons). Highlight that the attempt to fill the form with assumed values failed. Return the summary in markdown format."
+                              },
+                              "from_step": null
+                            },
+                            "id": "2"
+                          },
+                          {
+                            "data": {
+                              "index": "3",
+                              "description": "Save the current browser state.",
+                              "type": "BROWSEROPERATION",
+                              "status": "Skipped",
+                              "result": null,
+                              "conclusion": null,
+                              "error": null,
+                              "perception": null,
+                              "from_step": null
+                            },
+                            "id": "3"
+                          }
+                        ],
+                        "links": [
+                          {
+                            "type": "normal",
+                            "source": "ROOT",
+                            "target": "0"
+                          },
+                          {
+                            "type": "normal",
+                            "source": "0",
+                            "target": "1"
+                          },
+                          {
+                            "type": "normal",
+                            "source": "1",
+                            "target": "2"
+                          },
+                          {
+                            "type": "normal",
+                            "source": "2",
+                            "target": "3"
+                          }
+                        ]
+                      }
+                    },
+                    "status": "success",
+                    "final_step_id": "3",
+                    "reason": "Browser operation summarized successfully",
+                    "timestamp": "2025-05-30T18:08:35.689395",
+                    "original_query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+                    "final_summary": "Summary of Browser Operations:\n\n1.  **Browser Operations Performed:**\n    *   The browser opened the Google Form at the URL: `https://forms.gle/6Nc6QaaJyDvePxLv7`.\n    *   The page structure of the form was extracted.\n\n2.  **Key Results/Findings:**\n    *   The form has a total of 10 interactive elements.\n    *   The interactive elements are categorized as follows: 2 navigation elements, 4 form elements, and 4 button elements.\n\n3.  **Important Data Extracted:**\n    *   The form includes text input fields and buttons, essential for form filling.\n    *   The URL of the form is: `https://forms.gle/6Nc6QaaJyDvePxLv7`.\n\n4.  **Final Outcome:**\n    *   While the form was successfully opened and its structure was analyzed, the attempt to fill the form with assumed values **failed**. The form remains open in the browser, with its structure known, but the input fields are not populated.",
+                    "browser_operation": true
+                  },
+                  "conclusion": null,
+                  "error": null,
+                  "perception": null,
+                  "from_step": "ROOT"
+                },
+                "id": "BROWSER"
+              }
+            ],
+            "links": [
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "BROWSER"
+              }
+            ]
+          },
+          "perception": {
+            "entities": [
+              "Google Form",
+              "https://forms.gle/6Nc6QaaJyDvePxLv7",
+              "Form Filling"
+            ],
+            "result_requirement": "Fill the google form with dummy values without submitting.",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The user wants to fill a Google Form. This involves browser interaction to open the form, identify the form fields, fill them with assumed values, and not submit. Planning for browser interaction is required.",
+            "local_reasoning": "The task involves interaction with a webpage (Google Form) and needs planning for form filling.",
+            "last_tooluse_summary": "Not applicable",
+            "solution_summary": "Not ready yet.",
+            "route": "browser",
+            "instruction_to_summarize": "Not applicable"
+          }
+        },
+        "summary_output": "The agent attempted to open and fill the Google Form located at [https://forms.gle/6Nc6QaaJyDvePxLv7](https://forms.gle/6Nc6QaaJyDvePxLv7). The form's structure was successfully extracted.\n\nThe form, named \"Agentic Form,\" contains a total of **10 interactive elements**, categorized as:\n\n*   **2 navigation** elements\n*   **4 form** elements (text input fields)\n*   **4 button** elements\n\nUnfortunately, the attempt to **fill the form with assumed values failed.** The form is currently open with its structure known, but the input fields are not populated.",
+        "success": true,
+        "error": null,
+        "timestamp": "2025-05-30T18:07:03Z",
+        "return_to": ""
+      }
+    ],
+    "final_summary": "The agent attempted to open and fill the Google Form located at [https://forms.gle/6Nc6QaaJyDvePxLv7](https://forms.gle/6Nc6QaaJyDvePxLv7). The form's structure was successfully extracted.\n\nThe form, named \"Agentic Form,\" contains a total of **10 interactive elements**, categorized as:\n\n*   **2 navigation** elements\n*   **4 form** elements (text input fields)\n*   **4 button** elements\n\nUnfortunately, the attempt to **fill the form with assumed values failed.** The form is currently open with its structure known, but the input fields are not populated.",
+    "status": "success",
+    "completed_at": "2025-05-30T18:08:40.298175"
+  },
+  "status": "success",
+  "final_step_id": "BROWSER",
+  "reason": "Summarized successfully",
+  "timestamp": "2025-05-30T18:08:40.304174",
+  "original_query": "Query 1: Open https://forms.gle/6Nc6QaaJyDvePxLv7 and fill in the form, assume the values, don't click submit",
+  "final_summary": "The agent attempted to open and fill the Google Form located at [https://forms.gle/6Nc6QaaJyDvePxLv7](https://forms.gle/6Nc6QaaJyDvePxLv7). The form's structure was successfully extracted.\n\nThe form, named \"Agentic Form,\" contains a total of **10 interactive elements**, categorized as:\n\n*   **2 navigation** elements\n*   **4 form** elements (text input fields)\n*   **4 button** elements\n\nUnfortunately, the attempt to **fill the form with assumed values failed.** The form is currently open with its structure known, but the input fields are not populated."
+}

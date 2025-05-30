@@ -2,27 +2,28 @@
 from typing import Dict, Any
 from agent.model_manager import ModelManager
 from utils.json_parser import parse_llm_json
-from config.log_config import setup_logging, logger_json_block
+from config.log_config import setup_logging, logger_prompt
 from pathlib import Path
 import json
 from datetime import datetime
 
 log = setup_logging(__name__)
 
-def build_browser_decision_input(ctx, query, p_out) -> Dict[str, Any]:
+def build_browser_decision_input(ctx, query, p_out, plan_mode: str = "initial") -> Dict[str, Any]:
     """Build input for browser decision
     
     Args:
         ctx: BrowserContext instance
         query: The user's query
         p_out: Perception output
+        plan_mode: Either "initial" for first planning or "mid-session" for replanning
         
     Returns:
         Dict containing the input for decision
     """
     return {
         "current_time": datetime.utcnow().isoformat(),
-        "plan_mode": "initial",
+        "plan_mode": plan_mode,  # "initial" or "mid-session"
         "planning_strategy": "browser",
         "original_query": query,
         "perception": p_out,
@@ -63,6 +64,8 @@ class BrowserDecision:
             full_prompt = f"{prompt_template.strip()}\n{tool_descriptions}\n\n```json\n{json.dumps(decision_input, indent=2)}\n```"
             
             #log.info(f"Decision input: {decision_input}")
+
+            logger_prompt(log, "📝 Browser Agent Decision prompt:", full_prompt)
             
             # Generate the plan
             response = await self.model.generate_text(full_prompt)

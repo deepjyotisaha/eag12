@@ -35,6 +35,7 @@ class BrowserPerceptionResult:
     solution_summary: str
     confidence: str
     route: str
+    current_browser_state: str
 
 
 class BrowserContext:
@@ -69,27 +70,27 @@ class BrowserContext:
         """
         return self.latest_node_id
 
-    def add_step(self, step_id: str, description: str, step_type: str, from_node: Optional[str] = None, edge_type: str = "normal") -> str:
+    def add_step(self, step_id: str, description: str, step_type: str, from_step: str = None, edge_type: str = "normal"):
         """Add a step to the context
         
         Args:
             step_id: Unique identifier for the step
             description: Description of what the step does
             step_type: Type of the step
-            from_node: ID of the step this step follows from (default: None)
+            from_step: ID of the step this step follows from (default: None)
             edge_type: Type of the edge between steps (default: "normal")
         """
         step_node = BrowserStepNode(
             index=step_id,
             description=description,
             type=step_type,
-            from_step=from_node
+            from_step=from_step
         )
         self.graph.add_node(step_id, data=step_node)
         
-        # Always add the edge if from_node is provided
-        if from_node:
-            self.graph.add_edge(from_node, step_id, type=edge_type)
+        # Always add the edge if from_step is provided
+        if from_step:
+            self.graph.add_edge(from_step, step_id, type=edge_type)
         
         self.latest_node_id = step_id
         return step_id

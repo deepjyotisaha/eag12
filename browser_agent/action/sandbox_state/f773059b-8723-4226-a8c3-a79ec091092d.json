@@ -1,0 +1,1271 @@
+{
+  "result_0A": "🔗  Opened new tab with https://www.inkers.ai\n\nInteractive Elements:\n{\n  \"success\": true,\n  \"nav\": [\n    {\n      \"id\": 1,\n      \"desc\": \"Home\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 2,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 5,\n      \"desc\": \"Team\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 6,\n      \"desc\": \"Pricing\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 7,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 8,\n      \"desc\": \"Demo\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 10,\n      \"desc\": \"Owners\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 11,\n      \"desc\": \"Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 12,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 14,\n      \"desc\": \"Request a demo (cta-demo-button)\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 229,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 231,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 233,\n      \"desc\": \"Link\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 301,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 302,\n      \"desc\": \"Terms of Use\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 303,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"forms\": [\n    {\n      \"id\": 261,\n      \"desc\": \"Enter your first name (Name_First)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 263,\n      \"desc\": \"Enter your last name (Name_Last)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 265,\n      \"desc\": \"Enter country code (PhoneNumber_countrycodeval)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 267,\n      \"desc\": \"Enter your phone number (PhoneNumber_countrycode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 269,\n      \"desc\": \"Enter your organization name (SingleLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 271,\n      \"desc\": \"Enter your email (Email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 273,\n      \"desc\": \"Enter area to scan (sqft) (Number)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 276,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 280,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 283,\n      \"desc\": \"Date Input\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 285,\n      \"desc\": \"Address Line 1 (Address_AddressLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 286,\n      \"desc\": \"Address Line 2 (Address_AddressLine2)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 287,\n      \"desc\": \"City (Address_City)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 288,\n      \"desc\": \"State/Region/Province (Address_Region)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 289,\n      \"desc\": \"Postal / Zip Code (Address_ZipCode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 290,\n      \"desc\": \"Select Address Country (Address_Country)\",\n      \"action\": \"select_dropdown_option\",\n      \"options\": [\n        \"Åland Islands\",\n        \"Afghanistan\",\n        \"Akrotiri\",\n        \"Albania\",\n        \"Algeria\",\n        \"American Samoa\",\n        \"Andorra\",\n        \"Angola\",\n        \"Anguilla\",\n        \"Antarctica\",\n        \"Antigua and Barbuda\",\n        \"Argentina\",\n        \"Armenia\",\n        \"Aruba\",\n        \"Ashmore and Cartier Islands\",\n        \"Australia\",\n        \"Austria\",\n        \"Azerbaijan\",\n        \"Bahrain\",\n        \"Bangladesh\",\n        \"Barbados\",\n        \"Bassas Da India\",\n        \"Belarus\",\n        \"Belgium\",\n        \"Belize\",\n        \"Benin\",\n        \"Bermuda\",\n        \"Bhutan\",\n        \"Bolivia\",\n        \"Bosnia and Herzegovina\",\n        \"Botswana\",\n        \"Bouvet Island\",\n        \"Brazil\",\n        \"British Indian Ocean Territory\",\n        \"British Virgin Islands\",\n        \"Brunei\",\n        \"Bulgaria\",\n        \"Burkina Faso\",\n        \"Burma\",\n        \"Burundi\",\n        \"Cambodia\",\n        \"Cameroon\",\n        \"Canada\",\n        \"Cape Verde\",\n        \"Caribbean Netherlands\",\n        \"Cayman Islands\",\n        \"Central African Republic\",\n        \"Chad\",\n        \"Chile\",\n        \"China\",\n        \"Christmas Island\",\n        \"Clipperton Island\",\n        \"Cocos (Keeling) Islands\",\n        \"Colombia\",\n        \"Comoros\",\n        \"Cook Islands\",\n        \"Coral Sea Islands\",\n        \"Costa Rica\",\n        \"Cote D'Ivoire\",\n        \"Croatia\",\n        \"Cuba\",\n        \"Curaçao\",\n        \"Cyprus\",\n        \"Czech Republic\",\n        \"Democratic Republic of the Congo\",\n        \"Denmark\",\n        \"Dhekelia\",\n        \"Djibouti\",\n        \"Dominica\",\n        \"Dominican Republic\",\n        \"Ecuador\",\n        \"Egypt\",\n        \"El Salvador\",\n        \"Equatorial Guinea\",\n        \"Eritrea\",\n        \"Estonia\",\n        \"Ethiopia\",\n        \"Europa Island\",\n        \"Falkland Islands (Islas Malvinas)\",\n        \"Faroe Islands\",\n        \"Federated States of Micronesia\",\n        \"Fiji\",\n        \"Finland\",\n        \"France\",\n        \"French Guiana\",\n        \"French Polynesia\",\n        \"French Southern and Antarctic Lands\",\n        \"Gabon\",\n        \"Gaza Strip\",\n        \"Georgia\",\n        \"Germany\",\n        \"Ghana\",\n        \"Gibraltar\",\n        \"Glorioso Islands\",\n        \"Greece\",\n        \"Greenland\",\n        \"Grenada\",\n        \"Guadeloupe\",\n        \"Guam\",\n        \"Guatemala\",\n        \"Guernsey\",\n        \"Guinea\",\n        \"Guinea-bissau\",\n        \"Guyana\",\n        \"Haiti\",\n        \"Heard Island and Mcdonald Islands\",\n        \"Holy See (Vatican City)\",\n        \"Honduras\",\n        \"Hong Kong\",\n        \"Hungary\",\n        \"Iceland\",\n        \"India\",\n        \"Indonesia\",\n        \"Iran\",\n        \"Iraq\",\n        \"Ireland\",\n        \"Isle of Man\",\n        \"Israel\",\n        \"Italy\",\n        \"Jamaica\",\n        \"Jan Mayen\",\n        \"Japan\",\n        \"Jersey\",\n        \"Jordan\",\n        \"Juan De Nova Island\",\n        \"Kazakhstan\",\n        \"Kenya\",\n        \"Kiribati\",\n        \"Kosovo\",\n        \"Kuwait\",\n        \"Kyrgyzstan\",\n        \"Laos\",\n        \"Latvia\",\n        \"Lebanon\",\n        \"Lesotho\",\n        \"Liberia\",\n        \"Libya\",\n        \"Liechtenstein\",\n        \"Lithuania\",\n        \"Luxembourg\",\n        \"Macau\",\n        \"Macedonia\",\n        \"Madagascar\",\n        \"Malawi\",\n        \"Malaysia\",\n        \"Maldives\",\n        \"Mali\",\n        \"Malta\",\n        \"Marshall Islands\",\n        \"Martinique\",\n        \"Mauritania\",\n        \"Mauritius\",\n        \"Mayotte\",\n        \"Mexico\",\n        \"Moldova\",\n        \"Monaco\",\n        \"Mongolia\",\n        \"Montenegro\",\n        \"Montserrat\",\n        \"Morocco\",\n        \"Mozambique\",\n        \"Myanmar\",\n        \"Namibia\",\n        \"Nauru\",\n        \"Navassa Island\",\n        \"Nepal\",\n        \"Netherlands Antilles\",\n        \"Netherlands\",\n        \"New Caledonia\",\n        \"New Zealand\",\n        \"Nicaragua\",\n        \"Niger\",\n        \"Nigeria\",\n        \"Niue\",\n        \"Norfolk Island\",\n        \"North Korea\",\n        \"Northern Mariana Islands\",\n        \"Norway\",\n        \"Oman\",\n        \"Pakistan\",\n        \"Palau\",\n        \"Palestine\",\n        \"Panama\",\n        \"Papua New Guinea\",\n        \"Paracel Islands\",\n        \"Paraguay\",\n        \"Peru\",\n        \"Philippines\",\n        \"Pitcairn Islands\",\n        \"Poland\",\n        \"Portugal\",\n        \"Puerto Rico\",\n        \"Qatar\",\n        \"Republic of the Congo\",\n        \"Reunion\",\n        \"Romania\",\n        \"Russia\",\n        \"Rwanda\",\n        \"Saint BarthÃ©lemy\",\n        \"Saint Helena\",\n        \"Saint Kitts and Nevis\",\n        \"Saint Lucia\",\n        \"Saint Martin\",\n        \"Saint Pierre and Miquelon\",\n        \"Saint Vincent and the Grenadines\",\n        \"Samoa\",\n        \"San Marino\",\n        \"Sao Tome and Principe\",\n        \"Saudi Arabia\",\n        \"Senegal\",\n        \"Serbia\",\n        \"Seychelles\",\n        \"Sierra Leone\",\n        \"Singapore\",\n        \"Sint Maarten\",\n        \"Slovakia\",\n        \"Slovenia\",\n        \"Solomon Islands\",\n        \"Somalia\",\n        \"South Africa\",\n        \"South Georgia and the South Sandwich Islands\",\n        \"South Korea\",\n        \"South Sudan\",\n        \"Spain\",\n        \"Spratly Islands\",\n        \"Sri Lanka\",\n        \"Sudan\",\n        \"Suriname\",\n        \"Svalbard\",\n        \"Swaziland\",\n        \"Sweden\",\n        \"Switzerland\",\n        \"Syria\",\n        \"Taiwan\",\n        \"Tajikistan\",\n        \"Tanzania\",\n        \"Thailand\",\n        \"The Bahamas\",\n        \"The Gambia\",\n        \"Timor-leste\",\n        \"Togo\",\n        \"Tokelau\",\n        \"Tonga\",\n        \"Trinidad and Tobago\",\n        \"Tromelin Island\",\n        \"Tunisia\",\n        \"Turkey\",\n        \"Turkmenistan\",\n        \"Turks and Caicos Islands\",\n        \"Tuvalu\",\n        \"Uganda\",\n        \"Ukraine\",\n        \"United Arab Emirates\",\n        \"United Kingdom\",\n        \"United States\",\n        \"Uruguay\",\n        \"Uzbekistan\",\n        \"Vanuatu\",\n        \"Venezuela\",\n        \"Vietnam\",\n        \"Virgin Islands\",\n        \"Wake Island\",\n        \"Wallis and Futuna\",\n        \"West Bank\",\n        \"Western Sahara\",\n        \"Yemen\",\n        \"Zambia\",\n        \"Zimbabwe\"\n      ]\n    },\n    {\n      \"id\": 292,\n      \"desc\": \"Any questions or concerns (MultiLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 293,\n      \"desc\": \"Submit\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 294,\n      \"desc\": \"Enter your name (name)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 295,\n      \"desc\": \"Enter your email (email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 296,\n      \"desc\": \"Subscribe\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"buttons\": [\n    {\n      \"id\": 3,\n      \"desc\": \"Product\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 4,\n      \"desc\": \"Services\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 9,\n      \"desc\": \"Toggle theme\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 226,\n      \"desc\": \"Owners & Contractors\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 227,\n      \"desc\": \"Architects\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 228,\n      \"desc\": \"Lithic Scanner\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 230,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 232,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 234,\n      \"desc\": \"Start Free Trial\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 259,\n      \"desc\": \"sales@inkers.ai\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"total\": 47\n}",
+  "page_structure_0A": {
+    "page_structure": {
+      "total_interactive_elements": 47,
+      "categories": {
+        "navigation": 16,
+        "forms": 21,
+        "buttons": 10
+      }
+    },
+    "content": [
+      {
+        "type": "text",
+        "content": "Inkers Observance | AI Based Construction Management Platform"
+      },
+      {
+        "type": "text",
+        "content": "[logo]"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 1,
+        "text": "Home",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 2,
+        "text": "About",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "button",
+        "id": 3,
+        "text": "Product",
+        "action": "hover item, not implemented yet",
+        "category": "button"
+      },
+      {
+        "type": "interactive",
+        "element_type": "button",
+        "id": 4,
+        "text": "Services",
+        "action": "hover item, not implemented yet",
+        "category": "button"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 5,
+        "text": "Team",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 6,
+        "text": "Pricing",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 7,
+        "text": "Contact",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 8,
+        "text": "Demo",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "button",
+        "id": 9,
+        "text": "Toggle theme",
+        "action": "click_element_by_index",
+        "category": "button"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "If you can't measure it, you can't improve it."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Observance measures, while you construct!"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 10,
+        "text": "Owners",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 11,
+        "text": "Contractors",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 12,
+        "text": "Architects",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "text",
+        "content": "rely on Observance."
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 14,
+        "text": "Request a demo (cta-demo-button)",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "text",
+        "content": "[Request a demo →]"
+      },
+      {
+        "type": "text",
+        "content": "Enter fullscreen"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Main Features"
+      },
+      {
+        "type": "text",
+        "content": "Our Core Features"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "4D BIM (BIM with Timelines)"
+      },
+      {
+        "type": "paragraph",
+        "content": "Integrates the construction process with precise 2D and 3D measurements linked to project timelines, ensuring detailed documentation of all construction stages and progress tracking."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Snag List"
+      },
+      {
+        "type": "paragraph",
+        "content": "Highlights clashes and deviations with color-coded 3D textures mapped onto building surfaces, using AI-powered snag lists for efficient tracking."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Project Milestones"
+      },
+      {
+        "type": "paragraph",
+        "content": "Facilitates automated tracking of deliverables, quantities, timelines, and traceability from requirements to solutions."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Scan to BIM"
+      },
+      {
+        "type": "paragraph",
+        "content": "Converts point cloud data into Revit models for structural, architectural, and MEP disciplines, offering tailored Scan-to-BIM solutions."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Thermals Analytics"
+      },
+      {
+        "type": "paragraph",
+        "content": "Incorporates thermal texture models to analyze moisture levels, proactively addressing potential issues and enhancing project quality."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Deviation Analysis"
+      },
+      {
+        "type": "paragraph",
+        "content": "Compares as-built 3D models with BIM designs, using a distance texture with color gradients to identify and highlight deviations."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Our Customers"
+      },
+      {
+        "type": "text",
+        "content": "[Precision Surveys]"
+      },
+      {
+        "type": "text",
+        "content": "[Pidilite]"
+      },
+      {
+        "type": "text",
+        "content": "[MICD]"
+      },
+      {
+        "type": "text",
+        "content": "[GHR Infra]"
+      },
+      {
+        "type": "text",
+        "content": "[Military Engineer Services]"
+      },
+      {
+        "type": "text",
+        "content": "[UKn Properties]"
+      },
+      {
+        "type": "text",
+        "content": "[Design Fluid]"
+      },
+      {
+        "type": "text",
+        "content": "[Sobha]"
+      },
+      {
+        "type": "text",
+        "content": "[Sterling and Wilson]"
+      },
+      {
+        "type": "text",
+        "content": "[GMR Group]"
+      },
+      {
+        "type": "text",
+        "content": "[Raynet Xpert]"
+      },
+      {
+        "type": "text",
+        "content": "[Hyatt Centric]"
+      },
+      {
+        "type": "text",
+        "content": "[nhance]"
+      },
+      {
+        "type": "text",
+        "content": "[Prestige Group]"
+      },
+      {
+        "type": "text",
+        "content": "[Icon Group]"
+      },
+      {
+        "type": "text",
+        "content": "[Brigade Group]"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Projects with Colliers"
+      },
+      {
+        "type": "text",
+        "content": "[Divyasree]"
+      },
+      {
+        "type": "text",
+        "content": "[Embassy]"
+      },
+      {
+        "type": "text",
+        "content": "[Puravankara]"
+      },
+      {
+        "type": "text",
+        "content": "[Godrej]"
+      },
+      {
+        "type": "text",
+        "content": "[Bagmane]"
+      },
+      {
+        "type": "text",
+        "content": "[The Botanika]"
+      },
+      {
+        "type": "text",
+        "content": "[Fortius Infra]"
+      },
+      {
+        "type": "text",
+        "content": "[Manyata]"
+      },
+      {
+        "type": "text",
+        "content": "[Brookefield]"
+      },
+      {
+        "type": "text",
+        "content": "[Ozone]"
+      },
+      {
+        "type": "text",
+        "content": "[Koncept Ambience]"
+      },
+      {
+        "type": "text",
+        "content": "[Srijan]"
+      },
+      {
+        "type": "text",
+        "content": "[Ashirwad]"
+      },
+      {
+        "type": "text",
+        "content": "[Featherlite]"
+      },
+      {
+        "type": "text",
+        "content": "[Elington]"
+      },
+      {
+        "type": "text",
+        "content": "[Vega City]"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Automated Milestones and Scheduling"
+      },
+      {
+        "type": "paragraph",
+        "content": "Witness the ease of tracking, managing, and executing construction projects like never before. No BIM? No problem! Observance can still craft your project milestones and schedule tracking with impeccable precision. Remember, with us, BIM is an option, not an obligation. BIM or not, we've got your analytics covered!"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Real-time Tracking"
+      },
+      {
+        "type": "paragraph",
+        "content": "Monitor construction progress in real-time with automated milestone tracking and instant updates."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Smart Scheduling"
+      },
+      {
+        "type": "paragraph",
+        "content": "AI-powered scheduling optimization that adapts to your project's unique requirements."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "BIM Integration"
+      },
+      {
+        "type": "paragraph",
+        "content": "Seamlessly integrate with existing BIM models or work independently with our advanced tracking system."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Analytics Dashboard"
+      },
+      {
+        "type": "paragraph",
+        "content": "Comprehensive analytics and insights to make data-driven decisions for your construction projects."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Next Generation Construction AI"
+      },
+      {
+        "type": "paragraph",
+        "content": "Transform construction data into actionable insights with advanced analytics for informed decisions."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Defects AI"
+      },
+      {
+        "type": "paragraph",
+        "content": "Detects 15 construction defects in real-time, minimizing downtime and rework costs."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Mesh Segmentation AI"
+      },
+      {
+        "type": "paragraph",
+        "content": "Segments meshes into 10 IFC classes, simplifying Mesh-to-BIM conversion and saving time."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Objects AI"
+      },
+      {
+        "type": "paragraph",
+        "content": "Identifies over 35 site objects to streamline inventory management and operations."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Health & Safety AI"
+      },
+      {
+        "type": "paragraph",
+        "content": "Uses facial recognition for real-time attendance, safety, and unknown person reports."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Total Scans"
+      },
+      {
+        "type": "text",
+        "content": "60 Scans last week"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Scanned Area"
+      },
+      {
+        "type": "text",
+        "content": "Avg 51.2k sqft per scan"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Projects Onboarded"
+      },
+      {
+        "type": "text",
+        "content": "Due: 18; OnTime: 106"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Scans last week"
+      },
+      {
+        "type": "text",
+        "content": "2400 scans scheduled"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "What Our Partners Says"
+      },
+      {
+        "type": "paragraph",
+        "content": "We work very closely with all of our customers to understand their needs, so much so, that we become partners!"
+      },
+      {
+        "type": "paragraph",
+        "content": "I am pleased with Colliers collaboration with Inkers in developing CoGence to make our project management business more future-ready. As we focus on innovative technology platforms to provide customized and productive solutions for the industry, where one can get advanced analytics and real-time reports quickly, I am positive that Inkers will continue to add value to the platform and enhance its viability across clients."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Argenio Antao"
+      },
+      {
+        "type": "text",
+        "content": "Chief Operating Officer - Colliers India"
+      },
+      {
+        "type": "paragraph",
+        "content": "We're delighted with our partnership with Inkers and the transformative impact Observance has had on our construction projects at CHI. By leveraging this innovative platform, we're not just staying ahead of the curve but setting new standards in the industry. With Observance, we're empowered with timely delivered scan-to-BIM outputs, advanced analytics, and automated progress tracking, enabling us to deliver projects more efficiently than ever before."
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Prataap Wadhwa"
+      },
+      {
+        "type": "text",
+        "content": "Managing Director - Convention Hotels"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Simple and Affordable Pricing"
+      },
+      {
+        "type": "paragraph",
+        "content": "Select your product category to see relevant pricing plans."
+      },
+      {
+        "type": "interactive",
+        "element_type": "button",
+        "id": 226,
+        "text": "Owners & Contractors",
+        "action": "click_element_by_index",
+        "category": "button"
+      },
+      {
+        "type": "interactive",
+        "element_type": "button",
+        "id": 227,
+        "text": "Architects",
+        "action": "click_element_by_index",
+        "category": "button"
+      },
+      {
+        "type": "interactive",
+        "element_type": "button",
+        "id": 228,
+        "text": "Lithic Scanner",
+        "action": "click_element_by_index",
+        "category": "button"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Lite"
+      },
+      {
+        "type": "text",
+        "content": "Perfect for individuals or small projects"
+      },
+      {
+        "type": "interactive",
+        "element_type": "button",
+        "id": 230,
+        "text": "Start Free Trial",
+        "action": "click_element_by_index",
+        "category": "button"
+      },
+      {
+        "type": "interactive",
+        "element_type": "button",
+        "id": 232,
+        "text": "Start Free Trial",
+        "action": "click_element_by_index",
+        "category": "button"
+      },
+      {
+        "type": "text",
+        "content": "1 Project with 2 Users"
+      },
+      {
+        "type": "text",
+        "content": "Up to 10000 sqft scaned once"
+      },
+      {
+        "type": "text",
+        "content": "Textured 3D Model (Downloadable)"
+      },
+      {
+        "type": "text",
+        "content": "3D Walkthrough"
+      },
+      {
+        "type": "text",
+        "content": "Thermal Video & Texture"
+      },
+      {
+        "type": "text",
+        "content": "3D Segmented Model"
+      },
+      {
+        "type": "text",
+        "content": "2D As-Built Drawings"
+      },
+      {
+        "type": "text",
+        "content": "Section, Annotation and other tools"
+      },
+      {
+        "type": "text",
+        "content": "Visual Defects & Task Manager"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Basic"
+      },
+      {
+        "type": "text",
+        "content": "Ideal for growing construction companies"
+      },
+      {
+        "type": "interactive",
+        "element_type": "button",
+        "id": 234,
+        "text": "Start Free Trial",
+        "action": "click_element_by_index",
+        "category": "button"
+      },
+      {
+        "type": "text",
+        "content": "Start Free Trial"
+      },
+      {
+        "type": "text",
+        "content": "Everything in Lite, plus"
+      },
+      {
+        "type": "text",
+        "content": "Unlimited Projects"
+      },
+      {
+        "type": "text",
+        "content": "Unlimited Area"
+      },
+      {
+        "type": "text",
+        "content": "Frequency as per required"
+      },
+      {
+        "type": "text",
+        "content": "Structural Defects"
+      },
+      {
+        "type": "text",
+        "content": "BIM Comparison"
+      },
+      {
+        "type": "text",
+        "content": "Milestone BOQ"
+      },
+      {
+        "type": "text",
+        "content": "CCTV Live Stream"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Plus"
+      },
+      {
+        "type": "text",
+        "content": "For large-scale construction operations"
+      },
+      {
+        "type": "text",
+        "content": "[Start Free Trial]"
+      },
+      {
+        "type": "text",
+        "content": "Everything in Basic, plus"
+      },
+      {
+        "type": "text",
+        "content": "Scan-to-BIM"
+      },
+      {
+        "type": "text",
+        "content": "Object Detection"
+      },
+      {
+        "type": "text",
+        "content": "Milestone Schedule"
+      },
+      {
+        "type": "text",
+        "content": "People Management & FR Reports"
+      },
+      {
+        "type": "text",
+        "content": "H&S Management & Reports"
+      },
+      {
+        "type": "text",
+        "content": "Google Maps & 3D VR Integration"
+      },
+      {
+        "type": "text",
+        "content": "Floor Stacking"
+      },
+      {
+        "type": "text",
+        "content": "Multi-Scan Comparison"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Integrations"
+      },
+      {
+        "type": "text",
+        "content": "[Autodesk]"
+      },
+      {
+        "type": "text",
+        "content": "[Google Maps]"
+      },
+      {
+        "type": "text",
+        "content": "[MS Project]"
+      },
+      {
+        "type": "text",
+        "content": "[Oracle]"
+      },
+      {
+        "type": "text",
+        "content": "[Procore]"
+      },
+      {
+        "type": "text",
+        "content": "[Three.js]"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 301,
+        "text": "Contact",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "paragraph",
+        "content": "Get in touch for advanced AI solutions for your construction project"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Interested in a Free Scan?"
+      },
+      {
+        "type": "text",
+        "content": "For sales inquiries, please contact:"
+      },
+      {
+        "type": "interactive",
+        "element_type": "button",
+        "id": 259,
+        "text": "sales@inkers.ai",
+        "action": "click_element_by_index",
+        "category": "button"
+      },
+      {
+        "type": "paragraph",
+        "content": "Fill out the form below, and we'll process your request to schedule your complimentary scan at a convenient time!"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Contact Information"
+      },
+      {
+        "type": "text",
+        "content": "Phone Number"
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 269,
+        "text": "Enter your organization name (SingleLine1)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "text",
+        "content": "Organization Name*"
+      },
+      {
+        "type": "text",
+        "content": "Area to Scan (sqft)"
+      },
+      {
+        "type": "text",
+        "content": "Area to Scan (sqft)*"
+      },
+      {
+        "type": "text",
+        "content": "Is BIM Available?"
+      },
+      {
+        "type": "text",
+        "content": "Is Project Schedule Available?"
+      },
+      {
+        "type": "text",
+        "content": "Preferred Demo Date"
+      },
+      {
+        "type": "text",
+        "content": "Show date picker"
+      },
+      {
+        "type": "text",
+        "content": "Will be formatted as dd-MMM-yyyy"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Project Details"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Additional Information"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Project Address"
+      },
+      {
+        "type": "text",
+        "content": "Project Address"
+      },
+      {
+        "type": "text",
+        "content": "Project Address *"
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 286,
+        "text": "Address Line 2 (Address_AddressLine2)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 287,
+        "text": "City (Address_City)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 288,
+        "text": "State/Region/Province (Address_Region)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 289,
+        "text": "Postal / Zip Code (Address_ZipCode)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "text",
+        "content": "Antigua and Barbuda"
+      },
+      {
+        "type": "text",
+        "content": "Ashmore and Cartier Islands"
+      },
+      {
+        "type": "text",
+        "content": "Bosnia and Herzegovina"
+      },
+      {
+        "type": "text",
+        "content": "British Indian Ocean Territory"
+      },
+      {
+        "type": "text",
+        "content": "British Virgin Islands"
+      },
+      {
+        "type": "text",
+        "content": "Caribbean Netherlands"
+      },
+      {
+        "type": "text",
+        "content": "Central African Republic"
+      },
+      {
+        "type": "text",
+        "content": "Christmas Island"
+      },
+      {
+        "type": "text",
+        "content": "Clipperton Island"
+      },
+      {
+        "type": "text",
+        "content": "Cocos (Keeling) Islands"
+      },
+      {
+        "type": "text",
+        "content": "Coral Sea Islands"
+      },
+      {
+        "type": "text",
+        "content": "Democratic Republic of the Congo"
+      },
+      {
+        "type": "text",
+        "content": "Dominican Republic"
+      },
+      {
+        "type": "text",
+        "content": "Equatorial Guinea"
+      },
+      {
+        "type": "text",
+        "content": "Falkland Islands (Islas Malvinas)"
+      },
+      {
+        "type": "text",
+        "content": "Federated States of Micronesia"
+      },
+      {
+        "type": "text",
+        "content": "French Polynesia"
+      },
+      {
+        "type": "text",
+        "content": "French Southern and Antarctic Lands"
+      },
+      {
+        "type": "text",
+        "content": "Glorioso Islands"
+      },
+      {
+        "type": "text",
+        "content": "Heard Island and Mcdonald Islands"
+      },
+      {
+        "type": "text",
+        "content": "Holy See (Vatican City)"
+      },
+      {
+        "type": "text",
+        "content": "Juan De Nova Island"
+      },
+      {
+        "type": "text",
+        "content": "Marshall Islands"
+      },
+      {
+        "type": "text",
+        "content": "Netherlands Antilles"
+      },
+      {
+        "type": "text",
+        "content": "Northern Mariana Islands"
+      },
+      {
+        "type": "text",
+        "content": "Papua New Guinea"
+      },
+      {
+        "type": "text",
+        "content": "Pitcairn Islands"
+      },
+      {
+        "type": "text",
+        "content": "Republic of the Congo"
+      },
+      {
+        "type": "text",
+        "content": "Saint BarthÃ©lemy"
+      },
+      {
+        "type": "text",
+        "content": "Saint Kitts and Nevis"
+      },
+      {
+        "type": "text",
+        "content": "Saint Pierre and Miquelon"
+      },
+      {
+        "type": "text",
+        "content": "Saint Vincent and the Grenadines"
+      },
+      {
+        "type": "text",
+        "content": "Sao Tome and Principe"
+      },
+      {
+        "type": "text",
+        "content": "South Georgia and the South Sandwich Islands"
+      },
+      {
+        "type": "text",
+        "content": "Trinidad and Tobago"
+      },
+      {
+        "type": "text",
+        "content": "Turks and Caicos Islands"
+      },
+      {
+        "type": "text",
+        "content": "United Arab Emirates"
+      },
+      {
+        "type": "text",
+        "content": "Wallis and Futuna"
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 292,
+        "text": "Any questions or concerns (MultiLine1)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "text",
+        "content": "Any questions or concerns you have?"
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 293,
+        "text": "Submit",
+        "action": "click_element_by_index",
+        "category": "form"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Stay Updated with Monthly Insights"
+      },
+      {
+        "type": "paragraph",
+        "content": "Get exclusive monthly updates delivered straight to your inbox."
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 294,
+        "text": "Enter your name (name)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "email_input",
+        "id": 271,
+        "text": "Enter your email (Email)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 296,
+        "text": "Subscribe",
+        "action": "click_element_by_index",
+        "category": "form"
+      },
+      {
+        "type": "text",
+        "content": "Unsubscribe anytime, no strings attached!"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Inkers Technology Pvt Ltd"
+      },
+      {
+        "type": "text",
+        "content": "India Office"
+      },
+      {
+        "type": "text",
+        "content": "The Work Address - Vaishnavi HSR"
+      },
+      {
+        "type": "text",
+        "content": "Layout, Bengaluru, Karnataka 560102"
+      },
+      {
+        "type": "text",
+        "content": "8 The Green, Ste A"
+      },
+      {
+        "type": "text",
+        "content": "Dover, Kent County"
+      },
+      {
+        "type": "text",
+        "content": "19901, Delaware"
+      },
+      {
+        "type": "text",
+        "content": "[social-link]"
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "content": "Useful Links"
+      },
+      {
+        "type": "text",
+        "content": "[Contact]"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 302,
+        "text": "Terms of Use",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 303,
+        "text": "About",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "paragraph",
+        "content": "© 2025 Inkers Technology Pvt Ltd. All rights reserved."
+      },
+      {
+        "type": "section",
+        "content": "Additional Interactive Elements",
+        "level": 2
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 229,
+        "text": "Link",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 231,
+        "text": "Link",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "nav_link",
+        "id": 233,
+        "text": "Link",
+        "action": "click_element_by_index",
+        "category": "navigation"
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 261,
+        "text": "Enter your first name (Name_First)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 263,
+        "text": "Enter your last name (Name_Last)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "phone_input",
+        "id": 265,
+        "text": "Enter country code (PhoneNumber_countrycodeval)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "phone_input",
+        "id": 267,
+        "text": "Enter your phone number (PhoneNumber_countrycode)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "number_input",
+        "id": 273,
+        "text": "Enter area to scan (sqft) (Number)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "checkbox",
+        "id": 276,
+        "text": "Toggle option",
+        "action": "click_element_by_index",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "checkbox",
+        "id": 280,
+        "text": "Toggle option",
+        "action": "click_element_by_index",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "date_input",
+        "id": 283,
+        "text": "Date Input",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "text_input",
+        "id": 285,
+        "text": "Address Line 1 (Address_AddressLine1)",
+        "action": "input_text",
+        "category": "form"
+      },
+      {
+        "type": "interactive",
+        "element_type": "dropdown",
+        "id": 290,
+        "text": "Select Address Country (Address_Country)",
+        "action": "select_dropdown_option",
+        "category": "form",
+        "options_count": 268,
+        "has_options": true,
+        "sample_options": [
+          "Åland Islands",
+          "Afghanistan",
+          "Akrotiri",
+          "Albania",
+          "Algeria"
+        ]
+      },
+      {
+        "type": "interactive",
+        "element_type": "email_input",
+        "id": 295,
+        "text": "Enter your email (email)",
+        "action": "input_text",
+        "category": "form"
+      }
+    ]
+  },
+  "result_1A": "🖱️  Clicked button with index 8: Demo\n\nInteractive Elements:\n{\n  \"success\": true,\n  \"nav\": [\n    {\n      \"id\": 1,\n      \"desc\": \"Home\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 2,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 5,\n      \"desc\": \"Team\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 6,\n      \"desc\": \"Pricing\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 7,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 8,\n      \"desc\": \"Demo\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 52,\n      \"desc\": \"Contact\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 53,\n      \"desc\": \"Terms of Use\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 54,\n      \"desc\": \"About\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"forms\": [\n    {\n      \"id\": 12,\n      \"desc\": \"Enter your first name (Name_First)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 14,\n      \"desc\": \"Enter your last name (Name_Last)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 16,\n      \"desc\": \"Enter country code (PhoneNumber_countrycodeval)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 18,\n      \"desc\": \"Enter your phone number (PhoneNumber_countrycode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 20,\n      \"desc\": \"Enter your organization name (SingleLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 22,\n      \"desc\": \"Enter your email (Email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 24,\n      \"desc\": \"Enter area to scan (sqft) (Number)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 27,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 31,\n      \"desc\": \"Toggle option\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 34,\n      \"desc\": \"Date Input\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 36,\n      \"desc\": \"Address Line 1 (Address_AddressLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 37,\n      \"desc\": \"Address Line 2 (Address_AddressLine2)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 38,\n      \"desc\": \"City (Address_City)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 39,\n      \"desc\": \"State/Region/Province (Address_Region)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 40,\n      \"desc\": \"Postal / Zip Code (Address_ZipCode)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 41,\n      \"desc\": \"Select Address Country (Address_Country)\",\n      \"action\": \"select_dropdown_option\",\n      \"options\": [\n        \"Åland Islands\",\n        \"Afghanistan\",\n        \"Akrotiri\",\n        \"Albania\",\n        \"Algeria\",\n        \"American Samoa\",\n        \"Andorra\",\n        \"Angola\",\n        \"Anguilla\",\n        \"Antarctica\",\n        \"Antigua and Barbuda\",\n        \"Argentina\",\n        \"Armenia\",\n        \"Aruba\",\n        \"Ashmore and Cartier Islands\",\n        \"Australia\",\n        \"Austria\",\n        \"Azerbaijan\",\n        \"Bahrain\",\n        \"Bangladesh\",\n        \"Barbados\",\n        \"Bassas Da India\",\n        \"Belarus\",\n        \"Belgium\",\n        \"Belize\",\n        \"Benin\",\n        \"Bermuda\",\n        \"Bhutan\",\n        \"Bolivia\",\n        \"Bosnia and Herzegovina\",\n        \"Botswana\",\n        \"Bouvet Island\",\n        \"Brazil\",\n        \"British Indian Ocean Territory\",\n        \"British Virgin Islands\",\n        \"Brunei\",\n        \"Bulgaria\",\n        \"Burkina Faso\",\n        \"Burma\",\n        \"Burundi\",\n        \"Cambodia\",\n        \"Cameroon\",\n        \"Canada\",\n        \"Cape Verde\",\n        \"Caribbean Netherlands\",\n        \"Cayman Islands\",\n        \"Central African Republic\",\n        \"Chad\",\n        \"Chile\",\n        \"China\",\n        \"Christmas Island\",\n        \"Clipperton Island\",\n        \"Cocos (Keeling) Islands\",\n        \"Colombia\",\n        \"Comoros\",\n        \"Cook Islands\",\n        \"Coral Sea Islands\",\n        \"Costa Rica\",\n        \"Cote D'Ivoire\",\n        \"Croatia\",\n        \"Cuba\",\n        \"Curaçao\",\n        \"Cyprus\",\n        \"Czech Republic\",\n        \"Democratic Republic of the Congo\",\n        \"Denmark\",\n        \"Dhekelia\",\n        \"Djibouti\",\n        \"Dominica\",\n        \"Dominican Republic\",\n        \"Ecuador\",\n        \"Egypt\",\n        \"El Salvador\",\n        \"Equatorial Guinea\",\n        \"Eritrea\",\n        \"Estonia\",\n        \"Ethiopia\",\n        \"Europa Island\",\n        \"Falkland Islands (Islas Malvinas)\",\n        \"Faroe Islands\",\n        \"Federated States of Micronesia\",\n        \"Fiji\",\n        \"Finland\",\n        \"France\",\n        \"French Guiana\",\n        \"French Polynesia\",\n        \"French Southern and Antarctic Lands\",\n        \"Gabon\",\n        \"Gaza Strip\",\n        \"Georgia\",\n        \"Germany\",\n        \"Ghana\",\n        \"Gibraltar\",\n        \"Glorioso Islands\",\n        \"Greece\",\n        \"Greenland\",\n        \"Grenada\",\n        \"Guadeloupe\",\n        \"Guam\",\n        \"Guatemala\",\n        \"Guernsey\",\n        \"Guinea\",\n        \"Guinea-bissau\",\n        \"Guyana\",\n        \"Haiti\",\n        \"Heard Island and Mcdonald Islands\",\n        \"Holy See (Vatican City)\",\n        \"Honduras\",\n        \"Hong Kong\",\n        \"Hungary\",\n        \"Iceland\",\n        \"India\",\n        \"Indonesia\",\n        \"Iran\",\n        \"Iraq\",\n        \"Ireland\",\n        \"Isle of Man\",\n        \"Israel\",\n        \"Italy\",\n        \"Jamaica\",\n        \"Jan Mayen\",\n        \"Japan\",\n        \"Jersey\",\n        \"Jordan\",\n        \"Juan De Nova Island\",\n        \"Kazakhstan\",\n        \"Kenya\",\n        \"Kiribati\",\n        \"Kosovo\",\n        \"Kuwait\",\n        \"Kyrgyzstan\",\n        \"Laos\",\n        \"Latvia\",\n        \"Lebanon\",\n        \"Lesotho\",\n        \"Liberia\",\n        \"Libya\",\n        \"Liechtenstein\",\n        \"Lithuania\",\n        \"Luxembourg\",\n        \"Macau\",\n        \"Macedonia\",\n        \"Madagascar\",\n        \"Malawi\",\n        \"Malaysia\",\n        \"Maldives\",\n        \"Mali\",\n        \"Malta\",\n        \"Marshall Islands\",\n        \"Martinique\",\n        \"Mauritania\",\n        \"Mauritius\",\n        \"Mayotte\",\n        \"Mexico\",\n        \"Moldova\",\n        \"Monaco\",\n        \"Mongolia\",\n        \"Montenegro\",\n        \"Montserrat\",\n        \"Morocco\",\n        \"Mozambique\",\n        \"Myanmar\",\n        \"Namibia\",\n        \"Nauru\",\n        \"Navassa Island\",\n        \"Nepal\",\n        \"Netherlands Antilles\",\n        \"Netherlands\",\n        \"New Caledonia\",\n        \"New Zealand\",\n        \"Nicaragua\",\n        \"Niger\",\n        \"Nigeria\",\n        \"Niue\",\n        \"Norfolk Island\",\n        \"North Korea\",\n        \"Northern Mariana Islands\",\n        \"Norway\",\n        \"Oman\",\n        \"Pakistan\",\n        \"Palau\",\n        \"Palestine\",\n        \"Panama\",\n        \"Papua New Guinea\",\n        \"Paracel Islands\",\n        \"Paraguay\",\n        \"Peru\",\n        \"Philippines\",\n        \"Pitcairn Islands\",\n        \"Poland\",\n        \"Portugal\",\n        \"Puerto Rico\",\n        \"Qatar\",\n        \"Republic of the Congo\",\n        \"Reunion\",\n        \"Romania\",\n        \"Russia\",\n        \"Rwanda\",\n        \"Saint BarthÃ©lemy\",\n        \"Saint Helena\",\n        \"Saint Kitts and Nevis\",\n        \"Saint Lucia\",\n        \"Saint Martin\",\n        \"Saint Pierre and Miquelon\",\n        \"Saint Vincent and the Grenadines\",\n        \"Samoa\",\n        \"San Marino\",\n        \"Sao Tome and Principe\",\n        \"Saudi Arabia\",\n        \"Senegal\",\n        \"Serbia\",\n        \"Seychelles\",\n        \"Sierra Leone\",\n        \"Singapore\",\n        \"Sint Maarten\",\n        \"Slovakia\",\n        \"Slovenia\",\n        \"Solomon Islands\",\n        \"Somalia\",\n        \"South Africa\",\n        \"South Georgia and the South Sandwich Islands\",\n        \"South Korea\",\n        \"South Sudan\",\n        \"Spain\",\n        \"Spratly Islands\",\n        \"Sri Lanka\",\n        \"Sudan\",\n        \"Suriname\",\n        \"Svalbard\",\n        \"Swaziland\",\n        \"Sweden\",\n        \"Switzerland\",\n        \"Syria\",\n        \"Taiwan\",\n        \"Tajikistan\",\n        \"Tanzania\",\n        \"Thailand\",\n        \"The Bahamas\",\n        \"The Gambia\",\n        \"Timor-leste\",\n        \"Togo\",\n        \"Tokelau\",\n        \"Tonga\",\n        \"Trinidad and Tobago\",\n        \"Tromelin Island\",\n        \"Tunisia\",\n        \"Turkey\",\n        \"Turkmenistan\",\n        \"Turks and Caicos Islands\",\n        \"Tuvalu\",\n        \"Uganda\",\n        \"Ukraine\",\n        \"United Arab Emirates\",\n        \"United Kingdom\",\n        \"United States\",\n        \"Uruguay\",\n        \"Uzbekistan\",\n        \"Vanuatu\",\n        \"Venezuela\",\n        \"Vietnam\",\n        \"Virgin Islands\",\n        \"Wake Island\",\n        \"Wallis and Futuna\",\n        \"West Bank\",\n        \"Western Sahara\",\n        \"Yemen\",\n        \"Zambia\",\n        \"Zimbabwe\"\n      ]\n    },\n    {\n      \"id\": 43,\n      \"desc\": \"Any questions or concerns (MultiLine1)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 44,\n      \"desc\": \"Submit\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 45,\n      \"desc\": \"Enter your name (name)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 46,\n      \"desc\": \"Enter your email (email)\",\n      \"action\": \"input_text\"\n    },\n    {\n      \"id\": 47,\n      \"desc\": \"Subscribe\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"buttons\": [\n    {\n      \"id\": 3,\n      \"desc\": \"Product\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 4,\n      \"desc\": \"Services\",\n      \"action\": \"hover item, not implemented yet\"\n    },\n    {\n      \"id\": 9,\n      \"desc\": \"Toggle theme\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 10,\n      \"desc\": \"sales@inkers.ai\",\n      \"action\": \"click_element_by_index\"\n    },\n    {\n      \"id\": 55,\n      \"desc\": \"Contact Us | AI Solutions for Your Construction Business (__next-route-announcer__)\",\n      \"action\": \"click_element_by_index\"\n    }\n  ],\n  \"total\": 35\n}"
+}

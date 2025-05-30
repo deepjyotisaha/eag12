@@ -47,6 +47,7 @@ class BrowserPerception:
                 'last_tooluse_summary',
                 'solution_summary',
                 'confidence',
+                'current_browser_state',
                 'route'
             ])
 
@@ -65,6 +66,7 @@ class BrowserPerception:
                 "last_tooluse_summary": "None",
                 "solution_summary": "Not ready yet",
                 "confidence": "0.0",
+                "current_browser_state": "Cannot determine current browser state",
                 "route": "browser"
             }
 
@@ -88,6 +90,7 @@ def build_browser_perception_input(query: str, ctx: BrowserContext, snapshot_typ
         "globals_schema": {
             k: (type(v).__name__, str(v)[:120]) for k, v in ctx.globals.items()
         },
+        "current_browser_state": ctx.current_browser_state,
         "timestamp": "...",
         "schema_version": 1
     }

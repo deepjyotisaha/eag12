@@ -1,0 +1,991 @@
+{
+  "context": {
+    "session_id": "4834664f-c91b-45f7-959f-e35a58c5ea6b",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+    "globals": {
+      "memory": null,
+      "context": {
+        "session_id": "3635d65c-e0a4-4b79-b9a6-0aba2dcd92c1",
+        "query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+        "globals": {},
+        "graph": {
+          "directed": true,
+          "multigraph": false,
+          "graph": {},
+          "nodes": [
+            {
+              "data": {
+                "index": "ROOT",
+                "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+                "type": "ROOT",
+                "status": "completed",
+                "result": null,
+                "conclusion": null,
+                "error": null,
+                "perception": {
+                  "entities": [
+                    "Inkers.ai",
+                    "Demo Button",
+                    "Form"
+                  ],
+                  "result_requirement": "Open Inkers.ai, click the Demo button, fill the form with assumed values, and submit the form.",
+                  "original_goal_achieved": false,
+                  "local_goal_achieved": false,
+                  "confidence": "0.95",
+                  "reasoning": "The original query requires opening a specific URL, clicking a button, and filling out a form. None of these actions have been completed yet. The next step is to open the URL in the browser.",
+                  "local_reasoning": "The first step is to open the URL in the browser to enable further interactions such as clicking the 'Demo' button and filling the form.",
+                  "last_tooluse_summary": "Not applicable.",
+                  "solution_summary": "Not ready yet.",
+                  "current_browser_state": "Not applicable.",
+                  "route": "browser",
+                  "instruction_to_summarize": "Not applicable."
+                },
+                "from_step": null
+              },
+              "id": "ROOT"
+            },
+            {
+              "data": {
+                "index": "0",
+                "description": "Open the Inkers.ai website in a new tab.",
+                "type": "BROWSEROPERATION",
+                "status": "completed",
+                "result": {},
+                "conclusion": null,
+                "error": null,
+                "perception": {
+                  "entities": [
+                    "Inkers.ai",
+                    "Demo Button",
+                    "Form"
+                  ],
+                  "result_requirement": "Click the Demo button on Inkers.ai and fill the form with assumed values.",
+                  "original_goal_achieved": false,
+                  "local_goal_achieved": false,
+                  "confidence": "0.90",
+                  "reasoning": "The Inkers.ai website has been opened in a new tab. The next step is to click on the 'Demo Button' and fill the form. Since the website is open, we can proceed to interact with the page elements. The local goal of opening the website has been achieved, but the overall goal requires further steps.",
+                  "local_reasoning": "Now that the website is open, the next logical step is to click the 'Demo' button and fill the form to progress towards the original goal.",
+                  "last_tooluse_summary": "Successfully opened Inkers.ai in a new tab.",
+                  "solution_summary": "Not ready yet.",
+                  "current_browser_state": "Not applicable.",
+                  "route": "browser",
+                  "instruction_to_summarize": "Not applicable."
+                },
+                "from_step": null
+              },
+              "id": "0"
+            },
+            {
+              "data": {
+                "index": "1",
+                "description": "Click on the 'Demo' button.",
+                "type": "BROWSEROPERATION",
+                "status": "completed",
+                "result": null,
+                "conclusion": null,
+                "error": null,
+                "perception": {
+                  "entities": [
+                    "Inkers.ai",
+                    "Demo Button",
+                    "Form"
+                  ],
+                  "result_requirement": "Fill the form on Inkers.ai after clicking the Demo button with assumed values.",
+                  "original_goal_achieved": false,
+                  "local_goal_achieved": false,
+                  "confidence": "0.65",
+                  "reasoning": "The original query requires opening Inkers.ai, clicking the Demo button, and filling out a form. The website has been opened, and the Demo button has been clicked. The next step is to fill the form. Since the form filling is pending, the original goal has not been achieved. Since the output of the last action is empty, the agent is waiting for some info. Next step involves form filling, so rerouting to Browser.",
+                  "local_reasoning": "The 'Demo' button has been clicked. Now the next logical step is to fill out the form, if any, that appears after clicking the demo button. The browser needs to stay open to enable form interactions.",
+                  "last_tooluse_summary": "Successfully opened Inkers.ai and clicked the Demo button.",
+                  "solution_summary": "Not ready yet.",
+                  "current_browser_state": "Not applicable.",
+                  "route": "browser"
+                },
+                "from_step": null
+              },
+              "id": "1"
+            },
+            {
+              "data": {
+                "index": "2",
+                "description": "Submit the form.",
+                "type": "BROWSEROPERATION",
+                "status": "completed",
+                "result": null,
+                "conclusion": null,
+                "error": null,
+                "perception": {
+                  "entities": [
+                    "Inkers.ai",
+                    "Demo Button",
+                    "Form"
+                  ],
+                  "result_requirement": "Fill the form on Inkers.ai after clicking the Demo button with assumed values and submit the form.",
+                  "original_goal_achieved": false,
+                  "local_goal_achieved": false,
+                  "confidence": "0.3",
+                  "reasoning": "The original query requires opening Inkers.ai, clicking the Demo button, filling out a form with assumed values, and submitting it. The website has been opened, and the Demo button has been clicked. However, the form-filling and submission steps have failed. Since the last step (submit the form) resulted in a failed state, and there are many failed steps in total, it's unlikely that retrying will succeed without further information about the form. Moreover, there is no information in `globals_schema` on what to do, so it's time to summarize what has been done, i.e opening the page and clicking on the button, and report that we can not fill the form.",
+                  "local_reasoning": "The last action failed and the steps to fill the form and submit failed, indicating the process cannot continue. It's best to summarize the current state and report the failure to fill the form.",
+                  "last_tooluse_summary": "Successfully opened Inkers.ai and clicked the Demo button, but the subsequent submission failed.",
+                  "solution_summary": "Not ready yet.",
+                  "current_browser_state": "Not applicable.",
+                  "route": "summarize",
+                  "instruction_to_summarize": "The agent opened the Inkers.ai website and clicked the 'Demo' button as requested. However, the agent was unable to fill and submit the form as requested due to an error. Please summarize these steps for the user."
+                },
+                "from_step": null
+              },
+              "id": "2"
+            },
+            {
+              "data": {
+                "index": "3",
+                "description": "Verify the form submission.",
+                "type": "BROWSEROPERATION",
+                "status": "Skipped",
+                "result": null,
+                "conclusion": null,
+                "error": null,
+                "perception": null,
+                "from_step": null
+              },
+              "id": "3"
+            },
+            {
+              "data": {
+                "index": "4",
+                "description": "Find and click the submit button.",
+                "type": "BROWSEROPERATION",
+                "status": "Skipped",
+                "result": null,
+                "conclusion": null,
+                "error": null,
+                "perception": null,
+                "from_step": null
+              },
+              "id": "4"
+            }
+          ],
+          "links": [
+            {
+              "type": "normal",
+              "source": "ROOT",
+              "target": "0"
+            },
+            {
+              "type": "normal",
+              "source": "0",
+              "target": "1"
+            },
+            {
+              "type": "normal",
+              "source": "1",
+              "target": "2"
+            },
+            {
+              "type": "normal",
+              "source": "2",
+              "target": "3"
+            },
+            {
+              "source": "3",
+              "target": "4"
+            }
+          ]
+        }
+      },
+      "status": "success",
+      "final_step_id": "3",
+      "reason": "Browser operation summarized successfully",
+      "timestamp": "2025-05-30T13:20:20.309556",
+      "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+      "final_summary": "The browser operations performed included opening the Inkers.ai website in a new tab and clicking the \"Demo\" button. The agent was unable to proceed with filling out and submitting the form due to an unspecified error encountered during the submission process. No form data was successfully entered or submitted. The final outcome is that the initial steps of opening the page and clicking the button were successful, but form submission failed.",
+      "browser_operation": true
+    },
+    "memory": [
+      {
+        "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+        "result_requirement": "Final summary",
+        "summarizer_summary": "The agent successfully opened the [Inkers.ai](https://www.inkers.ai) website and clicked the \"Demo\" button as requested. However, the agent was unable to fill out and submit the form due to an error encountered during the submission process.",
+        "confidence": 0.95,
+        "original_goal_achieved": true,
+        "route": "summarize"
+      }
+    ],
+    "graph": {
+      "directed": true,
+      "multigraph": false,
+      "graph": {},
+      "nodes": [
+        {
+          "data": {
+            "index": "ROOT",
+            "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+            "type": "ROOT",
+            "status": "completed",
+            "result": null,
+            "conclusion": null,
+            "error": null,
+            "perception": {
+              "entities": [
+                "Inkers.ai",
+                "Demo Button",
+                "Form"
+              ],
+              "result_requirement": "Open Inkers.ai, click Demo button, fill form with assumed values",
+              "original_goal_achieved": false,
+              "local_goal_achieved": false,
+              "confidence": "0.9",
+              "reasoning": "The original query requires opening a webpage, clicking a button, and filling out a form. This requires browser interaction and planning.",
+              "local_reasoning": "The query involves browser actions that cannot be handled without the browser tool.",
+              "last_tooluse_summary": "Not applicable",
+              "solution_summary": "Not ready yet.",
+              "route": "browser",
+              "instruction_to_summarize": "Not applicable"
+            },
+            "from_step": null
+          },
+          "id": "ROOT"
+        },
+        {
+          "data": {
+            "index": "BROWSER",
+            "description": "Browser operation",
+            "type": "BROWSEROPERATION",
+            "status": "completed",
+            "result": {
+              "context": {
+                "session_id": "3635d65c-e0a4-4b79-b9a6-0aba2dcd92c1",
+                "query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+                "globals": {},
+                "graph": {
+                  "directed": true,
+                  "multigraph": false,
+                  "graph": {},
+                  "nodes": [
+                    {
+                      "data": {
+                        "index": "ROOT",
+                        "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+                        "type": "ROOT",
+                        "status": "completed",
+                        "result": null,
+                        "conclusion": null,
+                        "error": null,
+                        "perception": {
+                          "entities": [
+                            "Inkers.ai",
+                            "Demo Button",
+                            "Form"
+                          ],
+                          "result_requirement": "Open Inkers.ai, click the Demo button, fill the form with assumed values, and submit the form.",
+                          "original_goal_achieved": false,
+                          "local_goal_achieved": false,
+                          "confidence": "0.95",
+                          "reasoning": "The original query requires opening a specific URL, clicking a button, and filling out a form. None of these actions have been completed yet. The next step is to open the URL in the browser.",
+                          "local_reasoning": "The first step is to open the URL in the browser to enable further interactions such as clicking the 'Demo' button and filling the form.",
+                          "last_tooluse_summary": "Not applicable.",
+                          "solution_summary": "Not ready yet.",
+                          "current_browser_state": "Not applicable.",
+                          "route": "browser",
+                          "instruction_to_summarize": "Not applicable."
+                        },
+                        "from_step": null
+                      },
+                      "id": "ROOT"
+                    },
+                    {
+                      "data": {
+                        "index": "0",
+                        "description": "Open the Inkers.ai website in a new tab.",
+                        "type": "BROWSEROPERATION",
+                        "status": "completed",
+                        "result": {},
+                        "conclusion": null,
+                        "error": null,
+                        "perception": {
+                          "entities": [
+                            "Inkers.ai",
+                            "Demo Button",
+                            "Form"
+                          ],
+                          "result_requirement": "Click the Demo button on Inkers.ai and fill the form with assumed values.",
+                          "original_goal_achieved": false,
+                          "local_goal_achieved": false,
+                          "confidence": "0.90",
+                          "reasoning": "The Inkers.ai website has been opened in a new tab. The next step is to click on the 'Demo Button' and fill the form. Since the website is open, we can proceed to interact with the page elements. The local goal of opening the website has been achieved, but the overall goal requires further steps.",
+                          "local_reasoning": "Now that the website is open, the next logical step is to click the 'Demo' button and fill the form to progress towards the original goal.",
+                          "last_tooluse_summary": "Successfully opened Inkers.ai in a new tab.",
+                          "solution_summary": "Not ready yet.",
+                          "current_browser_state": "Not applicable.",
+                          "route": "browser",
+                          "instruction_to_summarize": "Not applicable."
+                        },
+                        "from_step": null
+                      },
+                      "id": "0"
+                    },
+                    {
+                      "data": {
+                        "index": "1",
+                        "description": "Click on the 'Demo' button.",
+                        "type": "BROWSEROPERATION",
+                        "status": "completed",
+                        "result": null,
+                        "conclusion": null,
+                        "error": null,
+                        "perception": {
+                          "entities": [
+                            "Inkers.ai",
+                            "Demo Button",
+                            "Form"
+                          ],
+                          "result_requirement": "Fill the form on Inkers.ai after clicking the Demo button with assumed values.",
+                          "original_goal_achieved": false,
+                          "local_goal_achieved": false,
+                          "confidence": "0.65",
+                          "reasoning": "The original query requires opening Inkers.ai, clicking the Demo button, and filling out a form. The website has been opened, and the Demo button has been clicked. The next step is to fill the form. Since the form filling is pending, the original goal has not been achieved. Since the output of the last action is empty, the agent is waiting for some info. Next step involves form filling, so rerouting to Browser.",
+                          "local_reasoning": "The 'Demo' button has been clicked. Now the next logical step is to fill out the form, if any, that appears after clicking the demo button. The browser needs to stay open to enable form interactions.",
+                          "last_tooluse_summary": "Successfully opened Inkers.ai and clicked the Demo button.",
+                          "solution_summary": "Not ready yet.",
+                          "current_browser_state": "Not applicable.",
+                          "route": "browser"
+                        },
+                        "from_step": null
+                      },
+                      "id": "1"
+                    },
+                    {
+                      "data": {
+                        "index": "2",
+                        "description": "Submit the form.",
+                        "type": "BROWSEROPERATION",
+                        "status": "completed",
+                        "result": null,
+                        "conclusion": null,
+                        "error": null,
+                        "perception": {
+                          "entities": [
+                            "Inkers.ai",
+                            "Demo Button",
+                            "Form"
+                          ],
+                          "result_requirement": "Fill the form on Inkers.ai after clicking the Demo button with assumed values and submit the form.",
+                          "original_goal_achieved": false,
+                          "local_goal_achieved": false,
+                          "confidence": "0.3",
+                          "reasoning": "The original query requires opening Inkers.ai, clicking the Demo button, filling out a form with assumed values, and submitting it. The website has been opened, and the Demo button has been clicked. However, the form-filling and submission steps have failed. Since the last step (submit the form) resulted in a failed state, and there are many failed steps in total, it's unlikely that retrying will succeed without further information about the form. Moreover, there is no information in `globals_schema` on what to do, so it's time to summarize what has been done, i.e opening the page and clicking on the button, and report that we can not fill the form.",
+                          "local_reasoning": "The last action failed and the steps to fill the form and submit failed, indicating the process cannot continue. It's best to summarize the current state and report the failure to fill the form.",
+                          "last_tooluse_summary": "Successfully opened Inkers.ai and clicked the Demo button, but the subsequent submission failed.",
+                          "solution_summary": "Not ready yet.",
+                          "current_browser_state": "Not applicable.",
+                          "route": "summarize",
+                          "instruction_to_summarize": "The agent opened the Inkers.ai website and clicked the 'Demo' button as requested. However, the agent was unable to fill and submit the form as requested due to an error. Please summarize these steps for the user."
+                        },
+                        "from_step": null
+                      },
+                      "id": "2"
+                    },
+                    {
+                      "data": {
+                        "index": "3",
+                        "description": "Verify the form submission.",
+                        "type": "BROWSEROPERATION",
+                        "status": "Skipped",
+                        "result": null,
+                        "conclusion": null,
+                        "error": null,
+                        "perception": null,
+                        "from_step": null
+                      },
+                      "id": "3"
+                    },
+                    {
+                      "data": {
+                        "index": "4",
+                        "description": "Find and click the submit button.",
+                        "type": "BROWSEROPERATION",
+                        "status": "Skipped",
+                        "result": null,
+                        "conclusion": null,
+                        "error": null,
+                        "perception": null,
+                        "from_step": null
+                      },
+                      "id": "4"
+                    }
+                  ],
+                  "links": [
+                    {
+                      "type": "normal",
+                      "source": "ROOT",
+                      "target": "0"
+                    },
+                    {
+                      "type": "normal",
+                      "source": "0",
+                      "target": "1"
+                    },
+                    {
+                      "type": "normal",
+                      "source": "1",
+                      "target": "2"
+                    },
+                    {
+                      "type": "normal",
+                      "source": "2",
+                      "target": "3"
+                    },
+                    {
+                      "source": "3",
+                      "target": "4"
+                    }
+                  ]
+                }
+              },
+              "status": "success",
+              "final_step_id": "3",
+              "reason": "Browser operation summarized successfully",
+              "timestamp": "2025-05-30T13:20:20.309556",
+              "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+              "final_summary": "The browser operations performed included opening the Inkers.ai website in a new tab and clicking the \"Demo\" button. The agent was unable to proceed with filling out and submitting the form due to an unspecified error encountered during the submission process. No form data was successfully entered or submitted. The final outcome is that the initial steps of opening the page and clicking the button were successful, but form submission failed.",
+              "browser_operation": true
+            },
+            "conclusion": null,
+            "error": null,
+            "perception": null,
+            "from_step": "ROOT"
+          },
+          "id": "BROWSER"
+        }
+      ],
+      "links": [
+        {
+          "type": "normal",
+          "source": "ROOT",
+          "target": "BROWSER"
+        }
+      ]
+    }
+  },
+  "session": {
+    "session_id": "4834664f-c91b-45f7-959f-e35a58c5ea6b",
+    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+    "perception_snapshots": [
+      {
+        "run_id": "4834664f-c91b-45f7-959f-e35a58c5ea6b-P",
+        "snapshot_type": "user_query",
+        "entities": [
+          "Inkers.ai",
+          "Demo Button",
+          "Form"
+        ],
+        "result_requirement": "Open Inkers.ai, click Demo button, fill form with assumed values",
+        "original_goal_achieved": false,
+        "reasoning": "The original query requires opening a webpage, clicking a button, and filling out a form. This requires browser interaction and planning.",
+        "local_goal_achieved": false,
+        "local_reasoning": "The query involves browser actions that cannot be handled without the browser tool.",
+        "last_tooluse_summary": "Not applicable",
+        "solution_summary": "Not ready yet.",
+        "confidence": "0.9",
+        "route": "browser",
+        "timestamp": "...",
+        "return_to": ""
+      }
+    ],
+    "decision_snapshots": [],
+    "execution_snapshots": [],
+    "summarizer_snapshots": [
+      {
+        "run_id": "57d93008-bb65-4b0b-aa04-00409ca6f477",
+        "input": {
+          "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+          "globals_schema": {
+            "memory": null,
+            "context": {
+              "session_id": "3635d65c-e0a4-4b79-b9a6-0aba2dcd92c1",
+              "query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+              "globals": {},
+              "graph": {
+                "directed": true,
+                "multigraph": false,
+                "graph": {},
+                "nodes": [
+                  {
+                    "data": {
+                      "index": "ROOT",
+                      "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+                      "type": "ROOT",
+                      "status": "completed",
+                      "result": null,
+                      "conclusion": null,
+                      "error": null,
+                      "perception": {
+                        "entities": [
+                          "Inkers.ai",
+                          "Demo Button",
+                          "Form"
+                        ],
+                        "result_requirement": "Open Inkers.ai, click the Demo button, fill the form with assumed values, and submit the form.",
+                        "original_goal_achieved": false,
+                        "local_goal_achieved": false,
+                        "confidence": "0.95",
+                        "reasoning": "The original query requires opening a specific URL, clicking a button, and filling out a form. None of these actions have been completed yet. The next step is to open the URL in the browser.",
+                        "local_reasoning": "The first step is to open the URL in the browser to enable further interactions such as clicking the 'Demo' button and filling the form.",
+                        "last_tooluse_summary": "Not applicable.",
+                        "solution_summary": "Not ready yet.",
+                        "current_browser_state": "Not applicable.",
+                        "route": "browser",
+                        "instruction_to_summarize": "Not applicable."
+                      },
+                      "from_step": null
+                    },
+                    "id": "ROOT"
+                  },
+                  {
+                    "data": {
+                      "index": "0",
+                      "description": "Open the Inkers.ai website in a new tab.",
+                      "type": "BROWSEROPERATION",
+                      "status": "completed",
+                      "result": {},
+                      "conclusion": null,
+                      "error": null,
+                      "perception": {
+                        "entities": [
+                          "Inkers.ai",
+                          "Demo Button",
+                          "Form"
+                        ],
+                        "result_requirement": "Click the Demo button on Inkers.ai and fill the form with assumed values.",
+                        "original_goal_achieved": false,
+                        "local_goal_achieved": false,
+                        "confidence": "0.90",
+                        "reasoning": "The Inkers.ai website has been opened in a new tab. The next step is to click on the 'Demo Button' and fill the form. Since the website is open, we can proceed to interact with the page elements. The local goal of opening the website has been achieved, but the overall goal requires further steps.",
+                        "local_reasoning": "Now that the website is open, the next logical step is to click the 'Demo' button and fill the form to progress towards the original goal.",
+                        "last_tooluse_summary": "Successfully opened Inkers.ai in a new tab.",
+                        "solution_summary": "Not ready yet.",
+                        "current_browser_state": "Not applicable.",
+                        "route": "browser",
+                        "instruction_to_summarize": "Not applicable."
+                      },
+                      "from_step": null
+                    },
+                    "id": "0"
+                  },
+                  {
+                    "data": {
+                      "index": "1",
+                      "description": "Click on the 'Demo' button.",
+                      "type": "BROWSEROPERATION",
+                      "status": "completed",
+                      "result": null,
+                      "conclusion": null,
+                      "error": null,
+                      "perception": {
+                        "entities": [
+                          "Inkers.ai",
+                          "Demo Button",
+                          "Form"
+                        ],
+                        "result_requirement": "Fill the form on Inkers.ai after clicking the Demo button with assumed values.",
+                        "original_goal_achieved": false,
+                        "local_goal_achieved": false,
+                        "confidence": "0.65",
+                        "reasoning": "The original query requires opening Inkers.ai, clicking the Demo button, and filling out a form. The website has been opened, and the Demo button has been clicked. The next step is to fill the form. Since the form filling is pending, the original goal has not been achieved. Since the output of the last action is empty, the agent is waiting for some info. Next step involves form filling, so rerouting to Browser.",
+                        "local_reasoning": "The 'Demo' button has been clicked. Now the next logical step is to fill out the form, if any, that appears after clicking the demo button. The browser needs to stay open to enable form interactions.",
+                        "last_tooluse_summary": "Successfully opened Inkers.ai and clicked the Demo button.",
+                        "solution_summary": "Not ready yet.",
+                        "current_browser_state": "Not applicable.",
+                        "route": "browser"
+                      },
+                      "from_step": null
+                    },
+                    "id": "1"
+                  },
+                  {
+                    "data": {
+                      "index": "2",
+                      "description": "Submit the form.",
+                      "type": "BROWSEROPERATION",
+                      "status": "completed",
+                      "result": null,
+                      "conclusion": null,
+                      "error": null,
+                      "perception": {
+                        "entities": [
+                          "Inkers.ai",
+                          "Demo Button",
+                          "Form"
+                        ],
+                        "result_requirement": "Fill the form on Inkers.ai after clicking the Demo button with assumed values and submit the form.",
+                        "original_goal_achieved": false,
+                        "local_goal_achieved": false,
+                        "confidence": "0.3",
+                        "reasoning": "The original query requires opening Inkers.ai, clicking the Demo button, filling out a form with assumed values, and submitting it. The website has been opened, and the Demo button has been clicked. However, the form-filling and submission steps have failed. Since the last step (submit the form) resulted in a failed state, and there are many failed steps in total, it's unlikely that retrying will succeed without further information about the form. Moreover, there is no information in `globals_schema` on what to do, so it's time to summarize what has been done, i.e opening the page and clicking on the button, and report that we can not fill the form.",
+                        "local_reasoning": "The last action failed and the steps to fill the form and submit failed, indicating the process cannot continue. It's best to summarize the current state and report the failure to fill the form.",
+                        "last_tooluse_summary": "Successfully opened Inkers.ai and clicked the Demo button, but the subsequent submission failed.",
+                        "solution_summary": "Not ready yet.",
+                        "current_browser_state": "Not applicable.",
+                        "route": "summarize",
+                        "instruction_to_summarize": "The agent opened the Inkers.ai website and clicked the 'Demo' button as requested. However, the agent was unable to fill and submit the form as requested due to an error. Please summarize these steps for the user."
+                      },
+                      "from_step": null
+                    },
+                    "id": "2"
+                  },
+                  {
+                    "data": {
+                      "index": "3",
+                      "description": "Verify the form submission.",
+                      "type": "BROWSEROPERATION",
+                      "status": "Skipped",
+                      "result": null,
+                      "conclusion": null,
+                      "error": null,
+                      "perception": null,
+                      "from_step": null
+                    },
+                    "id": "3"
+                  },
+                  {
+                    "data": {
+                      "index": "4",
+                      "description": "Find and click the submit button.",
+                      "type": "BROWSEROPERATION",
+                      "status": "Skipped",
+                      "result": null,
+                      "conclusion": null,
+                      "error": null,
+                      "perception": null,
+                      "from_step": null
+                    },
+                    "id": "4"
+                  }
+                ],
+                "links": [
+                  {
+                    "type": "normal",
+                    "source": "ROOT",
+                    "target": "0"
+                  },
+                  {
+                    "type": "normal",
+                    "source": "0",
+                    "target": "1"
+                  },
+                  {
+                    "type": "normal",
+                    "source": "1",
+                    "target": "2"
+                  },
+                  {
+                    "type": "normal",
+                    "source": "2",
+                    "target": "3"
+                  },
+                  {
+                    "source": "3",
+                    "target": "4"
+                  }
+                ]
+              }
+            },
+            "status": "success",
+            "final_step_id": "3",
+            "reason": "Browser operation summarized successfully",
+            "timestamp": "2025-05-30T13:20:20.309556",
+            "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+            "final_summary": "The browser operations performed included opening the Inkers.ai website in a new tab and clicking the \"Demo\" button. The agent was unable to proceed with filling out and submitting the form due to an unspecified error encountered during the submission process. No form data was successfully entered or submitted. The final outcome is that the initial steps of opening the page and clicking the button were successful, but form submission failed.",
+            "browser_operation": true
+          },
+          "plan_graph": {
+            "directed": true,
+            "multigraph": false,
+            "graph": {},
+            "nodes": [
+              {
+                "data": {
+                  "index": "ROOT",
+                  "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+                  "type": "ROOT",
+                  "status": "completed",
+                  "result": null,
+                  "conclusion": null,
+                  "error": null,
+                  "perception": {
+                    "entities": [
+                      "Inkers.ai",
+                      "Demo Button",
+                      "Form"
+                    ],
+                    "result_requirement": "Open Inkers.ai, click Demo button, fill form with assumed values",
+                    "original_goal_achieved": false,
+                    "local_goal_achieved": false,
+                    "confidence": "0.9",
+                    "reasoning": "The original query requires opening a webpage, clicking a button, and filling out a form. This requires browser interaction and planning.",
+                    "local_reasoning": "The query involves browser actions that cannot be handled without the browser tool.",
+                    "last_tooluse_summary": "Not applicable",
+                    "solution_summary": "Not ready yet.",
+                    "route": "browser",
+                    "instruction_to_summarize": "Not applicable"
+                  },
+                  "from_step": null
+                },
+                "id": "ROOT"
+              },
+              {
+                "data": {
+                  "index": "BROWSER",
+                  "description": "Browser operation",
+                  "type": "BROWSEROPERATION",
+                  "status": "completed",
+                  "result": {
+                    "context": {
+                      "session_id": "3635d65c-e0a4-4b79-b9a6-0aba2dcd92c1",
+                      "query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+                      "globals": {},
+                      "graph": {
+                        "directed": true,
+                        "multigraph": false,
+                        "graph": {},
+                        "nodes": [
+                          {
+                            "data": {
+                              "index": "ROOT",
+                              "description": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+                              "type": "ROOT",
+                              "status": "completed",
+                              "result": null,
+                              "conclusion": null,
+                              "error": null,
+                              "perception": {
+                                "entities": [
+                                  "Inkers.ai",
+                                  "Demo Button",
+                                  "Form"
+                                ],
+                                "result_requirement": "Open Inkers.ai, click the Demo button, fill the form with assumed values, and submit the form.",
+                                "original_goal_achieved": false,
+                                "local_goal_achieved": false,
+                                "confidence": "0.95",
+                                "reasoning": "The original query requires opening a specific URL, clicking a button, and filling out a form. None of these actions have been completed yet. The next step is to open the URL in the browser.",
+                                "local_reasoning": "The first step is to open the URL in the browser to enable further interactions such as clicking the 'Demo' button and filling the form.",
+                                "last_tooluse_summary": "Not applicable.",
+                                "solution_summary": "Not ready yet.",
+                                "current_browser_state": "Not applicable.",
+                                "route": "browser",
+                                "instruction_to_summarize": "Not applicable."
+                              },
+                              "from_step": null
+                            },
+                            "id": "ROOT"
+                          },
+                          {
+                            "data": {
+                              "index": "0",
+                              "description": "Open the Inkers.ai website in a new tab.",
+                              "type": "BROWSEROPERATION",
+                              "status": "completed",
+                              "result": {},
+                              "conclusion": null,
+                              "error": null,
+                              "perception": {
+                                "entities": [
+                                  "Inkers.ai",
+                                  "Demo Button",
+                                  "Form"
+                                ],
+                                "result_requirement": "Click the Demo button on Inkers.ai and fill the form with assumed values.",
+                                "original_goal_achieved": false,
+                                "local_goal_achieved": false,
+                                "confidence": "0.90",
+                                "reasoning": "The Inkers.ai website has been opened in a new tab. The next step is to click on the 'Demo Button' and fill the form. Since the website is open, we can proceed to interact with the page elements. The local goal of opening the website has been achieved, but the overall goal requires further steps.",
+                                "local_reasoning": "Now that the website is open, the next logical step is to click the 'Demo' button and fill the form to progress towards the original goal.",
+                                "last_tooluse_summary": "Successfully opened Inkers.ai in a new tab.",
+                                "solution_summary": "Not ready yet.",
+                                "current_browser_state": "Not applicable.",
+                                "route": "browser",
+                                "instruction_to_summarize": "Not applicable."
+                              },
+                              "from_step": null
+                            },
+                            "id": "0"
+                          },
+                          {
+                            "data": {
+                              "index": "1",
+                              "description": "Click on the 'Demo' button.",
+                              "type": "BROWSEROPERATION",
+                              "status": "completed",
+                              "result": null,
+                              "conclusion": null,
+                              "error": null,
+                              "perception": {
+                                "entities": [
+                                  "Inkers.ai",
+                                  "Demo Button",
+                                  "Form"
+                                ],
+                                "result_requirement": "Fill the form on Inkers.ai after clicking the Demo button with assumed values.",
+                                "original_goal_achieved": false,
+                                "local_goal_achieved": false,
+                                "confidence": "0.65",
+                                "reasoning": "The original query requires opening Inkers.ai, clicking the Demo button, and filling out a form. The website has been opened, and the Demo button has been clicked. The next step is to fill the form. Since the form filling is pending, the original goal has not been achieved. Since the output of the last action is empty, the agent is waiting for some info. Next step involves form filling, so rerouting to Browser.",
+                                "local_reasoning": "The 'Demo' button has been clicked. Now the next logical step is to fill out the form, if any, that appears after clicking the demo button. The browser needs to stay open to enable form interactions.",
+                                "last_tooluse_summary": "Successfully opened Inkers.ai and clicked the Demo button.",
+                                "solution_summary": "Not ready yet.",
+                                "current_browser_state": "Not applicable.",
+                                "route": "browser"
+                              },
+                              "from_step": null
+                            },
+                            "id": "1"
+                          },
+                          {
+                            "data": {
+                              "index": "2",
+                              "description": "Submit the form.",
+                              "type": "BROWSEROPERATION",
+                              "status": "completed",
+                              "result": null,
+                              "conclusion": null,
+                              "error": null,
+                              "perception": {
+                                "entities": [
+                                  "Inkers.ai",
+                                  "Demo Button",
+                                  "Form"
+                                ],
+                                "result_requirement": "Fill the form on Inkers.ai after clicking the Demo button with assumed values and submit the form.",
+                                "original_goal_achieved": false,
+                                "local_goal_achieved": false,
+                                "confidence": "0.3",
+                                "reasoning": "The original query requires opening Inkers.ai, clicking the Demo button, filling out a form with assumed values, and submitting it. The website has been opened, and the Demo button has been clicked. However, the form-filling and submission steps have failed. Since the last step (submit the form) resulted in a failed state, and there are many failed steps in total, it's unlikely that retrying will succeed without further information about the form. Moreover, there is no information in `globals_schema` on what to do, so it's time to summarize what has been done, i.e opening the page and clicking on the button, and report that we can not fill the form.",
+                                "local_reasoning": "The last action failed and the steps to fill the form and submit failed, indicating the process cannot continue. It's best to summarize the current state and report the failure to fill the form.",
+                                "last_tooluse_summary": "Successfully opened Inkers.ai and clicked the Demo button, but the subsequent submission failed.",
+                                "solution_summary": "Not ready yet.",
+                                "current_browser_state": "Not applicable.",
+                                "route": "summarize",
+                                "instruction_to_summarize": "The agent opened the Inkers.ai website and clicked the 'Demo' button as requested. However, the agent was unable to fill and submit the form as requested due to an error. Please summarize these steps for the user."
+                              },
+                              "from_step": null
+                            },
+                            "id": "2"
+                          },
+                          {
+                            "data": {
+                              "index": "3",
+                              "description": "Verify the form submission.",
+                              "type": "BROWSEROPERATION",
+                              "status": "Skipped",
+                              "result": null,
+                              "conclusion": null,
+                              "error": null,
+                              "perception": null,
+                              "from_step": null
+                            },
+                            "id": "3"
+                          },
+                          {
+                            "data": {
+                              "index": "4",
+                              "description": "Find and click the submit button.",
+                              "type": "BROWSEROPERATION",
+                              "status": "Skipped",
+                              "result": null,
+                              "conclusion": null,
+                              "error": null,
+                              "perception": null,
+                              "from_step": null
+                            },
+                            "id": "4"
+                          }
+                        ],
+                        "links": [
+                          {
+                            "type": "normal",
+                            "source": "ROOT",
+                            "target": "0"
+                          },
+                          {
+                            "type": "normal",
+                            "source": "0",
+                            "target": "1"
+                          },
+                          {
+                            "type": "normal",
+                            "source": "1",
+                            "target": "2"
+                          },
+                          {
+                            "type": "normal",
+                            "source": "2",
+                            "target": "3"
+                          },
+                          {
+                            "source": "3",
+                            "target": "4"
+                          }
+                        ]
+                      }
+                    },
+                    "status": "success",
+                    "final_step_id": "3",
+                    "reason": "Browser operation summarized successfully",
+                    "timestamp": "2025-05-30T13:20:20.309556",
+                    "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+                    "final_summary": "The browser operations performed included opening the Inkers.ai website in a new tab and clicking the \"Demo\" button. The agent was unable to proceed with filling out and submitting the form due to an unspecified error encountered during the submission process. No form data was successfully entered or submitted. The final outcome is that the initial steps of opening the page and clicking the button were successful, but form submission failed.",
+                    "browser_operation": true
+                  },
+                  "conclusion": null,
+                  "error": null,
+                  "perception": null,
+                  "from_step": "ROOT"
+                },
+                "id": "BROWSER"
+              }
+            ],
+            "links": [
+              {
+                "type": "normal",
+                "source": "ROOT",
+                "target": "BROWSER"
+              }
+            ]
+          },
+          "perception": {
+            "entities": [
+              "Inkers.ai",
+              "Demo Button",
+              "Form"
+            ],
+            "result_requirement": "Open Inkers.ai, click Demo button, fill form with assumed values",
+            "original_goal_achieved": false,
+            "local_goal_achieved": false,
+            "confidence": "0.9",
+            "reasoning": "The original query requires opening a webpage, clicking a button, and filling out a form. This requires browser interaction and planning.",
+            "local_reasoning": "The query involves browser actions that cannot be handled without the browser tool.",
+            "last_tooluse_summary": "Not applicable",
+            "solution_summary": "Not ready yet.",
+            "route": "browser",
+            "instruction_to_summarize": "Not applicable"
+          }
+        },
+        "summary_output": "The agent successfully opened the [Inkers.ai](https://www.inkers.ai) website and clicked the \"Demo\" button as requested. However, the agent was unable to fill out and submit the form due to an error encountered during the submission process.",
+        "success": true,
+        "error": null,
+        "timestamp": "2025-05-30T13:19:21Z",
+        "return_to": ""
+      }
+    ],
+    "final_summary": "The agent successfully opened the [Inkers.ai](https://www.inkers.ai) website and clicked the \"Demo\" button as requested. However, the agent was unable to fill out and submit the form due to an error encountered during the submission process.",
+    "status": "success",
+    "completed_at": "2025-05-30T13:20:23.674804"
+  },
+  "status": "success",
+  "final_step_id": "BROWSER",
+  "reason": "Summarized successfully",
+  "timestamp": "2025-05-30T13:20:23.677822",
+  "original_query": "Query 1: Open https://www.inkers.ai in a new tab, and click on Demo Button, and fill the form, you can assume values",
+  "final_summary": "The agent successfully opened the [Inkers.ai](https://www.inkers.ai) website and clicked the \"Demo\" button as requested. However, the agent was unable to fill out and submit the form due to an error encountered during the submission process."
+}

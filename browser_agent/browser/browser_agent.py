@@ -6,6 +6,7 @@ from datetime import datetime
 import uuid
 import sys
 from pathlib import Path
+import yaml
 
 # Add the parent directory to Python path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -21,6 +22,7 @@ from browser.browser_perception import BrowserPerception, build_browser_percepti
 from perception.perception import build_perception_input
 from browser.browser_decision import BrowserDecision, build_browser_decision_input
 from browser.browser_summarize import BrowserAgentSummarizer
+from mcp_servers.multiMCP import MultiMCP
 
 log = setup_logging(__name__)
 
@@ -41,26 +43,27 @@ class BrowserAgent:
             multi_mcp: MultiMCP instance for tool execution
         """
         log.info("Initializing BrowserAgent components...")
-        self.multi_mcp = multi_mcp
+        #self.multi_mcp = multi_mcp
         self.model = ModelManager()
         self.session_id = str(uuid.uuid4())
         log.info(f"BrowserAgent initialized with session ID: {self.session_id}")
-        
-        # Initialize perception
-        self.perception = BrowserPerception(
-            perception_prompt_path="prompts/browser_agent_perception_prompt.txt"
-        )
-        
-        # Initialize decision with both required parameters
-        self.decision = BrowserDecision(
-            decision_prompt_path="prompts/browser_agent_decision_prompt.txt",
-            multi_mcp=multi_mcp
-        )
-        
-        # Initialize summarizer with path
-        self.summarizer = BrowserAgentSummarizer(
-            summarizer_prompt_path="prompts/browser_agent_summarizer_prompt.txt"
-        )
+
+        # Load MCP server configs
+        config_path = Path("config/mcp_server_config.yaml")
+        with open(config_path, "r") as f:
+            profile = yaml.safe_load(f)
+            mcp_servers_list = profile.get("mcp_servers", [])
+            # Filter for webbrowsing server only
+            browser_config = next(
+                (server for server in mcp_servers_list if server["id"] == "webbrowsing"),
+                None
+            )
+            if not browser_config:
+                raise ValueError("Webbrowsing MCP server config not found")
+            
+        # Initialize MultiMCP with only the browser config
+        log.info("Initializing MultiMCP with browser tools...")
+        self.multi_mcp = MultiMCP(server_configs=[browser_config])
         
     async def run(self, query: str) -> dict:
         """
@@ -76,6 +79,34 @@ class BrowserAgent:
             log.info("Starting browser operation...")
 
             log_step("🌐 Starting browser operation with BrowserAgent 🌐")
+
+            await self.multi_mcp.initialize()       
+        
+            # Initialize perception
+            self.perception = BrowserPerception(
+                perception_prompt_path="prompts/browser_agent_perception_prompt.txt"
+            )
+        
+            # Initialize decision with both required parameters
+            self.decision = BrowserDecision(
+                decision_prompt_path="prompts/browser_agent_decision_prompt.txt",
+                multi_mcp=self.multi_mcp
+            )
+        
+            # Initialize summarizer with path
+            self.summarizer = BrowserAgentSummarizer(
+                summarizer_prompt_path="prompts/browser_agent_summarizer_prompt.txt"
+            )
+        
+            # Log available tools and their details
+            tools = await self.multi_mcp.list_all_tools()
+            log.info(f"Successfully initialized MultiMCP with {len(tools)} tools")
+
+            # Log tool descriptions in the same format as decision prompt
+            log.info("\n=== Available Tools ===")
+            function_list_text = self.multi_mcp.tool_description_wrapper()
+            tool_descriptions = "\n".join(f"- `{desc.strip()}`" for desc in function_list_text)
+            log.info("\n" + tool_descriptions)
             
             # Initialize context
             self.ctx = BrowserContext(self.session_id, query)
@@ -156,12 +187,13 @@ class BrowserAgent:
             Dict containing the plan
         """
         log.info("Planning browser operation steps...")
-        d_input = build_browser_decision_input(self.ctx, query, self.p_out)
+        d_input = build_browser_decision_input(self.ctx, query, self.p_out, plan_mode="initial")
         log.info(f"Decision input:")
         logger_json_block(log,'Decision input:', d_input)
         plan = await self.decision.run(d_input)
         log.info(f"Decision output:")
         logger_json_block(log,'Decision output:', plan)
+        log_json_block(f"📌 Browser Agent Decision output (initial)", plan)
         log.info(f"Planned {len(plan['plan_graph']['nodes'])} steps")
         log.info(f"📋 Planned steps: {json.dumps(plan, indent=2)}")
         
@@ -170,7 +202,8 @@ class BrowserAgent:
             self.ctx.add_step(
                 step_id=node["id"],
                 description=node["description"],
-                step_type=StepType.BROWSEROPERATION
+                step_type=StepType.BROWSEROPERATION,
+                from_step=node["from"] if "from" in node else None
             )
         
         # Then add edges according to the plan
@@ -218,7 +251,8 @@ class BrowserAgent:
                 self.multi_mcp
             )
 
-            if not success:
+            #if not success:
+            if success.get("status") != "success": 
                 log.error(f"❌ Step {retry_step_id} failed. Marking as failed.")
                 self.ctx.mark_step_failed(self.next_step_id, "All fallback variants failed")
                 tracker.record_failure(self.next_step_id)
@@ -261,7 +295,7 @@ class BrowserAgent:
 
             # 🔁 Decision again
             log.info(f"🔁 Browser Agent - Running Decision again")
-            d_input = build_browser_decision_input(self.ctx, self.ctx.query, self.p_out)
+            d_input = build_browser_decision_input(self.ctx, self.ctx.query, self.p_out, plan_mode="mid-session")
             log.info(f"Decision input:")
             logger_json_block(log,'Decision input:', d_input)
             d_out = await self.decision.run(d_input)
@@ -321,6 +355,7 @@ class StepExecutionTracker:
         return self.tries < self.max_steps
 
     def has_exceeded_retries(self, step_id):
+        log.info(f"Attempts for step {step_id}: {self.attempts.get(step_id, 0)} attempts and max retries are {self.max_retries}")
         return self.attempts.get(step_id, 0) >= self.max_retries
 
     def register_root_failure(self):

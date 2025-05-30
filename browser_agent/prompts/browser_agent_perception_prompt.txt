@@ -56,7 +56,8 @@ Your tasks:
   "globals_schema": { ... },      // currently available variables
   "current_plan": [...],          // nodes + steps if available
   "completed_steps": [...],       // history of successful nodes
-  "failed_steps": [...]           // history of failed nodes/tools
+  "failed_steps": [...],           // history of failed nodes/tools
+  "current_browser_state": [...]   // 
 }
 ````
 
@@ -75,6 +76,7 @@ Your tasks:
   "local_reasoning": "...",
   "last_tooluse_summary": "...",
   "solution_summary": "...",
+  "current_browser_state": "...",
   "route": "summarize" | "browser",
   "instruction_to_summarize": "..."   // only when route = "summarize"
 }
@@ -136,6 +138,7 @@ Examples:
   "local_reasoning": "The page structure includes the 'Demo' button with id 8 which is a navigation link. The next logical step is to click this button to fulfill the original query.",
   "last_tooluse_summary": "Successfully opened Inkers.ai and retrieved page structure using get_comprehensive_markdown.", 
   "solution_summary": "Not ready yet.",
+  "current_browser_state:"Browser has the webpage with http://www.google.com open, and the elements have already been identied.  "
   "route": "browser"
 }
 ```
