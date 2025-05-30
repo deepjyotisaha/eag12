@@ -1,17 +1,17 @@
-2025-05-30 15:19:34,432 - INFO - browser_main:main:23 - Loading environment variables...
-2025-05-30 15:19:34,433 - INFO - browser_main:main:27 - Loading MCP server configurations...
-2025-05-30 15:19:34,435 - INFO - browser_main:main:41 - Initializing MultiMCP with browser tools...
-2025-05-30 15:19:34,445 - INFO - sse:sse_client:55 - Connecting to SSE endpoint: http://localhost:8100/sse
-2025-05-30 15:19:35,162 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8100/sse "HTTP/1.1 200 OK"
-2025-05-30 15:19:35,163 - INFO - sse:sse_reader:75 - Received endpoint URL: http://localhost:8100/messages?session_id=16c5b6c76a774796a7d064ea6ac48f53
-2025-05-30 15:19:35,163 - INFO - sse:sse_client:148 - Starting post writer with endpoint URL: http://localhost:8100/messages?session_id=16c5b6c76a774796a7d064ea6ac48f53
-2025-05-30 15:19:35,424 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8100/messages?session_id=16c5b6c76a774796a7d064ea6ac48f53 "HTTP/1.1 202 Accepted"
-2025-05-30 15:19:35,431 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8100/messages?session_id=16c5b6c76a774796a7d064ea6ac48f53 "HTTP/1.1 202 Accepted"
-2025-05-30 15:19:35,436 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8100/messages?session_id=16c5b6c76a774796a7d064ea6ac48f53 "HTTP/1.1 202 Accepted"
-2025-05-30 15:19:35,443 - INFO - browser_main:main:47 - Successfully initialized MultiMCP with 24 tools
-2025-05-30 15:19:35,443 - INFO - browser_main:main:50 - 
+2025-05-30 15:34:46,522 - INFO - browser_main:main:23 - Loading environment variables...
+2025-05-30 15:34:46,523 - INFO - browser_main:main:27 - Loading MCP server configurations...
+2025-05-30 15:34:46,525 - INFO - browser_main:main:41 - Initializing MultiMCP with browser tools...
+2025-05-30 15:34:46,537 - INFO - sse:sse_client:55 - Connecting to SSE endpoint: http://localhost:8100/sse
+2025-05-30 15:34:47,244 - INFO - _client:_send_single_request:1740 - HTTP Request: GET http://localhost:8100/sse "HTTP/1.1 200 OK"
+2025-05-30 15:34:47,245 - INFO - sse:sse_reader:75 - Received endpoint URL: http://localhost:8100/messages?session_id=4a5b4f68b4ab4ebbad469c8439cde3de
+2025-05-30 15:34:47,245 - INFO - sse:sse_client:148 - Starting post writer with endpoint URL: http://localhost:8100/messages?session_id=4a5b4f68b4ab4ebbad469c8439cde3de
+2025-05-30 15:34:47,505 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8100/messages?session_id=4a5b4f68b4ab4ebbad469c8439cde3de "HTTP/1.1 202 Accepted"
+2025-05-30 15:34:47,508 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8100/messages?session_id=4a5b4f68b4ab4ebbad469c8439cde3de "HTTP/1.1 202 Accepted"
+2025-05-30 15:34:47,511 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8100/messages?session_id=4a5b4f68b4ab4ebbad469c8439cde3de "HTTP/1.1 202 Accepted"
+2025-05-30 15:34:47,513 - INFO - browser_main:main:47 - Successfully initialized MultiMCP with 24 tools
+2025-05-30 15:34:47,513 - INFO - browser_main:main:50 - 
 === Available Tools ===
-2025-05-30 15:19:35,443 - INFO - browser_main:main:53 - 
+2025-05-30 15:34:47,514 - INFO - browser_main:main:53 - 
 - `open_tab(string)  # Open a new browser tab with the specified URL`
 - `go_to_url(string)  # Navigate to URL in the current tab`
 - `go_back()  # Go back to the previous page`
@@ -36,22 +36,22 @@
 - `take_screenshot(boolean, boolean)  # Take a screenshot of the current page and save as PNG file (returns file path, not base64)`
 - `get_interactive_elements(string, boolean, boolean)  # Get interactive elements with smart viewport and strict filtering`
 - `close_browser_session()  # Close the browser session`
-2025-05-30 15:19:35,444 - INFO - browser_main:main:56 - Initializing BrowserAgent...
-2025-05-30 15:19:35,444 - INFO - browser_agent:__init__:37 - Initializing BrowserAgent components...
-2025-05-30 15:19:35,784 - INFO - browser_agent:__init__:41 - BrowserAgent initialized with session ID: 5e5b7408-0bec-46cd-b668-19d0ebab2cf0
-2025-05-30 15:19:36,119 - INFO - browser_main:main:58 - BrowserAgent initialized successfully
-2025-05-30 15:20:02,266 - INFO - browser_main:main:66 - Processing query: Open https://www.inkers.ai in a new tab, and click on Demo Button.
-2025-05-30 15:20:02,267 - INFO - browser_agent:run:59 - Starting browser operation...
-2025-05-30 15:20:02,267 - INFO - browser_context:__init__:43 - Initializing BrowserContext for session 5e5b7408-0bec-46cd-b668-19d0ebab2cf0 with query: Open https://www.inkers.ai in a new tab, and click on Demo Button.
-2025-05-30 15:20:02,267 - INFO - browser_context:__init__:53 - Initializing BrowserContext, creating root node...
-2025-05-30 15:20:02,267 - INFO - browser_agent:_run_initial_perception:146 - 📝 Initial Perception
-2025-05-30 15:20:02,267 - JSON_BLOCK - log_config:logger_json_block:56 - 
+2025-05-30 15:34:47,514 - INFO - browser_main:main:56 - Initializing BrowserAgent...
+2025-05-30 15:34:47,514 - INFO - browser_agent:__init__:37 - Initializing BrowserAgent components...
+2025-05-30 15:34:47,884 - INFO - browser_agent:__init__:41 - BrowserAgent initialized with session ID: 351a3fbb-34e5-4f5a-81bf-e87c57b24cf2
+2025-05-30 15:34:48,259 - INFO - browser_main:main:58 - BrowserAgent initialized successfully
+2025-05-30 15:34:51,499 - INFO - browser_main:main:66 - Processing query: Open https://www.inkers.ai in a new tab, and click on Demo Button.
+2025-05-30 15:34:51,500 - INFO - browser_agent:run:59 - Starting browser operation...
+2025-05-30 15:34:51,500 - INFO - browser_context:__init__:43 - Initializing BrowserContext for session 351a3fbb-34e5-4f5a-81bf-e87c57b24cf2 with query: Open https://www.inkers.ai in a new tab, and click on Demo Button.
+2025-05-30 15:34:51,500 - INFO - browser_context:__init__:53 - Initializing BrowserContext, creating root node...
+2025-05-30 15:34:51,500 - INFO - browser_agent:_run_initial_perception:153 - 📝 Initial Perception
+2025-05-30 15:34:51,500 - JSON_BLOCK - log_config:logger_json_block:56 - 
 ================================================================================
 📌 Inital Perception input:
 ================================================================================
 {
-  "current_time": "2025-05-30T09:50:02.267847",
-  "run_id": "5e5b7408-0bec-46cd-b668-19d0ebab2cf0-P",
+  "current_time": "2025-05-30T10:04:51.500630",
+  "run_id": "351a3fbb-34e5-4f5a-81bf-e87c57b24cf2-P",
   "snapshot_type": "user_query",
   "original_query": "Open https://www.inkers.ai in a new tab, and click on Demo Button.",
   "raw_input": "Open https://www.inkers.ai in a new tab, and click on Demo Button.",
@@ -65,7 +65,7 @@
 }
 ================================================================================
 
-2025-05-30 15:20:02,269 - PROMPT_BLOCK - log_config:logger_prompt:83 - 
+2025-05-30 15:34:51,502 - PROMPT_BLOCK - log_config:logger_prompt:83 - 
 ================================================================================
 📝 📝 Browser perception prompt:
 ================================================================================
@@ -179,8 +179,8 @@
   * Remember Summarizer can only read what you send or `global_schema`, it doesn't have access to any other tools or ways to access internet or any other information outside what you send or is already available in `global_schema`. 
   You control the flow. Decide cleanly. Route responsibly. Solve in as fewer steps as possible.
   {
-    "current_time": "2025-05-30T09:50:02.267847",
-    "run_id": "5e5b7408-0bec-46cd-b668-19d0ebab2cf0-P",
+    "current_time": "2025-05-30T10:04:51.500630",
+    "run_id": "351a3fbb-34e5-4f5a-81bf-e87c57b24cf2-P",
     "snapshot_type": "user_query",
     "original_query": "Open https://www.inkers.ai in a new tab, and click on Demo Button.",
     "raw_input": "Open https://www.inkers.ai in a new tab, and click on Demo Button.",
@@ -194,10 +194,10 @@
   }
 ================================================================================
 
-2025-05-30 15:20:02,270 - INFO - models:generate_content:7118 - AFC is enabled with max remote calls: 10.
-2025-05-30 15:20:05,580 - INFO - _client:_send_single_request:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-30 15:20:05,582 - INFO - browser_agent:_run_initial_perception:149 - 📝 Initial Perception output
-2025-05-30 15:20:05,582 - JSON_BLOCK - log_config:logger_json_block:56 - 
+2025-05-30 15:34:51,504 - INFO - models:generate_content:7118 - AFC is enabled with max remote calls: 10.
+2025-05-30 15:34:53,469 - INFO - _client:_send_single_request:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-30 15:34:53,471 - INFO - browser_agent:_run_initial_perception:156 - 📝 Initial Perception output
+2025-05-30 15:34:53,471 - JSON_BLOCK - log_config:logger_json_block:56 - 
 ================================================================================
 📌 Initial Perception output:
 ================================================================================
@@ -206,18 +206,95 @@
     "https://www.inkers.ai",
     "Demo Button"
   ],
-  "result_requirement": "Open the specified URL in a new tab and click the Demo button. Return the browser state after clicking the button.",
+  "result_requirement": "Open the given URL in a new tab and click the 'Demo Button'.",
   "original_goal_achieved": false,
   "local_goal_achieved": false,
   "confidence": "0.95",
-  "reasoning": "The user query requires opening a URL and clicking a specific button. This necessitates browser interaction. The goal is not achievable without interacting with the browser.",
-  "local_reasoning": "The task requires opening a webpage and interacting with it, specifically clicking the 'Demo Button'. This is a clear case for browser interaction.",
-  "last_tooluse_summary": "Not applicable.",
-  "solution_summary": "Not applicable.",
+  "reasoning": "The user query requires opening a URL and clicking a button, which are browser interactions.  The goal is not yet achieved as the URL needs to be opened and the button needs to be clicked. No information is available in memory or globals to solve this without browser interaction.",
+  "local_reasoning": "The immediate next step is to open the URL in a new tab using the browser.",
+  "last_tooluse_summary": "Not applicable",
+  "solution_summary": "Not applicable",
   "route": "browser",
   "instruction_to_summarize": "Not applicable"
 }
 ================================================================================
 
-2025-05-30 15:20:05,587 - INFO - browser_agent:run:66 - Perception result: None
-2025-05-30 15:20:05,588 - INFO - browser_main:main:68 - Query result: Browser operation failed: 'NoneType' object is not subscriptable
+2025-05-30 15:34:53,480 - INFO - browser_agent:run:66 - Perception result: {'entities': ['https://www.inkers.ai', 'Demo Button'], 'result_requirement': "Open the given URL in a new tab and click the 'Demo Button'.", 'original_goal_achieved': False, 'local_goal_achieved': False, 'confidence': '0.95', 'reasoning': 'The user query requires opening a URL and clicking a button, which are browser interactions.  The goal is not yet achieved as the URL needs to be opened and the button needs to be clicked. No information is available in memory or globals to solve this without browser interaction.', 'local_reasoning': 'The immediate next step is to open the URL in a new tab using the browser.', 'last_tooluse_summary': 'Not applicable', 'solution_summary': 'Not applicable', 'route': 'browser', 'instruction_to_summarize': 'Not applicable'}
+2025-05-30 15:34:53,480 - INFO - browser_agent:run:78 - Available tools: ['open_tab', 'go_to_url', 'go_back', 'search_google', 'click_element_by_index', 'input_text', 'send_keys', 'scroll_down', 'scroll_up', 'scroll_to_text', 'switch_tab', 'close_tab', 'get_dropdown_options', 'select_dropdown_option', 'drag_drop', 'get_enhanced_page_structure', 'get_comprehensive_markdown', 'save_pdf', 'wait', 'done', 'get_session_snapshot', 'take_screenshot', 'get_interactive_elements', 'close_browser_session']
+2025-05-30 15:34:53,480 - INFO - browser_agent:run:81 - Planning browser operation steps...
+2025-05-30 15:34:53,480 - INFO - models:generate_content:7118 - AFC is enabled with max remote calls: 10.
+2025-05-30 15:34:55,503 - INFO - _client:_send_single_request:1740 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-30 15:34:55,506 - INFO - browser_agent:_plan_steps:231 - Model response: ```json
+{
+  "plan_graph": {
+    "nodes": [
+      {
+        "id": "0",
+        "description": "Open https://www.inkers.ai in a new tab"
+      },
+      {
+        "id": "1",
+        "description": "Click on the Demo Button"
+      }
+    ],
+    "edges": [
+      {
+        "from": "ROOT",
+        "to": "0",
+        "type": "normal"
+      },
+      {
+        "from": "0",
+        "to": "1",
+        "type": "normal"
+      }
+    ]
+  },
+  "next_step_id": "0",
+  "code_variants": {
+    "CODE_0A": "result = open_tab('https://www.inkers.ai')\nreturn { 'result_0A': result }",
+    "CODE_0B": "result = open_tab('https://www.inkers.ai')\nreturn { 'result_0B': result }",
+    "CODE_0C": "result = open_tab('https://www.inkers.ai')\nreturn { 'result_0C': result }"
+  }
+}
+```
+2025-05-30 15:34:55,506 - INFO - browser_agent:run:83 - Planned 2 steps
+2025-05-30 15:34:55,506 - INFO - browser_agent:run:84 - 📋 Planned steps: {
+  "plan_graph": {
+    "nodes": [
+      {
+        "id": "0",
+        "description": "Open https://www.inkers.ai in a new tab"
+      },
+      {
+        "id": "1",
+        "description": "Click on the Demo Button"
+      }
+    ],
+    "edges": [
+      {
+        "from": "ROOT",
+        "to": "0",
+        "type": "normal"
+      },
+      {
+        "from": "0",
+        "to": "1",
+        "type": "normal"
+      }
+    ]
+  },
+  "next_step_id": "0",
+  "code_variants": {
+    "CODE_0A": "result = open_tab('https://www.inkers.ai')\nreturn { 'result_0A': result }",
+    "CODE_0B": "result = open_tab('https://www.inkers.ai')\nreturn { 'result_0B': result }",
+    "CODE_0C": "result = open_tab('https://www.inkers.ai')\nreturn { 'result_0C': result }"
+  }
+}
+2025-05-30 15:34:55,506 - INFO - browser_agent:run:118 - Executing step 0
+2025-05-30 15:34:55,790 - INFO - _client:_send_single_request:1740 - HTTP Request: POST http://localhost:8100/messages?session_id=4a5b4f68b4ab4ebbad469c8439cde3de "HTTP/1.1 202 Accepted"
+2025-05-30 15:35:01,019 - INFO - browser_agent:run:132 - ✅ Step 0 completed successfully
+2025-05-30 15:35:01,019 - INFO - browser_agent:run:118 - Executing step 1
+2025-05-30 15:35:01,020 - INFO - browser_agent:run:132 - ✅ Step 1 completed successfully
+2025-05-30 15:35:01,020 - INFO - browser_agent:run:143 - Browser operation completed successfully
+2025-05-30 15:35:01,022 - INFO - browser_main:main:68 - Query result: Browser operation failed: 'summary'

@@ -88,7 +88,8 @@ class AgentLoop:
         log.info(f"📝 Initial Perception output")
         logger_json_block(log,'Initial Perception output:', self.p_out)
 
-        self.ctx.add_step(step_id=StepType.ROOT, description="initial query", step_type=StepType.ROOT)
+        # This is not needed, because the root node is created in the BrowserContext constructor
+        #self.ctx.add_step(step_id=StepType.ROOT, description="initial query", step_type=StepType.ROOT)
         self.ctx.mark_step_completed(StepType.ROOT)
         self.ctx.attach_perception(StepType.ROOT, self.p_out)
 
@@ -121,9 +122,11 @@ class AgentLoop:
             self.ctx.add_step(
                 step_id=node["id"],
                 description=node["description"],
-                step_type=StepType.CODE,
-                from_node=StepType.ROOT
+                step_type=StepType.CODE
             )
+
+        for edge in d_out["plan_graph"]["edges"]:
+            self.ctx.graph.add_edge(edge["from"], edge["to"], type=edge.get("type", "normal"))
 
         await self._execute_steps_loop()
 

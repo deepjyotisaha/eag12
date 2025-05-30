@@ -76,8 +76,11 @@ class BrowserContext:
             from_step=from_step
         )
         self.graph.add_node(step_id, data=node)
-        if from_step != "ROOT":
+        
+        # Always add the edge if from_step is provided
+        if from_step:
             self.graph.add_edge(from_step, step_id)
+        
         self.latest_step_id = step_id
         return step_id
 

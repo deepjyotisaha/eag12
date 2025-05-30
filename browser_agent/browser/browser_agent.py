@@ -61,13 +61,13 @@ class BrowserAgent:
             # Initialize context
             self.ctx = BrowserContext(self.session_id, query)
 
-            perception_result = await self._run_initial_perception()
+            await self._run_initial_perception()
 
-            log.info(f"Perception result: {perception_result}")
+            log.info(f"Perception result: {self.p_out}")
                   
             # If perception suggests a different route, handle it
-            if perception_result["route"] != "browser":
-                return f"Perception suggests this query should be handled by {perception_result['route']} module"
+            if self.p_out["route"] != "browser":
+                return f"Perception suggests this query should be handled by {self.p_out['route']} module"
             
             # Continue with existing browser operation logic...
             tools = await self.multi_mcp.list_all_tools()
@@ -88,13 +88,20 @@ class BrowserAgent:
                 self.ctx.add_step(
                     step_id=node["id"],
                     description=node["description"],
-                    from_step="ROOT"
+                    step_type=StepType.CODE
                 )
+            
+            # Then add edges according to the plan
+            for edge in plan["plan_graph"]["edges"]:
+                self.ctx.graph.add_edge(edge["from"], edge["to"])
             
             # 5. Execute steps using execute_step_with_mode
             next_step_id = plan["next_step_id"]
             code_variants = plan["code_variants"]
-            
+
+            self.code_variants = plan["code_variants"]
+            self.next_step_id = plan["next_step_id"]
+
             while True:
                 if self.ctx.is_step_completed(next_step_id):
                     log.info(f"✅ Step {next_step_id} already completed. Skipping.")
@@ -149,7 +156,8 @@ class BrowserAgent:
         log.info(f"📝 Initial Perception output")
         logger_json_block(log,'Initial Perception output:', self.p_out)
 
-        self.ctx.add_step(step_id=StepType.ROOT, description="initial query", step_type=StepType.ROOT)
+        # This is not needed, because the root node is created in the BrowserContext constructor
+        #self.ctx.add_step(step_id=StepType.ROOT, description="initial query", step_type=StepType.ROOT)
         self.ctx.mark_step_completed(StepType.ROOT)
         self.ctx.attach_perception(StepType.ROOT, self.p_out)
 
