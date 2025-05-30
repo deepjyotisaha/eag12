@@ -60,7 +60,7 @@ class AgentLoop:
                 log.info(f"📌 Browser output")
                 logger_json_block(log,f"📌 Browser output", browser_agent_result)
                 log_step("🔄🔄🔄 BrowserAgent completed. 🔄🔄🔄")
-                log_json_block(f"📌 BrowserAgent Output", browser_agent_result["final_summary"], 300)
+                log_json_block(f"📌 BrowserAgent Output", browser_agent_result["final_summary"], 500)
 
                 # Add browser operation to context
                 self.ctx.add_step(
