@@ -54,7 +54,7 @@ class BrowserContext:
         # Add root node
         root_node = BrowserStepNode(
             step_id="ROOT",
-            type="BROWSEROPERATION",
+            type="ROOT",
             description=query,
             status="pending"
         )

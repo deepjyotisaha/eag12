@@ -128,6 +128,8 @@ class AgentLoop:
         for edge in d_out["plan_graph"]["edges"]:
             self.ctx.graph.add_edge(edge["from"], edge["to"], type=edge.get("type", "normal"))
 
+        self.ctx._print_graph(depth=3)
+
         await self._execute_steps_loop()
 
     async def _execute_steps_loop(self):

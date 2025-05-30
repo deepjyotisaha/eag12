@@ -1,0 +1,52 @@
+You are a browser automation expert. Given the following browser query and available tools, plan the steps needed.
+Return ONLY a valid JSON object with no additional text.
+
+Query: {query}
+
+{tool_descriptions}
+
+Required JSON format:
+{{
+    "plan_graph": {{
+        "nodes": [
+            {{ "id": "0", "description": "..." }},
+            {{ "id": "1", "description": "..." }}
+        ],
+        "edges": [
+            {{ "from": "ROOT", "to": "0", "type": "normal" }},
+            {{ "from": "0", "to": "1", "type": "normal" }}
+        ]
+    }},
+    "next_step_id": "0",
+    "code_variants": {{
+        "CODE_0A": "<code block>",
+        "CODE_0B": "<code block>",
+        "CODE_0C": "<code block>"
+    }}
+}}
+
+Rules:
+1. Each code block must be raw Python code (no await, no def, no markdown)
+2. Each code block must end with a return statement like:
+   return {{ "result_0A": value }}
+3. Use different strategies in each variant
+4. No import statements, only use provided tools
+5. No keyword arguments, use positional arguments only
+
+Example for opening a URL:
+{{
+    "plan_graph": {{
+        "nodes": [
+            {{ "id": "0", "description": "Open URL in new tab" }}
+        ],
+        "edges": [
+            {{ "from": "ROOT", "to": "0", "type": "normal" }}
+        ]
+    }},
+    "next_step_id": "0",
+    "code_variants": {{
+        "CODE_0A": "result = open_tab('https://example.com')\nreturn {{ 'result_0A': result }}",
+        "CODE_0B": "result = go_to_url('https://example.com')\nreturn {{ 'result_0B': result }}",
+        "CODE_0C": "result = search_google('example.com')\nreturn {{ 'result_0C': result }}"
+    }}
+}}

@@ -12,19 +12,24 @@ sys.path.append(str(Path(__file__).parent.parent))
 
 from mcp_servers.multiMCP import MultiMCP
 from agent.model_manager import ModelManager
-from utils.utils import log_error, log_json_block
+from utils.utils import log_error, log_json_block, log_step
 from config.log_config import setup_logging, logger_json_block
 from utils.json_parser import parse_llm_json
 from action.execute_step import execute_step_with_mode
 from browser.browser_context import BrowserContext
 from browser.browser_perception import BrowserPerception, build_browser_perception_input
 from perception.perception import build_perception_input
+from browser.browser_decision import BrowserDecision, build_browser_decision_input
 
 log = setup_logging(__name__)
 
 class StepType:
     ROOT = "ROOT"
-    CODE = "CODE"
+    BROWSEROPERATION = "BROWSEROPERATION"
+
+class Route:
+    CONCLUDE = "conclude"
+    BROWSER = "browser"
 
 class BrowserAgent:
     def __init__(self, multi_mcp: MultiMCP):
@@ -45,6 +50,12 @@ class BrowserAgent:
             perception_prompt_path="prompts/browser_agent_perception_prompt.txt"
         )
         
+        # Initialize decision with both required parameters
+        self.decision = BrowserDecision(
+            decision_prompt_path="prompts/browser_agent_decision_prompt.txt",
+            multi_mcp=multi_mcp
+        )
+        
     async def run(self, query: str) -> str:
         """
         Execute browser operations based on user query
@@ -62,8 +73,6 @@ class BrowserAgent:
             self.ctx = BrowserContext(self.session_id, query)
 
             await self._run_initial_perception()
-
-            log.info(f"Perception result: {self.p_out}")
                   
             # If perception suggests a different route, handle it
             if self.p_out["route"] != "browser":
@@ -77,68 +86,13 @@ class BrowserAgent:
             
             log.info(f"Available tools: {tools}")
             
-            # 2. Plan steps using the model
-            log.info("Planning browser operation steps...")
-            plan = await self._plan_steps(query, tools)
-            log.info(f"Planned {len(plan['plan_graph']['nodes'])} steps")
-            log.info(f"📋 Planned steps: {json.dumps(plan, indent=2)}")
+            # 2. Plan steps using the decision module
+            plan = await self._plan_next_steps(query)
             
-            # 4. Add steps to context
-            for node in plan["plan_graph"]["nodes"]:
-                self.ctx.add_step(
-                    step_id=node["id"],
-                    description=node["description"],
-                    step_type=StepType.CODE
-                )
-            
-            # Then add edges according to the plan
-            for edge in plan["plan_graph"]["edges"]:
-                self.ctx.graph.add_edge(edge["from"], edge["to"])
-            
-            # 5. Execute steps using execute_step_with_mode
-            next_step_id = plan["next_step_id"]
-            code_variants = plan["code_variants"]
-
-            self.code_variants = plan["code_variants"]
-            self.next_step_id = plan["next_step_id"]
-
-            while True:
-                if self.ctx.is_step_completed(next_step_id):
-                    log.info(f"✅ Step {next_step_id} already completed. Skipping.")
-                    # Find next uncompleted step
-                    for node in plan["plan_graph"]["nodes"]:
-                        if not self.ctx.is_step_completed(node["id"]):
-                            next_step_id = node["id"]
-                            break
-                    else:
-                        # All steps completed
-                        break
-                    continue
-                
-                log.info(f"Executing step {next_step_id}")
-                success = await execute_step_with_mode(
-                    next_step_id,
-                    code_variants,
-                    self.ctx,
-                    "fallback",  # Use fallback mode
-                    None,  # No session needed for browser operations
-                    self.multi_mcp
-                )
-                
-                if not success:
-                    log.error(f"❌ Step {next_step_id} failed")
-                    return f"Failed to execute step {next_step_id}"
-                
-                log.info(f"✅ Step {next_step_id} completed successfully")
-                
-                # Get next step from plan graph
-                for edge in plan["plan_graph"]["edges"]:
-                    if edge["from"] == next_step_id:
-                        next_step_id = edge["to"]
-                        break
-                else:
-                    # No more steps
-                    break
+            # 5. Execute steps
+            success = await self._execute_steps(plan)
+            if not success:
+                return "Failed to execute browser operation"
             
             log.info("Browser operation completed successfully")
             return plan["summary"]
@@ -156,124 +110,188 @@ class BrowserAgent:
         log.info(f"📝 Initial Perception output")
         logger_json_block(log,'Initial Perception output:', self.p_out)
 
-        # This is not needed, because the root node is created in the BrowserContext constructor
-        #self.ctx.add_step(step_id=StepType.ROOT, description="initial query", step_type=StepType.ROOT)
         self.ctx.mark_step_completed(StepType.ROOT)
         self.ctx.attach_perception(StepType.ROOT, self.p_out)
 
         log_json_block('📌 Perception output (ROOT)', self.p_out)
         self.ctx._print_graph(depth=2)
-    
-    async def _plan_steps(self, query: str, tools: list) -> Dict[str, Any]:
-        """Plan browser operations using LLM"""
-        # Get tool descriptions in the same format as decision.py
-        function_list_text = self.multi_mcp.tool_description_wrapper()
-        tool_descriptions = "\n".join(f"- `{desc.strip()}`" for desc in function_list_text)
-        tool_descriptions = "\n\n### The ONLY Available Tools\n\n---\n\n" + tool_descriptions
 
-        prompt = f"""
-        You are a browser automation expert. Given the following browser query and available tools, plan the steps needed.
-        Return ONLY a valid JSON object with no additional text.
-
-        Query: {query}
+    async def _plan_next_steps(self, query: str) -> Dict[str, Any]:
+        """Plan the next steps for browser operation
         
-        {tool_descriptions}
-        
-        Required JSON format:
-        {{
-            "plan_graph": {{
-                "nodes": [
-                    {{ "id": "0", "description": "..." }},
-                    {{ "id": "1", "description": "..." }}
-                ],
-                "edges": [
-                    {{ "from": "ROOT", "to": "0", "type": "normal" }},
-                    {{ "from": "0", "to": "1", "type": "normal" }}
-                ]
-            }},
-            "next_step_id": "0",
-            "code_variants": {{
-                "CODE_0A": "<code block>",
-                "CODE_0B": "<code block>",
-                "CODE_0C": "<code block>"
-            }}
-        }}
-
-        Rules:
-        1. Each code block must be raw Python code (no await, no def, no markdown)
-        2. Each code block must end with a return statement like:
-           return {{ "result_0A": value }}
-        3. Use different strategies in each variant
-        4. No import statements, only use provided tools
-        5. No keyword arguments, use positional arguments only
-
-        Example for opening a URL:
-        {{
-            "plan_graph": {{
-                "nodes": [
-                    {{ "id": "0", "description": "Open URL in new tab" }}
-                ],
-                "edges": [
-                    {{ "from": "ROOT", "to": "0", "type": "normal" }}
-                ]
-            }},
-            "next_step_id": "0",
-            "code_variants": {{
-                "CODE_0A": "result = open_tab('https://example.com')\nreturn {{ 'result_0A': result }}",
-                "CODE_0B": "result = go_to_url('https://example.com')\nreturn {{ 'result_0B': result }}",
-                "CODE_0C": "result = search_google('example.com')\nreturn {{ 'result_0C': result }}"
-            }}
-        }}
+        Args:
+            query: The user's query
+            
+        Returns:
+            Dict containing the plan
         """
+        log.info("Planning browser operation steps...")
+        d_input = build_browser_decision_input(self.ctx, query, self.p_out)
+        log.info(f"Decision input:")
+        logger_json_block(log,'Decision input:', d_input)
+        plan = await self.decision.run(d_input)
+        log.info(f"Decision output:")
+        logger_json_block(log,'Decision output:', plan)
+        log.info(f"Planned {len(plan['plan_graph']['nodes'])} steps")
+        log.info(f"📋 Planned steps: {json.dumps(plan, indent=2)}")
         
-        try:
-            response = await self.model.generate_text(prompt)
-            log.info(f"Model response: {response}")
+        # Add steps to context
+        for node in plan["plan_graph"]["nodes"]:
+            self.ctx.add_step(
+                step_id=node["id"],
+                description=node["description"],
+                step_type=StepType.BROWSEROPERATION
+            )
+        
+        # Then add edges according to the plan
+        for edge in plan["plan_graph"]["edges"]:
+            self.ctx.graph.add_edge(edge["from"], edge["to"])
+        
+        # Store plan details
+        self.code_variants = plan["code_variants"]
+        self.next_step_id = plan["next_step_id"]
+
+        self.ctx._print_graph(depth=3)
+        
+        return plan
+
+    async def _execute_steps(self, plan: Dict[str, Any]) -> bool:
+        """Execute the planned steps
+        
+        Args:
+            plan: The plan containing steps to execute
             
-            # Use parse_llm_json to handle the response
-            plan = parse_llm_json(response, required_keys=["plan_graph", "next_step_id", "code_variants"])
-            
-            # Validate the plan structure
-            if not isinstance(plan.get("plan_graph", {}).get("nodes"), list):
-                raise ValueError("Plan graph nodes must be a list")
-                
-            for node in plan["plan_graph"]["nodes"]:
-                if not all(k in node for k in ["id", "description"]):
-                    raise ValueError("Each node must have id and description")
-                    
-            if not isinstance(plan.get("code_variants"), dict):
-                raise ValueError("Code variants must be a dictionary")
-                
-            for suffix in ["A", "B", "C"]:
-                variant_key = f"CODE_{plan['next_step_id']}{suffix}"
-                if variant_key not in plan["code_variants"]:
-                    raise ValueError(f"Missing code variant {variant_key}")
-                    
-            return plan
-                
-        except Exception as e:
-            log_error(f"Failed to parse model response: {str(e)}")
-            # Return a default plan for common operations
-            return {
-                "plan_graph": {
-                    "nodes": [
-                        {
-                            "id": "0",
-                            "description": "Open URL in new tab"
-                        }
-                    ],
-                    "edges": [
-                        {
-                            "from": "ROOT",
-                            "to": "0",
-                            "type": "normal"
-                        }
-                    ]
-                },
-                "next_step_id": "0",
-                "code_variants": {
-                    "CODE_0A": f"result = open_tab('{query.split()[1] if 'http' in query else f'https://{query.split()[1]}'}')\nreturn {{ 'result_0A': result }}",
-                    "CODE_0B": f"result = go_to_url('{query.split()[1] if 'http' in query else f'https://{query.split()[1]}'}')\nreturn {{ 'result_0B': result }}",
-                    "CODE_0C": f"result = search_google('{query.split()[1] if 'http' in query else f'https://{query.split()[1]}'}')\nreturn {{ 'result_0C': result }}"
-                }
-            }
+        Returns:
+            bool: True if all steps completed successfully, False otherwise
+        """
+        tracker = StepExecutionTracker(max_steps=12, max_retries=5)
+        AUTO_EXECUTION_MODE = "fallback"
+
+        while tracker.should_continue():
+            tracker.increment()
+            log.info(f"🔁 Loop {tracker.tries} — Executing step {self.next_step_id}")
+            log_step(f"🔁 Loop {tracker.tries} — Executing step {self.next_step_id}")
+
+            if self.ctx.is_step_completed(self.next_step_id):
+                log.info(f"✅ Step {self.next_step_id} already completed. Skipping.")
+                self.next_step_id = self._pick_next_step(self.ctx)
+                continue
+
+            retry_step_id = tracker.retry_step_id(self.next_step_id)
+            log.info(f"🔍 Executing step {retry_step_id}")
+            success = await execute_step_with_mode(
+                retry_step_id,
+                self.code_variants,
+                self.ctx,
+                AUTO_EXECUTION_MODE,
+                None,  # No session needed for browser operations
+                self.multi_mcp
+            )
+
+            if not success:
+                log.error(f"❌ Step {retry_step_id} failed. Marking as failed.")
+                self.ctx.mark_step_failed(self.next_step_id, "All fallback variants failed")
+                tracker.record_failure(self.next_step_id)
+
+                if tracker.has_exceeded_retries(self.next_step_id):
+                    if self.next_step_id == StepType.ROOT:
+                        if tracker.register_root_failure():
+                            log.error("🚨 ROOT failed too many times. Halting execution.")
+                            log_error("🚨 ROOT failed too many times. Halting execution.")
+                            return False
+                    else:
+                        log.error(f"⚠️ Step {self.next_step_id} failed too many times. Forcing replan.")
+                        log_error(f"⚠️ Step {self.next_step_id} failed too many times. Forcing replan.")
+                        self.next_step_id = StepType.ROOT
+                    continue
+
+            self.ctx.mark_step_completed(self.next_step_id)
+            log.info(f"✅ Step {self.next_step_id} completed successfully.")
+
+            # 🔍 Perception after execution
+            p_input = build_perception_input(self.ctx.query, self.ctx.memory, self.ctx, snapshot_type="step_result")
+            log.info(f"Perception input:")
+            logger_json_block(log,'Perception input:', p_input)
+            self.p_out = await self.perception.run(p_input, self.ctx)
+            log.info(f"Perception output:")
+            logger_json_block(log,'Perception output:', self.p_out)
+            self.ctx.attach_perception(self.next_step_id, self.p_out)
+            log_json_block(f"📌 Perception output ({self.next_step_id})", self.p_out)
+            self.ctx._print_graph(depth=3)
+
+            if self.p_out.get("original_goal_achieved") or self.p_out.get("route") == Route.CONCLUDE:
+                log.info(f"🔍 Original goal achieved or route is conclude, Now concluding...")
+                return True
+
+            if self.p_out.get("route") != Route.BROWSER:
+                log.error("🚩 Invalid route from perception. Exiting.")
+                log_error("🚩 Invalid route from perception. Exiting.")
+                return False
+
+            # 🔁 Decision again
+            log.info(f"🔁 Running Decision again")
+            d_input = build_browser_decision_input(self.ctx, self.ctx.query, self.p_out)
+            log.info(f"Decision input:")
+            logger_json_block(log,'Decision input:', d_input)
+            d_out = await self.decision.run(d_input)
+            log.info(f"Decision output:")
+            logger_json_block(log,'Decision output:', d_out)
+            log_json_block(f"📌 Decision Output ({tracker.tries})", d_out)
+
+            self.next_step_id = d_out["next_step_id"]
+            self.code_variants = d_out["code_variants"]
+            plan_graph = d_out["plan_graph"]
+            self.update_plan_graph(self.ctx, plan_graph, self.next_step_id)
+            self.ctx._print_graph(depth=3)
+
+        return True
+
+    def _pick_next_step(self, ctx) -> str:
+        """Pick the next uncompleted step from the graph"""
+        for node_id in ctx.graph.nodes:
+            node = ctx.graph.nodes[node_id]["data"]
+            if node.status == "pending":
+                return node.index
+        return StepType.ROOT
+
+    def update_plan_graph(self, ctx, plan_graph, from_step_id):
+        """Update the plan graph with new nodes and edges"""
+        for node in plan_graph["nodes"]:
+            step_id = node["id"]
+            if step_id in ctx.graph.nodes:
+                existing = ctx.graph.nodes[step_id]["data"]
+                if existing.status != "pending":
+                    continue
+            ctx.add_step(step_id, description=node["description"], step_type=StepType.BROWSEROPERATION)
+        
+        for edge in plan_graph["edges"]:
+            if edge["from"] in ctx.graph.nodes and edge["to"] in ctx.graph.nodes:
+                ctx.graph.add_edge(edge["from"], edge["to"], type=edge.get("type", "normal"))
+
+class StepExecutionTracker:
+    def __init__(self, max_steps=12, max_retries=3):
+        self.max_steps = max_steps
+        self.max_retries = max_retries
+        self.attempts = {}
+        self.tries = 0
+        self.root_failures = 0
+
+    def increment(self):
+        self.tries += 1
+
+    def record_failure(self, step_id):
+        self.attempts[step_id] = self.attempts.get(step_id, 0) + 1
+
+    def retry_step_id(self, step_id):
+        attempts = self.attempts.get(step_id, 0)
+        return f"{step_id}F{attempts}" if attempts > 0 else step_id
+
+    def should_continue(self):
+        return self.tries < self.max_steps
+
+    def has_exceeded_retries(self, step_id):
+        return self.attempts.get(step_id, 0) >= self.max_retries
+
+    def register_root_failure(self):
+        self.root_failures += 1
+        return self.root_failures >= 2
