@@ -194,11 +194,6 @@ class MultiMCP:
                 tools.extend(self.server_tools[server])
         return tools
 
-    # async def shutdown(self):
-    #     for client in self.client_cache.values():
-    #         await client.shutdown()
-
-
     async def shutdown(self):
         for client in self.client_cache.values():
             if client.session:
